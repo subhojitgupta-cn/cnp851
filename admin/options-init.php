@@ -26,17 +26,17 @@ if (! class_exists('Redux')) {
         'use_cdn' => true,
         'dev_mode' => false,
         'display_name' => __('Kong Helpdesk', 'kong-helpdesk'),
-        'display_version' => '1.6.3',
+        'display_version' => '1.0.0',
         'page_title' => __('Kong Helpdesk', 'kong-helpdesk'),
         'update_notice' => true,
         'intro_text' => '',
         'footer_text' => '&copy; ' . date('Y') . ' weLaunch',
         'admin_bar' => true,
-        'menu_type' => 'submenu',
+        'menu_type' => 'menu',
         'menu_title' => __('Settings', 'kong-helpdesk'),
-        'allow_sub_menu' => true,
-        'page_parent' => 'edit.php?post_type=ticket',
-        'page_parent_post_type' => 'ticket',
+        'allow_sub_menu' => false,
+       /* 'page_parent' => 'edit.php?post_type=ticket',
+        'page_parent_post_type' => 'ticket',*/
         'customizer' => false,
         'default_mark' => '*',
         'hints' => array(
@@ -110,7 +110,7 @@ if (! class_exists('Redux')) {
      */
 
     Redux::setSection($opt_name, array(
-        'title'  => __('Helpdesk', 'kong-helpdesk'),
+        'title'  => __('Kong Helpdesk', 'kong-helpdesk'),
         'id'     => 'general',
         'desc'   => __('Need support? Please use the comment function on codecanyon.', 'kong-helpdesk'),
         'icon'   => 'el el-home',
@@ -802,7 +802,7 @@ if (! class_exists('Redux')) {
         )
     ));
 
-    Redux::setSection($opt_name, array(
+    /*Redux::setSection($opt_name, array(
         'title'      => __('Integrations', 'kong-helpdesk'),
         'id'         => 'integration-settings',
         'subsection' => true,
@@ -1003,7 +1003,7 @@ if (! class_exists('Redux')) {
                 'required' => array('enableLiveChatChatra','equals','1'),
             ), 
         )
-    ));
+    ));*/
 
     Redux::setSection($opt_name, array(
         'title'      => __('Mail Notifications', 'kong-helpdesk'),
@@ -1344,7 +1344,7 @@ if (! class_exists('Redux')) {
         )
     ));
 
-    Redux::setSection($opt_name, array(
+    /*Redux::setSection($opt_name, array(
         'title'      => __('Support Rating', 'kong-helpdesk'),
         'desc'       => __('Send out Emails when tickets are completed and ask for a support rating.', 'kong-helpdesk'),
         'id'         => 'rate-settings',
@@ -1412,7 +1412,7 @@ if (! class_exists('Redux')) {
                 'required' => array('enableSupportRating','equals','1'),
             ),
         )
-    ));
+    ));*/
 
     Redux::setSection($opt_name, array(
         'title'      => __('Tickets', 'kong-helpdesk'),

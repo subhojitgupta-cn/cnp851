@@ -7,7 +7,7 @@ class Kong_Helpdesk_Reports extends Kong_Helpdesk
 
     /**
      * Construct Reports Class
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.0
      * @link    https://plugins.db-dzine.com
@@ -22,7 +22,7 @@ class Kong_Helpdesk_Reports extends Kong_Helpdesk
 
     /**
      * Init Reports Page in Admin
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.0
      * @link    https://plugins.db-dzine.com
@@ -33,19 +33,28 @@ class Kong_Helpdesk_Reports extends Kong_Helpdesk
         global $kong_helpdesk_options;
         $this->options = $kong_helpdesk_options;
         
-        add_submenu_page(
-            'edit.php?post_type=ticket',
+       add_menu_page(
+            'Reports',
+            'Reports',
+            'manage_options',
+            'helpdesk-reports',
+            array($this, 'render_helpdesk_reports'),
+            '',
+            '3'
+        );
+        /*add_menu_page(
+            'helpdesk-reports',
             __('Reports', 'kong-helpdesk'),
             __('Reports', 'kong-helpdesk'),
             'manage_options',
             'helpdesk-reports',
             array($this, 'render_helpdesk_reports')
-        );
+        );*/
     }
 
     /**
      * Action for date filter
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.0
      * @link    https://plugins.db-dzine.com
@@ -66,7 +75,7 @@ class Kong_Helpdesk_Reports extends Kong_Helpdesk
 
     /**
      * Display callback for report page
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.0
      * @link    https://plugins.db-dzine.com
@@ -422,7 +431,7 @@ class Kong_Helpdesk_Reports extends Kong_Helpdesk
 
     /**
      * Get Tickets by Status
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.0
      * @link    https://plugins.db-dzine.com
@@ -444,7 +453,7 @@ class Kong_Helpdesk_Reports extends Kong_Helpdesk
 
     /**
      * Get Tickets by Type
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.0
      * @link    https://plugins.db-dzine.com
@@ -466,7 +475,7 @@ class Kong_Helpdesk_Reports extends Kong_Helpdesk
 
     /**
      * Get Tickets by Type
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.2.4
      * @link    https://plugins.db-dzine.com
@@ -488,7 +497,7 @@ class Kong_Helpdesk_Reports extends Kong_Helpdesk
 
     /**
      * Get Tickets by System
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.0
      * @link    https://plugins.db-dzine.com
@@ -510,7 +519,7 @@ class Kong_Helpdesk_Reports extends Kong_Helpdesk
 
     /**
      * Validate Date
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.0
      * @link    https://plugins.db-dzine.com

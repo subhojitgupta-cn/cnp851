@@ -7,7 +7,7 @@ class Kong_Helpdesk_Attachments extends Kong_Helpdesk
 
     /**
      * Construct Attachments Class
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.0
      * @link    http://plugins.db-dzine.com
@@ -25,7 +25,7 @@ class Kong_Helpdesk_Attachments extends Kong_Helpdesk
 
     /**
      * Init Attachments
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.0
      * @link    https://plugins.db-dzine.com
@@ -39,7 +39,7 @@ class Kong_Helpdesk_Attachments extends Kong_Helpdesk
 
     /**
      * Add attachment fields to comment for
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.0
      * @link    http://plugins.db-dzine.com
@@ -68,7 +68,7 @@ class Kong_Helpdesk_Attachments extends Kong_Helpdesk
 
     /**
      * Save comment attachments
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.0
      * @link    http://plugins.db-dzine.com
@@ -115,7 +115,7 @@ class Kong_Helpdesk_Attachments extends Kong_Helpdesk
 
     /**
      * Save post / ticket attachments
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.0
      * @link    http://plugins.db-dzine.com
@@ -154,7 +154,7 @@ class Kong_Helpdesk_Attachments extends Kong_Helpdesk
 
     /**
      * Diverse array of $_FILES
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.0
      * @link    http://plugins.db-dzine.com
@@ -173,7 +173,7 @@ class Kong_Helpdesk_Attachments extends Kong_Helpdesk
 
     /**
      * Insert attachments
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.0
      * @link    http://plugins.db-dzine.com
@@ -210,7 +210,7 @@ class Kong_Helpdesk_Attachments extends Kong_Helpdesk
 
     /**
      * Show Comment Attachments
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.0
      * @link    http://plugins.db-dzine.com

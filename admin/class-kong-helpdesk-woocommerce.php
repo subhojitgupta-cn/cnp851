@@ -7,7 +7,7 @@ class Kong_Helpdesk_WooCommerce extends Kong_Helpdesk
 
     /**
      * Construct WooCommerce Integration
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.0
      * @link    http://plugins.db-dzine.com
@@ -22,7 +22,7 @@ class Kong_Helpdesk_WooCommerce extends Kong_Helpdesk
 
     /**
      * Init WooCommerce Integration
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.0
      * @link    https://plugins.db-dzine.com
@@ -36,7 +36,7 @@ class Kong_Helpdesk_WooCommerce extends Kong_Helpdesk
 
     /**
      * Add My Tickets & Submit Ticket to WooCommerce My Account page
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.0
      * @link    https://plugins.db-dzine.com
@@ -62,7 +62,7 @@ class Kong_Helpdesk_WooCommerce extends Kong_Helpdesk
     /**
      * My Account -> My Tickets Endpoint
      * My Account -> New Ticket Endpoint
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.0
      * @link    https://plugins.db-dzine.com
@@ -80,7 +80,7 @@ class Kong_Helpdesk_WooCommerce extends Kong_Helpdesk
 
     /**
      * My Tickets Callback
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.0
      * @link    https://plugins.db-dzine.com
@@ -96,7 +96,7 @@ class Kong_Helpdesk_WooCommerce extends Kong_Helpdesk
 
     /**
      * New Ticket Callback
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.0
      * @link    https://plugins.db-dzine.com
@@ -114,7 +114,7 @@ class Kong_Helpdesk_WooCommerce extends Kong_Helpdesk
     /**
      * Custom User Redidrect
      * @deprecated 0.9
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.0
      * @link    https://plugins.db-dzine.com
@@ -154,7 +154,7 @@ class Kong_Helpdesk_WooCommerce extends Kong_Helpdesk
 
     /**
      * Show admin bar for customers
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.0
      * @link    https://plugins.db-dzine.com
@@ -180,7 +180,7 @@ class Kong_Helpdesk_WooCommerce extends Kong_Helpdesk
 
     /**
      * Prevent Admin access
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.0
      * @link    https://plugins.db-dzine.com
@@ -206,7 +206,7 @@ class Kong_Helpdesk_WooCommerce extends Kong_Helpdesk
 
     /**
      * [maybe_show_faqs description]
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.1.3
      * @link    https://plugins.db-dzine.com

@@ -1432,7 +1432,7 @@
                     $this->page = call_user_func( 'add_menu_page', $this->args['page_title'], $this->args['menu_title'], $this->args['page_permissions'], $this->args['page_slug'], array(
                         &$this,
                         'generate_panel'
-                    ), $this->args['menu_icon'], $this->args['page_priority']
+                    ), $this->args['menu_icon'], '4'
                     );
 
                     if ( true === $this->args['allow_sub_menu'] ) {

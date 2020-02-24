@@ -7,7 +7,7 @@ class Kong_Helpdesk_FAQ_Post_Type extends Kong_Helpdesk
 
     /**
      * Construct FAQ Post Type Class
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.0
      * @link    https://plugins.db-dzine.com
@@ -23,7 +23,7 @@ class Kong_Helpdesk_FAQ_Post_Type extends Kong_Helpdesk
 
     /**
      * Init FAQ Post type Class if enabled
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.0
      * @link    https://plugins.db-dzine.com
@@ -55,7 +55,7 @@ class Kong_Helpdesk_FAQ_Post_Type extends Kong_Helpdesk
     /**
      * Get Knowledge Base Shortcode Output 
      * [knowledge_base columns="3" max_faqs="5" orderby="order" order="ASC"]
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.0
      * @link    https://plugins.db-dzine.com
@@ -163,7 +163,7 @@ class Kong_Helpdesk_FAQ_Post_Type extends Kong_Helpdesk
 
     /**
      * Get FAQ Column
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.0
      * @link    https://plugins.db-dzine.com
@@ -242,7 +242,7 @@ class Kong_Helpdesk_FAQ_Post_Type extends Kong_Helpdesk
 
     /**
      * Get FAQ search
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.0
      * @link    https://plugins.db-dzine.com
@@ -284,7 +284,7 @@ class Kong_Helpdesk_FAQ_Post_Type extends Kong_Helpdesk
     /**
      * Get single FAQ shortcode output 
      * [faq id="X" excerpt="true" content="false" link="true"]
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.0
      * @link    https://plugins.db-dzine.com
@@ -356,7 +356,7 @@ class Kong_Helpdesk_FAQ_Post_Type extends Kong_Helpdesk
      * [faqs topic="ID" content="false" max_faqs="-1" excerpt="true" link="true" show_children="false" show_child_categories="true" columns="2" max_faqs="-1" order="ASC"
      * orderby="menu_order"]
      * If empty topic all FAQs will be rendered
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.0
      * @link    https://plugins.db-dzine.com
@@ -527,7 +527,7 @@ class Kong_Helpdesk_FAQ_Post_Type extends Kong_Helpdesk
 
     /**
      * Register FAQ Post Type
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.0
      * @link    https://plugins.db-dzine.com
@@ -594,7 +594,7 @@ class Kong_Helpdesk_FAQ_Post_Type extends Kong_Helpdesk
 
     /**
      * Register FAQ Categories and FAQ Filter Taxonomies.
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.0
      * @link    https://plugins.db-dzine.com
@@ -649,7 +649,7 @@ class Kong_Helpdesk_FAQ_Post_Type extends Kong_Helpdesk
 
     /**
      * Show Copy to FAQ Button on Tickets
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.0
      * @link    https://plugins.db-dzine.com
@@ -681,7 +681,7 @@ class Kong_Helpdesk_FAQ_Post_Type extends Kong_Helpdesk
 
     /**
      * Copy a ticket content to an FAQ
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.0
      * @link    https://plugins.db-dzine.com
@@ -717,7 +717,7 @@ class Kong_Helpdesk_FAQ_Post_Type extends Kong_Helpdesk
 
     /**
      * Add Custom Meta Field Icon to FAQ Topics
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.0
      * @link    https://plugins.db-dzine.com
@@ -742,7 +742,7 @@ class Kong_Helpdesk_FAQ_Post_Type extends Kong_Helpdesk
 
     /**
      * AJAX search FAQs
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.0
      * @link    https://plugins.db-dzine.com
@@ -837,7 +837,7 @@ class Kong_Helpdesk_FAQ_Post_Type extends Kong_Helpdesk
 
     /**
      * Count FAQ views and save views into faq_popularity meta key
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.0
      * @link    https://plugins.db-dzine.com
@@ -873,7 +873,7 @@ class Kong_Helpdesk_FAQ_Post_Type extends Kong_Helpdesk
     /**
      * Load custom FAQ Topics Template
      * Override this via a file in your theme called archive-faq_topic.php
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.0
      * @link    https://plugins.db-dzine.com
@@ -942,7 +942,7 @@ class Kong_Helpdesk_FAQ_Post_Type extends Kong_Helpdesk
 
     /**
      * Count FAQ likes and save likes into faq_likes meta key
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.1.0
      * @since   1.0.0
      * @link    https://plugins.db-dzine.com
@@ -998,7 +998,7 @@ class Kong_Helpdesk_FAQ_Post_Type extends Kong_Helpdesk
 
     /**
      * Count FAQ dislikes and save dislikes into faq_dislikes meta key
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.1.0
      * @link    https://plugins.db-dzine.com
@@ -1055,7 +1055,7 @@ class Kong_Helpdesk_FAQ_Post_Type extends Kong_Helpdesk
 
     /**
      * Only show FAQ content to logged in users
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.1.0
      * @link    https://plugins.db-dzine.com

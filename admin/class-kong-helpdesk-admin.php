@@ -7,7 +7,7 @@ class Kong_Helpdesk_Admin extends Kong_Helpdesk
 
     /**
      * Construct Helpdesk Admin Class
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.0
      * @link    http://plugins.db-dzine.com
@@ -18,11 +18,12 @@ class Kong_Helpdesk_Admin extends Kong_Helpdesk
     {
         $this->plugin_name = $plugin_name;
         $this->version = $version;
+        add_action('admin_menu', array($this,'custom_menu_links'));
     }
 
     /**
      * Enqueue Admin Styles
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.0
      * @link    http://plugins.db-dzine.com
@@ -38,7 +39,7 @@ class Kong_Helpdesk_Admin extends Kong_Helpdesk
     
     /**
      * Enqueue Admin Scripts
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.0
      * @link    http://plugins.db-dzine.com
@@ -56,7 +57,7 @@ class Kong_Helpdesk_Admin extends Kong_Helpdesk
 
     /**
      * Add admin JS vars
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.0
      * @link    http://plugins.db-dzine.com
@@ -66,7 +67,7 @@ class Kong_Helpdesk_Admin extends Kong_Helpdesk
     {
     ?>
     <script type='text/javascript'>
-        var kong_helpdesk_settings = <?php echo json_encode(array(
+        var kong_helpdesk_settings =<?php echo json_encode(array(
             'ajax_url' => admin_url('admin-ajax.php'),
             'liveChatAJAXInterval' => $this->get_option('liveChatAJAXInterval') ?  $this->get_option('liveChatAJAXInterval') : 2000,
         )); ?>
@@ -76,7 +77,7 @@ class Kong_Helpdesk_Admin extends Kong_Helpdesk
 
     /**
      * Load Extensions
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.0
      * @link    http://plugins.db-dzine.com
@@ -99,7 +100,7 @@ class Kong_Helpdesk_Admin extends Kong_Helpdesk
 
     /**
      * Init
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.0
      * @link    http://plugins.db-dzine.com
@@ -158,7 +159,7 @@ class Kong_Helpdesk_Admin extends Kong_Helpdesk
 
     /**
      * Maybe redirect reporters
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.0
      * @link    http://plugins.db-dzine.com
@@ -188,7 +189,7 @@ class Kong_Helpdesk_Admin extends Kong_Helpdesk
 
     /**
      * Remove Menus for Agents & Reporter
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.3
      * @link    https://plugins.db-dzine.com
@@ -202,13 +203,44 @@ class Kong_Helpdesk_Admin extends Kong_Helpdesk
             if (in_array('subscriber', $user->roles) || in_array('agent', $user->roles)) {
                 remove_menu_page( 'index.php' );
                 remove_submenu_page( 'index.php', 'my-sites.php' );
+                remove_menu_page( 'index.php' );                  //Dashboard
+                
             }
         }
+
+        // remove menu item for all users
+        remove_menu_page( 'index.php' );                   // dashboard
+        remove_menu_page( 'jetpack' );                    //Jetpack* 
+        remove_menu_page( 'edit.php' );                   //Posts
+        //remove_menu_page( 'upload.php' );                 //Media
+        //remove_menu_page( 'edit.php?post_type=page' );    //Pages
+        remove_menu_page( 'edit-comments.php' );          //Comments
+        remove_menu_page( 'themes.php' );                 //Appearance
+        remove_menu_page( 'plugins.php' );                //Plugins
+        //remove_menu_page( 'users.php' );                  //Users
+        remove_menu_page( 'tools.php' );                  //Tools
+        remove_menu_page( 'options-general.php' );        //Settings
+    }
+
+    // created custom menu
+    public function custom_menu_links() {
+
+
+        /*add_menu_page(
+            'Tickets',
+            'Tickets',
+            'manage_options',
+            'edit.php?post_type=ticket',
+            '',
+            '',
+            81
+        );*/
+        
     }
 
     /**
      * Remove Admin bar nodes
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.3
      * @link    https://plugins.db-dzine.com
@@ -232,7 +264,7 @@ class Kong_Helpdesk_Admin extends Kong_Helpdesk
     /**
      * Redirect Reporter to My Profile
      * Redirect Agents to All Tickets
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.3
      * @link    https://plugins.db-dzine.com
@@ -266,7 +298,7 @@ class Kong_Helpdesk_Admin extends Kong_Helpdesk
 
     /**
      * Maybe modify login url
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.0
      * @link    http://plugins.db-dzine.com

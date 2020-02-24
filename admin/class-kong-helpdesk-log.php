@@ -7,7 +7,7 @@ class Kong_Helpdesk_Log extends Kong_Helpdesk
 
     /**
      * Construct Log Class
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.0
      * @link    https://plugins.db-dzine.com
@@ -22,7 +22,7 @@ class Kong_Helpdesk_Log extends Kong_Helpdesk
 
     /**
      * Init Log (set Mail template)
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.0
      * @link    https://plugins.db-dzine.com
@@ -36,7 +36,7 @@ class Kong_Helpdesk_Log extends Kong_Helpdesk
 
     /**
      * Add the Log metabox for Ticket pages
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.0
      * @link    https://plugins.db-dzine.com
@@ -48,7 +48,7 @@ class Kong_Helpdesk_Log extends Kong_Helpdesk
 
     /**
      * Content of the Log metabox
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.0
      * @link    https://plugins.db-dzine.com
@@ -84,7 +84,7 @@ class Kong_Helpdesk_Log extends Kong_Helpdesk
 
     /**
      * Ticket Created Log
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.0
      * @link    https://plugins.db-dzine.com
@@ -123,7 +123,7 @@ class Kong_Helpdesk_Log extends Kong_Helpdesk
 
     /**
      * Terms changes (status changed)
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.0
      * @link    https://plugins.db-dzine.com
@@ -170,7 +170,7 @@ class Kong_Helpdesk_Log extends Kong_Helpdesk
 
     /**
      * Comment Created Log
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.0
      * @link    https://plugins.db-dzine.com
@@ -207,7 +207,7 @@ class Kong_Helpdesk_Log extends Kong_Helpdesk
 
     /**
      * Assigned Agent changed Log
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.0
      * @link    https://plugins.db-dzine.com
@@ -271,7 +271,7 @@ class Kong_Helpdesk_Log extends Kong_Helpdesk
 
     /**
      * Assigned Agent added Log
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.0
      * @link    https://plugins.db-dzine.com
@@ -306,7 +306,7 @@ class Kong_Helpdesk_Log extends Kong_Helpdesk
 
     /**
      * Save log String into custom post meta
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.0
      * @link    https://plugins.db-dzine.com

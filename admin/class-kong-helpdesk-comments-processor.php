@@ -37,7 +37,7 @@ class Kong_Helpdesk_Comments_Processor extends Kong_Helpdesk
 
     /**
      * Construct Comments Processor
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.0
      * @link    http://plugins.db-dzine.com
@@ -53,7 +53,7 @@ class Kong_Helpdesk_Comments_Processor extends Kong_Helpdesk
 
     /**
      * Init Comments
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.0
      * @link    https://plugins.db-dzine.com
@@ -67,7 +67,7 @@ class Kong_Helpdesk_Comments_Processor extends Kong_Helpdesk
 
     /**
      * Sanitize comment data
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.0
      * @link    https://plugins.db-dzine.com
@@ -95,7 +95,7 @@ class Kong_Helpdesk_Comments_Processor extends Kong_Helpdesk
 
     /**
      * Validate Comment data
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.0
      * @link    https://plugins.db-dzine.com
@@ -165,7 +165,7 @@ class Kong_Helpdesk_Comments_Processor extends Kong_Helpdesk
 
     /**
      * Create the comment
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.0
      * @link    https://plugins.db-dzine.com
@@ -201,7 +201,7 @@ class Kong_Helpdesk_Comments_Processor extends Kong_Helpdesk
 
     /**
      * Sanitize Comment Data
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.0
      * @link    https://plugins.db-dzine.com
@@ -234,7 +234,7 @@ class Kong_Helpdesk_Comments_Processor extends Kong_Helpdesk
 
     /**
      * Check if automatic reply for ticket reply is available
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.0
      * @link    https://plugins.db-dzine.com
@@ -266,7 +266,7 @@ class Kong_Helpdesk_Comments_Processor extends Kong_Helpdesk
 
     /**
      * Check User Exists
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.0
      * @link    https://plugins.db-dzine.com
@@ -291,7 +291,7 @@ class Kong_Helpdesk_Comments_Processor extends Kong_Helpdesk
 
     /**
      * Create User
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.0
      * @link    https://plugins.db-dzine.com

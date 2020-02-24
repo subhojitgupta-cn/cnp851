@@ -11,7 +11,7 @@ class Kong_Helpdesk_Comments extends Kong_Helpdesk
 
     /**
      * Construct Comments Processor
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.0
      * @link    http://plugins.db-dzine.com
@@ -26,7 +26,7 @@ class Kong_Helpdesk_Comments extends Kong_Helpdesk
 
     /**
      * Init Comments
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.0
      * @link    https://plugins.db-dzine.com
@@ -40,7 +40,7 @@ class Kong_Helpdesk_Comments extends Kong_Helpdesk
 
     /**
      * Comment Editor Changes
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.0
      * @link    https://plugins.db-dzine.com
@@ -65,7 +65,7 @@ class Kong_Helpdesk_Comments extends Kong_Helpdesk
 
     /**
      * Enable comment editor on frontend
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.0
      * @link    https://plugins.db-dzine.com
@@ -97,7 +97,7 @@ class Kong_Helpdesk_Comments extends Kong_Helpdesk
 
     /**
      * Allow Comments for all tickets
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.0
      * @link    https://plugins.db-dzine.com

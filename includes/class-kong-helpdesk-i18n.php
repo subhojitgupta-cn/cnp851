@@ -22,7 +22,7 @@
  * @since      1.0.0
  * @package    Kong_Helpdesk
  * @subpackage Kong_Helpdesk/includes
- * @author     Daniel Barenkamp <contact@db-dzine.de>
+ * @author     CN <contact@db-dzine.de>
  */
 class Kong_Helpdesk_i18n {
 

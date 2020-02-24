@@ -7,7 +7,7 @@ class Kong_Helpdesk_Ticket_Notes extends Kong_Helpdesk
 
     /**
      * Construct Custom Ticket Post Type Class
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.0
      * @link    https://plugins.db-dzine.com
@@ -22,7 +22,7 @@ class Kong_Helpdesk_Ticket_Notes extends Kong_Helpdesk
 
     /**
      * Init Ticket post type class
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.0
      * @link    https://plugins.db-dzine.com
@@ -37,7 +37,7 @@ class Kong_Helpdesk_Ticket_Notes extends Kong_Helpdesk
 
     /**
      * Add custom ticket metaboxes
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.0
      * @link    https://plugins.db-dzine.com
@@ -51,7 +51,7 @@ class Kong_Helpdesk_Ticket_Notes extends Kong_Helpdesk
 
     /**
      * Display Metabox Private Notes
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.4.4
      * @link    https://plugins.db-dzine.com

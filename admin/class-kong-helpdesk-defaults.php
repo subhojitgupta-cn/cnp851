@@ -7,7 +7,7 @@ class Kong_Helpdesk_Defaults extends Kong_Helpdesk
 
     /**
      * Construct Defaults Class
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.0
      * @link    http://plugins.db-dzine.com
@@ -22,7 +22,7 @@ class Kong_Helpdesk_Defaults extends Kong_Helpdesk
 
     /**
      * Init Defaults
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.0
      * @link    https://plugins.db-dzine.com
@@ -36,7 +36,7 @@ class Kong_Helpdesk_Defaults extends Kong_Helpdesk
 
     /**
      * Set defaults
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.0
      * @link    https://plugins.db-dzine.com

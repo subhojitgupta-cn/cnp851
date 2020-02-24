@@ -33,7 +33,7 @@ class Kong_Helpdesk_Support_Rating extends Kong_Helpdesk
 
     /**
      * Construct Notifications Class
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.0
      * @link    https://plugins.db-dzine.com
@@ -48,7 +48,7 @@ class Kong_Helpdesk_Support_Rating extends Kong_Helpdesk
 
     /**
      * Init Notifications (set Mail template)
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.0
      * @link    https://plugins.db-dzine.com
@@ -164,7 +164,7 @@ class Kong_Helpdesk_Support_Rating extends Kong_Helpdesk
 
     /**
      * Terms changes (status changed)
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.0
      * @link    https://plugins.db-dzine.com
@@ -237,7 +237,7 @@ class Kong_Helpdesk_Support_Rating extends Kong_Helpdesk
 
     /**
      * Send out notification Mail
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.0
      * @link    https://plugins.db-dzine.com

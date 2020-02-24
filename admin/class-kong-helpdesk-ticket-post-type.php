@@ -7,7 +7,7 @@ class Kong_Helpdesk_Ticket_Post_Type extends Kong_Helpdesk
 
     /**
      * Construct Custom Ticket Post Type Class
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.0
      * @link    https://plugins.db-dzine.com
@@ -22,7 +22,7 @@ class Kong_Helpdesk_Ticket_Post_Type extends Kong_Helpdesk
 
     /**
      * Init Ticket post type class
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.0
      * @link    https://plugins.db-dzine.com
@@ -45,7 +45,7 @@ class Kong_Helpdesk_Ticket_Post_Type extends Kong_Helpdesk
 
     /**
      * Make filtering for custom Taxonomies possible
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.0
      * @link    https://plugins.db-dzine.com
@@ -76,7 +76,7 @@ class Kong_Helpdesk_Ticket_Post_Type extends Kong_Helpdesk
 
     /**
      * Build the query for custom tax filtering
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.0
      * @link    https://plugins.db-dzine.com
@@ -100,7 +100,7 @@ class Kong_Helpdesk_Ticket_Post_Type extends Kong_Helpdesk
 
     /**
      * Register Ticket Post Type
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.0
      * @link    https://plugins.db-dzine.com
@@ -177,7 +177,7 @@ class Kong_Helpdesk_Ticket_Post_Type extends Kong_Helpdesk
 
     /**
      * Register custom Ticket Taxonomies
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.0
      * @link    https://plugins.db-dzine.com
@@ -415,7 +415,7 @@ class Kong_Helpdesk_Ticket_Post_Type extends Kong_Helpdesk
 
     /**
      * Add custom ticket metaboxes
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.0
      * @link    https://plugins.db-dzine.com
@@ -435,7 +435,7 @@ class Kong_Helpdesk_Ticket_Post_Type extends Kong_Helpdesk
 
     /**
      * Display Metabox Short Information
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.0
      * @link    https://plugins.db-dzine.com
@@ -467,7 +467,7 @@ class Kong_Helpdesk_Ticket_Post_Type extends Kong_Helpdesk
 
     /**
      * Display Metabox Merge Ticket
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.4.3
      * @link    https://plugins.db-dzine.com
@@ -504,7 +504,7 @@ class Kong_Helpdesk_Ticket_Post_Type extends Kong_Helpdesk
 
     /**
      * Copy a ticket content to an FAQ
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.4.3
      * @link    https://plugins.db-dzine.com
@@ -560,7 +560,7 @@ class Kong_Helpdesk_Ticket_Post_Type extends Kong_Helpdesk
 
     /**
      * Get Meta Taxonomies
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.0
      * @link    https://plugins.db-dzine.com
@@ -624,7 +624,7 @@ class Kong_Helpdesk_Ticket_Post_Type extends Kong_Helpdesk
 
     /**
      * Get the created information
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.0
      * @link    https://plugins.db-dzine.com
@@ -650,7 +650,7 @@ class Kong_Helpdesk_Ticket_Post_Type extends Kong_Helpdesk
 
     /**
      * Get the assigned Information
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.0
      * @link    https://plugins.db-dzine.com
@@ -700,7 +700,7 @@ class Kong_Helpdesk_Ticket_Post_Type extends Kong_Helpdesk
 
     /**
      * Get the Envato Information
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.0
      * @link    https://plugins.db-dzine.com
@@ -731,7 +731,7 @@ class Kong_Helpdesk_Ticket_Post_Type extends Kong_Helpdesk
 
     /**
      * Verify Envato purchase Code
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.0
      * @link    https://plugins.db-dzine.com
@@ -760,7 +760,7 @@ class Kong_Helpdesk_Ticket_Post_Type extends Kong_Helpdesk
 
     /**
      * Get WooCommerce Pages
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.0
      * @link    https://plugins.db-dzine.com
@@ -775,7 +775,7 @@ class Kong_Helpdesk_Ticket_Post_Type extends Kong_Helpdesk
 
     /**
      * Get WooCommerce Order Pages
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.0
      * @link    https://plugins.db-dzine.com
@@ -813,7 +813,7 @@ class Kong_Helpdesk_Ticket_Post_Type extends Kong_Helpdesk
 
     /**
      * Get WooCommerce Products
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.0
      * @link    https://plugins.db-dzine.com
@@ -853,7 +853,7 @@ class Kong_Helpdesk_Ticket_Post_Type extends Kong_Helpdesk
 
     /**
      * Get Attachments Metabox
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.0
      * @link    https://plugins.db-dzine.com
@@ -916,7 +916,7 @@ class Kong_Helpdesk_Ticket_Post_Type extends Kong_Helpdesk
 
     /**
      * Content of the Feedback metabox
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.0
      * @link    https://plugins.db-dzine.com
@@ -937,7 +937,7 @@ class Kong_Helpdesk_Ticket_Post_Type extends Kong_Helpdesk
 
     /**
      * Save Custom Metaboxes
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.0
      * @link    https://plugins.db-dzine.com
@@ -986,7 +986,7 @@ class Kong_Helpdesk_Ticket_Post_Type extends Kong_Helpdesk
 
     /**
      * Add Custom Meta Field Color to System, Type, Status
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.0
      * @link    https://plugins.db-dzine.com
@@ -1011,7 +1011,7 @@ class Kong_Helpdesk_Ticket_Post_Type extends Kong_Helpdesk
 
     /**
      * Access check for Tickets
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.0
      * @link    https://plugins.db-dzine.com
@@ -1063,7 +1063,7 @@ class Kong_Helpdesk_Ticket_Post_Type extends Kong_Helpdesk
 
     /**
      * Filter not authore ones 
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.0
      * @link    https://plugins.db-dzine.com
@@ -1095,7 +1095,7 @@ class Kong_Helpdesk_Ticket_Post_Type extends Kong_Helpdesk
 
     /**
      * Modify the Title of Tickets to always have the ID in Front
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.0
      * @link    https://plugins.db-dzine.com
@@ -1118,7 +1118,7 @@ class Kong_Helpdesk_Ticket_Post_Type extends Kong_Helpdesk
 
     /**
      * Show all Authors
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.0
      * @link    https://plugins.db-dzine.com
@@ -1133,7 +1133,7 @@ class Kong_Helpdesk_Ticket_Post_Type extends Kong_Helpdesk
     /**
      * Load custom FAQ Topics Template
      * Override this via a file in your theme called archive-faq_topic.php
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.0
      * @link    https://plugins.db-dzine.com

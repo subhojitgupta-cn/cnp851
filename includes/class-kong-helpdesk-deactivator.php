@@ -18,13 +18,13 @@
  * @since      1.0.0
  * @package    Kong_Helpdesk
  * @subpackage Kong_Helpdesk/includes
- * @author     Daniel Barenkamp <contact@db-dzine.de>
+ * @author     CN <contact@db-dzine.de>
  */
 class Kong_Helpdesk_Deactivator {
 
 	/**
 	 * On Plugin deactivation remove roles
-	 * @author Daniel Barenkamp
+	 * @author CN
 	 * @version 1.0.0
 	 * @since   1.0.0
 	 * @link    https://plugins.db-dzine.com

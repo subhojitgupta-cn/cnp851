@@ -54,7 +54,7 @@ require plugin_dir_path( __FILE__ ) . 'includes/class-kong-helpdesk.php';
 
 /**
  * Run the Plugin
- * @author Daniel Barenkamp
+ * @author CN
  * @version 1.0.0
  * @since   1.0.0
  * @link    http://plugins.db-dzine.com

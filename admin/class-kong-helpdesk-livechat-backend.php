@@ -7,7 +7,7 @@ class Kong_Helpdesk_Livechat_Backend extends Kong_Helpdesk
 
     /**
      * Construct Livechat Class
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.0
      * @link    https://plugins.db-dzine.com
@@ -27,7 +27,7 @@ class Kong_Helpdesk_Livechat_Backend extends Kong_Helpdesk
 
     /**
      * Init Livechat
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.0
      * @link    https://plugins.db-dzine.com
@@ -41,7 +41,7 @@ class Kong_Helpdesk_Livechat_Backend extends Kong_Helpdesk
 
     /**
      * Init User status
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.0
      * @link    https://plugins.db-dzine.com
@@ -78,7 +78,7 @@ class Kong_Helpdesk_Livechat_Backend extends Kong_Helpdesk
 
     /**
      * Check if a specific user has been online in the last 1 minutes
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.0
      * @link    https://plugins.db-dzine.com
@@ -93,7 +93,7 @@ class Kong_Helpdesk_Livechat_Backend extends Kong_Helpdesk
 
     /**
      * Check if any user has been online in the last 1 minutes
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.0
      * @link    https://plugins.db-dzine.com
@@ -118,7 +118,7 @@ class Kong_Helpdesk_Livechat_Backend extends Kong_Helpdesk
 
     /**
      * Check when a user was last online.
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.0
      * @link    https://plugins.db-dzine.com
@@ -139,7 +139,7 @@ class Kong_Helpdesk_Livechat_Backend extends Kong_Helpdesk
 
     /**
      * 
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.0
      * @link    https://plugins.db-dzine.com
@@ -168,7 +168,7 @@ class Kong_Helpdesk_Livechat_Backend extends Kong_Helpdesk
 
     /**
      * Create Ticket from Livechat
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.0
      * @link    https://plugins.db-dzine.com
@@ -270,7 +270,7 @@ class Kong_Helpdesk_Livechat_Backend extends Kong_Helpdesk
 
     /**
      * Get ticket details
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.0
      * @link    https://plugins.db-dzine.com
@@ -283,7 +283,7 @@ class Kong_Helpdesk_Livechat_Backend extends Kong_Helpdesk
 
     /**
      * Post comment to ticket
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.0
      * @link    https://plugins.db-dzine.com
@@ -307,7 +307,7 @@ class Kong_Helpdesk_Livechat_Backend extends Kong_Helpdesk
 
     /**
      * Post comment to ticket
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.0
      * @link    https://plugins.db-dzine.com
@@ -421,7 +421,7 @@ class Kong_Helpdesk_Livechat_Backend extends Kong_Helpdesk
 
     /**
      * Get ticket details
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.0
      * @link    https://plugins.db-dzine.com

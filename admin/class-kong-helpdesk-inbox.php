@@ -13,7 +13,7 @@ class Kong_Helpdesk_Inbox extends Kong_Helpdesk
 
     /**
      * Construct Inbox Class
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.0
      * @link    https://plugins.db-dzine.com
@@ -32,7 +32,7 @@ class Kong_Helpdesk_Inbox extends Kong_Helpdesk
 
     /**
      * Init Inbox
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.0
      * @link    https://plugins.db-dzine.com
@@ -104,7 +104,7 @@ class Kong_Helpdesk_Inbox extends Kong_Helpdesk
 
     /**
      * Setup the Inbox
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.0
      * @link    https://plugins.db-dzine.com
@@ -143,7 +143,7 @@ class Kong_Helpdesk_Inbox extends Kong_Helpdesk
 
     /**
      * Test the Inbox
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.0
      * @link    https://plugins.db-dzine.com
@@ -167,7 +167,7 @@ class Kong_Helpdesk_Inbox extends Kong_Helpdesk
 
     /**
      * Get Folders – this helps to find out what folders are available
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.0
      * @link    https://plugins.db-dzine.com
@@ -201,7 +201,7 @@ class Kong_Helpdesk_Inbox extends Kong_Helpdesk
 
     /**
      * Check Inbox for new Mails
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.0
      * @link    https://plugins.db-dzine.com
@@ -244,7 +244,7 @@ class Kong_Helpdesk_Inbox extends Kong_Helpdesk
 
     /**
      * Returns all Unseen Mails
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.0
      * @link    https://plugins.db-dzine.com
@@ -257,7 +257,7 @@ class Kong_Helpdesk_Inbox extends Kong_Helpdesk
 
     /**
      * Check if mail is a reply or a new ticket
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.0
      * @link    https://plugins.db-dzine.com
@@ -284,7 +284,7 @@ class Kong_Helpdesk_Inbox extends Kong_Helpdesk
 
     /**
      * Process Mail as new Ticket / Post
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.0
      * @link    https://plugins.db-dzine.com
@@ -349,7 +349,7 @@ class Kong_Helpdesk_Inbox extends Kong_Helpdesk
 
     /**
      * Process Mail as Reply to a Ticket
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.0
      * @link    https://plugins.db-dzine.com
@@ -402,7 +402,7 @@ class Kong_Helpdesk_Inbox extends Kong_Helpdesk
 
      /**
      * Try formatting mail HTML (get body of mail)
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.0
      * @link    https://plugins.db-dzine.com
@@ -444,7 +444,7 @@ class Kong_Helpdesk_Inbox extends Kong_Helpdesk
 
     /**
      * To be checked
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.0
      * @link    https://plugins.db-dzine.com
@@ -477,7 +477,7 @@ class Kong_Helpdesk_Inbox extends Kong_Helpdesk
 
     /**
      * Check Attachments in Mail
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.0
      * @link    https://plugins.db-dzine.com

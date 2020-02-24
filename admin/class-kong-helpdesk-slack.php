@@ -7,7 +7,7 @@ class Kong_Helpdesk_Slack extends Kong_Helpdesk
 
     /**
      * Slack Integration Constructor
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.0
      * @link    https://plugins.db-dzine.com
@@ -22,7 +22,7 @@ class Kong_Helpdesk_Slack extends Kong_Helpdesk
 
     /**
      * Init Slack Integration with option credentials
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.0
      * @link    https://plugins.db-dzine.com
@@ -53,7 +53,7 @@ class Kong_Helpdesk_Slack extends Kong_Helpdesk
 
     /**
      * Slack information when Ticket created
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.0
      * @link    https://plugins.db-dzine.com
@@ -100,7 +100,7 @@ class Kong_Helpdesk_Slack extends Kong_Helpdesk
 
     /**
      * Slack information when Comment created
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.0
      * @link    https://plugins.db-dzine.com
@@ -141,7 +141,7 @@ class Kong_Helpdesk_Slack extends Kong_Helpdesk
 
     /**
      *  Slack information when Ticket status changed
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.0
      * @link    https://plugins.db-dzine.com
@@ -200,7 +200,7 @@ class Kong_Helpdesk_Slack extends Kong_Helpdesk
 
     /**
      * Slack information when assigned Agent has changed
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.0
      * @link    https://plugins.db-dzine.com
@@ -259,7 +259,7 @@ class Kong_Helpdesk_Slack extends Kong_Helpdesk
 
     /**
      * Assigned Agent added Notification
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.0
      * @link    https://plugins.db-dzine.com
@@ -295,7 +295,7 @@ class Kong_Helpdesk_Slack extends Kong_Helpdesk
 
     /**
      * Send Message to Slack Service
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.0
      * @link    https://plugins.db-dzine.com

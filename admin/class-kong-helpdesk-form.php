@@ -7,7 +7,7 @@ class Kong_Helpdesk_Form extends Kong_Helpdesk
 
     /**
      * Construct Form
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.0
      * @link    https://plugins.db-dzine.com
@@ -24,7 +24,7 @@ class Kong_Helpdesk_Form extends Kong_Helpdesk
 
     /**
      * Init Helpdesk Forms
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.0
      * @link    https://plugins.db-dzine.com
@@ -41,7 +41,7 @@ class Kong_Helpdesk_Form extends Kong_Helpdesk
 
     /**
      * Render new ticket shortcode [new_ticket type="Simple|WooCommerce|Envato|Chat"]
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.0
      * @link    https://plugins.db-dzine.com
@@ -210,7 +210,7 @@ class Kong_Helpdesk_Form extends Kong_Helpdesk
 
     /**
      * Extra WooCommerce Fields
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.0
      * @link    https://plugins.db-dzine.com
@@ -254,7 +254,7 @@ class Kong_Helpdesk_Form extends Kong_Helpdesk
 
     /**
      * Get Username Field
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.0
      * @link    https://plugins.db-dzine.com
@@ -270,7 +270,7 @@ class Kong_Helpdesk_Form extends Kong_Helpdesk
 
     /**
      * Get Email Field
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.0
      * @link    https://plugins.db-dzine.com
@@ -286,7 +286,7 @@ class Kong_Helpdesk_Form extends Kong_Helpdesk
 
     /**
      * Get Subject Field
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.0
      * @link    https://plugins.db-dzine.com
@@ -303,7 +303,7 @@ class Kong_Helpdesk_Form extends Kong_Helpdesk
 
     /**
      * Get Subject Field
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.0
      * @link    https://plugins.db-dzine.com
@@ -321,7 +321,7 @@ class Kong_Helpdesk_Form extends Kong_Helpdesk
 
     /**
      * Get Message Field
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.0
      * @link    https://plugins.db-dzine.com
@@ -345,7 +345,7 @@ class Kong_Helpdesk_Form extends Kong_Helpdesk
 
     /**
      * Get System Field
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.0
      * @link    https://plugins.db-dzine.com
@@ -380,7 +380,7 @@ class Kong_Helpdesk_Form extends Kong_Helpdesk
 
     /**
      * Get Priority Field
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.0
      * @link    https://plugins.db-dzine.com
@@ -415,7 +415,7 @@ class Kong_Helpdesk_Form extends Kong_Helpdesk
 
     /**
      * Get Types Field
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.0
      * @link    https://plugins.db-dzine.com
@@ -450,7 +450,7 @@ class Kong_Helpdesk_Form extends Kong_Helpdesk
 
     /**
      * Get Order Field
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.0
      * @link    https://plugins.db-dzine.com
@@ -485,7 +485,7 @@ class Kong_Helpdesk_Form extends Kong_Helpdesk
 
     /**
      * Get Order Subject Fields
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.0
      * @link    https://plugins.db-dzine.com
@@ -519,7 +519,7 @@ class Kong_Helpdesk_Form extends Kong_Helpdesk
 
     /**
      * Get Products Fields
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.0
      * @link    https://plugins.db-dzine.com
@@ -559,7 +559,7 @@ class Kong_Helpdesk_Form extends Kong_Helpdesk
 
     /**
      * Get Envato Purchase Code Field
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.0
      * @link    https://plugins.db-dzine.com
@@ -579,7 +579,7 @@ class Kong_Helpdesk_Form extends Kong_Helpdesk
 
     /**
      * Get Envato Items Field
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.0
      * @link    https://plugins.db-dzine.com
@@ -607,7 +607,7 @@ class Kong_Helpdesk_Form extends Kong_Helpdesk
 
     /**
      * Get Envato Items
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.0
      * @link    https://plugins.db-dzine.com
@@ -635,7 +635,7 @@ class Kong_Helpdesk_Form extends Kong_Helpdesk
 
     /**
      * Get Website URL Field
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.0
      * @link    https://plugins.db-dzine.com
@@ -655,7 +655,7 @@ class Kong_Helpdesk_Form extends Kong_Helpdesk
 
     /**
      * Get Attachments Field
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.0
      * @link    https://plugins.db-dzine.com

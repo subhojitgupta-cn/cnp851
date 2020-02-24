@@ -7,7 +7,7 @@ class Kong_Helpdesk_Crisp extends Kong_Helpdesk
 
     /**
      * Construct Livechat Class
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.0
      * @link    https://plugins.db-dzine.com
@@ -26,7 +26,7 @@ class Kong_Helpdesk_Crisp extends Kong_Helpdesk
 
     /**
      * Init Livechat
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.0
      * @link    https://plugins.db-dzine.com
@@ -114,7 +114,7 @@ class Kong_Helpdesk_Crisp extends Kong_Helpdesk
 
     /**
      * Get Crisp Session
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.0
      * @link    https://plugins.db-dzine.com
@@ -146,7 +146,7 @@ class Kong_Helpdesk_Crisp extends Kong_Helpdesk
 
     /**
      * Authenticate Crisp
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.0
      * @link    https://plugins.db-dzine.com

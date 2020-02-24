@@ -7,7 +7,7 @@ class Kong_Helpdesk_Saved_Replies_Post_Type extends Kong_Helpdesk
 
     /**
      * Construct Saved Replies Class
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.0
      * @link    https://plugins.db-dzine.com
@@ -27,7 +27,7 @@ class Kong_Helpdesk_Saved_Replies_Post_Type extends Kong_Helpdesk
 
     /**
      * Init Saved Replies
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.0
      * @link    https://plugins.db-dzine.com
@@ -48,7 +48,7 @@ class Kong_Helpdesk_Saved_Replies_Post_Type extends Kong_Helpdesk
 
     /**
      * Get saved Replies
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.0
      * @link    https://plugins.db-dzine.com
@@ -104,7 +104,7 @@ class Kong_Helpdesk_Saved_Replies_Post_Type extends Kong_Helpdesk
 
     /**
      * Get single save reply to load this into comment form
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.0
      * @link    https://plugins.db-dzine.com
@@ -133,7 +133,7 @@ class Kong_Helpdesk_Saved_Replies_Post_Type extends Kong_Helpdesk
 
     /**
      * Register Custom Post type "saved_reply"
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.0
      * @link    https://plugins.db-dzine.com
@@ -195,7 +195,7 @@ class Kong_Helpdesk_Saved_Replies_Post_Type extends Kong_Helpdesk
      * Register Saved Reply Categories and Saved Reply Filter Taxonomies.
     *  Saved reply categories => For better internal categorization
     *  Saved reply tags => For suggested reply
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.0
      * @link    https://plugins.db-dzine.com
@@ -281,7 +281,7 @@ class Kong_Helpdesk_Saved_Replies_Post_Type extends Kong_Helpdesk
     /**
      * Show Copy link on comments
      * Allows users to copy comment_content to saved_reply post_content
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.0
      * @link    https://plugins.db-dzine.com
@@ -314,7 +314,7 @@ class Kong_Helpdesk_Saved_Replies_Post_Type extends Kong_Helpdesk
 
     /**
      * Created the new Saved Reply based on Comment
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.0
      * @link    https://plugins.db-dzine.com

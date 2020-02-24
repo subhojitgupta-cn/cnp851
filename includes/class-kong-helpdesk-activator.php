@@ -3,7 +3,7 @@
 /**
  * Fired during plugin activation
  *
- * @link       http://plugins.db-dzine.com
+ * @link       
  * @since      1.0.0
  *
  * @package    Kong_Helpdesk
@@ -18,7 +18,7 @@
  * @since      1.0.0
  * @package    Kong_Helpdesk
  * @subpackage Kong_Helpdesk/includes
- * @author     Daniel Barenkamp <contact@db-dzine.de>
+ * @author     
  */
 class Kong_Helpdesk_Activator {
 
@@ -160,7 +160,7 @@ class Kong_Helpdesk_Activator {
 
     /**
      * On plugin activation -> Assign Caps
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.0
      * @link    https://plugins.db-dzine.com

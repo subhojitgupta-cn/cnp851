@@ -37,7 +37,7 @@ class Kong_Helpdesk_Ticket_Processor extends Kong_Helpdesk
 
     /**
      * Constructor
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.0
      * @link    https://plugins.db-dzine.com
@@ -53,7 +53,7 @@ class Kong_Helpdesk_Ticket_Processor extends Kong_Helpdesk
 
     /**
      * Init the Ticket Processor
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.0
      * @link    https://plugins.db-dzine.com
@@ -67,7 +67,7 @@ class Kong_Helpdesk_Ticket_Processor extends Kong_Helpdesk
 
     /**
      * Sanitize the data for the Ticket
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.0
      * @link    https://plugins.db-dzine.com
@@ -113,7 +113,7 @@ class Kong_Helpdesk_Ticket_Processor extends Kong_Helpdesk
 
     /**
      * Validate the data for Ticket
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.0
      * @link    https://plugins.db-dzine.com
@@ -224,7 +224,7 @@ class Kong_Helpdesk_Ticket_Processor extends Kong_Helpdesk
 
     /**
      * Verfiy Envato Purchase Code
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.0
      * @link    https://plugins.db-dzine.com
@@ -253,7 +253,7 @@ class Kong_Helpdesk_Ticket_Processor extends Kong_Helpdesk
 
     /**
      * Create the Ticket
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.0
      * @link    https://plugins.db-dzine.com
@@ -330,7 +330,7 @@ class Kong_Helpdesk_Ticket_Processor extends Kong_Helpdesk
 
     /**
      * Check if user exists by name & email
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.0
      * @link    https://plugins.db-dzine.com
@@ -357,7 +357,7 @@ class Kong_Helpdesk_Ticket_Processor extends Kong_Helpdesk
 
     /**
      * Check if user is an reporter
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.0
      * @link    https://plugins.db-dzine.com
@@ -379,7 +379,7 @@ class Kong_Helpdesk_Ticket_Processor extends Kong_Helpdesk
 
     /**
      * Create WP User
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.0
      * @link    https://plugins.db-dzine.com

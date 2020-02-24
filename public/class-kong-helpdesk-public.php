@@ -8,7 +8,7 @@ class Kong_Helpdesk_Public
 
     /**
      * Store Locator Plugin Construct
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.0
      * @link    http://plugins.db-dzine.com
@@ -23,7 +23,7 @@ class Kong_Helpdesk_Public
 
     /**
      * Enqueue Styles
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.0
      * @link    http://plugins.db-dzine.com
@@ -51,7 +51,7 @@ class Kong_Helpdesk_Public
 
     /**
      * Register the JavaScript for the public-facing side of the site.
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.0
      * @link    http://plugins.db-dzine.com
@@ -106,7 +106,7 @@ class Kong_Helpdesk_Public
 
     /**
      * Get Options
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.0
      * @link    http://plugins.db-dzine.com
@@ -128,7 +128,7 @@ class Kong_Helpdesk_Public
 
     /**
      * Init the Public
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.0
      * @link    http://plugins.db-dzine.com

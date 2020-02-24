@@ -7,7 +7,7 @@ class Kong_Helpdesk_Exporter extends Kong_Helpdesk
 
     /**
      * Construct Ticket Locator Admin Class
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.0
      * @link    http://plugins.db-dzine.com
@@ -23,7 +23,7 @@ class Kong_Helpdesk_Exporter extends Kong_Helpdesk
 
     /**
      * Init the Exporter Function
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.0
      * @link    https://plugins.db-dzine.com
@@ -58,7 +58,7 @@ class Kong_Helpdesk_Exporter extends Kong_Helpdesk
 
     /**
      * Get All Tickets for Export
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.0
      * @link    https://plugins.db-dzine.com
@@ -137,7 +137,7 @@ class Kong_Helpdesk_Exporter extends Kong_Helpdesk
 
     /**
      * Build the Export file
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.0
      * @link    https://plugins.db-dzine.com
@@ -251,7 +251,7 @@ class Kong_Helpdesk_Exporter extends Kong_Helpdesk
 
     /**
      * Show a notice
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.0
      * @link    https://plugins.db-dzine.com

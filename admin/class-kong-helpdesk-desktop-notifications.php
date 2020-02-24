@@ -7,7 +7,7 @@ class Kong_Helpdesk_Desktop_Notifications extends Kong_Helpdesk
 
     /**
      * Construct Desktop Notifications Class
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.0
      * @link    http://plugins.db-dzine.com
@@ -22,7 +22,7 @@ class Kong_Helpdesk_Desktop_Notifications extends Kong_Helpdesk
 
     /**
      * Init Desktop Notification
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.0
      * @link    https://plugins.db-dzine.com
@@ -37,7 +37,7 @@ class Kong_Helpdesk_Desktop_Notifications extends Kong_Helpdesk
     /**
      * Get All comment IDs for current users tickets
      * This due to check if new comments will be added (intersection)
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.0
      * @link    https://plugins.db-dzine.com
@@ -89,7 +89,7 @@ class Kong_Helpdesk_Desktop_Notifications extends Kong_Helpdesk
 
     /**
      * Get new comments (Intersection of old & just added)
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.0
      * @link    https://plugins.db-dzine.com

@@ -498,7 +498,7 @@ class Kong_Helpdesk
 
     /**
      * Get Options
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.0
      * @link    http://plugins.db-dzine.com

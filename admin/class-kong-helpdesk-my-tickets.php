@@ -7,7 +7,7 @@ class Kong_Helpdesk_My_Tickets extends Kong_Helpdesk
 
     /**
      * Construct My Tickets Class
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.0
      * @link    https://plugins.db-dzine.com
@@ -23,7 +23,7 @@ class Kong_Helpdesk_My_Tickets extends Kong_Helpdesk
 
     /**
      * Init My Tickets Class
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.0
      * @link    https://plugins.db-dzine.com
@@ -40,7 +40,7 @@ class Kong_Helpdesk_My_Tickets extends Kong_Helpdesk
 
     /**
      * Render my tickets shortcode [my_tickets orderby="date" order="DESC"]
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.0
      * @link    https://plugins.db-dzine.com
@@ -259,15 +259,16 @@ class Kong_Helpdesk_My_Tickets extends Kong_Helpdesk
                 'menu_name'  => 'INBOX',
                 'slug'       =>'konginbox',
                 'icon'       =>'dashicons-email',
-                'position'   => 10,
+                'position'   => 2,
             ),
             array(
                 'id'       => 'ticket_system',
                 'menu_name'  => 'FOLDERS',
                 'slug'       =>'kongfolder',
                 'icon'       =>'dashicons-portfolio',
-                'position'   => 11,
+                'position'   => 3,
             )
+            
         );
 
 

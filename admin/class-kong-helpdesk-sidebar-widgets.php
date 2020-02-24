@@ -7,7 +7,7 @@ class Kong_Helpdesk_Sidebar_Widgets extends Kong_Helpdesk
 
     /**
      * Construct Sidebar
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.0
      * @link    https://plugins.db-dzine.com
@@ -22,7 +22,7 @@ class Kong_Helpdesk_Sidebar_Widgets extends Kong_Helpdesk
 
     /**
      * Init Sidebar Widgetes
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.0
      * @link    https://plugins.db-dzine.com
@@ -36,7 +36,7 @@ class Kong_Helpdesk_Sidebar_Widgets extends Kong_Helpdesk
 
     /**
      * Register Helpdesk Sidebar
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.0
      * @link    https://plugins.db-dzine.com
@@ -59,7 +59,7 @@ class Kong_Helpdesk_Sidebar_Widgets extends Kong_Helpdesk
 
     /**
      * Register Helpdesk Widgets
-     * @author Daniel Barenkamp
+     * @author CN
      * @version 1.0.0
      * @since   1.0.0
      * @link    https://plugins.db-dzine.com
