@@ -98,6 +98,7 @@ class Kong_Helpdesk_Inbox extends Kong_Helpdesk
         }
         
         if(is_user_logged_in() && $this->setupMailbox()) {
+
             $this->checkInbox();
         }
     }

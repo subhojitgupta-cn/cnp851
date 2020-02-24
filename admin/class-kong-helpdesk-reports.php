@@ -266,6 +266,7 @@ class Kong_Helpdesk_Reports extends Kong_Helpdesk
 
 
         ?>
+       
         <div class="wrap">
             <div class="kong-helpdesk-container">
                 <h1><?php _e('Reports', 'kong-helpdesk'); ?></h1>
@@ -402,7 +403,7 @@ class Kong_Helpdesk_Reports extends Kong_Helpdesk
                           data: <?php echo json_encode(array_values($ticketsByPriority)) ?>
                         });</script>
                     </div>
-<!--                     <div class="kong-helpdesk-col-sm-6">
+                    <div class="kong-helpdesk-col-sm-6">
                         <h3 class="kong-helpdesk-center">Created / Completed Tickets by Month</h3>
                         <div id="created-completed-tickets-by-month"></div>
                         <script>Morris.Bar({
@@ -422,7 +423,7 @@ class Kong_Helpdesk_Reports extends Kong_Helpdesk
                               labels: ['Series A', 'Series B']
                             });
                         </script>
-                    </div> -->
+                    </div>
                 </div>
             </div>
         </div>
