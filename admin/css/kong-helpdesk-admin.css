@@ -658,7 +658,7 @@ ul.ticket_notes li a.delete_note {
 }
 
 .kong-helpdesk-livechat-message:before, 
-.kong-helpdesk-livechat-message:after,{
+.kong-helpdesk-livechat-message:after{
   content: " ";
   display: table;
   clear: both;
@@ -724,3 +724,187 @@ input[type="text"].kong-helpdesk-livechat-comment-form-message,
 .lum-lightbox.lum-open {
     z-index: 99999999;
 }
+
+
+/* custom css */
+
+.app__navigation  {
+  overflow-y: scroll !important;
+}
+body::-webkit-scrollbar,
+.app__navigation::-webkit-scrollbar,
+.kong-container::-webkit-scrollbar,
+.form-landing::-webkit-scrollbar {
+ width: 5px;
+}
+
+body::-webkit-scrollbar-track,
+.app__navigation::-webkit-scrollbar-track,
+.kong-container::-webkit-scrollbar-track,
+.form-landing::-webkit-scrollbar-track {
+ box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+body::-webkit-scrollbar-thumb,
+.app__navigation::-webkit-scrollbar-thumb,
+.kong-container::-webkit-scrollbar-thumb,
+.form-landing::-webkit-scrollbar-thumb {
+ background-color:#3a3a3a;
+ outline: 1px solid #000;
+ border-radius: 5px;
+}
+.kong-container::-webkit-scrollbar-thumb {
+background-color: #000
+}
+.wp-submenu .wp-submenu-head {
+  display: none !important;
+}
+.side-navigation__menu-item > i {
+  display: none !important;
+}
+li.wp-first-item {
+  padding: 0 !important;
+}
+li.wp-first-item a{
+  padding: 15px !important;
+}
+.wp-submenu li a i {
+  display: none !important;
+}
+.wp-submenu li a {
+  text-transform: capitalize;
+}
+
+.wp-submenu li a span {
+  float: right !important;
+  background: #98752d;
+  padding: 2px 10px;
+  border-radius: 20px;
+  font-size: 11px;
+  width: 40px;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.tablenav.bottom {
+  display: none !important; 
+}
+
+.inboxes.widefat th.sortable a, .inboxes.widefat th.sorted a, .inboxes.widefat th {
+  font-size: 12px !important;
+  color: #a2a2a2 !important;
+}
+.inboxes.widefat th:first-of-type {
+  width: 80px;
+}
+.inboxes #the-list tr:last-child td, .inboxes #the-list tr:last-child th {
+  vertical-align: middle !important;
+}
+.inboxes .customer.column-customer a{
+  display: flex;
+  align-items: center;
+}
+.inboxes td.customer.column-customer a span{
+   margin-right: 5px;
+   color: #6f6f6f;
+}
+.inboxes th#ticket_summary {
+  width: 40%;
+}
+.inboxes .helpdesk-avatar {
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+}
+.info-warp {
+  display: flex;
+  align-items: flex-start;
+  flex-flow: column;
+  position: relative;
+}
+.info-warp p {
+  margin: 0 !important;
+}
+.info-warp > p {
+  color: #272727;
+}
+.widefat tbody td, .widefat tbody th {
+  padding: 12px 10px !important;
+}
+.info-warp .cat-count {
+  background: #f1f1f1;
+  padding: 2px 5px;
+  box-shadow: 0 0 5px 0 rgba(0,0,0,.1);
+  color: #9c9c9c;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translate(0%, -50%);
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+}
+.row-actions {
+  position: static !important;
+}
+.info-warp .cat-name {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  margin-bottom: 5px;
+}
+.info-warp .cat-name span {
+  background: #AAAEB7;
+  color: #fff;
+  padding: 0px 7px;
+  border-radius: 3px;
+  font-size: 11px !important;
+  margin-right: 5px;
+}
+.info-warp .cat-name p {
+  font-weight: 600;
+}
+td.assigned_to.column-assigned_to, td.last_updated.column-last_updated {
+  color: #272727;
+}
+td.ticket_id.column-ticket_id.has-row-actions.column-primary a {
+  font-size: 12px;
+  color: #8C6C2A;
+}
+th.check-column {
+  display: flex;
+  align-items: center;
+  margin-top: 5px;
+}
+tbody tr {
+  border-bottom: 1px solid #e4e4e4 !important;
+}
+.categorydiv select {
+  display: block !important;
+}
+.tablenav {
+  clear: both;
+  height: 30px;
+  margin: 6px 0 4px;
+  vertical-align: middle;
+  margin-bottom: 15px;
+  width: 100%;
+}
+.alignleft.actions.bulkactions {
+  display: flex;
+}
+.alignleft.actions.bulkactions .select-wrapper {
+  position: static !important;
+}
+.btn.action {
+  padding: 0 25px;
+  height: 40px;
+  border-radius: 5px;
+  font-size: 14px;
+  line-height: 1 !important;
+  margin-left: 10px !important; 
+}
+
