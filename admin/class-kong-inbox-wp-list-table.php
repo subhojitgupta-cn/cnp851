@@ -513,7 +513,7 @@ class Kong_Inbox_List_Table extends WP_List_Table {
    				$comment_latest = $comment[0]->comment_content;
    				$last_updated = human_time_diff(get_the_time ( 'U' ), current_time( 'timestamp' )). ' ago';
    			
-   				$ticket_summary = '<span>'.$term_list_string.'</span><span>'.$title.'</span><span>'.$comment_latest.'</span><span>'.$comment_count.'</span>';
+   				$ticket_summary = '<div class="info-warp"><div class="cat-name"><span>'.$term_list_string.'</span><p>'.$title.'</p></div><p>'.$comment_latest.'</p><span class="cat-count">'.$comment_count.'</span></div>';
 
 
            		$tickets_data[] = array(
