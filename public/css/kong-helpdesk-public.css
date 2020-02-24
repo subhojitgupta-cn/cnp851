@@ -1,0 +1,2273 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.kong-helpdesk-container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  width: 100%;
+}
+.kong-helpdesk-row {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+.kong-helpdesk-col-xs-1, .kong-helpdesk-col-sm-1, .kong-helpdesk-col-md-1, .kong-helpdesk-col-lg-1, .kong-helpdesk-col-xs-2, .kong-helpdesk-col-sm-2, .kong-helpdesk-col-md-2, .kong-helpdesk-col-lg-2, .kong-helpdesk-col-xs-3, .kong-helpdesk-col-sm-3, .kong-helpdesk-col-md-3, .kong-helpdesk-col-lg-3, .kong-helpdesk-col-xs-4, .kong-helpdesk-col-sm-4, .kong-helpdesk-col-md-4, .kong-helpdesk-col-lg-4, .kong-helpdesk-col-xs-5, .kong-helpdesk-col-sm-5, .kong-helpdesk-col-md-5, .kong-helpdesk-col-lg-5, .kong-helpdesk-col-xs-6, .kong-helpdesk-col-sm-6, .kong-helpdesk-col-md-6, .kong-helpdesk-col-lg-6, .kong-helpdesk-col-xs-7, .kong-helpdesk-col-sm-7, .kong-helpdesk-col-md-7, .kong-helpdesk-col-lg-7, .kong-helpdesk-col-xs-8, .kong-helpdesk-col-sm-8, .kong-helpdesk-col-md-8, .kong-helpdesk-col-lg-8, .kong-helpdesk-col-xs-9, .kong-helpdesk-col-sm-9, .kong-helpdesk-col-md-9, .kong-helpdesk-col-lg-9, .kong-helpdesk-col-xs-10, .kong-helpdesk-col-sm-10, .kong-helpdesk-col-md-10, .kong-helpdesk-col-lg-10, .kong-helpdesk-col-xs-11, .kong-helpdesk-col-sm-11, .kong-helpdesk-col-md-11, .kong-helpdesk-col-lg-11, .kong-helpdesk-col-xs-12, .kong-helpdesk-col-sm-12, .kong-helpdesk-col-md-12, .kong-helpdesk-col-lg-12 {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.kong-helpdesk-col-xs-1, .kong-helpdesk-col-xs-2, .kong-helpdesk-col-xs-3, .kong-helpdesk-col-xs-4, .kong-helpdesk-col-xs-5, .kong-helpdesk-col-xs-6, .kong-helpdesk-col-xs-7, .kong-helpdesk-col-xs-8, .kong-helpdesk-col-xs-9, .kong-helpdesk-col-xs-10, .kong-helpdesk-col-xs-11, .kong-helpdesk-col-xs-12 {
+  float: left;
+}
+.kong-helpdesk-col-xs-12 {
+  width: 100%;
+}
+.kong-helpdesk-col-xs-11 {
+  width: 91.66666667%;
+}
+.kong-helpdesk-col-xs-10 {
+  width: 83.33333333%;
+}
+.kong-helpdesk-col-xs-9 {
+  width: 75%;
+}
+.kong-helpdesk-col-xs-8 {
+  width: 66.66666667%;
+}
+.kong-helpdesk-col-xs-7 {
+  width: 58.33333333%;
+}
+.kong-helpdesk-col-xs-6 {
+  width: 50%;
+}
+.kong-helpdesk-col-xs-5 {
+  width: 41.66666667%;
+}
+.kong-helpdesk-col-xs-4 {
+  width: 33.33333333%;
+}
+.kong-helpdesk-col-xs-3 {
+  width: 25%;
+}
+.kong-helpdesk-col-xs-2 {
+  width: 16.66666667%;
+}
+.kong-helpdesk-col-xs-1 {
+  width: 8.33333333%;
+}
+.kong-helpdesk-col-xs-pull-12 {
+  right: 100%;
+}
+.kong-helpdesk-col-xs-pull-11 {
+  right: 91.66666667%;
+}
+.kong-helpdesk-col-xs-pull-10 {
+  right: 83.33333333%;
+}
+.kong-helpdesk-col-xs-pull-9 {
+  right: 75%;
+}
+.kong-helpdesk-col-xs-pull-8 {
+  right: 66.66666667%;
+}
+.kong-helpdesk-col-xs-pull-7 {
+  right: 58.33333333%;
+}
+.kong-helpdesk-col-xs-pull-6 {
+  right: 50%;
+}
+.kong-helpdesk-col-xs-pull-5 {
+  right: 41.66666667%;
+}
+.kong-helpdesk-col-xs-pull-4 {
+  right: 33.33333333%;
+}
+.kong-helpdesk-col-xs-pull-3 {
+  right: 25%;
+}
+.kong-helpdesk-col-xs-pull-2 {
+  right: 16.66666667%;
+}
+.kong-helpdesk-col-xs-pull-1 {
+  right: 8.33333333%;
+}
+.kong-helpdesk-col-xs-pull-0 {
+  right: auto;
+}
+.kong-helpdesk-col-xs-push-12 {
+  left: 100%;
+}
+.kong-helpdesk-col-xs-push-11 {
+  left: 91.66666667%;
+}
+.kong-helpdesk-col-xs-push-10 {
+  left: 83.33333333%;
+}
+.kong-helpdesk-col-xs-push-9 {
+  left: 75%;
+}
+.kong-helpdesk-col-xs-push-8 {
+  left: 66.66666667%;
+}
+.kong-helpdesk-col-xs-push-7 {
+  left: 58.33333333%;
+}
+.kong-helpdesk-col-xs-push-6 {
+  left: 50%;
+}
+.kong-helpdesk-col-xs-push-5 {
+  left: 41.66666667%;
+}
+.kong-helpdesk-col-xs-push-4 {
+  left: 33.33333333%;
+}
+.kong-helpdesk-col-xs-push-3 {
+  left: 25%;
+}
+.kong-helpdesk-col-xs-push-2 {
+  left: 16.66666667%;
+}
+.kong-helpdesk-col-xs-push-1 {
+  left: 8.33333333%;
+}
+.kong-helpdesk-col-xs-push-0 {
+  left: auto;
+}
+.kong-helpdesk-col-xs-offset-12 {
+  margin-left: 100%;
+}
+.kong-helpdesk-col-xs-offset-11 {
+  margin-left: 91.66666667%;
+}
+.kong-helpdesk-col-xs-offset-10 {
+  margin-left: 83.33333333%;
+}
+.kong-helpdesk-col-xs-offset-9 {
+  margin-left: 75%;
+}
+.kong-helpdesk-col-xs-offset-8 {
+  margin-left: 66.66666667%;
+}
+.kong-helpdesk-col-xs-offset-7 {
+  margin-left: 58.33333333%;
+}
+.kong-helpdesk-col-xs-offset-6 {
+  margin-left: 50%;
+}
+.kong-helpdesk-col-xs-offset-5 {
+  margin-left: 41.66666667%;
+}
+.kong-helpdesk-col-xs-offset-4 {
+  margin-left: 33.33333333%;
+}
+.kong-helpdesk-col-xs-offset-3 {
+  margin-left: 25%;
+}
+.kong-helpdesk-col-xs-offset-2 {
+  margin-left: 16.66666667%;
+}
+.kong-helpdesk-col-xs-offset-1 {
+  margin-left: 8.33333333%;
+}
+.kong-helpdesk-col-xs-offset-0 {
+  margin-left: 0%;
+}
+@media (min-width: 768px) {
+  .kong-helpdesk-col-sm-1, .kong-helpdesk-col-sm-2, .kong-helpdesk-col-sm-3, .kong-helpdesk-col-sm-4, .kong-helpdesk-col-sm-5, .kong-helpdesk-col-sm-6, .kong-helpdesk-col-sm-7, .kong-helpdesk-col-sm-8, .kong-helpdesk-col-sm-9, .kong-helpdesk-col-sm-10, .kong-helpdesk-col-sm-11, .kong-helpdesk-col-sm-12 {
+    float: left;
+  }
+  .kong-helpdesk-col-sm-12 {
+    width: 100%;
+  }
+  .kong-helpdesk-col-sm-11 {
+    width: 91.66666667%;
+  }
+  .kong-helpdesk-col-sm-10 {
+    width: 83.33333333%;
+  }
+  .kong-helpdesk-col-sm-9 {
+    width: 75%;
+  }
+  .kong-helpdesk-col-sm-8 {
+    width: 66.66666667%;
+  }
+  .kong-helpdesk-col-sm-7 {
+    width: 58.33333333%;
+  }
+  .kong-helpdesk-col-sm-6 {
+    width: 50%;
+  }
+  .kong-helpdesk-col-sm-5 {
+    width: 41.66666667%;
+  }
+  .kong-helpdesk-col-sm-4 {
+    width: 33.33333333%;
+  }
+  .kong-helpdesk-col-sm-3 {
+    width: 25%;
+  }
+  .kong-helpdesk-col-sm-2 {
+    width: 16.66666667%;
+  }
+  .kong-helpdesk-col-sm-1 {
+    width: 8.33333333%;
+  }
+  .kong-helpdesk-col-sm-pull-12 {
+    right: 100%;
+  }
+  .kong-helpdesk-col-sm-pull-11 {
+    right: 91.66666667%;
+  }
+  .kong-helpdesk-col-sm-pull-10 {
+    right: 83.33333333%;
+  }
+  .kong-helpdesk-col-sm-pull-9 {
+    right: 75%;
+  }
+  .kong-helpdesk-col-sm-pull-8 {
+    right: 66.66666667%;
+  }
+  .kong-helpdesk-col-sm-pull-7 {
+    right: 58.33333333%;
+  }
+  .kong-helpdesk-col-sm-pull-6 {
+    right: 50%;
+  }
+  .kong-helpdesk-col-sm-pull-5 {
+    right: 41.66666667%;
+  }
+  .kong-helpdesk-col-sm-pull-4 {
+    right: 33.33333333%;
+  }
+  .kong-helpdesk-col-sm-pull-3 {
+    right: 25%;
+  }
+  .kong-helpdesk-col-sm-pull-2 {
+    right: 16.66666667%;
+  }
+  .kong-helpdesk-col-sm-pull-1 {
+    right: 8.33333333%;
+  }
+  .kong-helpdesk-col-sm-pull-0 {
+    right: auto;
+  }
+  .kong-helpdesk-col-sm-push-12 {
+    left: 100%;
+  }
+  .kong-helpdesk-col-sm-push-11 {
+    left: 91.66666667%;
+  }
+  .kong-helpdesk-col-sm-push-10 {
+    left: 83.33333333%;
+  }
+  .kong-helpdesk-col-sm-push-9 {
+    left: 75%;
+  }
+  .kong-helpdesk-col-sm-push-8 {
+    left: 66.66666667%;
+  }
+  .kong-helpdesk-col-sm-push-7 {
+    left: 58.33333333%;
+  }
+  .kong-helpdesk-col-sm-push-6 {
+    left: 50%;
+  }
+  .kong-helpdesk-col-sm-push-5 {
+    left: 41.66666667%;
+  }
+  .kong-helpdesk-col-sm-push-4 {
+    left: 33.33333333%;
+  }
+  .kong-helpdesk-col-sm-push-3 {
+    left: 25%;
+  }
+  .kong-helpdesk-col-sm-push-2 {
+    left: 16.66666667%;
+  }
+  .kong-helpdesk-col-sm-push-1 {
+    left: 8.33333333%;
+  }
+  .kong-helpdesk-col-sm-push-0 {
+    left: auto;
+  }
+  .kong-helpdesk-col-sm-offset-12 {
+    margin-left: 100%;
+  }
+  .kong-helpdesk-col-sm-offset-11 {
+    margin-left: 91.66666667%;
+  }
+  .kong-helpdesk-col-sm-offset-10 {
+    margin-left: 83.33333333%;
+  }
+  .kong-helpdesk-col-sm-offset-9 {
+    margin-left: 75%;
+  }
+  .kong-helpdesk-col-sm-offset-8 {
+    margin-left: 66.66666667%;
+  }
+  .kong-helpdesk-col-sm-offset-7 {
+    margin-left: 58.33333333%;
+  }
+  .kong-helpdesk-col-sm-offset-6 {
+    margin-left: 50%;
+  }
+  .kong-helpdesk-col-sm-offset-5 {
+    margin-left: 41.66666667%;
+  }
+  .kong-helpdesk-col-sm-offset-4 {
+    margin-left: 33.33333333%;
+  }
+  .kong-helpdesk-col-sm-offset-3 {
+    margin-left: 25%;
+  }
+  .kong-helpdesk-col-sm-offset-2 {
+    margin-left: 16.66666667%;
+  }
+  .kong-helpdesk-col-sm-offset-1 {
+    margin-left: 8.33333333%;
+  }
+  .kong-helpdesk-col-sm-offset-0 {
+    margin-left: 0%;
+  }
+}
+
+.kong-helpdesk-clearfix:before,
+.kong-helpdesk-clearfix:after,
+.kong-helpdesk-container:before,
+.kong-helpdesk-container:after,
+.kong-helpdesk-container-fluid:before,
+.kong-helpdesk-container-fluid:after,
+.kong-helpdesk-row:before,
+.kong-helpdesk-row:after {
+  content: " ";
+  display: table;
+}
+.kong-helpdesk-clearfix:after,
+.kong-helpdesk-container:after,
+.kong-helpdesk-container-fluid:after,
+.kong-helpdesk-row:after {
+  clear: both;
+}
+.kong-helpdesk-center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+/*.kong-helpdesk-pull-right {
+  float: right !important;
+}*/
+.kong-helpdesk-pull-left {
+  float: left !important;
+}
+.kong-helpdesk-hide {
+  display: none !important;
+}
+.kong-helpdesk-show {
+  display: block !important;
+}
+.kong-helpdesk-invisible {
+  visibility: hidden;
+}
+.kong-helpdesk-text-hide {
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+}
+.kong-helpdesk-hidden {
+  display: none !important;
+}
+.kong-helpdesk-affix {
+  position: fixed;
+}
+
+.kong-helpdesk-left {
+  text-align: left;
+}
+
+.kong-helpdesk-right {
+  text-align: right;
+}
+
+.kong-helpdesk-center {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.kong-helpdesk-justify {
+  text-align: justify;
+}
+
+.kong-helpdesk-box {
+  background-color: #f7f7f7;
+  padding: 50px;
+}
+
+.kong-helpdesk button, .kong-helpdesk 
+input, .kong-helpdesk 
+optgroup, .kong-helpdesk 
+select, .kong-helpdesk 
+textarea {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+}
+.kong-helpdesk 
+button {
+  overflow: visible;
+}
+.kong-helpdesk 
+button, .kong-helpdesk 
+select {
+  text-transform: none;
+}
+.kong-helpdesk 
+button, .kong-helpdesk 
+html input[type="button"], .kong-helpdesk 
+input[type="reset"], .kong-helpdesk 
+input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+.kong-helpdesk 
+button[disabled], .kong-helpdesk 
+html input[disabled] {
+  cursor: default;
+}
+.kong-helpdesk 
+button::-moz-focus-inner, .kong-helpdesk 
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+.kong-helpdesk 
+input {
+  line-height: normal;
+}
+.kong-helpdesk 
+input[type="checkbox"], .kong-helpdesk 
+input[type="radio"] {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+}
+.kong-helpdesk 
+input[type="number"]::-webkit-inner-spin-button, .kong-helpdesk 
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+.kong-helpdesk 
+input[type="search"] {
+  -webkit-appearance: textfield;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.kong-helpdesk 
+.form-control.kong-helpdesk-faq-searchterm {
+  height: 45px;
+}
+.kong-helpdesk 
+input[type="search"]::-webkit-search-cancel-button, .kong-helpdesk 
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+.kong-helpdesk 
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+.kong-helpdesk 
+legend {
+  border: 0;
+  padding: 0;
+}
+.kong-helpdesk 
+textarea {
+  overflow: auto;
+}
+.kong-helpdesk 
+optgroup {
+  font-weight: bold;
+}
+.kong-helpdesk 
+
+input, .kong-helpdesk 
+button, .kong-helpdesk 
+select, .kong-helpdesk 
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+.kong-helpdesk 
+fieldset {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  min-width: 0;
+}
+.kong-helpdesk 
+legend {
+  display: block;
+  width: 100%;
+  padding: 0;
+  margin-bottom: 20px;
+  font-size: 21px;
+  line-height: inherit;
+  color: #333333;
+  border: 0;
+  border-bottom: 1px solid #e5e5e5;
+}
+.kong-helpdesk 
+label {
+  display: inline-block;
+  max-width: 100%;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+.kong-helpdesk 
+input[type="radio"], .kong-helpdesk 
+input[type="checkbox"] {
+  margin: 4px 0 0;
+  margin-top: 1px \9;
+  line-height: normal;
+}
+.kong-helpdesk 
+input[type="file"] {
+  display: block;
+}
+.kong-helpdesk 
+input[type="range"] {
+  display: block;
+  width: 100%;
+}
+.kong-helpdesk 
+select[multiple], .kong-helpdesk 
+select[size] {
+  height: auto;
+}
+.kong-helpdesk 
+input[type="file"]:focus, .kong-helpdesk 
+input[type="radio"]:focus, .kong-helpdesk 
+input[type="checkbox"]:focus {
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+.kong-helpdesk 
+output {
+  display: block;
+  padding-top: 7px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #555555;
+}
+.kong-helpdesk 
+.form-control {
+  display: block;
+  width: 100%;
+  height: 34px;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #555555;
+  background-color: rgb(247, 247, 247);
+  background-image: none;
+  border: 1px solid rgb(238, 238, 238);
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, .kong-helpdesk  0, .kong-helpdesk  0, .kong-helpdesk  0.075);
+  box-shadow: inset 0 1px 1px rgba(0, .kong-helpdesk  0, .kong-helpdesk  0, .kong-helpdesk  0.075);
+  -webkit-transition: border-color ease-in-out .15s, .kong-helpdesk  -webkit-box-shadow ease-in-out .15s;
+  -o-transition: border-color ease-in-out .15s, .kong-helpdesk  box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s, .kong-helpdesk  box-shadow ease-in-out .15s;
+}
+.kong-helpdesk 
+.form-control:focus {
+  border-color: #66afe9;
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, .kong-helpdesk 0, .kong-helpdesk 0, .kong-helpdesk .075), .kong-helpdesk  0 0 8px rgba(102, .kong-helpdesk  175, .kong-helpdesk  233, .kong-helpdesk  0.6);
+  box-shadow: inset 0 1px 1px rgba(0, .kong-helpdesk 0, .kong-helpdesk 0, .kong-helpdesk .075), .kong-helpdesk  0 0 8px rgba(102, .kong-helpdesk  175, .kong-helpdesk  233, .kong-helpdesk  0.6);
+}
+.kong-helpdesk 
+.form-control::-moz-placeholder {
+  color: #333333;
+  opacity: 1;
+}
+.kong-helpdesk 
+.form-control:-ms-input-placeholder {
+  color: #333333;
+}
+.kong-helpdesk 
+.form-control::-webkit-input-placeholder {
+  color: #333333;
+}
+.kong-helpdesk 
+.form-control::-ms-expand {
+  border: 0;
+  background-color: transparent;
+}
+.kong-helpdesk 
+.form-control[disabled], .kong-helpdesk 
+.form-control[readonly], .kong-helpdesk 
+fieldset[disabled] .form-control {
+  background-color: #eeeeee;
+  opacity: 1;
+}
+.kong-helpdesk 
+.form-control[disabled], .kong-helpdesk 
+fieldset[disabled] .form-control {
+  cursor: not-allowed;
+}
+.kong-helpdesk 
+textarea.form-control {
+  height: auto;
+}
+.kong-helpdesk 
+input[type="search"] {
+  -webkit-appearance: none;
+}
+.kong-helpdesk 
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  input[type="date"].form-control, .kong-helpdesk 
+  input[type="time"].form-control, .kong-helpdesk 
+  input[type="datetime-local"].form-control, .kong-helpdesk 
+  input[type="month"].form-control {
+    line-height: 34px;
+  }
+.kong-helpdesk 
+  input[type="date"].input-sm, .kong-helpdesk 
+  input[type="time"].input-sm, .kong-helpdesk 
+  input[type="datetime-local"].input-sm, .kong-helpdesk 
+  input[type="month"].input-sm, .kong-helpdesk 
+  .input-group-sm input[type="date"], .kong-helpdesk 
+  .input-group-sm input[type="time"], .kong-helpdesk 
+  .input-group-sm input[type="datetime-local"], .kong-helpdesk 
+  .input-group-sm input[type="month"] {
+    line-height: 30px;
+  }
+.kong-helpdesk 
+  input[type="date"].input-lg, .kong-helpdesk 
+  input[type="time"].input-lg, .kong-helpdesk 
+  input[type="datetime-local"].input-lg, .kong-helpdesk 
+  input[type="month"].input-lg, .kong-helpdesk 
+  .input-group-lg input[type="date"], .kong-helpdesk 
+  .input-group-lg input[type="time"], .kong-helpdesk 
+  .input-group-lg input[type="datetime-local"], .kong-helpdesk 
+  .input-group-lg input[type="month"] {
+    line-height: 46px;
+  }
+.kong-helpdesk 
+}
+.kong-helpdesk 
+.form-group {
+  margin-bottom: 15px;
+}
+.kong-helpdesk 
+.radio, .kong-helpdesk 
+.checkbox {
+  position: relative;
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.kong-helpdesk 
+.radio label, .kong-helpdesk 
+.checkbox label {
+  min-height: 20px;
+  padding-left: 20px;
+  margin-bottom: 0;
+  font-weight: normal;
+  cursor: pointer;
+}
+.kong-helpdesk 
+.radio input[type="radio"], .kong-helpdesk 
+.radio-inline input[type="radio"], .kong-helpdesk 
+.checkbox input[type="checkbox"], .kong-helpdesk 
+.checkbox-inline input[type="checkbox"] {
+  position: absolute;
+  margin-left: -20px;
+  margin-top: 4px \9;
+}
+.kong-helpdesk 
+.radio + .radio, .kong-helpdesk 
+.checkbox + .checkbox {
+  margin-top: -5px;
+}
+.kong-helpdesk 
+.radio-inline, .kong-helpdesk 
+.checkbox-inline {
+  position: relative;
+  display: inline-block;
+  padding-left: 20px;
+  margin-bottom: 0;
+  vertical-align: middle;
+  font-weight: normal;
+  cursor: pointer;
+}
+.kong-helpdesk 
+.radio-inline + .radio-inline, .kong-helpdesk 
+.checkbox-inline + .checkbox-inline {
+  margin-top: 0;
+  margin-left: 10px;
+}
+.kong-helpdesk 
+input[type="radio"][disabled], .kong-helpdesk 
+input[type="checkbox"][disabled], .kong-helpdesk 
+input[type="radio"].disabled, .kong-helpdesk 
+input[type="checkbox"].disabled, .kong-helpdesk 
+fieldset[disabled] input[type="radio"], .kong-helpdesk 
+fieldset[disabled] input[type="checkbox"] {
+  cursor: not-allowed;
+}
+.kong-helpdesk 
+.radio-inline.disabled, .kong-helpdesk 
+.checkbox-inline.disabled, .kong-helpdesk 
+fieldset[disabled] .radio-inline, .kong-helpdesk 
+fieldset[disabled] .checkbox-inline {
+  cursor: not-allowed;
+}
+.kong-helpdesk 
+.radio.disabled label, .kong-helpdesk 
+.checkbox.disabled label, .kong-helpdesk 
+fieldset[disabled] .radio label, .kong-helpdesk 
+fieldset[disabled] .checkbox label {
+  cursor: not-allowed;
+}
+.kong-helpdesk 
+.form-control-static {
+  padding-top: 7px;
+  padding-bottom: 7px;
+  margin-bottom: 0;
+  min-height: 34px;
+}
+.kong-helpdesk 
+.form-control-static.input-lg, .kong-helpdesk 
+.form-control-static.input-sm {
+  padding-left: 0;
+  padding-right: 0;
+}
+.kong-helpdesk 
+.input-sm {
+  height: 30px;
+  padding: 5px 10px;
+  font-size: 12px;
+  line-height: 1.5;
+  border-radius: 3px;
+}
+.kong-helpdesk 
+select.input-sm {
+  height: 30px;
+  line-height: 30px;
+}
+.kong-helpdesk 
+textarea.input-sm, .kong-helpdesk 
+select[multiple].input-sm {
+  height: auto;
+}
+.kong-helpdesk 
+.form-group-sm .form-control {
+  height: 30px;
+  padding: 5px 10px;
+  font-size: 12px;
+  line-height: 1.5;
+  border-radius: 3px;
+}
+.kong-helpdesk 
+.form-group-sm select.form-control {
+  height: 30px;
+  line-height: 30px;
+}
+.kong-helpdesk 
+.form-group-sm textarea.form-control, .kong-helpdesk 
+.form-group-sm select[multiple].form-control {
+  height: auto;
+}
+.kong-helpdesk 
+.form-group-sm .form-control-static {
+  height: 30px;
+  min-height: 32px;
+  padding: 6px 10px;
+  font-size: 12px;
+  line-height: 1.5;
+}
+.kong-helpdesk 
+.input-lg {
+  height: 46px;
+  padding: 10px 16px;
+  font-size: 18px;
+  line-height: 1.3333333;
+  border-radius: 6px;
+}
+.kong-helpdesk 
+select.input-lg {
+  height: 46px;
+  line-height: 46px;
+}
+.kong-helpdesk 
+textarea.input-lg, .kong-helpdesk 
+select[multiple].input-lg {
+  height: auto;
+}
+.kong-helpdesk 
+.form-group-lg .form-control {
+  height: 46px;
+  padding: 10px 16px;
+  font-size: 18px;
+  line-height: 1.3333333;
+  border-radius: 6px;
+}
+.kong-helpdesk 
+.form-group-lg select.form-control {
+  height: 46px;
+  line-height: 46px;
+}
+.kong-helpdesk 
+.form-group-lg textarea.form-control, .kong-helpdesk 
+.form-group-lg select[multiple].form-control {
+  height: auto;
+}
+.kong-helpdesk 
+.form-group-lg .form-control-static {
+  height: 46px;
+  min-height: 38px;
+  padding: 11px 16px;
+  font-size: 18px;
+  line-height: 1.3333333;
+}
+.kong-helpdesk 
+.has-feedback {
+  position: relative;
+}
+.kong-helpdesk 
+.has-feedback .form-control {
+  padding-right: 42.5px;
+}
+.kong-helpdesk 
+.form-control-feedback {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
+  display: block;
+  width: 34px;
+  height: 34px;
+  line-height: 34px;
+  text-align: center;
+  pointer-events: none;
+}
+.kong-helpdesk 
+.input-lg + .form-control-feedback, .kong-helpdesk 
+.input-group-lg + .form-control-feedback, .kong-helpdesk 
+.form-group-lg .form-control + .form-control-feedback {
+  width: 46px;
+  height: 46px;
+  line-height: 46px;
+}
+.kong-helpdesk 
+.input-sm + .form-control-feedback, .kong-helpdesk 
+.input-group-sm + .form-control-feedback, .kong-helpdesk 
+.form-group-sm .form-control + .form-control-feedback {
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+}
+.kong-helpdesk 
+.has-success .help-block, .kong-helpdesk 
+.has-success .control-label, .kong-helpdesk 
+.has-success .radio, .kong-helpdesk 
+.has-success .checkbox, .kong-helpdesk 
+.has-success .radio-inline, .kong-helpdesk 
+.has-success .checkbox-inline, .kong-helpdesk 
+.has-success.radio label, .kong-helpdesk 
+.has-success.checkbox label, .kong-helpdesk 
+.has-success.radio-inline label, .kong-helpdesk 
+.has-success.checkbox-inline label {
+  color: #3c763d;
+}
+.kong-helpdesk 
+.has-success .form-control {
+  border-color: #3c763d;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, .kong-helpdesk  0, .kong-helpdesk  0, .kong-helpdesk  0.075);
+  box-shadow: inset 0 1px 1px rgba(0, .kong-helpdesk  0, .kong-helpdesk  0, .kong-helpdesk  0.075);
+}
+.kong-helpdesk 
+.has-success .form-control:focus {
+  border-color: #2b542c;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, .kong-helpdesk  0, .kong-helpdesk  0, .kong-helpdesk  0.075), .kong-helpdesk  0 0 6px #67b168;
+  box-shadow: inset 0 1px 1px rgba(0, .kong-helpdesk  0, .kong-helpdesk  0, .kong-helpdesk  0.075), .kong-helpdesk  0 0 6px #67b168;
+}
+.kong-helpdesk 
+.has-success .input-group-addon {
+  color: #3c763d;
+  border-color: #3c763d;
+  background-color: #dff0d8;
+}
+.kong-helpdesk 
+.has-success .form-control-feedback {
+  color: #3c763d;
+}
+.kong-helpdesk 
+.has-warning .help-block, .kong-helpdesk 
+.has-warning .control-label, .kong-helpdesk 
+.has-warning .radio, .kong-helpdesk 
+.has-warning .checkbox, .kong-helpdesk 
+.has-warning .radio-inline, .kong-helpdesk 
+.has-warning .checkbox-inline, .kong-helpdesk 
+.has-warning.radio label, .kong-helpdesk 
+.has-warning.checkbox label, .kong-helpdesk 
+.has-warning.radio-inline label, .kong-helpdesk 
+.has-warning.checkbox-inline label {
+  color: #8a6d3b;
+}
+.kong-helpdesk 
+.has-warning .form-control {
+  border-color: #8a6d3b;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, .kong-helpdesk  0, .kong-helpdesk  0, .kong-helpdesk  0.075);
+  box-shadow: inset 0 1px 1px rgba(0, .kong-helpdesk  0, .kong-helpdesk  0, .kong-helpdesk  0.075);
+}
+.kong-helpdesk 
+.has-warning .form-control:focus {
+  border-color: #66512c;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, .kong-helpdesk  0, .kong-helpdesk  0, .kong-helpdesk  0.075), .kong-helpdesk  0 0 6px #c0a16b;
+  box-shadow: inset 0 1px 1px rgba(0, .kong-helpdesk  0, .kong-helpdesk  0, .kong-helpdesk  0.075), .kong-helpdesk  0 0 6px #c0a16b;
+}
+.kong-helpdesk 
+.has-warning .input-group-addon {
+  color: #8a6d3b;
+  border-color: #8a6d3b;
+  background-color: #fcf8e3;
+}
+.kong-helpdesk 
+.has-warning .form-control-feedback {
+  color: #8a6d3b;
+}
+.kong-helpdesk 
+.has-error .help-block, .kong-helpdesk 
+.has-error .control-label, .kong-helpdesk 
+.has-error .radio, .kong-helpdesk 
+.has-error .checkbox, .kong-helpdesk 
+.has-error .radio-inline, .kong-helpdesk 
+.has-error .checkbox-inline, .kong-helpdesk 
+.has-error.radio label, .kong-helpdesk 
+.has-error.checkbox label, .kong-helpdesk 
+.has-error.radio-inline label, .kong-helpdesk 
+.has-error.checkbox-inline label {
+  color: #a94442;
+}
+.kong-helpdesk 
+.has-error .form-control {
+  border-color: #a94442;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, .kong-helpdesk  0, .kong-helpdesk  0, .kong-helpdesk  0.075);
+  box-shadow: inset 0 1px 1px rgba(0, .kong-helpdesk  0, .kong-helpdesk  0, .kong-helpdesk  0.075);
+}
+.kong-helpdesk 
+.has-error .form-control:focus {
+  border-color: #843534;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, .kong-helpdesk  0, .kong-helpdesk  0, .kong-helpdesk  0.075), .kong-helpdesk  0 0 6px #ce8483;
+  box-shadow: inset 0 1px 1px rgba(0, .kong-helpdesk  0, .kong-helpdesk  0, .kong-helpdesk  0.075), .kong-helpdesk  0 0 6px #ce8483;
+}
+.kong-helpdesk 
+.has-error .input-group-addon {
+  color: #a94442;
+  border-color: #a94442;
+  background-color: #f2dede;
+}
+.kong-helpdesk 
+.has-error .form-control-feedback {
+  color: #a94442;
+}
+.kong-helpdesk 
+.has-feedback label ~ .form-control-feedback {
+  top: 25px;
+}
+.kong-helpdesk 
+.has-feedback label.sr-only ~ .form-control-feedback {
+  top: 0;
+}
+.kong-helpdesk 
+.help-block {
+  display: block;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  color: #737373;
+}
+.kong-helpdesk 
+@media (min-width: 768px) {
+  .form-inline .form-group {
+    display: inline-block;
+    margin-bottom: 0;
+    vertical-align: middle;
+  }
+.kong-helpdesk 
+  .form-inline .form-control {
+    display: inline-block;
+    width: auto;
+    vertical-align: middle;
+  }
+.kong-helpdesk 
+  .form-inline .form-control-static {
+    display: inline-block;
+  }
+.kong-helpdesk 
+  .form-inline .input-group {
+    display: inline-table;
+    vertical-align: middle;
+  }
+.kong-helpdesk 
+  .form-inline .input-group .input-group-addon, .kong-helpdesk 
+  .form-inline .input-group .input-group-btn, .kong-helpdesk 
+  .form-inline .input-group .form-control {
+    width: auto;
+  }
+.kong-helpdesk 
+  .form-inline .input-group > .form-control {
+    width: 100%;
+  }
+.kong-helpdesk 
+  .form-inline .control-label {
+    margin-bottom: 0;
+    vertical-align: middle;
+  }
+.kong-helpdesk 
+  .form-inline .radio, .kong-helpdesk 
+  .form-inline .checkbox {
+    display: inline-block;
+    margin-top: 0;
+    margin-bottom: 0;
+    vertical-align: middle;
+  }
+.kong-helpdesk 
+  .form-inline .radio label, .kong-helpdesk 
+  .form-inline .checkbox label {
+    padding-left: 0;
+  }
+.kong-helpdesk 
+  .form-inline .radio input[type="radio"], .kong-helpdesk 
+  .form-inline .checkbox input[type="checkbox"] {
+    position: relative;
+    margin-left: 0;
+  }
+.kong-helpdesk 
+  .form-inline .has-feedback .form-control-feedback {
+    top: 0;
+  }
+.kong-helpdesk 
+}
+.kong-helpdesk 
+.form-horizontal .radio, .kong-helpdesk 
+.form-horizontal .checkbox, .kong-helpdesk 
+.form-horizontal .radio-inline, .kong-helpdesk 
+.form-horizontal .checkbox-inline {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 7px;
+}
+.kong-helpdesk 
+.form-horizontal .radio, .kong-helpdesk 
+.form-horizontal .checkbox {
+  min-height: 27px;
+}
+.kong-helpdesk 
+.form-horizontal .form-group {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+.kong-helpdesk 
+@media (min-width: 768px) {
+  .form-horizontal .control-label {
+    text-align: right;
+    margin-bottom: 0;
+    padding-top: 7px;
+  }
+.kong-helpdesk 
+}
+.kong-helpdesk 
+.form-horizontal .has-feedback .form-control-feedback {
+  right: 15px;
+}
+.kong-helpdesk 
+@media (min-width: 768px) {
+  .form-horizontal .form-group-lg .control-label {
+    padding-top: 11px;
+    font-size: 18px;
+  }
+.kong-helpdesk 
+}
+.kong-helpdesk 
+@media (min-width: 768px) {
+  .form-horizontal .form-group-sm .control-label {
+    padding-top: 6px;
+    font-size: 12px;
+  }
+.kong-helpdesk 
+}
+.kong-helpdesk 
+.input-group {
+  position: relative;
+  display: table;
+  border-collapse: separate;
+}
+.kong-helpdesk 
+.input-group[class*="col-"] {
+  float: none;
+  padding-left: 0;
+  padding-right: 0;
+}
+.kong-helpdesk 
+.input-group .form-control {
+  position: relative;
+  z-index: 2;
+  float: left;
+  width: 100%;
+  margin-bottom: 0;
+}
+.kong-helpdesk 
+.input-group .form-control:focus {
+  z-index: 3;
+}
+.kong-helpdesk 
+.input-group-lg > .form-control, .kong-helpdesk 
+.input-group-lg > .input-group-addon, .kong-helpdesk 
+.input-group-lg > .input-group-btn > .btn {
+  height: 46px;
+  padding: 10px 16px;
+  font-size: 18px;
+  line-height: 1.3333333;
+  border-radius: 6px;
+}
+.kong-helpdesk 
+select.input-group-lg > .form-control, .kong-helpdesk 
+select.input-group-lg > .input-group-addon, .kong-helpdesk 
+select.input-group-lg > .input-group-btn > .btn {
+  height: 46px;
+  line-height: 46px;
+}
+.kong-helpdesk 
+textarea.input-group-lg > .form-control, .kong-helpdesk 
+textarea.input-group-lg > .input-group-addon, .kong-helpdesk 
+textarea.input-group-lg > .input-group-btn > .btn, .kong-helpdesk 
+select[multiple].input-group-lg > .form-control, .kong-helpdesk 
+select[multiple].input-group-lg > .input-group-addon, .kong-helpdesk 
+select[multiple].input-group-lg > .input-group-btn > .btn {
+  height: auto;
+}
+.kong-helpdesk 
+.input-group-sm > .form-control, .kong-helpdesk 
+.input-group-sm > .input-group-addon, .kong-helpdesk 
+.input-group-sm > .input-group-btn > .btn {
+  height: 30px;
+  padding: 5px 10px;
+  font-size: 12px;
+  line-height: 1.5;
+  border-radius: 3px;
+}
+.kong-helpdesk 
+select.input-group-sm > .form-control, .kong-helpdesk 
+select.input-group-sm > .input-group-addon, .kong-helpdesk 
+select.input-group-sm > .input-group-btn > .btn {
+  height: 30px;
+  line-height: 30px;
+}
+.kong-helpdesk 
+textarea.input-group-sm > .form-control, .kong-helpdesk 
+textarea.input-group-sm > .input-group-addon, .kong-helpdesk 
+textarea.input-group-sm > .input-group-btn > .btn, .kong-helpdesk 
+select[multiple].input-group-sm > .form-control, .kong-helpdesk 
+select[multiple].input-group-sm > .input-group-addon, .kong-helpdesk 
+select[multiple].input-group-sm > .input-group-btn > .btn {
+  height: auto;
+}
+.kong-helpdesk 
+.input-group-addon, .kong-helpdesk 
+.input-group-btn, .kong-helpdesk 
+.input-group .form-control {
+  display: table-cell;
+}
+.kong-helpdesk 
+.input-group-addon:not(:first-child):not(:last-child), .kong-helpdesk 
+.input-group-btn:not(:first-child):not(:last-child), .kong-helpdesk 
+.input-group .form-control:not(:first-child):not(:last-child) {
+  border-radius: 0;
+}
+.kong-helpdesk 
+.input-group-addon, .kong-helpdesk 
+.input-group-btn {
+  width: 1%;
+  white-space: nowrap;
+  vertical-align: middle;
+}
+.kong-helpdesk 
+.input-group-addon {
+  padding: 6px 12px;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1;
+  color: #555555;
+  text-align: center;
+  background-color: #eeeeee;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+}
+.kong-helpdesk 
+.input-group-addon.input-sm {
+  padding: 5px 10px;
+  font-size: 12px;
+  border-radius: 3px;
+}
+.kong-helpdesk 
+.input-group-addon.input-lg {
+  padding: 10px 16px;
+  font-size: 18px;
+  border-radius: 6px;
+}
+.kong-helpdesk 
+.input-group-addon input[type="radio"], .kong-helpdesk 
+.input-group-addon input[type="checkbox"] {
+  margin-top: 0;
+}
+.kong-helpdesk 
+.input-group .form-control:first-child, .kong-helpdesk 
+.input-group-addon:first-child, .kong-helpdesk 
+.input-group-btn:first-child > .btn, .kong-helpdesk 
+.input-group-btn:first-child > .btn-group > .btn, .kong-helpdesk 
+.input-group-btn:first-child > .dropdown-toggle, .kong-helpdesk 
+.input-group-btn:last-child > .btn:not(:last-child):not(.dropdown-toggle), .kong-helpdesk 
+.input-group-btn:last-child > .btn-group:not(:last-child) > .btn {
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+}
+.kong-helpdesk 
+.input-group-addon:first-child {
+  border-right: 0;
+}
+.kong-helpdesk 
+.input-group .form-control:last-child, .kong-helpdesk 
+.input-group-addon:last-child, .kong-helpdesk 
+.input-group-btn:last-child > .btn, .kong-helpdesk 
+.input-group-btn:last-child > .btn-group > .btn, .kong-helpdesk 
+.input-group-btn:last-child > .dropdown-toggle, .kong-helpdesk 
+.input-group-btn:first-child > .btn:not(:first-child), .kong-helpdesk 
+.input-group-btn:first-child > .btn-group:not(:first-child) > .btn {
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+}
+.kong-helpdesk 
+.input-group-addon:last-child {
+  border-left: 0;
+}
+.kong-helpdesk 
+.input-group-btn {
+  position: relative;
+  font-size: 0;
+  white-space: nowrap;
+}
+.kong-helpdesk 
+.input-group-btn > .btn {
+  position: relative;
+}
+.kong-helpdesk 
+.input-group-btn > .btn + .btn {
+  margin-left: -1px;
+}
+.kong-helpdesk 
+.input-group-btn > .btn:hover, .kong-helpdesk 
+.input-group-btn > .btn:focus, .kong-helpdesk 
+.input-group-btn > .btn:active {
+  z-index: 2;
+}
+.kong-helpdesk 
+.input-group-btn:first-child > .btn, .kong-helpdesk 
+.input-group-btn:first-child > .btn-group {
+  margin-right: -1px;
+}
+.kong-helpdesk 
+.input-group-btn:last-child > .btn, .kong-helpdesk 
+.input-group-btn:last-child > .btn-group {
+  z-index: 2;
+  margin-left: -1px;
+}
+.kong-helpdesk 
+.label {
+  display: inline;
+  padding: .2em .6em .3em;
+  color: #FFFFFF;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: .25em;
+}
+.kong-helpdesk 
+a.label:hover, .kong-helpdesk 
+a.label:focus {
+  color: #ffffff;
+  text-decoration: none;
+  cursor: pointer;
+}
+.kong-helpdesk 
+.label:empty {
+  display: none;
+}
+.kong-helpdesk 
+.btn .label {
+  position: relative;
+  top: -1px;
+}
+.kong-helpdesk 
+.label-default {
+  background-color: #777777;
+}
+.kong-helpdesk 
+.label-default[href]:hover, .kong-helpdesk 
+.label-default[href]:focus {
+  background-color: #5e5e5e;
+}
+.kong-helpdesk 
+.label-primary {
+  background-color: #337ab7;
+}
+.kong-helpdesk 
+.label-primary[href]:hover, .kong-helpdesk 
+.label-primary[href]:focus {
+  background-color: #286090;
+}
+.kong-helpdesk 
+.label-success {
+  background-color: #5cb85c;
+}
+.kong-helpdesk 
+.label-success[href]:hover, .kong-helpdesk 
+.label-success[href]:focus {
+  background-color: #449d44;
+}
+.kong-helpdesk 
+.label-info {
+  background-color: #5bc0de;
+}
+.kong-helpdesk 
+.label-info[href]:hover, .kong-helpdesk 
+.label-info[href]:focus {
+  background-color: #31b0d5;
+}
+.kong-helpdesk 
+.label-warning {
+  background-color: #f0ad4e;
+}
+.kong-helpdesk 
+.label-warning[href]:hover, .kong-helpdesk 
+.label-warning[href]:focus {
+  background-color: #ec971f;
+}
+.kong-helpdesk 
+.label-danger {
+  background-color: #d9534f;
+}
+.kong-helpdesk 
+.label-danger[href]:hover, .kong-helpdesk 
+.label-danger[href]:focus {
+  background-color: #c9302c;
+}
+.kong-helpdesk 
+.alert {
+  padding: 15px;
+  margin-bottom: 20px;
+}
+.kong-helpdesk 
+.alert h4 {
+  margin-top: 0;
+  color: inherit;
+}
+.kong-helpdesk 
+.alert .alert-link {
+  font-weight: bold;
+}
+.kong-helpdesk 
+.alert > p, .kong-helpdesk 
+.alert > ul {
+  margin-bottom: 0;
+}
+.kong-helpdesk 
+.alert > p + p {
+  margin-top: 5px;
+}
+.kong-helpdesk .alert a,
+.kong-helpdesk .alert a:hover,
+.kong-helpdesk .alert a:active {
+  color: #FFFFFF;
+  font-weight: bold;
+}
+.kong-helpdesk 
+.alert-dismissable, .kong-helpdesk 
+.alert-dismissible {
+  padding-right: 35px;
+}
+.kong-helpdesk 
+.alert-dismissable .close, .kong-helpdesk 
+.alert-dismissible .close {
+  position: relative;
+  top: -2px;
+  right: -21px;
+  color: inherit;
+}
+.kong-helpdesk 
+.alert-success {
+  background-color: #4CAF50;
+  color: #FFFFFF;
+}
+.kong-helpdesk 
+.alert-success .alert-link {
+  color: #2b542c;
+}
+.kong-helpdesk 
+.alert-info {
+  background-color: #03A9F4;
+  color: #FFFFFF;
+}
+.kong-helpdesk 
+.alert-info .alert-link {
+  color: #245269;
+}
+.kong-helpdesk 
+.alert-warning {
+  background-color: #FF9800;
+  color: #FFFFFF;
+}
+.kong-helpdesk 
+.alert-warning .alert-link {
+  color: #66512c;
+}
+.kong-helpdesk 
+.alert-danger {
+  background-color: #F44336;
+  color: #FFFFFF;
+}
+.kong-helpdesk 
+.alert-danger .alert-link {
+  color: #843534;
+}
+.kong-helpdesk 
+.clearfix:before, .kong-helpdesk 
+.clearfix:after, .kong-helpdesk 
+.form-horizontal .form-group:before, .kong-helpdesk 
+.form-horizontal .form-group:after {
+  content: " ";
+  display: table;
+}
+.kong-helpdesk 
+.clearfix:after, .kong-helpdesk 
+.form-horizontal .form-group:after {
+  clear: both;
+}
+.kong-helpdesk 
+.center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.kong-helpdesk 
+.pull-right {
+  float: right !important;
+}
+.kong-helpdesk 
+.pull-left {
+  float: left !important;
+}
+.kong-helpdesk 
+.hide {
+  display: none !important;
+}
+.kong-helpdesk 
+.show {
+  display: block !important;
+}
+.kong-helpdesk 
+.invisible {
+  visibility: hidden;
+}
+.kong-helpdesk 
+.text-hide {
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+}
+.kong-helpdesk 
+.hidden {
+  display: none !important;
+}
+.kong-helpdesk 
+.affix {
+  position: fixed;
+}
+.kong-helpdesk-faq-live-search-results {
+    position: absolute;
+    background-color: #FFFFFF;
+    z-index: 99999;
+    border-bottom: 1px solid #eaeaea;
+    border-left: 1px solid #eaeaea;
+    border-right: 1px solid #eaeaea;
+    border-radius: 10px 10px 0px 0px;
+    width: 100%;
+}
+.kong-helpdesk-faq-live-search-header {
+    padding: 10px 20px 0;
+}
+
+.kong-helpdesk-faq-live-search-result {
+    border-bottom: 1px solid #eaeaea;
+    display: block;
+    color: #333333;
+    padding: 10px 20px;
+}
+
+.kong-helpdesk-faq-live-search-result:hover {
+  color: #000000;
+  background-color: #f7f7f7;
+}
+
+.kong-helpdesk-faq-live-search-result:hover .kong-helpdesk-faq-live-search-result-title {
+  text-decoration: underline;
+}
+
+.kong-helpdesk-faq-live-search-result:hover .kong-helpdesk-faq-live-search-result-content {
+  text-decoration: none;
+}
+
+.kong-helpdesk-faq-live-search-result-title {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.kong-helpdesk-faq-live-search-result-content {
+  font-size: 14px;
+}
+
+.kong-helpdesk-faq-live-search-footer {
+  text-align: center;
+  padding-top: 4px;
+}
+
+.kong-helpdesk-faq-live-search-footer-found-more {
+  font-size: 10px;
+}
+
+.kong-helpdesk-faq-live-search-footer-see-all {
+    background-color: #1786e5;
+    color: #FFF;
+    padding: 8px;
+    border-radius: 0 0 6px 6px;
+    display: block;
+}
+
+.kong-helpdesk-faq-live-search-footer-see-all:hover {
+  color: #FFF;
+  background-color: #2f92e8;
+}
+
+.kong-helpdesk-faq-divider {
+  margin: 0 0 10px;
+  width: 30%;
+}
+.kong-helpdesk-faq-title {
+    margin: 0;
+    padding: 10px 0 0;
+    font-size: 24px;
+}
+ul.kong-helpdesk-faq-list {
+    list-style: none;
+    margin: 0 !important;
+    padding: 0 0 0 0 !important;;
+}
+
+.kong-helpdesk-faq-list li {
+    padding: 8px 0 3px 0;
+    margin-bottom: 0.2em;
+    list-style: none;
+    border-bottom: 1px solid #eaeaea;
+}
+
+.kong-helpdesk-faq-list li i.fa {
+  margin-right: 10px;
+}
+
+.kong-helpdesk-faq-list li a {
+  color: #333333;
+}
+
+.kong-helpdesk-faq-content {
+  padding: 10px 0;
+}
+.kong-helpdesk-faq-searchform {
+  position: relative;
+}
+
+.kong-helpdesk-faq-searchform .form-control {
+    border-radius: 25px;
+}
+
+.kong-helpdesk-faq-searchform .searchform-submit {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    height: 20px;
+    line-height: 20px;
+    margin: -10px 0 0;
+    background: none;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    color: #000;
+    font-size: 20px;
+    -moz-opacity: .5;
+    -webkit-opacity: .5;
+    opacity: .5;
+}
+
+.kong-helpdesk-faq-searchform {
+  margin: 20px 0 60px;
+}
+
+.kong-helpdesk-woocommerce-types {
+  padding-bottom: 40px;
+}
+
+.kong-helpdesk-livechat {
+  bottom: 0;
+  font-size: 12px;
+  right: 24px;
+  position: fixed;
+  width: 350px;
+  z-index: 999999;
+}
+.kong-helpdesk-livechat header {
+  background: #293239;
+  border-radius: 5px 5px 0 0;
+  color: #fff;
+  cursor: pointer;
+  padding: 16px 24px;
+}
+.kong-helpdesk-livechat header h4 {
+  color: #FFFFFF;
+  margin: 0;
+  display: inline-block;
+}
+
+.kong-helpdesk-livechat .chat-welcome-text {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.kong-helpdesk-livechat h4:before {
+  border-radius: 50%;
+  content: "";
+  display: inline-block;
+  height: 8px;
+  margin: 0 8px 0 0;
+  width: 8px;
+}
+
+.kong-helpdesk-livechat h4.kong-helpdesk-livechat-title-online:before {
+  background: #4CAF50;
+}
+
+.kong-helpdesk-livechat h4.kong-helpdesk-livechat-title-offline:before {
+  background: #F44336;
+}
+
+.kong-helpdesk-livechat h4 {
+  font-size: 12px;
+}
+.kong-helpdesk-livechat h5 {
+  font-size: 10px;
+  margin: 0 0 5px 0;
+}
+.kong-helpdesk-livechat input[type="text"] {
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  padding: 8px;
+  outline: none;
+  width: 100%;
+}
+.kong-helpdesk-livechat .chat-message-counter {
+  background: #e62727;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  display: none;
+  font-size: 12px;
+  font-weight: bold;
+  height: 28px;
+  left: 0;
+  line-height: 28px;
+  margin: -15px 0 0 -15px;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  width: 28px;
+}
+.kong-helpdesk-livechat .chat-close {
+    background: #eaeaea;
+    padding: 2px 10px;
+    border-radius: 25px;
+    color: #333;
+    font-weight: 500;
+    display: block;
+    float: right;
+    font-size: 10px;
+    line-height: 16px;
+    margin: 2px 0 0 0;
+    text-align: center;
+}
+.kong-helpdesk-livechat .chat {
+  background: #fff;
+  margin-bottom: 30px;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+.kong-helpdesk-livechat .chat-history {
+  height: 252px;
+  overflow-y: scroll;
+  border-bottom: 1px solid #eaeaea;
+  padding-top: 10px;
+}
+.chat {
+  border: 1px solid #eaeaea;
+}
+.kong-helpdesk-livechat .chat-message img {
+  border-radius: 50%;
+  float: left;
+}
+.kong-helpdesk-livechat fieldset {
+  margin-bottom: 10px;
+}
+.kong-helpdesk-livechat .chat-history hr {
+  margin: 10px 0;
+  border: solid #e8e8e8;
+  border-width: 1px 0 0;
+  clear: both;
+  height: 0;
+}
+.kong-helpdesk-livechat .chat-message-content {
+  text-align: left;
+}
+
+.kong-helpdesk-livechat .chat-message-agent .chat-message-content p {
+    margin: 0;
+    background: #2196F3;
+    width: 100%;
+    color: #FFF;
+    display: inline;
+    padding: 5px 15px;
+    border-radius: 20px;
+}
+
+.kong-helpdesk-livechat .chat-message-agent .chat-message-content {
+  text-align: right;
+}
+
+.kong-helpdesk-livechat .chat-message-content {
+    padding: 10px 24px 0px;
+}
+.kong-helpdesk-livechat .chat-message-content p {
+  padding: 0;
+  margin: 0;
+}
+.kong-helpdesk-livechat .chat-time {
+  float: right;
+  font-size: 10px;
+}
+.kong-helpdesk-livechat .chat-feedback {
+  font-style: italic; 
+  width: 100%;
+  text-align: center;
+}
+
+.kong-helpdesk-livechat .chat-online-footer {
+  border-right: 1px solid #eaeaea;
+  padding-bottom: 10px;
+  margin-bottom: -20px;
+  padding: 8px 10px 0;
+}
+
+#livechat-ticket-form {
+  padding-bottom: 10px;
+}
+
+.kong-helpdesk-livechat-status .alert {
+  margin-bottom: 0;
+  font-size: 11px;
+}
+
+.kong-helpdesk-my-tickets-divider {
+  margin: 10px 0;
+  border: solid #e8e8e8;
+  border-width: 1px 0 0;
+  clear: both;
+  height: 0;
+}
+
+.kong-helpdesk-ticket-attachments a {
+padding: 5px;
+    background: #eaeaea;
+    height: 150px;
+    display: block;
+    width: 150px;
+    float: left;
+    margin-right: 20px;
+    margin-bottom: 10px;
+}
+
+.kong-helpdesk-meta-information {
+  margin-bottom: 20px;
+}
+
+.kong-helpdesk-my-tickets-table {
+  font-size: 15px;
+  line-height: 20px;
+}
+
+.kong-helpdesk-my-tickets-system.label {
+  font-size: 13px;
+  line-height: 18px;
+}
+
+.kong-helpdesk-my-tickets-table td {
+    padding: 10px 3px;
+    border-bottom: 1px solid #e8e8e8;
+}
+
+.kong-helpdesk-my-tickets-header th {
+  font-weight: bold;
+}
+
+li.widget {
+  list-style: none;
+}
+
+.kong-helpdesk-faq-boxed {
+    text-align: center;
+    border: 1px solid #eaeaea;
+    padding: 40px;
+    margin-bottom: 10px;
+}
+
+.kong-helpdesk-faq-boxed:hover {
+    background-color: #f2f2f2;
+}
+
+.kong-helpdesk-faq-boxed h3, .kong-helpdesk-faq-boxed p {
+  margin-bottom: 10px;
+}
+
+.kong-helpdesk-faq-boxed h3:hover, .kong-helpdesk-faq-boxed p:hover {
+  text-decoration: none;
+}
+
+.kong-helpdesk-faq-column a:hover {
+  text-decoration: none;
+}
+
+.kong-helpdesk-faq-boxed-count {
+  color: #333;
+}
+.kong-helpdesk-faq-link {
+  margin: 8px 0px 10px;
+}
+
+.kong-helpdesk-livechat .chat-message-content.livechat-open-chat {
+    font-weight: bold;
+    border-bottom: 1px solid #eaeaea;
+    padding-bottom: 10px;
+}
+
+a:hover h1, a:hover h2, a:hover h3 {
+  text-decoration: none;
+}
+
+.kong-helpdesk-reporter-box, .kong-helpdesk-agent-box {
+    background: #f2f2f2;
+    font-size: 10px;
+    padding: 10px 20px;
+}
+
+.kong-helpdesk-reporter-box-title, .kong-helpdesk-agent-box-title {
+  margin: 0 0 10px 0;
+  font-weight: 500;
+}
+
+.kong-helpdesk-reporter-box img, .kong-helpdesk-agent-box img {
+    width: 100%;
+    border-radius: 50%;
+}
+
+.lum-lightbox {
+  z-index: 9999999;
+}
+.kong-helpdesk-ticket-attachments-title {
+  margin: 0;
+}
+
+.kong-helpdesk-faq-rating {
+    display: inline;
+    float: right;
+    font-size: 18px;
+}
+
+.kong-helpdesk-faq-rating-dislike,
+.kong-helpdesk-faq-rating-dislike:hover, 
+.kong-helpdesk-faq-rating-dislike i {
+  margin-left: 5px;
+  color: #F44336;
+}
+
+.kong-helpdesk-faq-rating-like,
+.kong-helpdesk-faq-rating-like:hover,
+.kong-helpdesk-faq-rating-like i {
+  color: #3291e5;
+}
+
+.kong-helpdesk-faq-searchform .screen-reader-text {
+  clip: rect(1px, 1px, 1px, 1px);
+    position: absolute !important;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+}
+
+.kong-helpdesk-feedback i.fa {
+    text-align: center;
+    font-size: 200px;
+    color: #aeaeae;
+    width: 100%;
+}
+
+.kong-helpdesk-feedback-form {
+  margin-top: 20px;
+}
+
+.kong-helpdesk-livechat-trigger {
+    background-color: #1786e5;
+    width: 80px;
+    height: 80px;
+    position: fixed;
+    display: block;
+    bottom: 15px;
+    right: 1%;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 99999999999;
+}
+
+.kong-helpdesk-livechat-trigger .fa {
+    line-height: 74px;
+    text-align: center;
+    display: block;
+    font-size: 38px;
+    color: #FFF;
+}
+
+/* NEW */
+
+.kong-helpdesk-livechat-content {
+    width: 350px;
+    display: block;
+    background-color: #f7f7f7;
+    z-index: 99999999999;
+    max-height: 420px;
+    height: 420px;
+    position: fixed;
+    display: block;
+    bottom: 30px;
+    right: 2%;
+    font-size: 13px;
+    line-height: 19px;
+    border-radius: 5px;
+    -webkit-box-shadow: 0 12px 34px 0 rgba(0,0,0,.175)!important;
+    -moz-box-shadow: 0 12px 34px 0 rgba(0,0,0,.175)!important;
+    box-shadow: 0 12px 34px 0 rgba(0,0,0,.175)!important;
+}
+
+.kong-helpdesk-livechat-header {
+    background-color: #1786e5;
+    min-height: 60px;
+    border-radius: 5px 5px 0 0;
+    padding: 10px 15px 15px;
+}
+
+.kong-helpdesk-livechat-header-icon {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  background: #fff;
+  margin-right: 15px;
+  float: left;
+}
+
+.kong-helpdesk-livechat-header-icon img {
+  border-radius: 50%;
+}
+
+.kong-helpdesk-livechat-header-title-container {
+    float: left;
+    width: 220px;
+}
+
+.kong-helpdesk-livechat-header-title {
+    color: #FFF;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.kong-helpdesk-livechat-header-status {
+    color: #eaeaea;
+    font-size: 12px;
+}
+
+.kong-helpdesk-livechat-close {
+  color: #FFF;
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+a.kong-helpdesk-livechat-close:hover {
+  color: #f2f2f2;
+}
+
+.kong-helpdesk-livechat-messages {
+    padding: 10px 15px 10px;
+    overflow-y: auto;
+    height: 330px;
+    width: 100%;
+}
+
+.kong-helpdesk-livechat-messages hr {
+  margin: 10px 0;
+  border: solid #e8e8e8;
+  border-width: 1px 0 0;
+  clear: both;
+  height: 0;
+  float: none;
+}
+
+.kong-helpdesk-livechat-author {
+    float: left;
+    width: 30px;
+    margin-right: 15px;
+    font-size: 10px;
+    line-height: 13px;
+    color: #808080;
+    text-align: center;
+    position: relative;
+}
+
+.kong-helpdesk-livechat-author-name {
+    visibility: hidden;
+    width: 60px;
+    top: 100%;
+    left: 50%; 
+    margin-left: -30px; /* Use half of the width (120/2 = 60), to center the tooltip */
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+    position: absolute;
+    z-index: 1;
+}
+
+.kong-helpdesk-livechat-author:hover .kong-helpdesk-livechat-author-name {
+    visibility: visible;
+}
+
+.kong-helpdesk-livechat-message-agent .kong-helpdesk-livechat-author {
+    float: right;
+    margin-right: 0;
+    margin-left: 15px;
+}
+
+.kong-helpdesk-livechat-author img {
+  border-radius: 50%;
+}
+
+.kong-helpdesk-livechat-message {
+  float: left;
+  margin: 0;
+  background: #F2F2F2;
+  color: #000;
+  width: auto;
+  display: inline-block;
+  padding: 5px 15px;
+  border-radius: 20px;
+  max-width: 85%;
+  margin-bottom: 10px;
+}
+
+.kong-helpdesk-livechat-message p {
+    margin: 0;
+    padding: 0;
+}
+
+.kong-helpdesk-livechat-message:before, 
+.kong-helpdesk-livechat-message:after,{
+  content: " ";
+  display: table;
+  clear: both;
+  float: none;
+}
+
+.kong-helpdesk-livechat-message-agent .kong-helpdesk-livechat-message {
+  float: right;
+  background-color: #1786e5;
+  color: #FFF;
+}
+
+/**
+ * Livechat Enter Chat Form
+ */
+.kong-helpdesk-livechat-enter-chat input[type="date"], 
+.kong-helpdesk-livechat-enter-chat input[type="time"], 
+.kong-helpdesk-livechat-enter-chat input[type="datetime-local"], 
+.kong-helpdesk-livechat-enter-chat input[type="week"], 
+.kong-helpdesk-livechat-enter-chat input[type="month"], 
+.kong-helpdesk-livechat-enter-chat input[type="text"], 
+.kong-helpdesk-livechat-enter-chat input[type="email"], 
+.kong-helpdesk-livechat-enter-chat input[type="url"], 
+.kong-helpdesk-livechat-enter-chat input[type="password"], 
+.kong-helpdesk-livechat-enter-chat input[type="search"], 
+.kong-helpdesk-livechat-enter-chat input[type="tel"], 
+.kong-helpdesk-livechat-enter-chat input[type="number"], 
+.kong-helpdesk-livechat-enter-chat textarea
+{
+    background: #fff;
+    color: #555;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 8px;
+}
+
+.kong-helpdesk-livechat-enter-chat .theme-button, 
+.kong-helpdesk-livechat-enter-chat input[type="submit"], 
+.kong-helpdesk-livechat-enter-chat button {
+    width: 100%;
+}
+
+/**
+ * Livechat Error
+ */
+.kong-helpdesk-livechat-enter-chat-form-error {
+    border-radius: 20px;
+    background-color: #F44336;
+    display: none;
+    color: #FFF;
+    padding: 10px;
+}
+
+.kong-helpdesk-livechat-enter-chat-form-error a, .kong-helpdesk-livechat-enter-chat-form-error a:hover {
+  color: #FFFFFF;
+  font-weight: bold;
+}
+
+/**
+ * Livechat Success
+ */
+
+.kong-helpdesk-livechat-enter-chat-form-success {
+    border-radius: 20px;
+    background-color: #4CAF50;
+    display: none;
+    color: #FFF;
+    padding: 10px;
+}
+
+.kong-helpdesk-livechat-enter-chat-form-success a, .kong-helpdesk-livechat-enter-chat-form-success a:hover {
+  color: #FFFFFF;
+  font-weight: bold;
+}
+
+/**
+ * Livechat Footer
+ */
+.kong-helpdesk-livechat-footer {
+    background-color: #FFF;
+    height: 40px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: none;
+}
+
+input[type="text"].kong-helpdesk-livechat-comment-form-message,
+.kong-helpdesk-livechat-comment-form-message {
+    background-color: #FFFFFF;
+    border: none;
+    width: 100%;
+    color: #1786e5;
+    font-size: 16px;
+    line-height: 22px;
+    padding: 15px 15px;
+}
+
+.kong-helpdesk-livechat-comment-form-attachment {
+    position: absolute;
+    top: 14px;
+    right: 15px;
+}
+
+.kong-helpdesk-livechat-comment-form-attachment > input {
+    display: none;
+}
+
+.kong-helpdesk-livechat-comment-form-attachment .fa {
+    color: #1786e5;
+    font-size: 20px;
+}
+
+.kong-helpdesk-sidebar .widgettitle {
+  margin-top: 20px;
+}
+
+/*.kong-helpdesk-livechat-comment-form-attachment .fa {
+    width: 80px;
+    cursor: pointer;
+}*/
+
+.kong-helpdesk-ticket-solved{
+  text-align: right;
+}
+
+@media (min-width: 768px) {
+  .kong-helpdesk-pull-right {
+    float: right !important;
+  }
+}
+
+.single-ticket .wplink-autocomplete,
+.single-ticket #wp-link-wrap #search-panel,
+.single-ticket #wp-link-wrap .howto,
+.kong-helpdesk-new-ticket .wplink-autocomplete,
+.kong-helpdesk-new-ticket #wp-link-wrap #search-panel,
+.kong-helpdesk-new-ticket #wp-link-wrap .howto {
+  display: none !important;
+}
+
+.mce-btn button {
+  background: transparent !important;
+}

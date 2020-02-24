@@ -1,0 +1,2587 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Kong TotalDesk\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-07 07:59+0000\n"
+"PO-Revision-Date: 2019-05-07 08:00+0000\n"
+"Last-Translator: WeLaunch <support@dev.welaunch.io>\n"
+"Language-Team: Norwegian (Norway)\n"
+"Language: no_NO\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.2.2; wp-5.1.1"
+
+#: kong-helpdesk.php:95
+msgid ""
+"Kong Helpdesk requires the Redux Framework Please install or activate "
+"it before!"
+msgstr ""
+"Kong Helpdesk krever Redux Framework Vennligst installer eller aktiver "
+"det før!"
+
+#: admin/class-kong-helpdesk-form.php:119 admin/views/single-ticket.php:47
+msgid "< Back to My Tickets"
+msgstr "<Tilbake til Mine Billetter"
+
+#: admin/class-kong-helpdesk-form.php:133
+msgid "Recaptcha not passed!"
+msgstr "Recaptcha ikke bestått!"
+
+#: admin/class-kong-helpdesk-form.php:140
+#, php-format
+msgid ""
+"Ticket successfully created! You can <a href=\"%s\">view it here</a>.<br/>"
+msgstr ""
+"Billett er vellykket opprettet! Du kan <a href=\"% %s \"> vise det her </a>. "
+"<br/>"
+
+#: admin/class-kong-helpdesk-form.php:146
+msgid "Ticket could not be created!"
+msgstr "Ticket kunne ikke opprettes!"
+
+#: admin/class-kong-helpdesk-form.php:170
+#: admin/class-kong-helpdesk-form.php:176
+#, php-format
+msgid "Please <a href=\"%s\" title=\"Login\">login to submit a ticket.</a>"
+msgstr ""
+"Vennligst <a href=\" %s \" title=\"Login\"> logg inn for å sende inn en "
+"billett. </a>"
+
+#: admin/class-kong-helpdesk-form.php:218
+msgid "Create Ticket"
+msgstr "Opprett billett"
+
+#: admin/class-kong-helpdesk-form.php:256
+msgid "Order Support"
+msgstr "Bestillingsstøtte"
+
+#: admin/class-kong-helpdesk-form.php:266
+msgid "Product Support"
+msgstr "Produktstøtte"
+
+#: admin/class-kong-helpdesk-form.php:275
+msgid "Other"
+msgstr "Annen"
+
+#: admin/class-kong-helpdesk-form.php:294
+msgid "Your Name (required)"
+msgstr "Ditt navn (påkrevd)"
+
+#: admin/class-kong-helpdesk-form.php:310
+msgid "Your Email (required)"
+msgstr "Din e-post (påkrevd)"
+
+#: admin/class-kong-helpdesk-form.php:326
+#: admin/class-kong-helpdesk-form.php:343
+msgid "Subject (required)"
+msgstr "Emne (påkrevd)"
+
+#: admin/class-kong-helpdesk-form.php:368
+msgid "Message (required) "
+msgstr "Melding (påkrevd) "
+
+#: admin/class-kong-helpdesk-form.php:395
+msgid "Department (required)"
+msgstr "Avdeling (påkrevd)"
+
+#: admin/class-kong-helpdesk-form.php:397
+msgid "Select a Department"
+msgstr "Velg en avdeling"
+
+#: admin/class-kong-helpdesk-form.php:430
+msgid "Priority (required)"
+msgstr "Prioritet (påkrevd)"
+
+#: admin/class-kong-helpdesk-form.php:432
+msgid "Select a priority"
+msgstr "Velg en prioritet"
+
+#: admin/class-kong-helpdesk-form.php:465
+msgid "Type (required)"
+msgstr "Type (påkrevd)"
+
+#: admin/class-kong-helpdesk-form.php:467
+msgid "Select a type"
+msgstr "Velg en type"
+
+#: admin/class-kong-helpdesk-form.php:503
+msgid "Your Order"
+msgstr "Din bestilling"
+
+#: admin/class-kong-helpdesk-form.php:505
+msgid "Select your Order"
+msgstr "Velg bestillingen din"
+
+#: admin/class-kong-helpdesk-form.php:525
+msgid "Where is my stuff?"
+msgstr "Hvor er tingene mine?"
+
+#: admin/class-kong-helpdesk-form.php:526
+msgid "Problem with an order"
+msgstr "Problem med en bestilling"
+
+#: admin/class-kong-helpdesk-form.php:527
+msgid "Returns and refunds"
+msgstr "Returnerer og refunderer"
+
+#: admin/class-kong-helpdesk-form.php:528
+msgid "Gift Cards"
+msgstr "Gavekort"
+
+#: admin/class-kong-helpdesk-form.php:529
+msgid "Payment issues"
+msgstr "Betalingsproblemer"
+
+#: admin/class-kong-helpdesk-form.php:530
+msgid "Change an order"
+msgstr "Endre en bestilling"
+
+#: admin/class-kong-helpdesk-form.php:531
+msgid "Promotions and deals"
+msgstr "Kampanjer og tilbud"
+
+#: admin/class-kong-helpdesk-form.php:532
+msgid "More order issues"
+msgstr "Flere bestillingsproblemer"
+
+#: admin/class-kong-helpdesk-form.php:537
+msgid "Your Subject"
+msgstr "Ditt emne"
+
+#: admin/class-kong-helpdesk-form.php:539
+msgid "Select your Subject"
+msgstr "Velg ditt emne"
+
+#: admin/class-kong-helpdesk-form.php:572
+msgid "Product"
+msgstr "Produkt"
+
+#: admin/class-kong-helpdesk-form.php:574
+msgid "Select your product"
+msgstr "Velg ditt produkt"
+
+#: admin/class-kong-helpdesk-form.php:603 admin/options-init.php:607
+msgid "Purchase Code"
+msgstr "Kjøpskode"
+
+#: admin/class-kong-helpdesk-form.php:625
+msgid "Select Item"
+msgstr "Velg en"
+
+#: admin/class-kong-helpdesk-form.php:627
+msgid "Select an Item"
+msgstr "Velg en gjenstand"
+
+#: admin/class-kong-helpdesk-form.php:679 admin/options-init.php:558
+#: admin/options-init.php:595 admin/options-init.php:645
+msgid "Website URL"
+msgstr "nettadresse"
+
+#: admin/class-kong-helpdesk-form.php:699
+#: admin/class-kong-helpdesk-ticket-post-type.php:350
+#: admin/class-kong-helpdesk-attachments.php:62
+#: admin/views/single-ticket.php:182
+msgid "Attachments"
+msgstr "vedlegg"
+
+#: admin/class-kong-helpdesk-notifications.php:46
+#: admin/class-kong-helpdesk-support-rating.php:72
+msgid "View Ticket"
+msgstr "Se billett"
+
+#: admin/class-kong-helpdesk-notifications.php:90
+#: admin/class-kong-helpdesk-log.php:115
+msgid "New Ticket created"
+msgstr "Ny billett opprettet"
+
+#: admin/class-kong-helpdesk-notifications.php:94
+#, php-format
+msgid "A Ticket with the ID %s has been created"
+msgstr "En billett med ID %s er opprettet"
+
+#: admin/class-kong-helpdesk-notifications.php:156
+#: admin/class-kong-helpdesk-log.php:151
+#, php-format
+msgid "%s changed from %s to %s"
+msgstr "%s endret fra %s til %s"
+
+#: admin/class-kong-helpdesk-notifications.php:160
+#, php-format
+msgid "The %s has changed from %s to %s"
+msgstr "%s har endret seg fra %s til %s"
+
+#: admin/class-kong-helpdesk-notifications.php:191
+#: admin/class-kong-helpdesk-slack.php:192
+#: admin/class-kong-helpdesk-log.php:160
+#, php-format
+msgid "%s changed to: %s"
+msgstr "%s endret til: %s"
+
+#: admin/class-kong-helpdesk-notifications.php:195
+#, php-format
+msgid "The %s changed to: %s"
+msgstr "%s endret til: %s"
+
+#: admin/class-kong-helpdesk-notifications.php:255
+#: admin/class-kong-helpdesk-log.php:199
+msgid "Comment added"
+msgstr "Kommentar lagt til"
+
+#: admin/class-kong-helpdesk-notifications.php:259
+#, php-format
+msgid "New comment added by %s"
+msgstr "Ny kommentar lagt til av %s"
+
+#: admin/class-kong-helpdesk-notifications.php:325
+#: admin/class-kong-helpdesk-notifications.php:334
+#: admin/class-kong-helpdesk-ticket-post-type.php:604
+#: admin/class-kong-helpdesk-slack.php:231
+#: admin/class-kong-helpdesk-slack.php:240
+#: admin/class-kong-helpdesk-log.php:238
+#: admin/class-kong-helpdesk-log.php:247
+#: admin/class-kong-helpdesk-reports.php:168
+msgid "Unassigned"
+msgstr "Ikke tilordnet"
+
+#: admin/class-kong-helpdesk-notifications.php:342
+#: admin/class-kong-helpdesk-notifications.php:399
+#: admin/class-kong-helpdesk-slack.php:291
+#: admin/class-kong-helpdesk-log.php:263
+#: admin/class-kong-helpdesk-log.php:298
+#, php-format
+msgid "Assigned to %s"
+msgstr "Tilordnet til %s"
+
+#: admin/class-kong-helpdesk-notifications.php:347
+#, php-format
+msgid "This ticket has been assigned from %s to %s"
+msgstr "Denne billetten har blitt tildelt fra %s til %s"
+
+#: admin/class-kong-helpdesk-notifications.php:404
+#, php-format
+msgid "This ticket has been assigned to %s"
+msgstr "Denne billetten er tildelt %s"
+
+#: admin/class-kong-helpdesk-sidebar-widgets.php:48
+msgid "Helpdesk Sidebar"
+msgstr "Helpdesk Sidebar"
+
+#: admin/class-kong-helpdesk-sidebar-widgets.php:50
+msgid "Widgets in this area will be shown on all posts and pages."
+msgstr "Widgets i dette området vil bli vist på alle innlegg og sider."
+
+#: admin/class-kong-helpdesk-livechat-frontend.php:101
+#: admin/class-kong-helpdesk-livechat-backend.php:183
+msgid "Ticket could not be created. Please contact support email directly."
+msgstr "Ticket kunne ikke opprettes. Ta kontakt med support-e-post direkte."
+
+#: admin/class-kong-helpdesk-livechat-frontend.php:112
+#: admin/class-kong-helpdesk-livechat-backend.php:195
+#: admin/class-kong-helpdesk-livechat.php:279
+#, php-format
+msgid "A seperate Chat-Ticket with the ID %s has been created."
+msgstr "En separat chat-billett med ID %s er opprettet."
+
+#: admin/class-kong-helpdesk-livechat-frontend.php:160
+#: admin/class-kong-helpdesk-livechat-frontend.php:216
+#: admin/class-kong-helpdesk-livechat-backend.php:320
+#: admin/class-kong-helpdesk-livechat-backend.php:439
+#: admin/class-kong-helpdesk-livechat.php:340
+msgid "Ticket not set."
+msgstr "Billett ikke satt."
+
+#: admin/class-kong-helpdesk-livechat-frontend.php:224
+#: admin/class-kong-helpdesk-livechat-backend.php:447
+#: admin/class-kong-helpdesk-livechat.php:348
+msgid "Ticket does not exists."
+msgstr "Billett eksisterer ikke."
+
+#: admin/class-kong-helpdesk-livechat-frontend.php:234
+#: admin/class-kong-helpdesk-livechat-backend.php:457
+#: admin/class-kong-helpdesk-livechat.php:357
+msgid "This is not your Ticket!"
+msgstr "Dette er ikke din billett!"
+
+#: admin/class-kong-helpdesk-livechat-frontend.php:300
+#: admin/class-kong-helpdesk-ticket-post-type.php:118
+#: admin/class-kong-helpdesk-ticket-post-type.php:348
+#: admin/class-kong-helpdesk-ticket-post-type.php:1063
+#: admin/class-kong-helpdesk-livechat-backend.php:523
+msgid "Ticket"
+msgstr "Billett"
+
+#: admin/class-kong-helpdesk-livechat-frontend.php:403
+#: admin/class-kong-helpdesk-livechat-frontend.php:513
+#: admin/class-kong-helpdesk-livechat-backend.php:252
+#: admin/class-kong-helpdesk-livechat.php:486
+#: admin/class-kong-helpdesk-livechat.php:513
+msgid "Type your message…"
+msgstr "Skriv inn meldingen din ..."
+
+#: admin/class-kong-helpdesk-livechat-frontend.php:469
+msgid "Visitor"
+msgstr "Besøkende"
+
+#: admin/class-kong-helpdesk-livechat-frontend.php:501
+#: admin/class-kong-helpdesk-livechat.php:476
+msgid "Your Name"
+msgstr "Navnet ditt"
+
+#: admin/class-kong-helpdesk-livechat-frontend.php:504
+#: admin/class-kong-helpdesk-livechat.php:479
+msgid "Your Email"
+msgstr "Din epost"
+
+#: admin/class-kong-helpdesk-livechat-frontend.php:510
+#: admin/class-kong-helpdesk-livechat.php:483
+msgid "Subject"
+msgstr "Emne"
+
+#: admin/class-kong-helpdesk-livechat-frontend.php:517
+#: admin/class-kong-helpdesk-livechat.php:490
+msgid "Or enter your Ticket ID:"
+msgstr "Eller skriv inn din billett-ID:"
+
+#: admin/class-kong-helpdesk-livechat-frontend.php:519
+msgid "Ticket ID"
+msgstr ""
+
+#: admin/class-kong-helpdesk-support-rating.php:88
+msgid "No Ticket ID set."
+msgstr "Ingen billett ID sett."
+
+#: admin/class-kong-helpdesk-support-rating.php:94
+msgid "Please set a feedback text."
+msgstr "Vennligst sett inn tilbakemeldingstekst."
+
+#: admin/class-kong-helpdesk-support-rating.php:108
+msgid "Feedback received. Thanks!"
+msgstr "Tilbakemelding mottatt. Takk!"
+
+#: admin/class-kong-helpdesk-support-rating.php:112
+msgid "Wrong satisfied value."
+msgstr "Feil fornøyd verdi."
+
+#: admin/class-kong-helpdesk-support-rating.php:130
+msgid "Thanks for your feedback!"
+msgstr "Takk for din tilbakemelding!"
+
+#: admin/class-kong-helpdesk-support-rating.php:148
+msgid "We would be happy if you leave a feedback message:"
+msgstr "Vi vil være glade hvis du gir en tilbakemeldingsmelding:"
+
+#: admin/class-kong-helpdesk-support-rating.php:152
+msgid "Send Feedback"
+msgstr "Send tilbakemelding"
+
+#: admin/class-kong-helpdesk-ticket-post-type.php:119
+#: admin/class-kong-helpdesk-ticket-post-type.php:130
+#: admin/options-init.php:1408
+msgid "Tickets"
+msgstr "billetter"
+
+#: admin/class-kong-helpdesk-ticket-post-type.php:122
+#: admin/class-kong-helpdesk-ticket-post-type.php:124
+#: admin/class-kong-helpdesk-ticket-post-type.php:195
+#: admin/class-kong-helpdesk-ticket-post-type.php:232
+#: admin/class-kong-helpdesk-ticket-post-type.php:269
+#: admin/class-kong-helpdesk-ticket-post-type.php:306
+#: admin/class-kong-helpdesk-saved-replies.php:149
+#: admin/class-kong-helpdesk-saved-replies.php:214
+#: admin/class-kong-helpdesk-saved-replies.php:250
+#: admin/class-kong-helpdesk-faq-post-type.php:547
+#: admin/class-kong-helpdesk-faq-post-type.php:617
+#, php-format
+msgid "All %s"
+msgstr "Alle %s"
+
+#: admin/class-kong-helpdesk-ticket-post-type.php:133
+#: admin/class-kong-helpdesk-ticket-post-type.php:136
+#: admin/class-kong-helpdesk-saved-replies.php:151
+#: admin/class-kong-helpdesk-saved-replies.php:154
+#: admin/class-kong-helpdesk-faq-post-type.php:549
+#: admin/class-kong-helpdesk-faq-post-type.php:552
+#, php-format
+msgid "New %s"
+msgstr "Ny %s"
+
+#: admin/class-kong-helpdesk-ticket-post-type.php:134
+#: admin/class-kong-helpdesk-ticket-post-type.php:200
+#: admin/class-kong-helpdesk-ticket-post-type.php:237
+#: admin/class-kong-helpdesk-ticket-post-type.php:274
+#: admin/class-kong-helpdesk-ticket-post-type.php:311
+#: admin/class-kong-helpdesk-saved-replies.php:152
+#: admin/class-kong-helpdesk-saved-replies.php:219
+#: admin/class-kong-helpdesk-saved-replies.php:255
+#: admin/class-kong-helpdesk-faq-post-type.php:550
+#: admin/class-kong-helpdesk-faq-post-type.php:622
+#, php-format
+msgid "Add New %s"
+msgstr "Legg til nye %s"
+
+#: admin/class-kong-helpdesk-ticket-post-type.php:135
+#: admin/class-kong-helpdesk-ticket-post-type.php:198
+#: admin/class-kong-helpdesk-ticket-post-type.php:235
+#: admin/class-kong-helpdesk-ticket-post-type.php:272
+#: admin/class-kong-helpdesk-ticket-post-type.php:309
+#: admin/class-kong-helpdesk-saved-replies.php:153
+#: admin/class-kong-helpdesk-saved-replies.php:217
+#: admin/class-kong-helpdesk-saved-replies.php:253
+#: admin/class-kong-helpdesk-faq-post-type.php:551
+#: admin/class-kong-helpdesk-faq-post-type.php:620
+#, php-format
+msgid "Edit %s"
+msgstr "Rediger %s"
+
+#: admin/class-kong-helpdesk-ticket-post-type.php:137
+#: admin/class-kong-helpdesk-saved-replies.php:155
+#: admin/class-kong-helpdesk-faq-post-type.php:553
+#, php-format
+msgid "View %s"
+msgstr "Se %s"
+
+#: admin/class-kong-helpdesk-ticket-post-type.php:138
+#: admin/class-kong-helpdesk-ticket-post-type.php:194
+#: admin/class-kong-helpdesk-ticket-post-type.php:231
+#: admin/class-kong-helpdesk-ticket-post-type.php:268
+#: admin/class-kong-helpdesk-ticket-post-type.php:305
+#: admin/class-kong-helpdesk-saved-replies.php:156
+#: admin/class-kong-helpdesk-saved-replies.php:213
+#: admin/class-kong-helpdesk-saved-replies.php:249
+#: admin/class-kong-helpdesk-faq-post-type.php:554
+#: admin/class-kong-helpdesk-faq-post-type.php:616
+#, php-format
+msgid "Search %s"
+msgstr "Søk %s"
+
+#: admin/class-kong-helpdesk-ticket-post-type.php:139
+#: admin/class-kong-helpdesk-saved-replies.php:157
+#: admin/class-kong-helpdesk-faq-post-type.php:555
+#, php-format
+msgid "No %s found"
+msgstr "Ingen %s funnet"
+
+#: admin/class-kong-helpdesk-ticket-post-type.php:140
+#: admin/class-kong-helpdesk-saved-replies.php:158
+#: admin/class-kong-helpdesk-faq-post-type.php:556
+#, php-format
+msgid "No %s found in trash"
+msgstr "Nei %s funnet i søppel"
+
+#: admin/class-kong-helpdesk-ticket-post-type.php:188
+#: admin/class-kong-helpdesk-ticket-post-type.php:189
+#: admin/class-kong-helpdesk-ticket-post-type.php:1066
+#: admin/class-kong-helpdesk-exporter.php:185
+#: admin/class-kong-helpdesk-my-tickets.php:129
+msgid "Status"
+msgstr "Status"
+
+#: admin/class-kong-helpdesk-ticket-post-type.php:196
+#: admin/class-kong-helpdesk-ticket-post-type.php:233
+#: admin/class-kong-helpdesk-ticket-post-type.php:270
+#: admin/class-kong-helpdesk-ticket-post-type.php:307
+#: admin/class-kong-helpdesk-saved-replies.php:215
+#: admin/class-kong-helpdesk-saved-replies.php:251
+#: admin/class-kong-helpdesk-faq-post-type.php:618
+#, php-format
+msgid "Parent %s"
+msgstr "Foreldre %s"
+
+#: admin/class-kong-helpdesk-ticket-post-type.php:197
+#: admin/class-kong-helpdesk-ticket-post-type.php:234
+#: admin/class-kong-helpdesk-ticket-post-type.php:271
+#: admin/class-kong-helpdesk-ticket-post-type.php:308
+#: admin/class-kong-helpdesk-saved-replies.php:216
+#: admin/class-kong-helpdesk-saved-replies.php:252
+#: admin/class-kong-helpdesk-faq-post-type.php:619
+#, php-format
+msgid "Parent %s:"
+msgstr "Foreldre %s :"
+
+#: admin/class-kong-helpdesk-ticket-post-type.php:199
+#: admin/class-kong-helpdesk-ticket-post-type.php:236
+#: admin/class-kong-helpdesk-ticket-post-type.php:273
+#: admin/class-kong-helpdesk-ticket-post-type.php:310
+#: admin/class-kong-helpdesk-saved-replies.php:218
+#: admin/class-kong-helpdesk-saved-replies.php:254
+#: admin/class-kong-helpdesk-faq-post-type.php:621
+#, php-format
+msgid "Update %s"
+msgstr "Oppdater %s"
+
+#: admin/class-kong-helpdesk-ticket-post-type.php:201
+#: admin/class-kong-helpdesk-ticket-post-type.php:238
+#: admin/class-kong-helpdesk-ticket-post-type.php:275
+#: admin/class-kong-helpdesk-ticket-post-type.php:312
+#: admin/class-kong-helpdesk-saved-replies.php:220
+#: admin/class-kong-helpdesk-saved-replies.php:256
+#: admin/class-kong-helpdesk-faq-post-type.php:623
+#, php-format
+msgid "New %s Name"
+msgstr "Nytt %s Navn"
+
+#: admin/class-kong-helpdesk-ticket-post-type.php:225
+#: admin/class-kong-helpdesk-ticket-post-type.php:1068
+#: admin/class-kong-helpdesk-exporter.php:191
+#: admin/class-kong-helpdesk-my-tickets.php:141
+msgid "Type"
+msgstr "Type"
+
+#: admin/class-kong-helpdesk-ticket-post-type.php:226
+msgid "Types"
+msgstr "typer"
+
+#: admin/class-kong-helpdesk-ticket-post-type.php:262
+#: admin/class-kong-helpdesk-ticket-post-type.php:1069
+#: admin/class-kong-helpdesk-my-tickets.php:135
+msgid "Department"
+msgstr "Avdeling"
+
+#: admin/class-kong-helpdesk-ticket-post-type.php:263
+msgid "Departments"
+msgstr "avdelinger"
+
+#: admin/class-kong-helpdesk-ticket-post-type.php:299
+#: admin/class-kong-helpdesk-ticket-post-type.php:1070
+#: admin/class-kong-helpdesk-exporter.php:197
+#: admin/views/single-ticket.php:102
+msgid "Priority"
+msgstr "Prioritet"
+
+#: admin/class-kong-helpdesk-ticket-post-type.php:300
+msgid "Priorities"
+msgstr "prioriteringer"
+
+#: admin/class-kong-helpdesk-ticket-post-type.php:349
+msgid "Merge Ticket"
+msgstr "Slå sammen billett"
+
+#: admin/class-kong-helpdesk-ticket-post-type.php:353
+msgid "Feedback:"
+msgstr "Tilbakemelding:"
+
+#: admin/class-kong-helpdesk-ticket-post-type.php:376
+msgid "Website:"
+msgstr "nettside:"
+
+#: admin/class-kong-helpdesk-ticket-post-type.php:415
+msgid "Select Ticket"
+msgstr "Velg billett"
+
+#: admin/class-kong-helpdesk-ticket-post-type.php:422
+msgid "Merge Now"
+msgstr "Slå sammen nå"
+
+#: admin/class-kong-helpdesk-ticket-post-type.php:438
+#: admin/class-kong-helpdesk-faq-post-type.php:691
+msgid "No ticket to duplicate has been supplied!"
+msgstr "Ingen billett til duplikat har blitt levert!"
+
+#: admin/class-kong-helpdesk-ticket-post-type.php:478
+msgid "Could not Merge Ticket."
+msgstr "Kunne ikke slå sammen billett."
+
+#: admin/class-kong-helpdesk-ticket-post-type.php:561
+msgid "Created on: "
+msgstr "Opprettet på: "
+
+#: admin/class-kong-helpdesk-ticket-post-type.php:562
+msgid "Created by: "
+msgstr "Laget av: "
+
+#: admin/class-kong-helpdesk-ticket-post-type.php:593
+msgid "Assigned to: "
+msgstr "Tilordnet: "
+
+#: admin/class-kong-helpdesk-ticket-post-type.php:639
+msgid "Purchase Code could not be verified!"
+msgstr "Kjøpskoden kunne ikke bekreftes!"
+
+#: admin/class-kong-helpdesk-ticket-post-type.php:642
+msgid "Item: "
+msgstr "Punkt: "
+
+#: admin/class-kong-helpdesk-ticket-post-type.php:643
+msgid "License: "
+msgstr "Tillatelse: "
+
+#: admin/class-kong-helpdesk-ticket-post-type.php:644
+msgid "Support Until:"
+msgstr "Støtte til:"
+
+#: admin/class-kong-helpdesk-ticket-post-type.php:757
+msgid "Select Product"
+msgstr "Velg produkt"
+
+#: admin/class-kong-helpdesk-ticket-post-type.php:825
+msgid "No feedback available"
+msgstr "Ingen tilbakemelding tilgjengelig"
+
+#: admin/class-kong-helpdesk-ticket-post-type.php:901
+msgid "Color"
+msgstr "Farge"
+
+#: admin/class-kong-helpdesk-ticket-post-type.php:930
+#: admin/class-kong-helpdesk-my-tickets.php:51
+#, php-format
+msgid "Please <a href=\"%s\" title=\"Login\">login to view your tickets</a>"
+msgstr ""
+"Vennligst <a href=\" %s \" title=\"Login\"> logg inn for å se billettene "
+"dine </a>"
+
+#: admin/class-kong-helpdesk-ticket-post-type.php:1009
+#, php-format
+msgid "[Ticket: %s] %s"
+msgstr "[Billett: %s ] %s"
+
+#: admin/class-kong-helpdesk-ticket-post-type.php:1064
+msgid "From"
+msgstr "Fra"
+
+#: admin/class-kong-helpdesk-ticket-post-type.php:1065
+msgid "Assigned To"
+msgstr "Tilordnet"
+
+#: admin/class-kong-helpdesk-ticket-post-type.php:1067
+msgid "Satisfied"
+msgstr "Fornøyd"
+
+#: admin/class-kong-helpdesk-ticket-post-type.php:1071
+msgid ""
+"<span class=\"vers comment-grey-bubble\" title=\"Comments\"><span "
+"class=\"screen-reader-text\">Comments</span></span>"
+msgstr ""
+"<span class =  \"ny kommentar-grå-boble \" title =  \"Kommentarer \"> <span "
+"class =  \"screen-reader-text \"> Kommentarer </ span> </ span>"
+
+#: admin/class-kong-helpdesk-ticket-post-type.php:1072
+#: admin/class-kong-helpdesk-my-tickets.php:123
+msgid "Date"
+msgstr "Dato"
+
+#: admin/class-kong-helpdesk-ticket-post-type.php:1104
+#: admin/class-kong-helpdesk-livechat-backend.php:403
+msgid "No Author"
+msgstr "Ingen forfatter"
+
+#: admin/class-kong-helpdesk-woocommerce.php:54
+msgid "My Tickets"
+msgstr "Mine billetter"
+
+#: admin/class-kong-helpdesk-woocommerce.php:55
+msgid "Submit Ticket"
+msgstr "Send inn billett"
+
+#: admin/class-kong-helpdesk-woocommerce.php:110
+msgid "Submit a new Ticket"
+msgstr "Send inn en ny billett"
+
+#: admin/class-kong-helpdesk-woocommerce.php:222
+#: admin/class-kong-helpdesk-faq-post-type.php:543
+#: admin/class-kong-helpdesk-faq-post-type.php:546
+msgid "FAQs"
+msgstr "Spørsmål og svar"
+
+#: admin/class-kong-helpdesk-woocommerce.php:262
+msgid "Currently we do not have any frequently asked questions."
+msgstr "Foreløpig har vi ikke noen vanlige spørsmål."
+
+#: admin/class-kong-helpdesk-woocommerce.php:267
+msgid "Frequently Asked Questions"
+msgstr "ofte stilte spørsmål"
+
+#: admin/class-kong-helpdesk-desktop-notifications.php:129
+#, php-format
+msgid "New comment on %s"
+msgstr "Ny kommentar på %s"
+
+#: admin/options-init.php:28 admin/options-init.php:30
+msgid "Kong Helpdesk"
+msgstr "Kong Helpdesk"
+
+#: admin/options-init.php:36
+msgid "Settings"
+msgstr "innstillinger"
+
+#: admin/options-init.php:90
+msgid "Information"
+msgstr "Informasjon"
+
+#: admin/options-init.php:91
+msgid "<p>Need support? Please use the comment function on codecanyon.</p>"
+msgstr ""
+"<p> Trenger du støtte? Vennligst bruk kommentarfunksjonen på codecanyon. </ "
+"P>"
+
+#: admin/options-init.php:113 admin/options-init.php:1158
+msgid "Helpdesk"
+msgstr "Helpdesk"
+
+#: admin/options-init.php:115
+msgid "Need support? Please use the comment function on codecanyon."
+msgstr ""
+"Trenger du støtte? Vennligst bruk kommentaren funksjonen på codecanyon."
+
+#: admin/options-init.php:120
+msgid "General"
+msgstr "Generell"
+
+#: admin/options-init.php:127
+msgid "Enable"
+msgstr "Aktiver"
+
+#: admin/options-init.php:128
+msgid "Enable TotalDesk."
+msgstr "Aktiver TotalDesk."
+
+#: admin/options-init.php:134
+msgid "Login Page"
+msgstr "Innloggingsside"
+
+#: admin/options-init.php:135
+msgid "This will be the page, where the login button will link to."
+msgstr "Dette blir siden, der innloggingsknappen vil lenke til."
+
+#: admin/options-init.php:141 admin/options-init.php:148
+msgid "My Tickets Page"
+msgstr "Mine billetter Side"
+
+#: admin/options-init.php:142
+msgid ""
+"Make sure the [my_tickets] shortcode is placed there. After saving go to "
+"settings > permalinks and save."
+msgstr ""
+"Pass på at [my_tickets] shortcode er plassert der. Etter lagring gå til "
+"innstillinger> permalinks og lagre."
+
+#: admin/options-init.php:149
+msgid "Make sure the [new_ticket] shortcode is placed there."
+msgstr ""
+
+#: admin/options-init.php:155
+msgid "Redirect reporters to My Tickets page"
+msgstr "Omdirigere reportere til Min Billettside"
+
+#: admin/options-init.php:156
+msgid "After login all reporters will be redirected to the my tickets page."
+msgstr ""
+"Etter innlogging vil alle reportere bli omdirigert til min billetter side."
+
+#: admin/options-init.php:162
+msgid "Only Logged In"
+msgstr "Bare logget inn"
+
+#: admin/options-init.php:163
+msgid "Allow Ticket creation via Forms only when User is logged in."
+msgstr "Tillat kun å lage billett via skjemaer når brukeren er logget inn."
+
+#: admin/options-init.php:169
+msgid "Send Login credentials"
+msgstr "Send innloggingsinformasjonen"
+
+#: admin/options-init.php:170
+msgid ""
+"Send out the login credentials when a new account has been created for a new "
+"user."
+msgstr ""
+"Send ut påloggingsinformasjonen når en ny konto er opprettet for en ny "
+"bruker."
+
+#: admin/options-init.php:176
+msgid "Sidebar Display"
+msgstr "Sidepanelskjerm"
+
+#: admin/options-init.php:177
+msgid "Where you want to show the sidebar."
+msgstr "Hvor du vil vise sidebjelken."
+
+#: admin/options-init.php:179
+msgid "None"
+msgstr "Ingen"
+
+#: admin/options-init.php:180
+msgid "Only in Knowledge Base"
+msgstr "Kun i kunnskapsbasen"
+
+#: admin/options-init.php:181
+msgid "Only for Ticket pages"
+msgstr "Kun for billettsider"
+
+#: admin/options-init.php:182
+msgid "Show in Ticket & FAQ pages"
+msgstr "Vis på Billettside & FAQs sider"
+
+#: admin/options-init.php:189
+msgid "Sidebar Position"
+msgstr "Sidebar posisjon"
+
+#: admin/options-init.php:190
+msgid "Left or Right sidebar."
+msgstr "Venstre eller Høyre sidebjelke."
+
+#: admin/options-init.php:192
+msgid "Left"
+msgstr "Venstre"
+
+#: admin/options-init.php:193
+msgid "Right"
+msgstr "Ikke sant"
+
+#: admin/options-init.php:200
+msgid "Use Excel 2007"
+msgstr "Bruk Excel 2007"
+
+#: admin/options-init.php:201
+msgid ""
+"If you can not work with xlsx (Excel 2007 and higher) files, check this. You "
+"then can work with normal .xls files."
+msgstr ""
+"Hvis du ikke kan arbeide med xlsx (Excel 2007 og høyere) filer, sjekk dette. "
+"Du kan da arbeide med vanlige .xls-filer."
+
+#: admin/options-init.php:208
+msgid "Export all Tickets"
+msgstr "Eksporter alle billetter"
+
+#: admin/options-init.php:223
+msgid "Default New Ticket Status"
+msgstr ""
+
+#: admin/options-init.php:224
+msgid "The default status for new tickets."
+msgstr "Standardstatus for nye billetter."
+
+#: admin/options-init.php:234
+msgid "Default Solved (closed) Status"
+msgstr ""
+
+#: admin/options-init.php:235
+msgid "Set the name of the Solved (closed) ticket status."
+msgstr ""
+
+#: admin/options-init.php:245
+msgid "Default Type"
+msgstr "Standard Type"
+
+#: admin/options-init.php:246
+msgid "The default type for new tickets."
+msgstr "Standard typen for nye billetter."
+
+#: admin/options-init.php:256
+msgid "Default priority"
+msgstr "Standard prioritet"
+
+#: admin/options-init.php:257
+msgid "The default priority for new tickets."
+msgstr "Standard prioritet for nye billetter."
+
+#: admin/options-init.php:267
+msgid "Default Department"
+msgstr "Standardavdeling"
+
+#: admin/options-init.php:268
+msgid "The default Department for new tickets."
+msgstr "Standardavdelingen for nye billetter."
+
+#: admin/options-init.php:273
+msgid "Default Agent"
+msgstr "Standard agent"
+
+#: admin/options-init.php:274
+msgid "The default user for new tickets."
+msgstr "Standardbrukeren for nye billetter."
+
+#: admin/options-init.php:288
+#, php-format
+msgid "Default Agent for %s"
+msgstr "Standard agent for %s"
+
+#: admin/options-init.php:289
+#, php-format
+msgid "The default user for %s."
+msgstr "Standardbrukeren for %s ."
+
+#: admin/options-init.php:297
+msgid "Defaults"
+msgstr "mislighold"
+
+#: admin/options-init.php:305
+msgid "Desktop Notifications"
+msgstr "Bordmeldinger"
+
+#: admin/options-init.php:312
+msgid "Enable Desktop Notifications"
+msgstr "Aktiver skrivebordsvarsler"
+
+#: admin/options-init.php:318 admin/options-init.php:1282
+msgid "AJAX Interval"
+msgstr "AJAX Intervall"
+
+#: admin/options-init.php:319 admin/options-init.php:1283
+msgid "Increase the interval (in miliseconds) to save server performance."
+msgstr "Øk intervallet (i milisekunder) for å lagre serverytelsen."
+
+#: admin/options-init.php:329
+msgid "Welcome Title"
+msgstr "Velkommen tittel"
+
+#: admin/options-init.php:330
+msgid "Welcome to Helpdesk"
+msgstr "Velkommen til Helpdesk"
+
+#: admin/options-init.php:336
+msgid "Welcome Text"
+msgstr "Velkommen tekst"
+
+#: admin/options-init.php:337
+msgid "How can we help you today?"
+msgstr "Hvordan kan vi hjelpe deg i dag?"
+
+#: admin/options-init.php:343
+msgid "Welcome Timout"
+msgstr "Velkommen Timout"
+
+#: admin/options-init.php:344
+msgid "Time in minutes when the welcome message should pop up again."
+msgstr "Tid i minutter når velkomstmeldingen skal dukke opp igjen."
+
+#: admin/options-init.php:355
+msgid "Set an icon"
+msgstr "Sett et ikon"
+
+#: admin/options-init.php:356 admin/options-init.php:1223
+msgid "The icon must be in square format."
+msgstr "Ikonet må være i kvadratformat."
+
+#: admin/options-init.php:364
+msgid "Timeout"
+msgstr "Pause"
+
+#: admin/options-init.php:365
+msgid "Set the time when the notification automatically hides."
+msgstr "Angi tidspunktet når varselet automatisk skjuler."
+
+#: admin/options-init.php:378
+msgid "FAQ – Knowledge Base"
+msgstr "Vanlige spørsmål - Kunnskapsbase"
+
+#: admin/options-init.php:385
+msgid "Enable the FAQs Knowledge Base"
+msgstr "Aktiver FAQs Knowledge Base"
+
+#: admin/options-init.php:386
+msgid ""
+"Custom Post Type FAQ will be created. Ticket can be copied into a new FAQ."
+msgstr ""
+"Vanlige posttype FAQ vil bli opprettet. Billetten kan kopieres til en ny FAQ."
+
+#: admin/options-init.php:392
+msgid "Knowledge Base Page"
+msgstr "Knowledge Base Page"
+
+#: admin/options-init.php:393
+msgid ""
+"Make sure the [knowledge_base] shortcode is placed there. After saving go to "
+"settings > permalinks and save."
+msgstr ""
+"Pass på at [knowledge_base] shortcode er plassert der. Etter lagring gå til "
+"innstillinger> permalinks og lagre."
+
+#: admin/options-init.php:400
+msgid "Show Search"
+msgstr "Vis søk"
+
+#: admin/options-init.php:406
+msgid "Maximum Live Search Results"
+msgstr ""
+
+#: admin/options-init.php:407
+msgid "Set maximum results for FAQ live search."
+msgstr ""
+
+#: admin/options-init.php:418
+msgid "Show Views Count"
+msgstr "Vis antall visninger"
+
+#: admin/options-init.php:425
+msgid "Show Rating"
+msgstr "Vis vurdering"
+
+#: admin/options-init.php:432
+msgid "Disable the Rating dislike button"
+msgstr "Deaktiver knappen Misliker upassende"
+
+#: admin/options-init.php:439
+msgid "Masonry"
+msgstr "murverk"
+
+#: admin/options-init.php:446
+msgid "Topics Layout"
+msgstr ""
+
+#: admin/options-init.php:448
+msgid "List Layout"
+msgstr "Listeoppsett"
+
+#: admin/options-init.php:449
+msgid "Boxed Layout"
+msgstr "Boxed Layout"
+
+#: admin/options-init.php:456
+msgid "Topics Columns"
+msgstr ""
+
+#: admin/options-init.php:457 admin/options-init.php:475
+msgid "Default Topic columns. Needs to be deviable by 12."
+msgstr ""
+
+#: admin/options-init.php:468
+msgid "Item Masonry"
+msgstr ""
+
+#: admin/options-init.php:474
+msgid "Item Columns"
+msgstr ""
+
+#: admin/options-init.php:486
+msgid "Hide FAQ excerpts for not logged in"
+msgstr "Skjul FAQ-utdrag for ikke logget inn"
+
+#: admin/options-init.php:487
+msgid "Hide all FAQ excerpts for not logged in users in the Knwoledge Base"
+msgstr "Skjul alle vanlige utdrag for ikke innloggede brukere i Knwoledge Base"
+
+#: admin/options-init.php:494
+msgid "Hide All Single FAQs pages"
+msgstr "Skjul alle enkle ofte stillede sider"
+
+#: admin/options-init.php:495
+msgid "Hide all Single FAQ pages for not logged in users."
+msgstr "Skjul alle Enkle FAQ-sider for ikke innloggede brukere."
+
+#: admin/options-init.php:505
+msgid "Hide some FAQs"
+msgstr "Skjul noen vanlige spørsmål"
+
+#: admin/options-init.php:506
+msgid "Show the following FAQs only to logged in Users:"
+msgstr "Vis bare de vanlige spørsmålene som er innlogget for brukere:"
+
+#: admin/options-init.php:518
+msgid "Hide some Topics"
+msgstr "Skjul noen emner"
+
+#: admin/options-init.php:519
+msgid "Hide complete Topics from not logged in users:"
+msgstr "Skjul komplette emner fra ikke innloggede brukere:"
+
+#: admin/options-init.php:526
+msgid "Form Fields"
+msgstr "Form Fields"
+
+#: admin/options-init.php:533
+msgid "Simple Form Fields"
+msgstr "Enkle formfelt"
+
+#: admin/options-init.php:534
+msgid "Fields for the Simple [new_ticket] form. "
+msgstr "Felt for det enkle [new_ticket] skjemaet. "
+
+#: admin/options-init.php:540 admin/options-init.php:577
+#: admin/options-init.php:627
+msgid "Systems / Project Select Field"
+msgstr "Systemer / Prosjekt velg felt"
+
+#: admin/options-init.php:546 admin/options-init.php:583
+#: admin/options-init.php:633
+msgid "Priority Select Field"
+msgstr "Prioritert velg felt"
+
+#: admin/options-init.php:552 admin/options-init.php:589
+#: admin/options-init.php:639
+msgid "Types Select Field"
+msgstr "Typer Velg felt"
+
+#: admin/options-init.php:564 admin/options-init.php:601
+#: admin/options-init.php:651
+msgid "Attachments field"
+msgstr "Vedlegg felt"
+
+#: admin/options-init.php:570
+msgid "Envato Form Fields"
+msgstr "Envato Form Fields"
+
+#: admin/options-init.php:571
+msgid "Fields for the Simple [new_ticket type=\"Envato\"] form. "
+msgstr "Felt for den enkle [new_ticket type =  \"Envato \"] skjemaet. "
+
+#: admin/options-init.php:613
+msgid "Envato Items"
+msgstr "Envato-elementer"
+
+#: admin/options-init.php:614
+msgid ""
+"A selected Item will be overwritten when an item is found within the "
+"purchase code."
+msgstr ""
+"Et valgt element blir overskrevet når et element er funnet i innkjøpskoden."
+
+#: admin/options-init.php:620
+msgid "WooCommerce Form Fields"
+msgstr "WooCommerce Form Fields"
+
+#: admin/options-init.php:621
+msgid "Fields for the Simple [new_ticket type=\"WooCommerce\"] form. "
+msgstr "Felt for den enkle [new_ticket type =  \"WooCommerce \"] skjemaet. "
+
+#: admin/options-init.php:657
+msgid "Product Support (lists all Products)"
+msgstr "Produktstøtte (viser alle produkter)"
+
+#: admin/options-init.php:663
+msgid "Order Support (lists all Orders)"
+msgstr "Bestillingsstøtte (viser alle bestillinger)"
+
+#: admin/options-init.php:670
+msgid "Inbox"
+msgstr "Innboks"
+
+#: admin/options-init.php:677
+msgid "Enable Inbox"
+msgstr "Aktiver innboks"
+
+#: admin/options-init.php:678
+msgid "Enable this to allow ticket creation via Email."
+msgstr "Aktiver dette for å tillate biljettopprettelse via e-post."
+
+#: admin/options-init.php:684
+msgid "Recurrence"
+msgstr "Tilbakefall"
+
+#: admin/options-init.php:685
+msgid "How often should Emails be fetched."
+msgstr "Hvor ofte skal e-post bli hentet."
+
+#: admin/options-init.php:687
+msgid "Hourly"
+msgstr "Hver time"
+
+#: admin/options-init.php:688
+msgid "Twice daily"
+msgstr "To ganger daglig"
+
+#: admin/options-init.php:689
+msgid "Daily"
+msgstr "Daglig"
+
+#: admin/options-init.php:697
+msgid "Mail Account Settings"
+msgstr "Innstillinger for postkonto"
+
+#: admin/options-init.php:698
+msgid "Settings for your Mail Account."
+msgstr "Innstillinger for e-postkontoen din."
+
+#: admin/options-init.php:705
+msgid "Email"
+msgstr "e-post"
+
+#: admin/options-init.php:712
+msgid "Username & Password"
+msgstr "Brukernavn passord"
+
+#: admin/options-init.php:714
+msgid "Enter your Username"
+msgstr "Skriv inn brukernavnet ditt"
+
+#: admin/options-init.php:715
+msgid "Enter your Password"
+msgstr "Skriv inn passordet ditt"
+
+#: admin/options-init.php:722
+msgid "Host"
+msgstr "Vert"
+
+#: admin/options-init.php:728
+msgid "Inbox Folder"
+msgstr "Innboksmappe"
+
+#: admin/options-init.php:729
+msgid ""
+"The folder where to scan for new mails. Most of the time it is the INBOX "
+"folder."
+msgstr ""
+"Mappen der du skal skanne etter nye mails. Mesteparten av tiden er det INBOX-"
+"mappen."
+
+#: admin/options-init.php:736
+msgid "Archive Folder"
+msgstr "Arkivmappe"
+
+#: admin/options-init.php:737
+msgid "The target folder, where processed mails should be moved (eg. Archiv)."
+msgstr "Målmappen, der behandlet post skal flyttes (f.eks. Arkiv)."
+
+#: admin/options-init.php:744 admin/options-init.php:768
+msgid "Protocol"
+msgstr "protokoll"
+
+#: admin/options-init.php:746
+msgid "TLS"
+msgstr "TLS"
+
+#: admin/options-init.php:747
+msgid "SSL"
+msgstr "SSL"
+
+#: admin/options-init.php:755
+msgid "Port"
+msgstr "Havn"
+
+#: admin/options-init.php:757
+msgid "143"
+msgstr "143"
+
+#: admin/options-init.php:758
+msgid "993"
+msgstr "993"
+
+#: admin/options-init.php:759
+msgid "110"
+msgstr "110"
+
+#: admin/options-init.php:760
+msgid "995"
+msgstr "995"
+
+#: admin/options-init.php:770
+msgid "IMAP"
+msgstr "IMAP"
+
+#: admin/options-init.php:771
+msgid "IMAPS"
+msgstr "IMAPS"
+
+#: admin/options-init.php:772
+msgid "POP3"
+msgstr "POP3"
+
+#: admin/options-init.php:773
+msgid "POP3S"
+msgstr "POP3S"
+
+#: admin/options-init.php:781
+msgid "No Validate Cert"
+msgstr "Ingen bekreftelse Cert"
+
+#: admin/options-init.php:782
+msgid "Do not validate Certificates."
+msgstr "Ikke valider sertifikater."
+
+#: admin/options-init.php:789
+msgid "Test Mail Account"
+msgstr "Test postkonto"
+
+#: admin/options-init.php:789
+msgid "Check Folter"
+msgstr "Sjekk Folter"
+
+#: admin/options-init.php:789
+msgid "Fetch Emails Now"
+msgstr "Hent e-poster nå"
+
+#: admin/options-init.php:796
+msgid "Integrations"
+msgstr "integrasjoner"
+
+#: admin/options-init.php:804
+msgid "Invisible Recaptcha Integration"
+msgstr "Usynlig Recaptcha Integrasjon"
+
+#: admin/options-init.php:805
+msgid ""
+"Install & Setup the <a href=\"https://wordpress.org/plugins/invisible-"
+"recaptcha/\" target=\"_blank\">invisible recaptcha plugin from here</a>. "
+"Then check this option."
+msgstr ""
+"Installer og sett inn <a href=\"https://wordpress.org/plugins/invisible-"
+"recaptcha/\" target=\"_blank\"> usynlig recaptcha-plugin herfra </a>. Sjekk "
+"deretter dette alternativet."
+
+#: admin/options-init.php:812
+msgid "Envato Integration"
+msgstr "Envato Integrasjon"
+
+#: admin/options-init.php:818
+msgid "Your Envato Username"
+msgstr "Ditt Envato Brukernavn"
+
+#: admin/options-init.php:824
+msgid "Envato API Key"
+msgstr "Envato API-nøkkel"
+
+#: admin/options-init.php:825
+msgid ""
+"<a href=\"https://build.Envato.com/my-apps/\" target=\"_blank\">Click here "
+"to get your API key > Person Tokens</a>."
+msgstr ""
+"<a href=\"https://build.Envato.com/my-apps/\" target=\"_blank\"> Klikk her "
+"for å få API-nøkkelen din> Person-symboler </a>."
+
+#: admin/options-init.php:831
+msgid "Purchase Code required?"
+msgstr "Kode kreves?"
+
+#: admin/options-init.php:832
+msgid ""
+"If enabled manual ticket creations will require a purchase code. Requests "
+"without a purchase code will automatically be denied and a reply will be "
+"sent with the request for the code."
+msgstr ""
+"Hvis aktiverte manuelle billett kreasjoner vil kreve en kjøpskode. "
+"Forespørsler uten innkjøpskode blir automatisk nektet og et svar vil bli "
+"sendt med forespørselen om koden."
+
+#: admin/options-init.php:839
+msgid "Check Support until for Purchase?"
+msgstr "Sjekk støtte til kjøp?"
+
+#: admin/options-init.php:840
+msgid ""
+"If enabled purchases, where the support is expired will not be created as a "
+"ticket."
+msgstr ""
+"Hvis aktiverte kjøp, hvor støtten er utløpt, vil ikke bli opprettet som en "
+"billett."
+
+#: admin/options-init.php:848
+msgid "WooCommerce Integration"
+msgstr "WooCommerce Integrasjon"
+
+#: admin/options-init.php:854
+msgid "Show FAQs Tab on Product pages"
+msgstr "Vis FAQs-fanen på produktsidene"
+
+#: admin/options-init.php:861
+msgid "Hide Admin bar for Reporters"
+msgstr "Skjul Admin-bar for Reporters"
+
+#: admin/options-init.php:868
+msgid "Prevent Admin access for Reporters"
+msgstr "Forhindre admin tilgang for Reporters"
+
+#: admin/options-init.php:876
+msgid "Slack Integration"
+msgstr "Slakkintegrasjon"
+
+#: admin/options-init.php:882
+msgid "Webhook URL"
+msgstr "Webhook URL"
+
+#: admin/options-init.php:883
+msgid ""
+"Then <a href=\"https://my.slack.com/services/new/incoming-webhook\" "
+"target=\"_blank\">create an incoming webhook</a> on your Slack account for "
+"the package to use. You'll need the webhook URL to instantiate the client."
+msgstr ""
+"Deretter <a href=\"https://my.slack.com/services/new/incoming-webhook\" "
+"target=\"_blank\"> opprett et innkommende webhook </a> på din Slack-konto "
+"for pakken til bruk. Du trenger webhook-nettadressen for å instantiere "
+"klienten."
+
+#: admin/options-init.php:884
+msgid "https://hooks.slack.com/services/..."
+msgstr "https: //hooks.slack.com/services / ..."
+
+#: admin/options-init.php:890
+msgid "Channel"
+msgstr "Kanal"
+
+#: admin/options-init.php:891
+msgid "Channel where to post to."
+msgstr "Kanal hvor du skal legge inn til."
+
+#: admin/options-init.php:898
+msgid "Icon"
+msgstr "Ikon"
+
+#: admin/options-init.php:899
+msgid "Set your custom Slack Icon"
+msgstr "Sett inn din egendefinerte Slack Icon"
+
+#: admin/options-init.php:910 admin/options-init.php:1007
+#: admin/options-init.php:1014
+msgid "New Ticket Notification"
+msgstr "Ny billettmelding"
+
+#: admin/options-init.php:917 admin/options-init.php:1042
+#: admin/options-init.php:1049
+msgid "Status Change Notification"
+msgstr "Endringsmelding om status"
+
+#: admin/options-init.php:924 admin/options-init.php:931
+#: admin/options-init.php:1084
+msgid "Enable Comment added Notification"
+msgstr "Aktiver Kommentar lagt til Varsling"
+
+#: admin/options-init.php:938
+msgid "Enable FB Messenger Live Chat."
+msgstr ""
+
+#: admin/options-init.php:939
+msgid ""
+"Learn more here: <a href=\"https://developers.facebook.com/docs/messenger-"
+"platform/discovery/customer-chat-plugin\">Click</a>"
+msgstr ""
+
+#: admin/options-init.php:946
+msgid "FBMessenger Code"
+msgstr ""
+
+#: admin/options-init.php:947
+msgid ""
+"<a href=\"https://developers.facebook.com/docs/messenger-"
+"platform/discovery/customer-chat-plugin#steps\">Follow the steps here to get "
+"the Messenger code.</a>"
+msgstr ""
+
+#: admin/options-init.php:953
+msgid "Enable Crisp Live Chat."
+msgstr "Aktiver skarp Live Chat."
+
+#: admin/options-init.php:954
+msgid "Learn more here: https://crisp.chat/en/"
+msgstr "Lær mer her: https://crisp.chat/en/"
+
+#: admin/options-init.php:961
+msgid "Crisp Code"
+msgstr "Skarp kode"
+
+#: admin/options-init.php:962
+msgid ""
+"Copy & paste the HTML code here. https://app.crisp.chat/settings/websites/"
+msgstr ""
+"Kopier og lim inn HTML-koden her. https://app.crisp.chat/settings/websites/"
+
+#: admin/options-init.php:968
+msgid "Enable PureChat Live Chat."
+msgstr "Aktiver PureChat Live Chat."
+
+#: admin/options-init.php:969
+msgid "Learn more here: https://www.purechat.com/"
+msgstr "Lær mer her: https://www.purechat.com/"
+
+#: admin/options-init.php:976
+msgid "PureChat Code"
+msgstr "PureChat-kode"
+
+#: admin/options-init.php:977
+msgid ""
+"Copy & paste the HTML code here. https://app.purechat.com/websites/install-"
+"first"
+msgstr ""
+"Kopier og lim inn HTML-koden her. https://app.purechat.com/websites/install-"
+"first"
+
+#: admin/options-init.php:983
+msgid "Enable Chatra Live Chat."
+msgstr "Aktiver Chatra Live Chat."
+
+#: admin/options-init.php:984
+msgid "Learn more here: https://chatra.io"
+msgstr "Lær mer her: https://chatra.io"
+
+#: admin/options-init.php:991
+msgid "Chatra Code"
+msgstr "Chatra-kode"
+
+#: admin/options-init.php:992
+msgid "Copy & paste the HTML code here. https://app.chatra.io/settings/general"
+msgstr ""
+"Kopier og lim inn HTML-koden her. https://app.chatra.io/settings/general"
+
+#: admin/options-init.php:999
+msgid "Mail Notifications"
+msgstr "E-postvarsler"
+
+#: admin/options-init.php:1008
+msgid "Notification when a new ticket has been created. "
+msgstr "Varsel når en ny billett er opprettet. "
+
+#: admin/options-init.php:1020 admin/options-init.php:1055
+#: admin/options-init.php:1090 admin/options-init.php:1127
+msgid "Notify the reporter."
+msgstr "Gi beskjed til reporteren."
+
+#: admin/options-init.php:1027
+msgid "Notify the by default assigned agent."
+msgstr "Gi beskjed til den tildelte agent som standard."
+
+#: admin/options-init.php:1034 admin/options-init.php:1069
+#: admin/options-init.php:1106 admin/options-init.php:1141
+msgid "Notify the the following users:"
+msgstr "Gi beskjed til følgende brukere:"
+
+#: admin/options-init.php:1043
+msgid "Notification when a ticket status has been changed. "
+msgstr "Varsel når en billettstatus er endret. "
+
+#: admin/options-init.php:1062
+msgid "Notify the assigned agent."
+msgstr "Gi beskjed til den tildelte agenten."
+
+#: admin/options-init.php:1077
+msgid "Comment Added Notification"
+msgstr "Kommentar lagt til melding"
+
+#: admin/options-init.php:1078
+msgid "Whenever a comment has been added. "
+msgstr "Når en kommentar er lagt til. "
+
+#: admin/options-init.php:1098 admin/options-init.php:1134
+msgid "Notify the agent."
+msgstr "Informer agenten."
+
+#: admin/options-init.php:1114
+msgid "Assigned Agent Changed Notification"
+msgstr "Tilordnet agent endret melding"
+
+#: admin/options-init.php:1115
+msgid "Whenever the assigned agent changed. "
+msgstr "Når den tilordnede agenten endret seg. "
+
+#: admin/options-init.php:1121
+msgid "Enable agent changed added Notification"
+msgstr "Aktiver agent endret lagt til Varsling"
+
+#: admin/options-init.php:1149
+msgid "Notification settings"
+msgstr "Varslingsinnstillinger"
+
+#: admin/options-init.php:1150
+msgid "The default notification settings for mails etc."
+msgstr "Standardvarslingsinnstillingene for mails etc."
+
+#: admin/options-init.php:1156
+#: admin/class-kong-helpdesk-my-tickets.php:117
+#: admin/widgets/faq-topics.php:73
+msgid "Name"
+msgstr "Navn"
+
+#: admin/options-init.php:1157
+msgid "This is the default from name for your mail notifications."
+msgstr "Dette er standard fra navnet på dine e-postvarsler."
+
+#: admin/options-init.php:1164
+msgid "Set a Logo"
+msgstr "Sett en logo"
+
+#: admin/options-init.php:1165
+msgid "The logo will be used in all Mail notifications."
+msgstr "Logoen vil bli brukt i alle e-postvarsler."
+
+#: admin/options-init.php:1173
+msgid "Support Mail Address"
+msgstr "Støtte postadresse"
+
+#: admin/options-init.php:1174
+msgid ""
+"This will be used in your mail notifications as the default reply to address."
+msgstr ""
+"Dette vil bli brukt i dine e-postvarsler som standard svar på adressen."
+
+#: admin/options-init.php:1180
+msgid "Footer for Mails"
+msgstr "Footer for Mails"
+
+#: admin/options-init.php:1187 admin/options-init.php:1241
+#: admin/class-kong-helpdesk-livechat-backend.php:222
+#: admin/class-kong-helpdesk-livechat-backend.php:223
+#: admin/class-kong-helpdesk-livechat-backend.php:235
+#: admin/class-kong-helpdesk-livechat.php:558
+#: admin/class-kong-helpdesk-livechat.php:604
+#: admin/class-kong-helpdesk-livechat.php:605
+#: admin/class-kong-helpdesk-livechat.php:614
+msgid "Live Chat"
+msgstr "Live chat"
+
+#: admin/options-init.php:1194
+msgid "Enable Live Chat"
+msgstr "Aktiver Live Chat"
+
+#: admin/options-init.php:1200
+msgid "Allow Guest-Chat"
+msgstr "Tillat Guest-Chat"
+
+#: admin/options-init.php:1207
+msgid "Allow Attachments"
+msgstr "Tillat vedlegg"
+
+#: admin/options-init.php:1214
+msgid "Hide Livechat when agents offline"
+msgstr "Skjul Livechat når agenter offline"
+
+#: admin/options-init.php:1222
+msgid "Default Icon"
+msgstr "Standard ikon"
+
+#: admin/options-init.php:1240
+msgid "Live Chat Title"
+msgstr "Live Chat Tittel"
+
+#: admin/options-init.php:1247
+msgid "Status Text (Online)"
+msgstr "Statustekst (Online)"
+
+#: admin/options-init.php:1248
+msgid "Our customer service is available."
+msgstr "Vår kundeservice er tilgjengelig."
+
+#: admin/options-init.php:1254
+msgid "Status Text (Offline)"
+msgstr "Statustekst (frakoblet)"
+
+#: admin/options-init.php:1255
+msgid "No agents online."
+msgstr "Ingen agenter på nettet."
+
+#: admin/options-init.php:1261
+msgid "Welcome Text (Online)"
+msgstr "Velkommen tekst (Online)"
+
+#: admin/options-init.php:1262
+#, php-format
+msgid "Hi %s,<br><br>Please tell us your subject and your concerns."
+msgstr "Hei %s , <br> <br> Fortell oss ditt emne og dine bekymringer."
+
+#: admin/options-init.php:1268
+msgid "Welcome Text (Offline)"
+msgstr "Velkommen tekst (frakoblet)"
+
+#: admin/options-init.php:1269
+msgid ""
+"Sorry,<br><br>None of our agents is online right now. But you can leave a "
+"message."
+msgstr ""
+"Beklager, <br> <br> Ingen av våre agenter er online akkurat nå. Men du kan "
+"legge igjen en melding."
+
+#: admin/options-init.php:1275
+msgid "Button Text"
+msgstr "Knapptekst"
+
+#: admin/options-init.php:1276
+msgid "Enter Chat"
+msgstr "Skriv inn Chat"
+
+#: admin/options-init.php:1294
+msgid "Saved Replies (BOT)"
+msgstr "Lagrede svar (BOT)"
+
+#: admin/options-init.php:1301
+msgid "Enable Saved Replies"
+msgstr "Aktiver lagrede svar"
+
+#: admin/options-init.php:1302
+msgid ""
+"This allows you to save comments into a saved reply, that can be reused for "
+"later tickets."
+msgstr ""
+"Dette lar deg lagre kommentarer i et lagret svar, som kan brukes til senere "
+"billetter."
+
+#: admin/options-init.php:1308
+msgid "Enable Automatic Replies"
+msgstr "Aktiver automatiske svar"
+
+#: admin/options-init.php:1309
+msgid ""
+"This will use your saved replies based on tags & word matches to "
+"automatically reply."
+msgstr ""
+"Dette vil bruke dine lagrede svar basert på tagger og ord-kamper for å svare "
+"automatisk."
+
+#: admin/options-init.php:1315
+msgid "Automatic Reply User"
+msgstr "Automatisk svar bruker"
+
+#: admin/options-init.php:1316
+msgid ""
+"This User will be used for automatic replies. You can create a user Bot for "
+"example and set it here."
+msgstr ""
+"Denne brukeren blir brukt til automatiske svar. Du kan opprette en bruker "
+"Bot for eksempel og sette den her."
+
+#: admin/options-init.php:1323
+msgid "Enable Automatic Replies for new Tickets"
+msgstr "Aktiver automatiske svar på nye billetter"
+
+#: admin/options-init.php:1330
+msgid "Enable Automatic Reply for new Ticket Replies"
+msgstr "Aktiver automatisk svar for nye billettespørsmål"
+
+#: admin/options-init.php:1338
+msgid "Support Rating"
+msgstr "Støtte vurdering"
+
+#: admin/options-init.php:1339
+msgid ""
+"Send out Emails when tickets are completed and ask for a support rating."
+msgstr "Send ut e-post når billettene er fullført og be om en støttestatus."
+
+#: admin/options-init.php:1346
+msgid "Enable Support Rating"
+msgstr "Aktiver støttebedømmelse"
+
+#: admin/options-init.php:1357
+msgid "Rating Status"
+msgstr "Vurdering Status"
+
+#: admin/options-init.php:1358
+msgid "The status when the rating support email should be sent out."
+msgstr "Statusen når e-postadressen for vurderingstøtte skal sendes ut."
+
+#: admin/options-init.php:1364
+msgid "Feedback Page"
+msgstr "Tilbakemeldingsside"
+
+#: admin/options-init.php:1365
+msgid ""
+"Make sure the [helpdesk_feedback] shortcode is placed there. After saving "
+"here go to settings > permalinks and save."
+msgstr ""
+"Pass på at [helpdesk_feedback] shortcode er plassert der. Etter å ha lagret "
+"her, gå til innstillinger> permalinks og lagre."
+
+#: admin/options-init.php:1372
+msgid "Email Subject"
+msgstr "E-post Emne"
+
+#: admin/options-init.php:1373
+msgid "How would you rate the support?"
+msgstr "Hvordan ville du vurdere støtten?"
+
+#: admin/options-init.php:1379
+msgid "Email Intro"
+msgstr "E-post Intro"
+
+#: admin/options-init.php:1380
+#, php-format
+msgid ""
+"Hello %s,<br/><br/>We'd love to hear about your support experience. Please "
+"take a moment to answer one simple question by clicking either link below:"
+"<br/><br/>How would you rate the support you received?<br/><br/>"
+msgstr ""
+"Hei %s , <br/> <br/> Vi vil gjerne høre om din supportopplevelse. Ta et "
+"øyeblikk til å svare på ett enkelt spørsmål ved å klikke på linken nedenfor: "
+"<br/> <br/> Hvordan ville du vurdere støtten du mottok? <br/> <br/>"
+
+#: admin/options-init.php:1386 admin/options-init.php:1393
+msgid "Email Satisfied Text"
+msgstr "E-post fornøyd tekst"
+
+#: admin/options-init.php:1387
+msgid "Good, I'm satisfied"
+msgstr "Bra, jeg er fornøyd"
+
+#: admin/options-init.php:1394
+msgid "Bad, I'm unsatisfied"
+msgstr "Dårlig, jeg er utilfreds"
+
+#: admin/options-init.php:1400
+msgid "Email Outro"
+msgstr "Email Outro"
+
+#: admin/options-init.php:1401
+msgid ""
+"Not solved yet?<br><br>The message you add to your feedback will not be "
+"forwarded as a reply. If you have further questions you can reply to this "
+"email."
+msgstr ""
+"Ikke løst ennå? <br> <br> Meldingen du legger til i tilbakemeldingen din, "
+"blir ikke videresendt som svar. Hvis du har flere spørsmål, kan du svare på "
+"denne e-postadressen."
+
+#: admin/options-init.php:1409
+msgid "My Tickets options."
+msgstr ""
+
+#: admin/options-init.php:1416
+msgid "Automatically Close Tickets"
+msgstr ""
+
+#: admin/options-init.php:1417
+msgid ""
+"Automatically set Tickets to close / solved after X Days no comment / update "
+"was made. You need to set a default solved status!"
+msgstr ""
+
+#: admin/options-init.php:1423
+msgid "Days after a Ticket gets closed"
+msgstr ""
+
+#: admin/options-init.php:1433
+msgid "My tickets"
+msgstr ""
+
+#: admin/options-init.php:1434
+msgid "Configure what you want to show in the My tickets table."
+msgstr ""
+
+#: admin/options-init.php:1526
+msgid "Show Name"
+msgstr ""
+
+#: admin/options-init.php:1532
+msgid "Show Date"
+msgstr ""
+
+#: admin/options-init.php:1538
+msgid "Show Status"
+msgstr ""
+
+#: admin/options-init.php:1544
+msgid "Show System"
+msgstr ""
+
+#: admin/options-init.php:1550
+msgid "Show Type"
+msgstr ""
+
+#: admin/options-init.php:1557
+msgid "Advanced settings"
+msgstr "Avanserte innstillinger"
+
+#: admin/options-init.php:1558
+msgid "Custom stylesheet / javascript."
+msgstr "Tilpasset stilark / javascript."
+
+#: admin/options-init.php:1565
+msgid "Use Theme Template"
+msgstr "Bruk temalmaler"
+
+#: admin/options-init.php:1566
+msgid "Enable this to override the custom templates."
+msgstr "Aktiver dette for å overstyre de egendefinerte malene."
+
+#: admin/options-init.php:1573
+msgid "Support Mail Template"
+msgstr "Støtte Mail Template"
+
+#: admin/options-init.php:1574
+msgid "This will be used for notifications."
+msgstr "Dette vil bli brukt til varsler."
+
+#: admin/options-init.php:1581
+msgid "Custom CSS"
+msgstr "Tilpasset CSS"
+
+#: admin/options-init.php:1582 admin/options-init.php:1589
+msgid "Add some stylesheet if you want."
+msgstr "Legg til noen stilark hvis du vil."
+
+#: admin/options-init.php:1588
+msgid "Custom JS"
+msgstr "Tilpasset JS"
+
+#: admin/class-kong-helpdesk-saved-replies.php:144
+msgid "Saved Reply"
+msgstr "Lagret Svar"
+
+#: admin/class-kong-helpdesk-saved-replies.php:145
+#: admin/class-kong-helpdesk-saved-replies.php:148
+msgid "Saved Replies"
+msgstr "Lagrede svar"
+
+#: admin/class-kong-helpdesk-saved-replies.php:207
+msgid "Category"
+msgstr "Kategori"
+
+#: admin/class-kong-helpdesk-saved-replies.php:208
+msgid "Categories"
+msgstr "kategorier"
+
+#: admin/class-kong-helpdesk-saved-replies.php:211
+#: admin/class-kong-helpdesk-saved-replies.php:212
+#: admin/class-kong-helpdesk-saved-replies.php:221
+#: admin/class-kong-helpdesk-saved-replies.php:247
+#: admin/class-kong-helpdesk-saved-replies.php:248
+#: admin/class-kong-helpdesk-saved-replies.php:257
+#, php-format
+msgid "%s"
+msgstr "% s"
+
+#: admin/class-kong-helpdesk-saved-replies.php:243
+msgid "Tag"
+msgstr "stikkord"
+
+#: admin/class-kong-helpdesk-saved-replies.php:244
+msgid "Tags"
+msgstr "Tags"
+
+#: admin/class-kong-helpdesk-saved-replies.php:308
+msgid "Create Saved Reply"
+msgstr "Lag Lagret Svar"
+
+#: admin/class-kong-helpdesk-saved-replies.php:326
+msgid "No comment to duplicate has been supplied!"
+msgstr "Ingen kommentar til duplikat har blitt levert!"
+
+#: admin/class-kong-helpdesk-saved-replies.php:347
+msgid "Saved Reply creation failed, could not find original comment: "
+msgstr ""
+"Lagret Svaropprettelse mislyktes, kunne ikke finne original kommentar: "
+
+#: admin/class-kong-helpdesk-slack.php:90
+#: admin/class-kong-helpdesk-slack.php:95
+#, php-format
+msgid "New Ticket created: %s"
+msgstr "Ny billett opprettet: %s"
+
+#: admin/class-kong-helpdesk-slack.php:93
+#: admin/class-kong-helpdesk-slack.php:132
+#: admin/class-kong-helpdesk-slack.php:178
+#: admin/class-kong-helpdesk-slack.php:190
+#: admin/class-kong-helpdesk-slack.php:253
+#: admin/class-kong-helpdesk-slack.php:289
+#, php-format
+msgid "[Ticket: %s] - %s"
+msgstr "[Billett: %s ] - %s"
+
+#: admin/class-kong-helpdesk-slack.php:129
+#, php-format
+msgid "New Comment added on Ticket %s"
+msgstr "Ny kommentar lagt til på Ticket %s"
+
+#: admin/class-kong-helpdesk-slack.php:134
+#, php-format
+msgid "New Comment added by %s:"
+msgstr "Ny kommentar lagt til av %s :"
+
+#: admin/class-kong-helpdesk-slack.php:176
+#: admin/class-kong-helpdesk-slack.php:188
+#, php-format
+msgid "[Ticket: %s] %s changed"
+msgstr "[Billett: %s ] %s endret"
+
+#: admin/class-kong-helpdesk-slack.php:180
+#, php-format
+msgid "%s changed from %s to: %s"
+msgstr "%s endret fra %s til: %s"
+
+#: admin/class-kong-helpdesk-slack.php:251
+#, php-format
+msgid "[Ticket: %s] Agent changed"
+msgstr "[Billett: %s ] Agent endret"
+
+#: admin/class-kong-helpdesk-slack.php:255
+#: admin/class-kong-helpdesk-log.php:265
+#, php-format
+msgid "Assigned from %s to %s"
+msgstr "Tilordnet fra %s til %s"
+
+#: admin/class-kong-helpdesk-slack.php:287
+#, php-format
+msgid "[Ticket: %s] Agent assigned"
+msgstr "[Billett: %s ] Agent tildelt"
+
+#: admin/class-kong-helpdesk-log.php:46
+msgid "History"
+msgstr "Historie"
+
+#: admin/class-kong-helpdesk-log.php:74
+#: admin/class-kong-helpdesk-livechat-backend.php:160
+#: admin/class-kong-helpdesk-livechat.php:161
+msgid " by "
+msgstr " av "
+
+#: admin/class-kong-helpdesk-log.php:79
+msgid "Content: "
+msgstr "Innhold: "
+
+#: admin/class-kong-helpdesk-livechat-backend.php:201
+#: admin/class-kong-helpdesk-livechat.php:285
+#, php-format
+msgid "Message received and Chat-Ticket %s created. You should have an email."
+msgstr "Melding mottatt og Chat-Ticket %s opprettet. Du bør ha en e-post."
+
+#: admin/class-kong-helpdesk-livechat-backend.php:355
+msgid "Error while uploading your attachment."
+msgstr "Feil under opplasting av vedlegget ditt."
+
+#: admin/class-kong-helpdesk-livechat-backend.php:391
+#: admin/class-kong-helpdesk-livechat.php:656
+msgid "No Chat Tickets created yet"
+msgstr "Ingen Chat Billetter opprettet ennå"
+
+#: admin/class-kong-helpdesk-livechat-backend.php:395
+#, php-format
+msgid "%d Chat Tickets created yet"
+msgstr "%d Chat Billetter opprettet enda"
+
+#: admin/class-kong-helpdesk-faq-post-type.php:89
+msgid "<h2>No Topics created so far!</h2>"
+msgstr "<h2> Ingen emner opprettet så langt! </ h2>"
+
+#: admin/class-kong-helpdesk-faq-post-type.php:223
+#: admin/class-kong-helpdesk-faq-post-type.php:231
+#, php-format
+msgid "View %s article"
+msgid_plural "View %s articles"
+msgstr[0] "Se %s artikkel"
+msgstr[1] "Se %s artikkel"
+
+#: admin/class-kong-helpdesk-faq-post-type.php:257
+#: admin/class-kong-helpdesk-faq-post-type.php:260
+msgid "Search FAQs"
+msgstr "Søk FAQs"
+
+#: admin/class-kong-helpdesk-faq-post-type.php:307
+msgid "No FAQ ID set."
+msgstr "Ingen FAQ ID-sett."
+
+#: admin/class-kong-helpdesk-faq-post-type.php:313
+msgid "No FAQ found."
+msgstr "Ingen FAQ funnet."
+
+#: admin/class-kong-helpdesk-faq-post-type.php:343
+#: admin/class-kong-helpdesk-faq-post-type.php:521
+msgid "View Article"
+msgstr "Se artikkelen"
+
+#: admin/class-kong-helpdesk-faq-post-type.php:404
+msgid "Topic ID not an ID"
+msgstr "Emne ID ikke ID"
+
+#: admin/class-kong-helpdesk-faq-post-type.php:426
+#, php-format
+msgid "Please <a href=\"%s\" title=\"Login\">login to view this topic.</a>"
+msgstr ""
+"Vennligst <a href=\" %s \" title=\"Login\"> logg inn for å se dette emnet. "
+"</a>"
+
+#: admin/class-kong-helpdesk-faq-post-type.php:456
+msgid "No Articles found."
+msgstr "Ingen artikler funnet."
+
+#: admin/class-kong-helpdesk-faq-post-type.php:542
+msgid "FAQ"
+msgstr "FAQ"
+
+#: admin/class-kong-helpdesk-faq-post-type.php:610
+msgid "Topic"
+msgstr "Emne"
+
+#: admin/class-kong-helpdesk-faq-post-type.php:611
+#: admin/widgets/faq-topics.php:63
+msgid "Topics"
+msgstr "emner"
+
+#: admin/class-kong-helpdesk-faq-post-type.php:675
+msgid "Create FAQ from this Ticket"
+msgstr "Lag FAQ fra denne billetten"
+
+#: admin/class-kong-helpdesk-faq-post-type.php:711
+msgid "FAQ creation failed, could not find original ticket: "
+msgstr ""
+"Opprettelse av ofte stillede spørsmål mislyktes, kunne ikke finne "
+"originalbillett: "
+
+#: admin/class-kong-helpdesk-faq-post-type.php:783
+#, php-format
+msgid "Search Results for: %s"
+msgstr "Søkeresultater for: %s"
+
+#: admin/class-kong-helpdesk-faq-post-type.php:797
+#, php-format
+msgid "We found more than %d results ..."
+msgstr ""
+
+#: admin/class-kong-helpdesk-faq-post-type.php:804
+#, php-format
+msgid "Could not find anything for: %s"
+msgstr "Kunne ikke finne noe for: %s"
+
+#: admin/class-kong-helpdesk-faq-post-type.php:1068
+#: admin/class-kong-helpdesk-faq-post-type.php:1074
+#, php-format
+msgid "Please <a href=\"%s\" title=\"Login\">login to view this faq.</a>"
+msgstr ""
+"Vennligst <a href=\" %s \" title=\"Login\"> logg inn for å se denne faqen. "
+"</a>"
+
+#: admin/class-kong-helpdesk-faq-post-type.php:1085
+#: admin/class-kong-helpdesk-faq-post-type.php:1086
+#: admin/class-kong-helpdesk-faq-post-type.php:1105
+msgid "FAQ Terms"
+msgstr "Vanlige spørsmål"
+
+#: admin/class-kong-helpdesk-faq-post-type.php:1098
+msgid "No Search Terms found yet"
+msgstr "Ingen søkeord funnet ennå"
+
+#: admin/class-kong-helpdesk-faq-post-type.php:1111
+msgid "Term"
+msgstr "Begrep"
+
+#: admin/class-kong-helpdesk-faq-post-type.php:1112
+msgid "Search Counts"
+msgstr "Søk teller"
+
+#: admin/class-kong-helpdesk-faq-post-type.php:1113
+msgid "Articles Found"
+msgstr "Artikler funnet"
+
+#: admin/class-kong-helpdesk-comments-processor.php:113
+#: admin/class-kong-helpdesk-ticket-processor.php:131
+msgid "Username not set!"
+msgstr "Brukernavn er ikke satt!"
+
+#: admin/class-kong-helpdesk-comments-processor.php:116
+#: admin/class-kong-helpdesk-ticket-processor.php:134
+msgid "Email not set!"
+msgstr "E-post ikke satt!"
+
+#: admin/class-kong-helpdesk-comments-processor.php:121
+msgid "User Exists. The comment has been created by your account."
+msgstr "Bruker eksisterer. Kommentaren er opprettet av kontoen din."
+
+#: admin/class-kong-helpdesk-comments-processor.php:126
+#: admin/class-kong-helpdesk-ticket-processor.php:152
+msgid "We created an account for you – Check your inbox!"
+msgstr "Vi opprettet en konto for deg - Sjekk innboksen din!"
+
+#: admin/class-kong-helpdesk-comments-processor.php:129
+msgid "User not exists, but account could not be created."
+msgstr "Brukeren eksisterer ikke, men kontoen kan ikke opprettes."
+
+#: admin/class-kong-helpdesk-comments-processor.php:140
+msgid "Post ID not set!"
+msgstr "Post ID ikke satt!"
+
+#: admin/class-kong-helpdesk-comments-processor.php:146
+msgid "Post ID not created!"
+msgstr "Post-ID er ikke opprettet!"
+
+#: admin/class-kong-helpdesk-comments-processor.php:151
+#: admin/class-kong-helpdesk-ticket-processor.php:178
+msgid "Message not set!"
+msgstr "Melding ikke satt!"
+
+#: admin/class-kong-helpdesk-exporter.php:40
+msgid "You are not an admin"
+msgstr "Du er ikke en administrator"
+
+#: admin/class-kong-helpdesk-exporter.php:47
+msgid "No Tickets to Export"
+msgstr "Ingen billetter til eksport"
+
+#: admin/class-kong-helpdesk-exporter.php:53
+msgid "Your Ticket Export is ready. The Download should start automatically."
+msgstr "Din Ticket Export er klar. Nedlastingen skal starte automatisk."
+
+#: admin/class-kong-helpdesk-exporter.php:55
+msgid "Something was wrong with the export generation ..."
+msgstr "Det var noe galt med eksportgenerasjonen ..."
+
+#: admin/class-kong-helpdesk-exporter.php:179
+msgid "Ticket Information"
+msgstr "Billettinformasjon"
+
+#: admin/class-kong-helpdesk-exporter.php:203
+msgid "System"
+msgstr "System"
+
+#: admin/class-kong-helpdesk-ticket-notes.php:49
+msgid "Private Notes"
+msgstr "Private notater"
+
+#: admin/class-kong-helpdesk-ticket-notes.php:77
+#: admin/class-kong-helpdesk-ticket-notes.php:134
+#, php-format
+msgid "created on %s by %s"
+msgstr "opprettet på %s av %s"
+
+#: admin/class-kong-helpdesk-ticket-notes.php:78
+#: admin/class-kong-helpdesk-ticket-notes.php:135
+msgid "Delete Note"
+msgstr "Slett notat"
+
+#: admin/class-kong-helpdesk-ticket-notes.php:86
+msgid "Add Note"
+msgstr "Legge til notat"
+
+#: admin/class-kong-helpdesk-ticket-notes.php:92
+msgid "Add"
+msgstr "Legg til"
+
+#: admin/class-kong-helpdesk-ticket-notes.php:107
+msgid "Ticket Sytem"
+msgstr "Ticket Sytem"
+
+#: admin/class-kong-helpdesk-ticket-processor.php:141
+#, php-format
+msgid ""
+"Username or Email exists.  <a href=\"%s\" title=\"Login\">Please login to "
+"create a ticket</a>."
+msgstr ""
+"Brukernavn eller e-post finnes. <a href=\" %s \" title=\"Login\"> Vennligst "
+"logg inn for å opprette en billett </a>."
+
+#: admin/class-kong-helpdesk-ticket-processor.php:155
+#, php-format
+msgid ""
+"User not exists, but account could not be created. <a href=\"%s\" "
+"title=\"Login\">Please login first</a>!"
+msgstr ""
+"Brukeren eksisterer ikke, men kontoen kan ikke opprettes. <a href=\" %s \" "
+"title=\"Login\"> Vennligst logg inn først </a>!"
+
+#: admin/class-kong-helpdesk-ticket-processor.php:174
+msgid "Subject not set!"
+msgstr "Emne ikke satt!"
+
+#: admin/class-kong-helpdesk-ticket-processor.php:184
+msgid "Purchase Code not set!"
+msgstr "Kjøps kode er ikke satt!"
+
+#: admin/class-kong-helpdesk-ticket-processor.php:193
+#, php-format
+msgid "Purchase Code %s could not be verified!"
+msgstr "Kjøpskode %s kunne ikke bekreftes!"
+
+#: admin/class-kong-helpdesk-ticket-processor.php:198
+#, php-format
+msgid "Support Expired on %s – please renew!"
+msgstr "Støtten utløpt på %s - vær så snill å fornye!"
+
+#: admin/class-kong-helpdesk-ticket-processor.php:200
+#: admin/class-kong-helpdesk-ticket-processor.php:203
+msgid "Purchase Code verified for item: "
+msgstr "Kjøpskode bekreftet for element: "
+
+#: admin/class-kong-helpdesk-reports.php:38
+#: admin/class-kong-helpdesk-reports.php:39
+#: admin/class-kong-helpdesk-reports.php:257
+msgid "Reports"
+msgstr "rapporter"
+
+#: admin/class-kong-helpdesk-reports.php:84
+msgid "Date From is not valid!"
+msgstr "Dato Fra er ikke gyldig!"
+
+#: admin/class-kong-helpdesk-reports.php:94
+msgid "Date Until is not valid!"
+msgstr "Dato frem til er ikke gyldig!"
+
+#: admin/class-kong-helpdesk-reports.php:202
+msgid "Waiting"
+msgstr "Venter"
+
+#: admin/class-kong-helpdesk-reports.php:217
+msgid "No Source"
+msgstr "Ingen kilde"
+
+#: admin/class-kong-helpdesk-reports.php:259
+msgid "Date Filter"
+msgstr "Datofilter"
+
+#: admin/class-kong-helpdesk-reports.php:263
+msgid "Date From (JJJJ-MM-DD)"
+msgstr "Dato fra (JJJJ-MM-DD)"
+
+#: admin/class-kong-helpdesk-reports.php:267
+msgid "Date Until (JJJJ-MM-DD)"
+msgstr "Dato frem til (JJJJ-MM-DD)"
+
+#: admin/class-kong-helpdesk-reports.php:271
+msgid "Submit"
+msgstr "Sende inn"
+
+#: admin/class-kong-helpdesk-reports.php:276
+msgid "Filtered"
+msgstr "filtrert"
+
+#: admin/class-kong-helpdesk-reports.php:277
+msgid "Filtered Tickets:"
+msgstr "Filtrerte billetter:"
+
+#: admin/class-kong-helpdesk-reports.php:281
+msgid "Tickets by Agent"
+msgstr "Billetter fra Agent"
+
+#: admin/class-kong-helpdesk-reports.php:290
+msgid "Tickets by Reporter"
+msgstr "Billetter av Reporter"
+
+#: admin/class-kong-helpdesk-reports.php:299
+msgid "Tickets by Satisfaction"
+msgstr "Billetter etter tilfredshet"
+
+#: admin/class-kong-helpdesk-reports.php:308
+msgid "Tickets by Source"
+msgstr "Billetter fra Source"
+
+#: admin/class-kong-helpdesk-reports.php:317
+msgid "Tickets by Year"
+msgstr "Billetter etter år"
+
+#: admin/class-kong-helpdesk-reports.php:326
+msgid "Tickets by Month"
+msgstr "Billetter etter måned"
+
+#: admin/class-kong-helpdesk-reports.php:335
+msgid "Tickets created by Year / Month"
+msgstr "Billetter skapt av år / måned"
+
+#: admin/class-kong-helpdesk-reports.php:352
+msgid "Total"
+msgstr "Total"
+
+#: admin/class-kong-helpdesk-reports.php:353
+msgid "No Date filter applied here:"
+msgstr "Ingen datofilter brukt her:"
+
+#: admin/class-kong-helpdesk-reports.php:356
+msgid "Tickets by Status"
+msgstr "Billetter etter Status"
+
+#: admin/class-kong-helpdesk-reports.php:365
+msgid "Tickets by Type"
+msgstr "Billetter etter type"
+
+#: admin/class-kong-helpdesk-reports.php:374
+msgid "Tickets by Department"
+msgstr "Billetter etter avdeling"
+
+#: admin/class-kong-helpdesk-reports.php:383
+msgid "Tickets by Priority"
+msgstr "Billetter av Priority"
+
+#: admin/class-kong-helpdesk-my-tickets.php:146
+msgid "Actions"
+msgstr "handlinger"
+
+#: admin/class-kong-helpdesk-my-tickets.php:153
+msgid "No tickets submitted yet."
+msgstr "Ingen billetter sendt enda."
+
+#: admin/class-kong-helpdesk-my-tickets.php:161
+#, php-format
+msgid "[Ticket: %s]"
+msgstr "[Billett: %s ]"
+
+#: admin/class-kong-helpdesk-my-tickets.php:224
+msgid "View"
+msgstr ""
+
+#: admin/class-kong-helpdesk-inbox.php:312
+#: admin/class-kong-helpdesk-inbox.php:373
+msgid "No Message in your Email detected."
+msgstr "Ingen melding i din epost oppdaget."
+
+#: admin/class-kong-helpdesk-inbox.php:329
+msgid ""
+"No purchase code detected. Please make sure the email contains the following "
+"pattern \"Purchase Code: XXX\"."
+msgstr ""
+"Ingen kjøpskode oppdaget. Vennligst kontroller at e-posten inneholder "
+"følgende mønster  \"Kjøpskode: XXX \"."
+
+#: admin/class-kong-helpdesk-inbox.php:379
+msgid "Ticket ID for your Reply could not be found."
+msgstr "Billett-ID for svaret ditt kunne ikke bli funnet."
+
+#: admin/class-kong-helpdesk-inbox.php:460
+msgid "Sorry ..."
+msgstr "Beklager ..."
+
+#: admin/class-kong-helpdesk-inbox.php:465
+msgid "Sorry we could not process your mail :("
+msgstr "Beklager vi kunne ikke behandle din mail :("
+
+#: admin/class-kong-helpdesk-inbox.php:466
+msgid "Visit our Website"
+msgstr "Besøk vår hjemmeside"
+
+#: admin/class-kong-helpdesk-livechat.php:204
+msgid "Currently there are no open chats."
+msgstr ""
+
+#: admin/class-kong-helpdesk-livechat.php:211
+#, php-format
+msgid "There is currently %s open chat:"
+msgid_plural "There are currently %s open chats:"
+msgstr[0] ""
+msgstr[1] ""
+
+#: admin/class-kong-helpdesk-livechat.php:239
+#: admin/class-kong-helpdesk-livechat.php:243
+#: admin/class-kong-helpdesk-livechat.php:247
+msgid ""
+"<div class=\"alert alert-danger\" role=\"alert\">This Chat has been "
+"Closed</div>"
+msgstr ""
+
+#: admin/class-kong-helpdesk-livechat.php:267
+msgid ""
+"<div class=\"alert alert-danger\" role=\"alert\">Ticket could not be created."
+" Please contact support email directly.</div>"
+msgstr ""
+
+#: admin/class-kong-helpdesk-livechat.php:292
+msgid "</div>"
+msgstr ""
+
+#: admin/class-kong-helpdesk-livechat.php:438
+#: admin/class-kong-helpdesk-livechat.php:557
+msgid "Close this Chat"
+msgstr ""
+
+#: admin/class-kong-helpdesk-livechat.php:451
+msgid "<p>Please login first.</p>"
+msgstr ""
+
+#: admin/class-kong-helpdesk-livechat.php:452
+#, php-format
+msgid ""
+"<a href=\"%s\" class=\"button btn btn-primary theme-btn theme-button\">Login "
+"Now</a>"
+msgstr ""
+
+#: admin/class-kong-helpdesk-livechat.php:569
+#, php-format
+msgid "Hi Agent %s,"
+msgstr ""
+
+#: includes/class-kong-helpdesk-activator.php:193
+msgid "Agent"
+msgstr "Agent"
+
+#: includes/class-kong-helpdesk-activator.php:215
+msgid "Subscriber"
+msgstr "Subscriber"
+
+#: admin/widgets/faq-topics.php:6
+msgid "FAQ Topics"
+msgstr "Vanlige spørsmål"
+
+#: admin/widgets/faq-topics.php:64
+msgid "Title:"
+msgstr "Tittel:"
+
+#: admin/widgets/faq-topics.php:72
+msgid "Menu Order"
+msgstr "Menyordre"
+
+#: admin/widgets/faq-topics.php:74
+msgid "Slug"
+msgstr "Slug"
+
+#: admin/widgets/faq-topics.php:75
+msgid "Term_group"
+msgstr "Term_group"
+
+#: admin/widgets/faq-topics.php:76
+msgid "Term_id"
+msgstr "Term_id"
+
+#: admin/widgets/faq-topics.php:77
+msgid "Id"
+msgstr "id"
+
+#: admin/widgets/faq-topics.php:78
+msgid "Description"
+msgstr "Beskrivelse"
+
+#: admin/widgets/faq-topics.php:79
+msgid "Parent"
+msgstr "Parent"
+
+#: admin/widgets/faq-topics.php:80
+msgid "Count"
+msgstr "Telle"
+
+#: admin/widgets/faq-topics.php:83
+msgid "Order By:"
+msgstr "Rekkefølge etter:"
+
+#: admin/widgets/faq-topics.php:104
+msgid "Order:"
+msgstr "Rekkefølge:"
+
+#: admin/widgets/faq-live-search.php:6
+msgid "Use this to show the live ajax search for FAQs"
+msgstr "Bruk dette til å vise live ajax søke etter vanlige spørsmål"
+
+#: admin/widgets/faq-posts.php:6
+msgid "Show some FAQs."
+msgstr "Vis noen vanlige spørsmål."
+
+#: admin/widgets/faq-dynamic-posts.php:6
+msgid ""
+"Use this if you want to show FAQs dynamically based on the current users FAQ "
+"page."
+msgstr ""
+"Bruk dette hvis du vil vise vanlige spørsmål ofte, basert på gjeldende side "
+"for brukerne."
+
+#: admin/widgets/faq-dynamic-posts.php:71
+msgid "Popular FAQs"
+msgstr "Populære Vanlige spørsmål"
+
+#: admin/views/single-faq.php:62
+#, php-format
+msgid "Viewed: %s"
+msgstr "Sett: %s"
+
+#: admin/views/single-ticket.php:57
+msgid "Close ticket"
+msgstr ""
+
+#: admin/views/single-ticket.php:116
+#, php-format
+msgid "Reporter: %s"
+msgstr "Reporter: %s"
+
+#: admin/views/single-ticket.php:118 admin/views/single-ticket.php:151
+msgid "Created on:"
+msgstr "Opprettet på:"
+
+#: admin/views/single-ticket.php:119 admin/views/single-ticket.php:152
+msgid "Email:"
+msgstr "e-post:"
+
+#: admin/views/single-ticket.php:136
+msgid "No Agent assigned yet."
+msgstr "Ingen agent tildelt ennå."
+
+#: admin/views/single-ticket.php:149
+#, php-format
+msgid "Agent: %s"
+msgstr "Agent: %s"
+
+#. Name of the plugin
+msgid "Kong TotalDesk"
+msgstr "Kong TotalDesk"
+
+#. Description of the plugin
+msgid "The All in One Kong Helpdesk solution"
+msgstr "Alt i en Kong Helpdesk-løsning"
+
+#. URI of the plugin
+msgid "http://capitalnumbers.com/"
+msgstr ""
+
+#. Author of the plugin
+msgid "weLaunch"
+msgstr ""
+
+#. Author URI of the plugin
+msgid "https://welaunch.io"
+msgstr ""

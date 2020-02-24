@@ -1,0 +1,2583 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Kong TotalDesk\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-07 07:59+0000\n"
+"PO-Revision-Date: 2019-05-07 08:00+0000\n"
+"Last-Translator: WeLaunch <support@dev.welaunch.io>\n"
+"Language-Team: Finnish (Finland)\n"
+"Language: fi_FI\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.2.2; wp-5.1.1"
+
+#: kong-helpdesk.php:95
+msgid ""
+"Kong Helpdesk requires the Redux Framework Please install or activate "
+"it before!"
+msgstr ""
+"Kong Helpdesk vaatii Redux Frameworkin Asenna tai aktivoi se ennen!"
+
+#: admin/class-kong-helpdesk-form.php:119 admin/views/single-ticket.php:47
+msgid "< Back to My Tickets"
+msgstr "<Takaisin Omat liput"
+
+#: admin/class-kong-helpdesk-form.php:133
+msgid "Recaptcha not passed!"
+msgstr "Recaptcha ei läpäissyt!"
+
+#: admin/class-kong-helpdesk-form.php:140
+#, php-format
+msgid ""
+"Ticket successfully created! You can <a href=\"%s\">view it here</a>.<br/>"
+msgstr ""
+"Lippu on luotu! Voit <a href=\" %s \"> tarkastella sitä täällä </a>. <br/>"
+
+#: admin/class-kong-helpdesk-form.php:146
+msgid "Ticket could not be created!"
+msgstr "Lippua ei voitu luoda!"
+
+#: admin/class-kong-helpdesk-form.php:170
+#: admin/class-kong-helpdesk-form.php:176
+#, php-format
+msgid "Please <a href=\"%s\" title=\"Login\">login to submit a ticket.</a>"
+msgstr ""
+"Ole hyvä <a href=\" %s \" title=\"Login\"> kirjaudu sisään lipun "
+"lähettämiseksi. </a>"
+
+#: admin/class-kong-helpdesk-form.php:218
+msgid "Create Ticket"
+msgstr "Luo lippu"
+
+#: admin/class-kong-helpdesk-form.php:256
+msgid "Order Support"
+msgstr "Tilaa tuki"
+
+#: admin/class-kong-helpdesk-form.php:266
+msgid "Product Support"
+msgstr "Tuotetuki"
+
+#: admin/class-kong-helpdesk-form.php:275
+msgid "Other"
+msgstr "muut"
+
+#: admin/class-kong-helpdesk-form.php:294
+msgid "Your Name (required)"
+msgstr "Nimesi (pakollinen)"
+
+#: admin/class-kong-helpdesk-form.php:310
+msgid "Your Email (required)"
+msgstr "Sähköpostisi (pakollinen)"
+
+#: admin/class-kong-helpdesk-form.php:326
+#: admin/class-kong-helpdesk-form.php:343
+msgid "Subject (required)"
+msgstr "Aihe (vaaditaan)"
+
+#: admin/class-kong-helpdesk-form.php:368
+msgid "Message (required) "
+msgstr "Viesti (pakollinen) "
+
+#: admin/class-kong-helpdesk-form.php:395
+msgid "Department (required)"
+msgstr "Osasto (pakollinen)"
+
+#: admin/class-kong-helpdesk-form.php:397
+msgid "Select a Department"
+msgstr "Valitse osasto"
+
+#: admin/class-kong-helpdesk-form.php:430
+msgid "Priority (required)"
+msgstr "Etusija (pakollinen)"
+
+#: admin/class-kong-helpdesk-form.php:432
+msgid "Select a priority"
+msgstr "Valitse prioriteetti"
+
+#: admin/class-kong-helpdesk-form.php:465
+msgid "Type (required)"
+msgstr "Tyyppi (pakollinen)"
+
+#: admin/class-kong-helpdesk-form.php:467
+msgid "Select a type"
+msgstr "Valitse tyyppi"
+
+#: admin/class-kong-helpdesk-form.php:503
+msgid "Your Order"
+msgstr "Tilauksesi"
+
+#: admin/class-kong-helpdesk-form.php:505
+msgid "Select your Order"
+msgstr "Valitse tilauksesi"
+
+#: admin/class-kong-helpdesk-form.php:525
+msgid "Where is my stuff?"
+msgstr "Missä on tavaraani?"
+
+#: admin/class-kong-helpdesk-form.php:526
+msgid "Problem with an order"
+msgstr "Ongelma tilauksessa"
+
+#: admin/class-kong-helpdesk-form.php:527
+msgid "Returns and refunds"
+msgstr "Palautukset ja hyvitykset"
+
+#: admin/class-kong-helpdesk-form.php:528
+msgid "Gift Cards"
+msgstr "Lahjakortit"
+
+#: admin/class-kong-helpdesk-form.php:529
+msgid "Payment issues"
+msgstr "Maksuongelmat"
+
+#: admin/class-kong-helpdesk-form.php:530
+msgid "Change an order"
+msgstr "Muuta tilausta"
+
+#: admin/class-kong-helpdesk-form.php:531
+msgid "Promotions and deals"
+msgstr "Tarjoukset ja tarjoukset"
+
+#: admin/class-kong-helpdesk-form.php:532
+msgid "More order issues"
+msgstr "Lisää tilauksia"
+
+#: admin/class-kong-helpdesk-form.php:537
+msgid "Your Subject"
+msgstr "Sinun aiheesi"
+
+#: admin/class-kong-helpdesk-form.php:539
+msgid "Select your Subject"
+msgstr "Valitse aihe"
+
+#: admin/class-kong-helpdesk-form.php:572
+msgid "Product"
+msgstr "Tuote"
+
+#: admin/class-kong-helpdesk-form.php:574
+msgid "Select your product"
+msgstr "Valitse tuote"
+
+#: admin/class-kong-helpdesk-form.php:603 admin/options-init.php:607
+msgid "Purchase Code"
+msgstr "Ostokoodi"
+
+#: admin/class-kong-helpdesk-form.php:625
+msgid "Select Item"
+msgstr "Valitse tavara"
+
+#: admin/class-kong-helpdesk-form.php:627
+msgid "Select an Item"
+msgstr "Valitse esine"
+
+#: admin/class-kong-helpdesk-form.php:679 admin/options-init.php:558
+#: admin/options-init.php:595 admin/options-init.php:645
+msgid "Website URL"
+msgstr "Nettisivun URL"
+
+#: admin/class-kong-helpdesk-form.php:699
+#: admin/class-kong-helpdesk-ticket-post-type.php:350
+#: admin/class-kong-helpdesk-attachments.php:62
+#: admin/views/single-ticket.php:182
+msgid "Attachments"
+msgstr "Liitteet"
+
+#: admin/class-kong-helpdesk-notifications.php:46
+#: admin/class-kong-helpdesk-support-rating.php:72
+msgid "View Ticket"
+msgstr "Katso lippu"
+
+#: admin/class-kong-helpdesk-notifications.php:90
+#: admin/class-kong-helpdesk-log.php:115
+msgid "New Ticket created"
+msgstr "Uusi lippu luotiin"
+
+#: admin/class-kong-helpdesk-notifications.php:94
+#, php-format
+msgid "A Ticket with the ID %s has been created"
+msgstr "Lippu, jolla on tunnus %s on luotu"
+
+#: admin/class-kong-helpdesk-notifications.php:156
+#: admin/class-kong-helpdesk-log.php:151
+#, php-format
+msgid "%s changed from %s to %s"
+msgstr "%s muuttui %s sta %s"
+
+#: admin/class-kong-helpdesk-notifications.php:160
+#, php-format
+msgid "The %s has changed from %s to %s"
+msgstr "%s on muuttunut %s sta %s"
+
+#: admin/class-kong-helpdesk-notifications.php:191
+#: admin/class-kong-helpdesk-slack.php:192
+#: admin/class-kong-helpdesk-log.php:160
+#, php-format
+msgid "%s changed to: %s"
+msgstr "%s muuttui: %s"
+
+#: admin/class-kong-helpdesk-notifications.php:195
+#, php-format
+msgid "The %s changed to: %s"
+msgstr "%s muuttui %s"
+
+#: admin/class-kong-helpdesk-notifications.php:255
+#: admin/class-kong-helpdesk-log.php:199
+msgid "Comment added"
+msgstr "Kommentti lisätty"
+
+#: admin/class-kong-helpdesk-notifications.php:259
+#, php-format
+msgid "New comment added by %s"
+msgstr "Uusi kommentti lisätty %s"
+
+#: admin/class-kong-helpdesk-notifications.php:325
+#: admin/class-kong-helpdesk-notifications.php:334
+#: admin/class-kong-helpdesk-ticket-post-type.php:604
+#: admin/class-kong-helpdesk-slack.php:231
+#: admin/class-kong-helpdesk-slack.php:240
+#: admin/class-kong-helpdesk-log.php:238
+#: admin/class-kong-helpdesk-log.php:247
+#: admin/class-kong-helpdesk-reports.php:168
+msgid "Unassigned"
+msgstr "Unassigned"
+
+#: admin/class-kong-helpdesk-notifications.php:342
+#: admin/class-kong-helpdesk-notifications.php:399
+#: admin/class-kong-helpdesk-slack.php:291
+#: admin/class-kong-helpdesk-log.php:263
+#: admin/class-kong-helpdesk-log.php:298
+#, php-format
+msgid "Assigned to %s"
+msgstr "Liitetty kohteeseen %s"
+
+#: admin/class-kong-helpdesk-notifications.php:347
+#, php-format
+msgid "This ticket has been assigned from %s to %s"
+msgstr "Tämä lippu on annettu %s sta %s"
+
+#: admin/class-kong-helpdesk-notifications.php:404
+#, php-format
+msgid "This ticket has been assigned to %s"
+msgstr "Tämä lippu on annettu %s"
+
+#: admin/class-kong-helpdesk-sidebar-widgets.php:48
+msgid "Helpdesk Sidebar"
+msgstr "Helpdesk-sivupalkki"
+
+#: admin/class-kong-helpdesk-sidebar-widgets.php:50
+msgid "Widgets in this area will be shown on all posts and pages."
+msgstr "Tämän alueen widgetit näkyvät kaikilla viestillä ja sivuilla."
+
+#: admin/class-kong-helpdesk-livechat-frontend.php:101
+#: admin/class-kong-helpdesk-livechat-backend.php:183
+msgid "Ticket could not be created. Please contact support email directly."
+msgstr "Lippua ei voitu luoda. Ota yhteyttä tukeen suoraan."
+
+#: admin/class-kong-helpdesk-livechat-frontend.php:112
+#: admin/class-kong-helpdesk-livechat-backend.php:195
+#: admin/class-kong-helpdesk-livechat.php:279
+#, php-format
+msgid "A seperate Chat-Ticket with the ID %s has been created."
+msgstr "Erillinen chat-lippu, jonka tunnus on %s on luotu."
+
+#: admin/class-kong-helpdesk-livechat-frontend.php:160
+#: admin/class-kong-helpdesk-livechat-frontend.php:216
+#: admin/class-kong-helpdesk-livechat-backend.php:320
+#: admin/class-kong-helpdesk-livechat-backend.php:439
+#: admin/class-kong-helpdesk-livechat.php:340
+msgid "Ticket not set."
+msgstr "Lippuja ei ole asetettu."
+
+#: admin/class-kong-helpdesk-livechat-frontend.php:224
+#: admin/class-kong-helpdesk-livechat-backend.php:447
+#: admin/class-kong-helpdesk-livechat.php:348
+msgid "Ticket does not exists."
+msgstr "Lippua ei ole."
+
+#: admin/class-kong-helpdesk-livechat-frontend.php:234
+#: admin/class-kong-helpdesk-livechat-backend.php:457
+#: admin/class-kong-helpdesk-livechat.php:357
+msgid "This is not your Ticket!"
+msgstr "Tämä ei ole sinun lipuusi!"
+
+#: admin/class-kong-helpdesk-livechat-frontend.php:300
+#: admin/class-kong-helpdesk-ticket-post-type.php:118
+#: admin/class-kong-helpdesk-ticket-post-type.php:348
+#: admin/class-kong-helpdesk-ticket-post-type.php:1063
+#: admin/class-kong-helpdesk-livechat-backend.php:523
+msgid "Ticket"
+msgstr "lippu"
+
+#: admin/class-kong-helpdesk-livechat-frontend.php:403
+#: admin/class-kong-helpdesk-livechat-frontend.php:513
+#: admin/class-kong-helpdesk-livechat-backend.php:252
+#: admin/class-kong-helpdesk-livechat.php:486
+#: admin/class-kong-helpdesk-livechat.php:513
+msgid "Type your message…"
+msgstr "Kirjoita viesti ..."
+
+#: admin/class-kong-helpdesk-livechat-frontend.php:469
+msgid "Visitor"
+msgstr "Vierailija"
+
+#: admin/class-kong-helpdesk-livechat-frontend.php:501
+#: admin/class-kong-helpdesk-livechat.php:476
+msgid "Your Name"
+msgstr "Sinun nimesi"
+
+#: admin/class-kong-helpdesk-livechat-frontend.php:504
+#: admin/class-kong-helpdesk-livechat.php:479
+msgid "Your Email"
+msgstr "Sähköpostisi"
+
+#: admin/class-kong-helpdesk-livechat-frontend.php:510
+#: admin/class-kong-helpdesk-livechat.php:483
+msgid "Subject"
+msgstr "aihe"
+
+#: admin/class-kong-helpdesk-livechat-frontend.php:517
+#: admin/class-kong-helpdesk-livechat.php:490
+msgid "Or enter your Ticket ID:"
+msgstr "Tai anna Ticket-tunnus:"
+
+#: admin/class-kong-helpdesk-livechat-frontend.php:519
+msgid "Ticket ID"
+msgstr ""
+
+#: admin/class-kong-helpdesk-support-rating.php:88
+msgid "No Ticket ID set."
+msgstr "Ei lipputunnistetta."
+
+#: admin/class-kong-helpdesk-support-rating.php:94
+msgid "Please set a feedback text."
+msgstr "Aseta palautetta koskeva teksti."
+
+#: admin/class-kong-helpdesk-support-rating.php:108
+msgid "Feedback received. Thanks!"
+msgstr "Palaute Vastaanotettu. Kiitos!"
+
+#: admin/class-kong-helpdesk-support-rating.php:112
+msgid "Wrong satisfied value."
+msgstr "Väärä tyytyväinen arvo."
+
+#: admin/class-kong-helpdesk-support-rating.php:130
+msgid "Thanks for your feedback!"
+msgstr "Kiitos palautteestasi!"
+
+#: admin/class-kong-helpdesk-support-rating.php:148
+msgid "We would be happy if you leave a feedback message:"
+msgstr "Olisimme onnellisia, jos jätät palautetta koskevan viestin:"
+
+#: admin/class-kong-helpdesk-support-rating.php:152
+msgid "Send Feedback"
+msgstr "Lähetä palautetta"
+
+#: admin/class-kong-helpdesk-ticket-post-type.php:119
+#: admin/class-kong-helpdesk-ticket-post-type.php:130
+#: admin/options-init.php:1408
+msgid "Tickets"
+msgstr "liput"
+
+#: admin/class-kong-helpdesk-ticket-post-type.php:122
+#: admin/class-kong-helpdesk-ticket-post-type.php:124
+#: admin/class-kong-helpdesk-ticket-post-type.php:195
+#: admin/class-kong-helpdesk-ticket-post-type.php:232
+#: admin/class-kong-helpdesk-ticket-post-type.php:269
+#: admin/class-kong-helpdesk-ticket-post-type.php:306
+#: admin/class-kong-helpdesk-saved-replies.php:149
+#: admin/class-kong-helpdesk-saved-replies.php:214
+#: admin/class-kong-helpdesk-saved-replies.php:250
+#: admin/class-kong-helpdesk-faq-post-type.php:547
+#: admin/class-kong-helpdesk-faq-post-type.php:617
+#, php-format
+msgid "All %s"
+msgstr "Kaikki %s"
+
+#: admin/class-kong-helpdesk-ticket-post-type.php:133
+#: admin/class-kong-helpdesk-ticket-post-type.php:136
+#: admin/class-kong-helpdesk-saved-replies.php:151
+#: admin/class-kong-helpdesk-saved-replies.php:154
+#: admin/class-kong-helpdesk-faq-post-type.php:549
+#: admin/class-kong-helpdesk-faq-post-type.php:552
+#, php-format
+msgid "New %s"
+msgstr "Uusi %s"
+
+#: admin/class-kong-helpdesk-ticket-post-type.php:134
+#: admin/class-kong-helpdesk-ticket-post-type.php:200
+#: admin/class-kong-helpdesk-ticket-post-type.php:237
+#: admin/class-kong-helpdesk-ticket-post-type.php:274
+#: admin/class-kong-helpdesk-ticket-post-type.php:311
+#: admin/class-kong-helpdesk-saved-replies.php:152
+#: admin/class-kong-helpdesk-saved-replies.php:219
+#: admin/class-kong-helpdesk-saved-replies.php:255
+#: admin/class-kong-helpdesk-faq-post-type.php:550
+#: admin/class-kong-helpdesk-faq-post-type.php:622
+#, php-format
+msgid "Add New %s"
+msgstr "Lisää uusi %s"
+
+#: admin/class-kong-helpdesk-ticket-post-type.php:135
+#: admin/class-kong-helpdesk-ticket-post-type.php:198
+#: admin/class-kong-helpdesk-ticket-post-type.php:235
+#: admin/class-kong-helpdesk-ticket-post-type.php:272
+#: admin/class-kong-helpdesk-ticket-post-type.php:309
+#: admin/class-kong-helpdesk-saved-replies.php:153
+#: admin/class-kong-helpdesk-saved-replies.php:217
+#: admin/class-kong-helpdesk-saved-replies.php:253
+#: admin/class-kong-helpdesk-faq-post-type.php:551
+#: admin/class-kong-helpdesk-faq-post-type.php:620
+#, php-format
+msgid "Edit %s"
+msgstr "Muokkaa %s"
+
+#: admin/class-kong-helpdesk-ticket-post-type.php:137
+#: admin/class-kong-helpdesk-saved-replies.php:155
+#: admin/class-kong-helpdesk-faq-post-type.php:553
+#, php-format
+msgid "View %s"
+msgstr "Näytä %s"
+
+#: admin/class-kong-helpdesk-ticket-post-type.php:138
+#: admin/class-kong-helpdesk-ticket-post-type.php:194
+#: admin/class-kong-helpdesk-ticket-post-type.php:231
+#: admin/class-kong-helpdesk-ticket-post-type.php:268
+#: admin/class-kong-helpdesk-ticket-post-type.php:305
+#: admin/class-kong-helpdesk-saved-replies.php:156
+#: admin/class-kong-helpdesk-saved-replies.php:213
+#: admin/class-kong-helpdesk-saved-replies.php:249
+#: admin/class-kong-helpdesk-faq-post-type.php:554
+#: admin/class-kong-helpdesk-faq-post-type.php:616
+#, php-format
+msgid "Search %s"
+msgstr "Etsi %s"
+
+#: admin/class-kong-helpdesk-ticket-post-type.php:139
+#: admin/class-kong-helpdesk-saved-replies.php:157
+#: admin/class-kong-helpdesk-faq-post-type.php:555
+#, php-format
+msgid "No %s found"
+msgstr "%s löytynyt"
+
+#: admin/class-kong-helpdesk-ticket-post-type.php:140
+#: admin/class-kong-helpdesk-saved-replies.php:158
+#: admin/class-kong-helpdesk-faq-post-type.php:556
+#, php-format
+msgid "No %s found in trash"
+msgstr "%s löytynyt roskakoriin"
+
+#: admin/class-kong-helpdesk-ticket-post-type.php:188
+#: admin/class-kong-helpdesk-ticket-post-type.php:189
+#: admin/class-kong-helpdesk-ticket-post-type.php:1066
+#: admin/class-kong-helpdesk-exporter.php:185
+#: admin/class-kong-helpdesk-my-tickets.php:129
+msgid "Status"
+msgstr "Status"
+
+#: admin/class-kong-helpdesk-ticket-post-type.php:196
+#: admin/class-kong-helpdesk-ticket-post-type.php:233
+#: admin/class-kong-helpdesk-ticket-post-type.php:270
+#: admin/class-kong-helpdesk-ticket-post-type.php:307
+#: admin/class-kong-helpdesk-saved-replies.php:215
+#: admin/class-kong-helpdesk-saved-replies.php:251
+#: admin/class-kong-helpdesk-faq-post-type.php:618
+#, php-format
+msgid "Parent %s"
+msgstr "Vanhempi %s"
+
+#: admin/class-kong-helpdesk-ticket-post-type.php:197
+#: admin/class-kong-helpdesk-ticket-post-type.php:234
+#: admin/class-kong-helpdesk-ticket-post-type.php:271
+#: admin/class-kong-helpdesk-ticket-post-type.php:308
+#: admin/class-kong-helpdesk-saved-replies.php:216
+#: admin/class-kong-helpdesk-saved-replies.php:252
+#: admin/class-kong-helpdesk-faq-post-type.php:619
+#, php-format
+msgid "Parent %s:"
+msgstr "Vanhempi %s :"
+
+#: admin/class-kong-helpdesk-ticket-post-type.php:199
+#: admin/class-kong-helpdesk-ticket-post-type.php:236
+#: admin/class-kong-helpdesk-ticket-post-type.php:273
+#: admin/class-kong-helpdesk-ticket-post-type.php:310
+#: admin/class-kong-helpdesk-saved-replies.php:218
+#: admin/class-kong-helpdesk-saved-replies.php:254
+#: admin/class-kong-helpdesk-faq-post-type.php:621
+#, php-format
+msgid "Update %s"
+msgstr "Päivitä %s"
+
+#: admin/class-kong-helpdesk-ticket-post-type.php:201
+#: admin/class-kong-helpdesk-ticket-post-type.php:238
+#: admin/class-kong-helpdesk-ticket-post-type.php:275
+#: admin/class-kong-helpdesk-ticket-post-type.php:312
+#: admin/class-kong-helpdesk-saved-replies.php:220
+#: admin/class-kong-helpdesk-saved-replies.php:256
+#: admin/class-kong-helpdesk-faq-post-type.php:623
+#, php-format
+msgid "New %s Name"
+msgstr "Uusi %s nimi"
+
+#: admin/class-kong-helpdesk-ticket-post-type.php:225
+#: admin/class-kong-helpdesk-ticket-post-type.php:1068
+#: admin/class-kong-helpdesk-exporter.php:191
+#: admin/class-kong-helpdesk-my-tickets.php:141
+msgid "Type"
+msgstr "Tyyppi"
+
+#: admin/class-kong-helpdesk-ticket-post-type.php:226
+msgid "Types"
+msgstr "Tyypit"
+
+#: admin/class-kong-helpdesk-ticket-post-type.php:262
+#: admin/class-kong-helpdesk-ticket-post-type.php:1069
+#: admin/class-kong-helpdesk-my-tickets.php:135
+msgid "Department"
+msgstr "osasto"
+
+#: admin/class-kong-helpdesk-ticket-post-type.php:263
+msgid "Departments"
+msgstr "osastot"
+
+#: admin/class-kong-helpdesk-ticket-post-type.php:299
+#: admin/class-kong-helpdesk-ticket-post-type.php:1070
+#: admin/class-kong-helpdesk-exporter.php:197
+#: admin/views/single-ticket.php:102
+msgid "Priority"
+msgstr "prioriteetti"
+
+#: admin/class-kong-helpdesk-ticket-post-type.php:300
+msgid "Priorities"
+msgstr "prioriteetit"
+
+#: admin/class-kong-helpdesk-ticket-post-type.php:349
+msgid "Merge Ticket"
+msgstr "Yhdistä liput"
+
+#: admin/class-kong-helpdesk-ticket-post-type.php:353
+msgid "Feedback:"
+msgstr "Palaute:"
+
+#: admin/class-kong-helpdesk-ticket-post-type.php:376
+msgid "Website:"
+msgstr "Verkkosivusto:"
+
+#: admin/class-kong-helpdesk-ticket-post-type.php:415
+msgid "Select Ticket"
+msgstr "Valitse lippu"
+
+#: admin/class-kong-helpdesk-ticket-post-type.php:422
+msgid "Merge Now"
+msgstr "Yhdistä nyt"
+
+#: admin/class-kong-helpdesk-ticket-post-type.php:438
+#: admin/class-kong-helpdesk-faq-post-type.php:691
+msgid "No ticket to duplicate has been supplied!"
+msgstr "Ei kaksoiskappaleita ole toimitettu!"
+
+#: admin/class-kong-helpdesk-ticket-post-type.php:478
+msgid "Could not Merge Ticket."
+msgstr "Liitettä ei voi yhdistää."
+
+#: admin/class-kong-helpdesk-ticket-post-type.php:561
+msgid "Created on: "
+msgstr "Luotu: "
+
+#: admin/class-kong-helpdesk-ticket-post-type.php:562
+msgid "Created by: "
+msgstr "Luonut: "
+
+#: admin/class-kong-helpdesk-ticket-post-type.php:593
+msgid "Assigned to: "
+msgstr "Määritetty: "
+
+#: admin/class-kong-helpdesk-ticket-post-type.php:639
+msgid "Purchase Code could not be verified!"
+msgstr "Ostoskoodia ei voitu vahvistaa!"
+
+#: admin/class-kong-helpdesk-ticket-post-type.php:642
+msgid "Item: "
+msgstr "Tuote: "
+
+#: admin/class-kong-helpdesk-ticket-post-type.php:643
+msgid "License: "
+msgstr "Lisenssi: "
+
+#: admin/class-kong-helpdesk-ticket-post-type.php:644
+msgid "Support Until:"
+msgstr "Tuki:"
+
+#: admin/class-kong-helpdesk-ticket-post-type.php:757
+msgid "Select Product"
+msgstr "Valitse tuote"
+
+#: admin/class-kong-helpdesk-ticket-post-type.php:825
+msgid "No feedback available"
+msgstr "Palautetta ei ole saatavilla"
+
+#: admin/class-kong-helpdesk-ticket-post-type.php:901
+msgid "Color"
+msgstr "Väri"
+
+#: admin/class-kong-helpdesk-ticket-post-type.php:930
+#: admin/class-kong-helpdesk-my-tickets.php:51
+#, php-format
+msgid "Please <a href=\"%s\" title=\"Login\">login to view your tickets</a>"
+msgstr ""
+"<a href=\" %s \" title=\"Login\"> Kirjaudu sisään nähdäksesi liput </a>"
+
+#: admin/class-kong-helpdesk-ticket-post-type.php:1009
+#, php-format
+msgid "[Ticket: %s] %s"
+msgstr "[Liput: %s ] %s"
+
+#: admin/class-kong-helpdesk-ticket-post-type.php:1064
+msgid "From"
+msgstr "alkaen"
+
+#: admin/class-kong-helpdesk-ticket-post-type.php:1065
+msgid "Assigned To"
+msgstr "Määritetty"
+
+#: admin/class-kong-helpdesk-ticket-post-type.php:1067
+msgid "Satisfied"
+msgstr "vakuuttunut"
+
+#: admin/class-kong-helpdesk-ticket-post-type.php:1071
+msgid ""
+"<span class=\"vers comment-grey-bubble\" title=\"Comments\"><span "
+"class=\"screen-reader-text\">Comments</span></span>"
+msgstr ""
+"<span class =  \"vers comments-harmaa kupla \" title =  \"Comments \"> <span "
+"class =  \"screen-reader-text \"> Kommentit </ span> </ span>"
+
+#: admin/class-kong-helpdesk-ticket-post-type.php:1072
+#: admin/class-kong-helpdesk-my-tickets.php:123
+msgid "Date"
+msgstr "Treffi"
+
+#: admin/class-kong-helpdesk-ticket-post-type.php:1104
+#: admin/class-kong-helpdesk-livechat-backend.php:403
+msgid "No Author"
+msgstr "Ei kirjoittajaa"
+
+#: admin/class-kong-helpdesk-woocommerce.php:54
+msgid "My Tickets"
+msgstr "Omat liput"
+
+#: admin/class-kong-helpdesk-woocommerce.php:55
+msgid "Submit Ticket"
+msgstr "Lähetä liput"
+
+#: admin/class-kong-helpdesk-woocommerce.php:110
+msgid "Submit a new Ticket"
+msgstr "Lähetä uusi lippu"
+
+#: admin/class-kong-helpdesk-woocommerce.php:222
+#: admin/class-kong-helpdesk-faq-post-type.php:543
+#: admin/class-kong-helpdesk-faq-post-type.php:546
+msgid "FAQs"
+msgstr "FAQ"
+
+#: admin/class-kong-helpdesk-woocommerce.php:262
+msgid "Currently we do not have any frequently asked questions."
+msgstr "Tällä hetkellä meillä ei ole usein kysyttyjä kysymyksiä."
+
+#: admin/class-kong-helpdesk-woocommerce.php:267
+msgid "Frequently Asked Questions"
+msgstr "Usein Kysytyt Kysymykset"
+
+#: admin/class-kong-helpdesk-desktop-notifications.php:129
+#, php-format
+msgid "New comment on %s"
+msgstr "Uusi kommentti %s"
+
+#: admin/options-init.php:28 admin/options-init.php:30
+msgid "Kong Helpdesk"
+msgstr "Kong Helpdesk"
+
+#: admin/options-init.php:36
+msgid "Settings"
+msgstr "asetukset"
+
+#: admin/options-init.php:90
+msgid "Information"
+msgstr "Tiedot"
+
+#: admin/options-init.php:91
+msgid "<p>Need support? Please use the comment function on codecanyon.</p>"
+msgstr ""
+"<p> Tarvitsetko tukea? Käytä kommentointitoimintoa codecanyonilla. </ P>"
+
+#: admin/options-init.php:113 admin/options-init.php:1158
+msgid "Helpdesk"
+msgstr "Tukipalvelu"
+
+#: admin/options-init.php:115
+msgid "Need support? Please use the comment function on codecanyon."
+msgstr "Tarvitsetko tukea? Käytä kommentointitoimintoa koodekanialla."
+
+#: admin/options-init.php:120
+msgid "General"
+msgstr "yleinen"
+
+#: admin/options-init.php:127
+msgid "Enable"
+msgstr "ota käyttöön"
+
+#: admin/options-init.php:128
+msgid "Enable TotalDesk."
+msgstr "Ota TotalDesk käyttöön."
+
+#: admin/options-init.php:134
+msgid "Login Page"
+msgstr "Sisäänkirjautumissivu"
+
+#: admin/options-init.php:135
+msgid "This will be the page, where the login button will link to."
+msgstr "Tämä on sivu, jossa kirjautumisnappula linkittää."
+
+#: admin/options-init.php:141 admin/options-init.php:148
+msgid "My Tickets Page"
+msgstr "Omat liput"
+
+#: admin/options-init.php:142
+msgid ""
+"Make sure the [my_tickets] shortcode is placed there. After saving go to "
+"settings > permalinks and save."
+msgstr ""
+"Varmista, että [my_tickets] -koodi on sijoitettu siihen. Tallennuksen "
+"jälkeen siirry asetuksiin> permalinks ja tallenna."
+
+#: admin/options-init.php:149
+msgid "Make sure the [new_ticket] shortcode is placed there."
+msgstr ""
+
+#: admin/options-init.php:155
+msgid "Redirect reporters to My Tickets page"
+msgstr "Ohjaa toimittajia My Tickets -sivulle"
+
+#: admin/options-init.php:156
+msgid "After login all reporters will be redirected to the my tickets page."
+msgstr ""
+"Kirjautumisen jälkeen kaikki toimittajat ohjataan minun lippujen sivulle."
+
+#: admin/options-init.php:162
+msgid "Only Logged In"
+msgstr "Vain kirjautunut"
+
+#: admin/options-init.php:163
+msgid "Allow Ticket creation via Forms only when User is logged in."
+msgstr ""
+"Salli lippujen luominen lomakkeiden kautta vain, kun käyttäjä on kirjautunut "
+"sisään."
+
+#: admin/options-init.php:169
+msgid "Send Login credentials"
+msgstr "Lähetä kirjautumistunnukset"
+
+#: admin/options-init.php:170
+msgid ""
+"Send out the login credentials when a new account has been created for a new "
+"user."
+msgstr "Lähetä kirjautumistiedot, kun uusi käyttäjä on luotu uusi tili."
+
+#: admin/options-init.php:176
+msgid "Sidebar Display"
+msgstr "Sivupalkin näyttö"
+
+#: admin/options-init.php:177
+msgid "Where you want to show the sidebar."
+msgstr "Missä haluat näyttää sivupalkin."
+
+#: admin/options-init.php:179
+msgid "None"
+msgstr "Ei mitään"
+
+#: admin/options-init.php:180
+msgid "Only in Knowledge Base"
+msgstr "Vain tietokannassa"
+
+#: admin/options-init.php:181
+msgid "Only for Ticket pages"
+msgstr "Vain Lippu-sivuille"
+
+#: admin/options-init.php:182
+msgid "Show in Ticket & FAQ pages"
+msgstr "Näytä lipun & FAQ-sivuilla"
+
+#: admin/options-init.php:189
+msgid "Sidebar Position"
+msgstr "Sivupalkin sijainti"
+
+#: admin/options-init.php:190
+msgid "Left or Right sidebar."
+msgstr "Vasen tai oikea sivupalkki."
+
+#: admin/options-init.php:192
+msgid "Left"
+msgstr "vasen"
+
+#: admin/options-init.php:193
+msgid "Right"
+msgstr "oikea"
+
+#: admin/options-init.php:200
+msgid "Use Excel 2007"
+msgstr "Käytä Excel 2007: tä"
+
+#: admin/options-init.php:201
+msgid ""
+"If you can not work with xlsx (Excel 2007 and higher) files, check this. You "
+"then can work with normal .xls files."
+msgstr ""
+"Jos et pysty toimimaan xlsx (Excel 2007 ja uudempi) tiedostojen kanssa, "
+"tarkista tämä. Sitten voit työskennellä tavallisilla .xls-tiedostoilla."
+
+#: admin/options-init.php:208
+msgid "Export all Tickets"
+msgstr "Vie kaikki liput"
+
+#: admin/options-init.php:223
+msgid "Default New Ticket Status"
+msgstr ""
+
+#: admin/options-init.php:224
+msgid "The default status for new tickets."
+msgstr "Uusien lippujen oletustila."
+
+#: admin/options-init.php:234
+msgid "Default Solved (closed) Status"
+msgstr ""
+
+#: admin/options-init.php:235
+msgid "Set the name of the Solved (closed) ticket status."
+msgstr ""
+
+#: admin/options-init.php:245
+msgid "Default Type"
+msgstr "Oletustyyppi"
+
+#: admin/options-init.php:246
+msgid "The default type for new tickets."
+msgstr "Uusien lippujen oletustyyppi."
+
+#: admin/options-init.php:256
+msgid "Default priority"
+msgstr "Oletusprioriteetti"
+
+#: admin/options-init.php:257
+msgid "The default priority for new tickets."
+msgstr "Uusien lippujen oletusprioriteetti."
+
+#: admin/options-init.php:267
+msgid "Default Department"
+msgstr "Oletusosasto"
+
+#: admin/options-init.php:268
+msgid "The default Department for new tickets."
+msgstr "Uusien lippujen oletusosasto."
+
+#: admin/options-init.php:273
+msgid "Default Agent"
+msgstr "Oletusagentti"
+
+#: admin/options-init.php:274
+msgid "The default user for new tickets."
+msgstr "Uusien lippujen oletus käyttäjä."
+
+#: admin/options-init.php:288
+#, php-format
+msgid "Default Agent for %s"
+msgstr "Oletusagentti %s"
+
+#: admin/options-init.php:289
+#, php-format
+msgid "The default user for %s."
+msgstr "Oletusarvoinen käyttäjä %s ."
+
+#: admin/options-init.php:297
+msgid "Defaults"
+msgstr "Oletukset"
+
+#: admin/options-init.php:305
+msgid "Desktop Notifications"
+msgstr "Desktop-ilmoitukset"
+
+#: admin/options-init.php:312
+msgid "Enable Desktop Notifications"
+msgstr "Ota käyttöön työpöytäilmoitukset"
+
+#: admin/options-init.php:318 admin/options-init.php:1282
+msgid "AJAX Interval"
+msgstr "AJAX-väli"
+
+#: admin/options-init.php:319 admin/options-init.php:1283
+msgid "Increase the interval (in miliseconds) to save server performance."
+msgstr ""
+"Lisää aikaväliä (millisekunteina) palvelimen suorituskyvyn säästämiseksi."
+
+#: admin/options-init.php:329
+msgid "Welcome Title"
+msgstr "Tervetuloa osastoon"
+
+#: admin/options-init.php:330
+msgid "Welcome to Helpdesk"
+msgstr "Tervetuloa Helpdesk-palveluun"
+
+#: admin/options-init.php:336
+msgid "Welcome Text"
+msgstr "Tervetulotoivotus"
+
+#: admin/options-init.php:337
+msgid "How can we help you today?"
+msgstr "kuinka voimme auttaa sinua tänään?"
+
+#: admin/options-init.php:343
+msgid "Welcome Timout"
+msgstr "Tervetuloa Timout"
+
+#: admin/options-init.php:344
+msgid "Time in minutes when the welcome message should pop up again."
+msgstr ""
+"Aika minuutteina, jolloin tervetuliaisviestin pitäisi ponnahtaa uudelleen."
+
+#: admin/options-init.php:355
+msgid "Set an icon"
+msgstr "Aseta kuvake"
+
+#: admin/options-init.php:356 admin/options-init.php:1223
+msgid "The icon must be in square format."
+msgstr "Kuvakkeen on oltava nelikulmio."
+
+#: admin/options-init.php:364
+msgid "Timeout"
+msgstr "Aikalisä"
+
+#: admin/options-init.php:365
+msgid "Set the time when the notification automatically hides."
+msgstr "Aseta aika, jolloin ilmoitus automaattisesti piilossa."
+
+#: admin/options-init.php:378
+msgid "FAQ – Knowledge Base"
+msgstr "FAQ - Knowledge Base"
+
+#: admin/options-init.php:385
+msgid "Enable the FAQs Knowledge Base"
+msgstr "Ota käyttöön usein kysytyt kysymykset"
+
+#: admin/options-init.php:386
+msgid ""
+"Custom Post Type FAQ will be created. Ticket can be copied into a new FAQ."
+msgstr ""
+"Mukautetun postin tyypin usein kysytyt kysymykset luodaan. Lippu voidaan "
+"kopioida uuteen FAQ-kysymykseen."
+
+#: admin/options-init.php:392
+msgid "Knowledge Base Page"
+msgstr "Tietokannan sivu"
+
+#: admin/options-init.php:393
+msgid ""
+"Make sure the [knowledge_base] shortcode is placed there. After saving go to "
+"settings > permalinks and save."
+msgstr ""
+"Varmista, että [knowledge_base] -koodi on siellä. Tallennuksen jälkeen "
+"siirry asetuksiin> permalinks ja tallenna."
+
+#: admin/options-init.php:400
+msgid "Show Search"
+msgstr "Näytä haku"
+
+#: admin/options-init.php:406
+msgid "Maximum Live Search Results"
+msgstr ""
+
+#: admin/options-init.php:407
+msgid "Set maximum results for FAQ live search."
+msgstr ""
+
+#: admin/options-init.php:418
+msgid "Show Views Count"
+msgstr "Näytä näkymämäärät"
+
+#: admin/options-init.php:425
+msgid "Show Rating"
+msgstr "Näytä luokitus"
+
+#: admin/options-init.php:432
+msgid "Disable the Rating dislike button"
+msgstr "Poista Arvosteluominaisuus -painike käytöstä"
+
+#: admin/options-init.php:439
+msgid "Masonry"
+msgstr "muuraus"
+
+#: admin/options-init.php:446
+msgid "Topics Layout"
+msgstr ""
+
+#: admin/options-init.php:448
+msgid "List Layout"
+msgstr "List Layout"
+
+#: admin/options-init.php:449
+msgid "Boxed Layout"
+msgstr "Boxed Layout"
+
+#: admin/options-init.php:456
+msgid "Topics Columns"
+msgstr ""
+
+#: admin/options-init.php:457 admin/options-init.php:475
+msgid "Default Topic columns. Needs to be deviable by 12."
+msgstr ""
+
+#: admin/options-init.php:468
+msgid "Item Masonry"
+msgstr ""
+
+#: admin/options-init.php:474
+msgid "Item Columns"
+msgstr ""
+
+#: admin/options-init.php:486
+msgid "Hide FAQ excerpts for not logged in"
+msgstr "Piilota usein kysytyt kysymykset, jos et ole kirjautunut sisään"
+
+#: admin/options-init.php:487
+msgid "Hide all FAQ excerpts for not logged in users in the Knwoledge Base"
+msgstr ""
+"Piilota kaikki FAQ-erät, jotka eivät ole kirjautuneet käyttäjille Knwoledge-"
+"tukiasemassa"
+
+#: admin/options-init.php:494
+msgid "Hide All Single FAQs pages"
+msgstr "Piilota kaikki yksittäiset usein kysytyt kysymykset -sivut"
+
+#: admin/options-init.php:495
+msgid "Hide all Single FAQ pages for not logged in users."
+msgstr ""
+"Piilota kaikki yksittäiset FAQ-sivut, jotka eivät ole kirjautuneet sisään."
+
+#: admin/options-init.php:505
+msgid "Hide some FAQs"
+msgstr "Piilota jotkin usein kysytyt kysymykset"
+
+#: admin/options-init.php:506
+msgid "Show the following FAQs only to logged in Users:"
+msgstr ""
+"Näytä vain seuraavat usein kysytyt kysymykset kirjautuneille käyttäjille:"
+
+#: admin/options-init.php:518
+msgid "Hide some Topics"
+msgstr "Piilota jotkin aiheet"
+
+#: admin/options-init.php:519
+msgid "Hide complete Topics from not logged in users:"
+msgstr "Piilota kaikki aiheet, jotka eivät ole kirjautuneet sisään:"
+
+#: admin/options-init.php:526
+msgid "Form Fields"
+msgstr "Lomakekentät"
+
+#: admin/options-init.php:533
+msgid "Simple Form Fields"
+msgstr "Yksinkertaiset lomakekentät"
+
+#: admin/options-init.php:534
+msgid "Fields for the Simple [new_ticket] form. "
+msgstr "Yksinkertaisen [new_ticket] -kentän kentät. "
+
+#: admin/options-init.php:540 admin/options-init.php:577
+#: admin/options-init.php:627
+msgid "Systems / Project Select Field"
+msgstr "Järjestelmät / Projektin valintakenttä"
+
+#: admin/options-init.php:546 admin/options-init.php:583
+#: admin/options-init.php:633
+msgid "Priority Select Field"
+msgstr "Ensisijainen valintakenttä"
+
+#: admin/options-init.php:552 admin/options-init.php:589
+#: admin/options-init.php:639
+msgid "Types Select Field"
+msgstr "Tyypit Valitse kentän"
+
+#: admin/options-init.php:564 admin/options-init.php:601
+#: admin/options-init.php:651
+msgid "Attachments field"
+msgstr "Liitteet-kenttä"
+
+#: admin/options-init.php:570
+msgid "Envato Form Fields"
+msgstr "Envato lomakekentät"
+
+#: admin/options-init.php:571
+msgid "Fields for the Simple [new_ticket type=\"Envato\"] form. "
+msgstr "Yksinkertaisen [new_ticket type =  \"Envato \"] kentät. "
+
+#: admin/options-init.php:613
+msgid "Envato Items"
+msgstr "Envato-kohteet"
+
+#: admin/options-init.php:614
+msgid ""
+"A selected Item will be overwritten when an item is found within the "
+"purchase code."
+msgstr "Valittu kohta korvataan, kun kohde löytyy ostoskoodista."
+
+#: admin/options-init.php:620
+msgid "WooCommerce Form Fields"
+msgstr "WooCommerce lomakekentät"
+
+#: admin/options-init.php:621
+msgid "Fields for the Simple [new_ticket type=\"WooCommerce\"] form. "
+msgstr "Yksinkertaisen [new_ticket type =  \"WooCommerce \"] -kentän kentät. "
+
+#: admin/options-init.php:657
+msgid "Product Support (lists all Products)"
+msgstr "Tuotetuki (luettelo kaikista tuotteista)"
+
+#: admin/options-init.php:663
+msgid "Order Support (lists all Orders)"
+msgstr "Tilaa tuki (luetellaan kaikki tilaukset)"
+
+#: admin/options-init.php:670
+msgid "Inbox"
+msgstr "Saapuneet"
+
+#: admin/options-init.php:677
+msgid "Enable Inbox"
+msgstr "Ota postilaatikko käyttöön"
+
+#: admin/options-init.php:678
+msgid "Enable this to allow ticket creation via Email."
+msgstr "Ota tämä käyttöön sallimalla lippujen luominen sähköpostitse."
+
+#: admin/options-init.php:684
+msgid "Recurrence"
+msgstr "Toistuminen"
+
+#: admin/options-init.php:685
+msgid "How often should Emails be fetched."
+msgstr "Kuinka usein sähköpostit on haettava."
+
+#: admin/options-init.php:687
+msgid "Hourly"
+msgstr "tunti-"
+
+#: admin/options-init.php:688
+msgid "Twice daily"
+msgstr "Kahdesti päivässä"
+
+#: admin/options-init.php:689
+msgid "Daily"
+msgstr "Päivittäin"
+
+#: admin/options-init.php:697
+msgid "Mail Account Settings"
+msgstr "Mail Account Settings"
+
+#: admin/options-init.php:698
+msgid "Settings for your Mail Account."
+msgstr "Mail-tilisi asetukset."
+
+#: admin/options-init.php:705
+msgid "Email"
+msgstr "Sähköposti"
+
+#: admin/options-init.php:712
+msgid "Username & Password"
+msgstr "Käyttäjänimi Salasana"
+
+#: admin/options-init.php:714
+msgid "Enter your Username"
+msgstr "Syötä käyttäjänimesi"
+
+#: admin/options-init.php:715
+msgid "Enter your Password"
+msgstr "Syötä salasanasi"
+
+#: admin/options-init.php:722
+msgid "Host"
+msgstr "isäntä"
+
+#: admin/options-init.php:728
+msgid "Inbox Folder"
+msgstr "Saapuneet kansio"
+
+#: admin/options-init.php:729
+msgid ""
+"The folder where to scan for new mails. Most of the time it is the INBOX "
+"folder."
+msgstr "Kansio, johon etsitään uusia viestejä. Useimmiten se on INBOX-kansio."
+
+#: admin/options-init.php:736
+msgid "Archive Folder"
+msgstr "Arkistoi kansio"
+
+#: admin/options-init.php:737
+msgid "The target folder, where processed mails should be moved (eg. Archiv)."
+msgstr ""
+"Tavoitekansio, jossa käsitellyt sähköpostit on siirrettävä (esim. Arkisto)."
+
+#: admin/options-init.php:744 admin/options-init.php:768
+msgid "Protocol"
+msgstr "protokolla"
+
+#: admin/options-init.php:746
+msgid "TLS"
+msgstr "TLS"
+
+#: admin/options-init.php:747
+msgid "SSL"
+msgstr "SSL"
+
+#: admin/options-init.php:755
+msgid "Port"
+msgstr "portti"
+
+#: admin/options-init.php:757
+msgid "143"
+msgstr "143"
+
+#: admin/options-init.php:758
+msgid "993"
+msgstr "993"
+
+#: admin/options-init.php:759
+msgid "110"
+msgstr "110"
+
+#: admin/options-init.php:760
+msgid "995"
+msgstr "995"
+
+#: admin/options-init.php:770
+msgid "IMAP"
+msgstr "IMAP"
+
+#: admin/options-init.php:771
+msgid "IMAPS"
+msgstr "IMAPS"
+
+#: admin/options-init.php:772
+msgid "POP3"
+msgstr "POP3"
+
+#: admin/options-init.php:773
+msgid "POP3S"
+msgstr "POP3S"
+
+#: admin/options-init.php:781
+msgid "No Validate Cert"
+msgstr "Ei vahvista Cert"
+
+#: admin/options-init.php:782
+msgid "Do not validate Certificates."
+msgstr "Älä hyväksy sertifikaatteja."
+
+#: admin/options-init.php:789
+msgid "Test Mail Account"
+msgstr "Testaa sähköpostitili"
+
+#: admin/options-init.php:789
+msgid "Check Folter"
+msgstr "Tarkista Folter"
+
+#: admin/options-init.php:789
+msgid "Fetch Emails Now"
+msgstr "Hae sähköpostit nyt"
+
+#: admin/options-init.php:796
+msgid "Integrations"
+msgstr "integraatiot"
+
+#: admin/options-init.php:804
+msgid "Invisible Recaptcha Integration"
+msgstr "Näkymätön Recaptcha-integraatio"
+
+#: admin/options-init.php:805
+msgid ""
+"Install & Setup the <a href=\"https://wordpress.org/plugins/invisible-"
+"recaptcha/\" target=\"_blank\">invisible recaptcha plugin from here</a>. "
+"Then check this option."
+msgstr ""
+"Asenna ja asenna <a href=\"https://wordpress.org/plugins/invisible-"
+"recaptcha/\" target=\"_blank\"> näkymättömät recaptcha-laajennukset täältä "
+"</a>. Valitse sitten tämä vaihtoehto."
+
+#: admin/options-init.php:812
+msgid "Envato Integration"
+msgstr "Envato-integraatio"
+
+#: admin/options-init.php:818
+msgid "Your Envato Username"
+msgstr "Envato-käyttäjänimi"
+
+#: admin/options-init.php:824
+msgid "Envato API Key"
+msgstr "Envato API -avaimen"
+
+#: admin/options-init.php:825
+msgid ""
+"<a href=\"https://build.Envato.com/my-apps/\" target=\"_blank\">Click here "
+"to get your API key > Person Tokens</a>."
+msgstr ""
+"<a href=\"https://build.Envato.com/my-apps/\" target=\"_blank\"> "
+"Napsauttamalla tätä saat API-avaimesi> Henkilö-koodit </a>."
+
+#: admin/options-init.php:831
+msgid "Purchase Code required?"
+msgstr "Ostotilaa vaaditaan?"
+
+#: admin/options-init.php:832
+msgid ""
+"If enabled manual ticket creations will require a purchase code. Requests "
+"without a purchase code will automatically be denied and a reply will be "
+"sent with the request for the code."
+msgstr ""
+"Jos käytössä on manuaalinen lipun luominen, se edellyttää hankintakoodia. "
+"Pyyntöjä, joissa ei ole ostoskoodia, evätään automaattisesti ja vastaus "
+"lähetetään koodin pyyntöön."
+
+#: admin/options-init.php:839
+msgid "Check Support until for Purchase?"
+msgstr "Tarkista tuki ennen ostoa?"
+
+#: admin/options-init.php:840
+msgid ""
+"If enabled purchases, where the support is expired will not be created as a "
+"ticket."
+msgstr "Jos sallitut ostot, joissa tukea on vanhentunut, ei luota lippuna."
+
+#: admin/options-init.php:848
+msgid "WooCommerce Integration"
+msgstr "WooCommerce-integraatio"
+
+#: admin/options-init.php:854
+msgid "Show FAQs Tab on Product pages"
+msgstr "Näytä usein kysytyt kysymykset -välilehti tuotesivuilla"
+
+#: admin/options-init.php:861
+msgid "Hide Admin bar for Reporters"
+msgstr "Piilota Reportersin hallintapalkki"
+
+#: admin/options-init.php:868
+msgid "Prevent Admin access for Reporters"
+msgstr "Estä Adminin käyttöoikeus toimittajille"
+
+#: admin/options-init.php:876
+msgid "Slack Integration"
+msgstr "Lakaista integraatio"
+
+#: admin/options-init.php:882
+msgid "Webhook URL"
+msgstr "Web-URL-osoite"
+
+#: admin/options-init.php:883
+msgid ""
+"Then <a href=\"https://my.slack.com/services/new/incoming-webhook\" "
+"target=\"_blank\">create an incoming webhook</a> on your Slack account for "
+"the package to use. You'll need the webhook URL to instantiate the client."
+msgstr ""
+"Sitten <a href=\"https://my.slack.com/services/new/incoming-webhook\" "
+"target=\"_blank\"> luo saapuva webhook </a> Slack-tilillesi, jotta paketti "
+"käyttää. Tarvitset webhook-URL-osoitteen asiakkaan instantiosoittamiseksi."
+
+#: admin/options-init.php:884
+msgid "https://hooks.slack.com/services/..."
+msgstr "https: //hooks.slack.com/services / ..."
+
+#: admin/options-init.php:890
+msgid "Channel"
+msgstr "kanava"
+
+#: admin/options-init.php:891
+msgid "Channel where to post to."
+msgstr "Kanava, johon postitetaan."
+
+#: admin/options-init.php:898
+msgid "Icon"
+msgstr "ikoni"
+
+#: admin/options-init.php:899
+msgid "Set your custom Slack Icon"
+msgstr "Aseta oma löysä kuvake"
+
+#: admin/options-init.php:910 admin/options-init.php:1007
+#: admin/options-init.php:1014
+msgid "New Ticket Notification"
+msgstr "Uusi lipputiedotus"
+
+#: admin/options-init.php:917 admin/options-init.php:1042
+#: admin/options-init.php:1049
+msgid "Status Change Notification"
+msgstr "Tilamuutosilmoitus"
+
+#: admin/options-init.php:924 admin/options-init.php:931
+#: admin/options-init.php:1084
+msgid "Enable Comment added Notification"
+msgstr "Ota käyttöön lisätty kommentti"
+
+#: admin/options-init.php:938
+msgid "Enable FB Messenger Live Chat."
+msgstr ""
+
+#: admin/options-init.php:939
+msgid ""
+"Learn more here: <a href=\"https://developers.facebook.com/docs/messenger-"
+"platform/discovery/customer-chat-plugin\">Click</a>"
+msgstr ""
+
+#: admin/options-init.php:946
+msgid "FBMessenger Code"
+msgstr ""
+
+#: admin/options-init.php:947
+msgid ""
+"<a href=\"https://developers.facebook.com/docs/messenger-"
+"platform/discovery/customer-chat-plugin#steps\">Follow the steps here to get "
+"the Messenger code.</a>"
+msgstr ""
+
+#: admin/options-init.php:953
+msgid "Enable Crisp Live Chat."
+msgstr "Ota Crisp Live Chat käyttöön."
+
+#: admin/options-init.php:954
+msgid "Learn more here: https://crisp.chat/en/"
+msgstr "Lisätietoja tästä: https://crisp.chat/en/"
+
+#: admin/options-init.php:961
+msgid "Crisp Code"
+msgstr "Crisp Code"
+
+#: admin/options-init.php:962
+msgid ""
+"Copy & paste the HTML code here. https://app.crisp.chat/settings/websites/"
+msgstr ""
+"Kopioi ja liitä HTML-koodi tähän. https://app.crisp.chat/settings/websites/"
+
+#: admin/options-init.php:968
+msgid "Enable PureChat Live Chat."
+msgstr "Ota PureChat Live Chat käyttöön."
+
+#: admin/options-init.php:969
+msgid "Learn more here: https://www.purechat.com/"
+msgstr "Lisätietoja tästä: https://www.purechat.com/"
+
+#: admin/options-init.php:976
+msgid "PureChat Code"
+msgstr "PureChat-koodi"
+
+#: admin/options-init.php:977
+msgid ""
+"Copy & paste the HTML code here. https://app.purechat.com/websites/install-"
+"first"
+msgstr ""
+"Kopioi ja liitä HTML-koodi tähän. https://app.purechat.com/websites/install-"
+"first"
+
+#: admin/options-init.php:983
+msgid "Enable Chatra Live Chat."
+msgstr "Ota Chatra Live Chat käyttöön."
+
+#: admin/options-init.php:984
+msgid "Learn more here: https://chatra.io"
+msgstr "Lisätietoja tästä: https://chatra.io"
+
+#: admin/options-init.php:991
+msgid "Chatra Code"
+msgstr "Chatra-koodi"
+
+#: admin/options-init.php:992
+msgid "Copy & paste the HTML code here. https://app.chatra.io/settings/general"
+msgstr ""
+"Kopioi ja liitä HTML-koodi tähän. https://app.chatra.io/settings/general"
+
+#: admin/options-init.php:999
+msgid "Mail Notifications"
+msgstr "Postiilmoitukset"
+
+#: admin/options-init.php:1008
+msgid "Notification when a new ticket has been created. "
+msgstr "Ilmoitus kun uusi lippu on luotu. "
+
+#: admin/options-init.php:1020 admin/options-init.php:1055
+#: admin/options-init.php:1090 admin/options-init.php:1127
+msgid "Notify the reporter."
+msgstr "Ilmoita toimittajalle."
+
+#: admin/options-init.php:1027
+msgid "Notify the by default assigned agent."
+msgstr "Ilmoita oletuksena määritetystä agentista."
+
+#: admin/options-init.php:1034 admin/options-init.php:1069
+#: admin/options-init.php:1106 admin/options-init.php:1141
+msgid "Notify the the following users:"
+msgstr "Ilmoita seuraaville käyttäjille:"
+
+#: admin/options-init.php:1043
+msgid "Notification when a ticket status has been changed. "
+msgstr "Ilmoitus kun lipputilaa on muutettu. "
+
+#: admin/options-init.php:1062
+msgid "Notify the assigned agent."
+msgstr "Ilmoita asiamiehelle."
+
+#: admin/options-init.php:1077
+msgid "Comment Added Notification"
+msgstr "Kommentti lisätty ilmoitukseen"
+
+#: admin/options-init.php:1078
+msgid "Whenever a comment has been added. "
+msgstr "Aina kun kommentti on lisätty. "
+
+#: admin/options-init.php:1098 admin/options-init.php:1134
+msgid "Notify the agent."
+msgstr "Ilmoita agentille."
+
+#: admin/options-init.php:1114
+msgid "Assigned Agent Changed Notification"
+msgstr "Määritetty agentti muutti ilmoituksen"
+
+#: admin/options-init.php:1115
+msgid "Whenever the assigned agent changed. "
+msgstr "Aina kun osoitettu agentti muuttui. "
+
+#: admin/options-init.php:1121
+msgid "Enable agent changed added Notification"
+msgstr "Ota agentti muuttamaan lisätty ilmoitus"
+
+#: admin/options-init.php:1149
+msgid "Notification settings"
+msgstr "Ilmoitusasetukset"
+
+#: admin/options-init.php:1150
+msgid "The default notification settings for mails etc."
+msgstr "Sähköpostiviestien oletusasetusten asetukset jne."
+
+#: admin/options-init.php:1156
+#: admin/class-kong-helpdesk-my-tickets.php:117
+#: admin/widgets/faq-topics.php:73
+msgid "Name"
+msgstr "Nimi"
+
+#: admin/options-init.php:1157
+msgid "This is the default from name for your mail notifications."
+msgstr "Tämä on sähköpostiosoitteiden oletusasetus."
+
+#: admin/options-init.php:1164
+msgid "Set a Logo"
+msgstr "Aseta logo"
+
+#: admin/options-init.php:1165
+msgid "The logo will be used in all Mail notifications."
+msgstr "Logoa käytetään kaikissa postin ilmoituksissa."
+
+#: admin/options-init.php:1173
+msgid "Support Mail Address"
+msgstr "Tuki sähköpostiosoitteeseen"
+
+#: admin/options-init.php:1174
+msgid ""
+"This will be used in your mail notifications as the default reply to address."
+msgstr ""
+"Tätä käytetään postitusilmoituksissasi oletuksena vastauksena osoitteeseen."
+
+#: admin/options-init.php:1180
+msgid "Footer for Mails"
+msgstr "Sivun alatunniste"
+
+#: admin/options-init.php:1187 admin/options-init.php:1241
+#: admin/class-kong-helpdesk-livechat-backend.php:222
+#: admin/class-kong-helpdesk-livechat-backend.php:223
+#: admin/class-kong-helpdesk-livechat-backend.php:235
+#: admin/class-kong-helpdesk-livechat.php:558
+#: admin/class-kong-helpdesk-livechat.php:604
+#: admin/class-kong-helpdesk-livechat.php:605
+#: admin/class-kong-helpdesk-livechat.php:614
+msgid "Live Chat"
+msgstr "Live Chat"
+
+#: admin/options-init.php:1194
+msgid "Enable Live Chat"
+msgstr "Ota käyttöön Live Chat"
+
+#: admin/options-init.php:1200
+msgid "Allow Guest-Chat"
+msgstr "Salli Guest-Chat"
+
+#: admin/options-init.php:1207
+msgid "Allow Attachments"
+msgstr "Salli lisäykset"
+
+#: admin/options-init.php:1214
+msgid "Hide Livechat when agents offline"
+msgstr "Piilota Livechat, kun agentit offline-tilassa"
+
+#: admin/options-init.php:1222
+msgid "Default Icon"
+msgstr "Oletuskuvake"
+
+#: admin/options-init.php:1240
+msgid "Live Chat Title"
+msgstr "Live Chat -otsikko"
+
+#: admin/options-init.php:1247
+msgid "Status Text (Online)"
+msgstr "Tilateksti (verkossa)"
+
+#: admin/options-init.php:1248
+msgid "Our customer service is available."
+msgstr "Asiakaspalvelumme on saatavana."
+
+#: admin/options-init.php:1254
+msgid "Status Text (Offline)"
+msgstr "Tilateksti (Offline)"
+
+#: admin/options-init.php:1255
+msgid "No agents online."
+msgstr "Ei välittäjiä verkossa."
+
+#: admin/options-init.php:1261
+msgid "Welcome Text (Online)"
+msgstr "Tervetulotoivotus (Online)"
+
+#: admin/options-init.php:1262
+#, php-format
+msgid "Hi %s,<br><br>Please tell us your subject and your concerns."
+msgstr "Hi %s , <br> <br> Kerro meille aiheenne ja huolenne."
+
+#: admin/options-init.php:1268
+msgid "Welcome Text (Offline)"
+msgstr "Tervetuloa teksti (Offline)"
+
+#: admin/options-init.php:1269
+msgid ""
+"Sorry,<br><br>None of our agents is online right now. But you can leave a "
+"message."
+msgstr ""
+"Anteeksi, <br> <br> Yksikään agentti ei ole verkossa juuri nyt. Mutta voit "
+"jättää viestin."
+
+#: admin/options-init.php:1275
+msgid "Button Text"
+msgstr "Button Text"
+
+#: admin/options-init.php:1276
+msgid "Enter Chat"
+msgstr "Anna Chat"
+
+#: admin/options-init.php:1294
+msgid "Saved Replies (BOT)"
+msgstr "Tallennetut vastaukset (BOT)"
+
+#: admin/options-init.php:1301
+msgid "Enable Saved Replies"
+msgstr "Ota tallennettuja vastauksia käyttöön"
+
+#: admin/options-init.php:1302
+msgid ""
+"This allows you to save comments into a saved reply, that can be reused for "
+"later tickets."
+msgstr ""
+"Näin voit tallentaa kommentit tallennettuun vastaukseen, jota voidaan "
+"käyttää myöhempää lippua varten."
+
+#: admin/options-init.php:1308
+msgid "Enable Automatic Replies"
+msgstr "Ota automaattiset vastaukset käyttöön"
+
+#: admin/options-init.php:1309
+msgid ""
+"This will use your saved replies based on tags & word matches to "
+"automatically reply."
+msgstr ""
+"Tämä käyttää tallennettuja vastauksia, jotka perustuvat tunnisteisiin ja "
+"sanajoukkoihin automaattisesti vastaamiseksi."
+
+#: admin/options-init.php:1315
+msgid "Automatic Reply User"
+msgstr "Automaattinen vastaus käyttäjä"
+
+#: admin/options-init.php:1316
+msgid ""
+"This User will be used for automatic replies. You can create a user Bot for "
+"example and set it here."
+msgstr ""
+"Tätä käyttäjää käytetään automaattisiin vastauksiin. Voit esimerkiksi luoda "
+"käyttäjän Botin ja asettaa sen täältä."
+
+#: admin/options-init.php:1323
+msgid "Enable Automatic Replies for new Tickets"
+msgstr "Ota käyttöön automaattiset vastaukset uusille lipuille"
+
+#: admin/options-init.php:1330
+msgid "Enable Automatic Reply for new Ticket Replies"
+msgstr "Ota automaattinen vastaus uusiin lipputeksteihin"
+
+#: admin/options-init.php:1338
+msgid "Support Rating"
+msgstr "Tuki-luokitus"
+
+#: admin/options-init.php:1339
+msgid ""
+"Send out Emails when tickets are completed and ask for a support rating."
+msgstr "Lähetä sähköpostiviestit, kun liput ovat valmiit ja pyydä tukea."
+
+#: admin/options-init.php:1346
+msgid "Enable Support Rating"
+msgstr "Ota tukiluokitus käyttöön"
+
+#: admin/options-init.php:1357
+msgid "Rating Status"
+msgstr "Arvioinnin tila"
+
+#: admin/options-init.php:1358
+msgid "The status when the rating support email should be sent out."
+msgstr "Tilan, kun luokitustuki-sähköposti on lähetettävä."
+
+#: admin/options-init.php:1364
+msgid "Feedback Page"
+msgstr "Palaute sivu"
+
+#: admin/options-init.php:1365
+msgid ""
+"Make sure the [helpdesk_feedback] shortcode is placed there. After saving "
+"here go to settings > permalinks and save."
+msgstr ""
+"Varmista, että [helpdesk_feedback] -koodi on siellä. Kun olet tallentanut "
+"tähän, siirry asetuksiin> permalinks ja tallenna."
+
+#: admin/options-init.php:1372
+msgid "Email Subject"
+msgstr "Sähköpostin aihe"
+
+#: admin/options-init.php:1373
+msgid "How would you rate the support?"
+msgstr "Miten arvioisit tuen?"
+
+#: admin/options-init.php:1379
+msgid "Email Intro"
+msgstr "Sähköpostiin"
+
+#: admin/options-init.php:1380
+#, php-format
+msgid ""
+"Hello %s,<br/><br/>We'd love to hear about your support experience. Please "
+"take a moment to answer one simple question by clicking either link below:"
+"<br/><br/>How would you rate the support you received?<br/><br/>"
+msgstr ""
+"Hei %s , <br/> <br/> Haluamme kuulla tukikokemuksesi. Ottakaa hetki "
+"vastaamaan yhteen yksinkertaiseen kysymykseen klikkaamalla alla olevaa "
+"linkkiä: <br/> <br/> Miten arvioisit saamasi tuen? <br/> <br/>"
+
+#: admin/options-init.php:1386 admin/options-init.php:1393
+msgid "Email Satisfied Text"
+msgstr "Sähköposti tyydytetty teksti"
+
+#: admin/options-init.php:1387
+msgid "Good, I'm satisfied"
+msgstr "Hyvä, olen tyytyväinen"
+
+#: admin/options-init.php:1394
+msgid "Bad, I'm unsatisfied"
+msgstr "Huono, olen tyytymätön"
+
+#: admin/options-init.php:1400
+msgid "Email Outro"
+msgstr "Sähköposti Outro"
+
+#: admin/options-init.php:1401
+msgid ""
+"Not solved yet?<br><br>The message you add to your feedback will not be "
+"forwarded as a reply. If you have further questions you can reply to this "
+"email."
+msgstr ""
+"Ei vielä ratkaistu? <br> <br> Palautteeseesi lisättävää viestiä ei lähetetä "
+"vastauksena. Jos sinulla on lisäkysymyksiä, voit vastata tähän sähköpostiin."
+
+#: admin/options-init.php:1409
+msgid "My Tickets options."
+msgstr ""
+
+#: admin/options-init.php:1416
+msgid "Automatically Close Tickets"
+msgstr ""
+
+#: admin/options-init.php:1417
+msgid ""
+"Automatically set Tickets to close / solved after X Days no comment / update "
+"was made. You need to set a default solved status!"
+msgstr ""
+
+#: admin/options-init.php:1423
+msgid "Days after a Ticket gets closed"
+msgstr ""
+
+#: admin/options-init.php:1433
+msgid "My tickets"
+msgstr ""
+
+#: admin/options-init.php:1434
+msgid "Configure what you want to show in the My tickets table."
+msgstr ""
+
+#: admin/options-init.php:1526
+msgid "Show Name"
+msgstr ""
+
+#: admin/options-init.php:1532
+msgid "Show Date"
+msgstr ""
+
+#: admin/options-init.php:1538
+msgid "Show Status"
+msgstr ""
+
+#: admin/options-init.php:1544
+msgid "Show System"
+msgstr ""
+
+#: admin/options-init.php:1550
+msgid "Show Type"
+msgstr ""
+
+#: admin/options-init.php:1557
+msgid "Advanced settings"
+msgstr "Lisäasetukset"
+
+#: admin/options-init.php:1558
+msgid "Custom stylesheet / javascript."
+msgstr "Mukautettu tyylisivu / javascript."
+
+#: admin/options-init.php:1565
+msgid "Use Theme Template"
+msgstr "Käytä teemamallia"
+
+#: admin/options-init.php:1566
+msgid "Enable this to override the custom templates."
+msgstr "Ota tämä käyttöön ohittaaksesi mukautetut mallit."
+
+#: admin/options-init.php:1573
+msgid "Support Mail Template"
+msgstr "Tuki postimalli"
+
+#: admin/options-init.php:1574
+msgid "This will be used for notifications."
+msgstr "Tätä käytetään ilmoituksiin."
+
+#: admin/options-init.php:1581
+msgid "Custom CSS"
+msgstr "Custom CSS"
+
+#: admin/options-init.php:1582 admin/options-init.php:1589
+msgid "Add some stylesheet if you want."
+msgstr "Lisää haluamasi tyylitaulukko."
+
+#: admin/options-init.php:1588
+msgid "Custom JS"
+msgstr "Custom JS"
+
+#: admin/class-kong-helpdesk-saved-replies.php:144
+msgid "Saved Reply"
+msgstr "Tallennettu vastaus"
+
+#: admin/class-kong-helpdesk-saved-replies.php:145
+#: admin/class-kong-helpdesk-saved-replies.php:148
+msgid "Saved Replies"
+msgstr "Tallennetut vastaukset"
+
+#: admin/class-kong-helpdesk-saved-replies.php:207
+msgid "Category"
+msgstr "Kategoria"
+
+#: admin/class-kong-helpdesk-saved-replies.php:208
+msgid "Categories"
+msgstr "Luokat"
+
+#: admin/class-kong-helpdesk-saved-replies.php:211
+#: admin/class-kong-helpdesk-saved-replies.php:212
+#: admin/class-kong-helpdesk-saved-replies.php:221
+#: admin/class-kong-helpdesk-saved-replies.php:247
+#: admin/class-kong-helpdesk-saved-replies.php:248
+#: admin/class-kong-helpdesk-saved-replies.php:257
+#, php-format
+msgid "%s"
+msgstr "% s"
+
+#: admin/class-kong-helpdesk-saved-replies.php:243
+msgid "Tag"
+msgstr "Tag"
+
+#: admin/class-kong-helpdesk-saved-replies.php:244
+msgid "Tags"
+msgstr "Tunnisteet"
+
+#: admin/class-kong-helpdesk-saved-replies.php:308
+msgid "Create Saved Reply"
+msgstr "Luo tallennettu vastaus"
+
+#: admin/class-kong-helpdesk-saved-replies.php:326
+msgid "No comment to duplicate has been supplied!"
+msgstr "Kaksoiskappaleita ei ole toimitettu!"
+
+#: admin/class-kong-helpdesk-saved-replies.php:347
+msgid "Saved Reply creation failed, could not find original comment: "
+msgstr ""
+"Tallennetun vastauksen luominen epäonnistui, emme löytäneet alkuperäistä "
+"kommenttia: "
+
+#: admin/class-kong-helpdesk-slack.php:90
+#: admin/class-kong-helpdesk-slack.php:95
+#, php-format
+msgid "New Ticket created: %s"
+msgstr "Uusi lippu luotiin: %s"
+
+#: admin/class-kong-helpdesk-slack.php:93
+#: admin/class-kong-helpdesk-slack.php:132
+#: admin/class-kong-helpdesk-slack.php:178
+#: admin/class-kong-helpdesk-slack.php:190
+#: admin/class-kong-helpdesk-slack.php:253
+#: admin/class-kong-helpdesk-slack.php:289
+#, php-format
+msgid "[Ticket: %s] - %s"
+msgstr "[Liput: %s ] - %s"
+
+#: admin/class-kong-helpdesk-slack.php:129
+#, php-format
+msgid "New Comment added on Ticket %s"
+msgstr "Uusi kommentti lisätään lipuille %s"
+
+#: admin/class-kong-helpdesk-slack.php:134
+#, php-format
+msgid "New Comment added by %s:"
+msgstr "Uusi kommentti on lisännyt %s :"
+
+#: admin/class-kong-helpdesk-slack.php:176
+#: admin/class-kong-helpdesk-slack.php:188
+#, php-format
+msgid "[Ticket: %s] %s changed"
+msgstr "[Liput: %s ] %s muutettu"
+
+#: admin/class-kong-helpdesk-slack.php:180
+#, php-format
+msgid "%s changed from %s to: %s"
+msgstr "%s muuttui %s : sta %s"
+
+#: admin/class-kong-helpdesk-slack.php:251
+#, php-format
+msgid "[Ticket: %s] Agent changed"
+msgstr "[Liput: %s ] Agentti muuttui"
+
+#: admin/class-kong-helpdesk-slack.php:255
+#: admin/class-kong-helpdesk-log.php:265
+#, php-format
+msgid "Assigned from %s to %s"
+msgstr "Määritetty %s stä %s"
+
+#: admin/class-kong-helpdesk-slack.php:287
+#, php-format
+msgid "[Ticket: %s] Agent assigned"
+msgstr "[Ticket: %s ] Asiamiehen nimi"
+
+#: admin/class-kong-helpdesk-log.php:46
+msgid "History"
+msgstr "Historia"
+
+#: admin/class-kong-helpdesk-log.php:74
+#: admin/class-kong-helpdesk-livechat-backend.php:160
+#: admin/class-kong-helpdesk-livechat.php:161
+msgid " by "
+msgstr " mennessä "
+
+#: admin/class-kong-helpdesk-log.php:79
+msgid "Content: "
+msgstr "sisältö: "
+
+#: admin/class-kong-helpdesk-livechat-backend.php:201
+#: admin/class-kong-helpdesk-livechat.php:285
+#, php-format
+msgid "Message received and Chat-Ticket %s created. You should have an email."
+msgstr ""
+"Vastaanotettu viesti ja Chat-lippu %s luotu. Sinulla pitäisi olla sähköposti."
+
+#: admin/class-kong-helpdesk-livechat-backend.php:355
+msgid "Error while uploading your attachment."
+msgstr "Virhe lataamassa liitetiedostoasi."
+
+#: admin/class-kong-helpdesk-livechat-backend.php:391
+#: admin/class-kong-helpdesk-livechat.php:656
+msgid "No Chat Tickets created yet"
+msgstr "Ei ole vielä luotu Chat-lipuja"
+
+#: admin/class-kong-helpdesk-livechat-backend.php:395
+#, php-format
+msgid "%d Chat Tickets created yet"
+msgstr "%d Chat-liput on luotu"
+
+#: admin/class-kong-helpdesk-faq-post-type.php:89
+msgid "<h2>No Topics created so far!</h2>"
+msgstr "<h2> Ei tähän mennessä luotuja aiheita! </ h2>"
+
+#: admin/class-kong-helpdesk-faq-post-type.php:223
+#: admin/class-kong-helpdesk-faq-post-type.php:231
+#, php-format
+msgid "View %s article"
+msgid_plural "View %s articles"
+msgstr[0] "Näytä %s artikkeli"
+msgstr[1] "Näytä %s artikkeli"
+
+#: admin/class-kong-helpdesk-faq-post-type.php:257
+#: admin/class-kong-helpdesk-faq-post-type.php:260
+msgid "Search FAQs"
+msgstr "Etsi usein kysytyt kysymykset"
+
+#: admin/class-kong-helpdesk-faq-post-type.php:307
+msgid "No FAQ ID set."
+msgstr "Ei FAQ-tunnusta."
+
+#: admin/class-kong-helpdesk-faq-post-type.php:313
+msgid "No FAQ found."
+msgstr "Ei usein kysyttyjä kysymyksiä."
+
+#: admin/class-kong-helpdesk-faq-post-type.php:343
+#: admin/class-kong-helpdesk-faq-post-type.php:521
+msgid "View Article"
+msgstr "Näytä artikkeli"
+
+#: admin/class-kong-helpdesk-faq-post-type.php:404
+msgid "Topic ID not an ID"
+msgstr "Aiheen tunnus ei tunnusta"
+
+#: admin/class-kong-helpdesk-faq-post-type.php:426
+#, php-format
+msgid "Please <a href=\"%s\" title=\"Login\">login to view this topic.</a>"
+msgstr ""
+"<a href=\" %s \" title=\"Login\"> Kirjaudu sisään nähdäksesi tämän aiheen. "
+"</a>"
+
+#: admin/class-kong-helpdesk-faq-post-type.php:456
+msgid "No Articles found."
+msgstr "Artikkeleita ei löytynyt."
+
+#: admin/class-kong-helpdesk-faq-post-type.php:542
+msgid "FAQ"
+msgstr "Ohje"
+
+#: admin/class-kong-helpdesk-faq-post-type.php:610
+msgid "Topic"
+msgstr "Aihe"
+
+#: admin/class-kong-helpdesk-faq-post-type.php:611
+#: admin/widgets/faq-topics.php:63
+msgid "Topics"
+msgstr "aiheista"
+
+#: admin/class-kong-helpdesk-faq-post-type.php:675
+msgid "Create FAQ from this Ticket"
+msgstr "Luo FAQ tästä lipusta"
+
+#: admin/class-kong-helpdesk-faq-post-type.php:711
+msgid "FAQ creation failed, could not find original ticket: "
+msgstr "FAQ-luominen epäonnistui, emme löytäneet alkuperäistä lippua: "
+
+#: admin/class-kong-helpdesk-faq-post-type.php:783
+#, php-format
+msgid "Search Results for: %s"
+msgstr "Hakutulokset haulle: %s"
+
+#: admin/class-kong-helpdesk-faq-post-type.php:797
+#, php-format
+msgid "We found more than %d results ..."
+msgstr ""
+
+#: admin/class-kong-helpdesk-faq-post-type.php:804
+#, php-format
+msgid "Could not find anything for: %s"
+msgstr "Ei löytynyt mitään: %s"
+
+#: admin/class-kong-helpdesk-faq-post-type.php:1068
+#: admin/class-kong-helpdesk-faq-post-type.php:1074
+#, php-format
+msgid "Please <a href=\"%s\" title=\"Login\">login to view this faq.</a>"
+msgstr ""
+"<a href=\" %s \" title=\"Login\"> Kirjaudu sisään nähdäksesi tämän sivun. "
+"</a>"
+
+#: admin/class-kong-helpdesk-faq-post-type.php:1085
+#: admin/class-kong-helpdesk-faq-post-type.php:1086
+#: admin/class-kong-helpdesk-faq-post-type.php:1105
+msgid "FAQ Terms"
+msgstr "FAQ Ehdot"
+
+#: admin/class-kong-helpdesk-faq-post-type.php:1098
+msgid "No Search Terms found yet"
+msgstr "Hakutermejä ei löydy vielä"
+
+#: admin/class-kong-helpdesk-faq-post-type.php:1111
+msgid "Term"
+msgstr "Termi"
+
+#: admin/class-kong-helpdesk-faq-post-type.php:1112
+msgid "Search Counts"
+msgstr "Haku laskee"
+
+#: admin/class-kong-helpdesk-faq-post-type.php:1113
+msgid "Articles Found"
+msgstr "Artikkelit löytyi"
+
+#: admin/class-kong-helpdesk-comments-processor.php:113
+#: admin/class-kong-helpdesk-ticket-processor.php:131
+msgid "Username not set!"
+msgstr "Käyttäjänimi ei ole asetettu!"
+
+#: admin/class-kong-helpdesk-comments-processor.php:116
+#: admin/class-kong-helpdesk-ticket-processor.php:134
+msgid "Email not set!"
+msgstr "Sähköposti ei ole asetettu!"
+
+#: admin/class-kong-helpdesk-comments-processor.php:121
+msgid "User Exists. The comment has been created by your account."
+msgstr "Käyttäjä on olemassa. Kommentti on luotu tilillesi."
+
+#: admin/class-kong-helpdesk-comments-processor.php:126
+#: admin/class-kong-helpdesk-ticket-processor.php:152
+msgid "We created an account for you – Check your inbox!"
+msgstr "Luomme sinulle tilin - Tarkista postilaatikko!"
+
+#: admin/class-kong-helpdesk-comments-processor.php:129
+msgid "User not exists, but account could not be created."
+msgstr "Käyttäjä ei ole olemassa, mutta tiliä ei voitu luoda."
+
+#: admin/class-kong-helpdesk-comments-processor.php:140
+msgid "Post ID not set!"
+msgstr "Postin tunnus ei ole asetettu!"
+
+#: admin/class-kong-helpdesk-comments-processor.php:146
+msgid "Post ID not created!"
+msgstr "Postin tunnus ei ole luotu!"
+
+#: admin/class-kong-helpdesk-comments-processor.php:151
+#: admin/class-kong-helpdesk-ticket-processor.php:178
+msgid "Message not set!"
+msgstr "Viesti ei ole asetettu!"
+
+#: admin/class-kong-helpdesk-exporter.php:40
+msgid "You are not an admin"
+msgstr "Et ole ylläpitäjä"
+
+#: admin/class-kong-helpdesk-exporter.php:47
+msgid "No Tickets to Export"
+msgstr "Ei liput vientiin"
+
+#: admin/class-kong-helpdesk-exporter.php:53
+msgid "Your Ticket Export is ready. The Download should start automatically."
+msgstr "Lippuvuosi on valmis. Latauksen pitäisi alkaa automaattisesti."
+
+#: admin/class-kong-helpdesk-exporter.php:55
+msgid "Something was wrong with the export generation ..."
+msgstr "Jotain oli väärässä vienninedistämisessä ..."
+
+#: admin/class-kong-helpdesk-exporter.php:179
+msgid "Ticket Information"
+msgstr "Lipputiedot"
+
+#: admin/class-kong-helpdesk-exporter.php:203
+msgid "System"
+msgstr "järjestelmä"
+
+#: admin/class-kong-helpdesk-ticket-notes.php:49
+msgid "Private Notes"
+msgstr "Yksityiset huomautukset"
+
+#: admin/class-kong-helpdesk-ticket-notes.php:77
+#: admin/class-kong-helpdesk-ticket-notes.php:134
+#, php-format
+msgid "created on %s by %s"
+msgstr "luotiin %s %s"
+
+#: admin/class-kong-helpdesk-ticket-notes.php:78
+#: admin/class-kong-helpdesk-ticket-notes.php:135
+msgid "Delete Note"
+msgstr "Poista merkintä"
+
+#: admin/class-kong-helpdesk-ticket-notes.php:86
+msgid "Add Note"
+msgstr "Lisätä huomautus"
+
+#: admin/class-kong-helpdesk-ticket-notes.php:92
+msgid "Add"
+msgstr "Lisätä"
+
+#: admin/class-kong-helpdesk-ticket-notes.php:107
+msgid "Ticket Sytem"
+msgstr "Ticket Sytem"
+
+#: admin/class-kong-helpdesk-ticket-processor.php:141
+#, php-format
+msgid ""
+"Username or Email exists.  <a href=\"%s\" title=\"Login\">Please login to "
+"create a ticket</a>."
+msgstr ""
+"Käyttäjätunnus tai sähköpostiosoite on olemassa. <a href=\" %s \" "
+"title=\"Login\"> Kirjaudu sisään luodaksesi lipun </a>."
+
+#: admin/class-kong-helpdesk-ticket-processor.php:155
+#, php-format
+msgid ""
+"User not exists, but account could not be created. <a href=\"%s\" "
+"title=\"Login\">Please login first</a>!"
+msgstr ""
+"Käyttäjä ei ole olemassa, mutta tiliä ei voitu luoda. <a href=\" %s \" "
+"title=\"Login\"> Ole hyvä ja kirjaudu ensin </a>!"
+
+#: admin/class-kong-helpdesk-ticket-processor.php:174
+msgid "Subject not set!"
+msgstr "Aihe ei ole asetettu!"
+
+#: admin/class-kong-helpdesk-ticket-processor.php:184
+msgid "Purchase Code not set!"
+msgstr "Ostoskoodi ei ole asetettu!"
+
+#: admin/class-kong-helpdesk-ticket-processor.php:193
+#, php-format
+msgid "Purchase Code %s could not be verified!"
+msgstr "Ostoskoodia %s ei voitu vahvistaa!"
+
+#: admin/class-kong-helpdesk-ticket-processor.php:198
+#, php-format
+msgid "Support Expired on %s – please renew!"
+msgstr "Tuki umpeutui %s - uusitaan!"
+
+#: admin/class-kong-helpdesk-ticket-processor.php:200
+#: admin/class-kong-helpdesk-ticket-processor.php:203
+msgid "Purchase Code verified for item: "
+msgstr "Vahvistettu ostokoodi: "
+
+#: admin/class-kong-helpdesk-reports.php:38
+#: admin/class-kong-helpdesk-reports.php:39
+#: admin/class-kong-helpdesk-reports.php:257
+msgid "Reports"
+msgstr "raportit"
+
+#: admin/class-kong-helpdesk-reports.php:84
+msgid "Date From is not valid!"
+msgstr "Päivämäärä From ei ole voimassa!"
+
+#: admin/class-kong-helpdesk-reports.php:94
+msgid "Date Until is not valid!"
+msgstr "Päivämäärä, kunnes se ei ole voimassa!"
+
+#: admin/class-kong-helpdesk-reports.php:202
+msgid "Waiting"
+msgstr "odotus"
+
+#: admin/class-kong-helpdesk-reports.php:217
+msgid "No Source"
+msgstr "Ei lähdettä"
+
+#: admin/class-kong-helpdesk-reports.php:259
+msgid "Date Filter"
+msgstr "Päivämääräsuodatin"
+
+#: admin/class-kong-helpdesk-reports.php:263
+msgid "Date From (JJJJ-MM-DD)"
+msgstr "Päivämäärä (JJJJ-MM-DD)"
+
+#: admin/class-kong-helpdesk-reports.php:267
+msgid "Date Until (JJJJ-MM-DD)"
+msgstr "Päivämäärä asti (JJJJ-MM-DD)"
+
+#: admin/class-kong-helpdesk-reports.php:271
+msgid "Submit"
+msgstr "Lähetä"
+
+#: admin/class-kong-helpdesk-reports.php:276
+msgid "Filtered"
+msgstr "suodatettu"
+
+#: admin/class-kong-helpdesk-reports.php:277
+msgid "Filtered Tickets:"
+msgstr "Suodatetut liput:"
+
+#: admin/class-kong-helpdesk-reports.php:281
+msgid "Tickets by Agent"
+msgstr "Liput asiamiehen mukaan"
+
+#: admin/class-kong-helpdesk-reports.php:290
+msgid "Tickets by Reporter"
+msgstr "Reporterin liput"
+
+#: admin/class-kong-helpdesk-reports.php:299
+msgid "Tickets by Satisfaction"
+msgstr "Lippuja tyydytyksellä"
+
+#: admin/class-kong-helpdesk-reports.php:308
+msgid "Tickets by Source"
+msgstr "Liput lähteestä"
+
+#: admin/class-kong-helpdesk-reports.php:317
+msgid "Tickets by Year"
+msgstr "Liput vuosittain"
+
+#: admin/class-kong-helpdesk-reports.php:326
+msgid "Tickets by Month"
+msgstr "Liput kuukausittain"
+
+#: admin/class-kong-helpdesk-reports.php:335
+msgid "Tickets created by Year / Month"
+msgstr "Lippuja luotiin vuosi / kuukausi"
+
+#: admin/class-kong-helpdesk-reports.php:352
+msgid "Total"
+msgstr "Kaikki yhteensä"
+
+#: admin/class-kong-helpdesk-reports.php:353
+msgid "No Date filter applied here:"
+msgstr "Ei Päiväys suodattaa sovellettu täällä:"
+
+#: admin/class-kong-helpdesk-reports.php:356
+msgid "Tickets by Status"
+msgstr "Liput tilaajan mukaan"
+
+#: admin/class-kong-helpdesk-reports.php:365
+msgid "Tickets by Type"
+msgstr "Liput tyypin mukaan"
+
+#: admin/class-kong-helpdesk-reports.php:374
+msgid "Tickets by Department"
+msgstr "Liput osastoittain"
+
+#: admin/class-kong-helpdesk-reports.php:383
+msgid "Tickets by Priority"
+msgstr "Liput ensisijaisesti"
+
+#: admin/class-kong-helpdesk-my-tickets.php:146
+msgid "Actions"
+msgstr "Toimet"
+
+#: admin/class-kong-helpdesk-my-tickets.php:153
+msgid "No tickets submitted yet."
+msgstr "Ei vielä lippuja."
+
+#: admin/class-kong-helpdesk-my-tickets.php:161
+#, php-format
+msgid "[Ticket: %s]"
+msgstr "[Liput: %s ]"
+
+#: admin/class-kong-helpdesk-my-tickets.php:224
+msgid "View"
+msgstr ""
+
+#: admin/class-kong-helpdesk-inbox.php:312
+#: admin/class-kong-helpdesk-inbox.php:373
+msgid "No Message in your Email detected."
+msgstr "Sähköpostiviestiä ei löytynyt."
+
+#: admin/class-kong-helpdesk-inbox.php:329
+msgid ""
+"No purchase code detected. Please make sure the email contains the following "
+"pattern \"Purchase Code: XXX\"."
+msgstr ""
+"Mitään ostoskoodia ei tunnistettu. Varmista, että sähköpostiosoitteessa on "
+"seuraava ohje:  \"Ostoskoodi: XXX \"."
+
+#: admin/class-kong-helpdesk-inbox.php:379
+msgid "Ticket ID for your Reply could not be found."
+msgstr "Vastauksesi vastausta ei löytynyt."
+
+#: admin/class-kong-helpdesk-inbox.php:460
+msgid "Sorry ..."
+msgstr "Anteeksi ..."
+
+#: admin/class-kong-helpdesk-inbox.php:465
+msgid "Sorry we could not process your mail :("
+msgstr "Anteeksi emme voineet käsitellä postia :("
+
+#: admin/class-kong-helpdesk-inbox.php:466
+msgid "Visit our Website"
+msgstr "Vieraile verkkosivuillamme"
+
+#: admin/class-kong-helpdesk-livechat.php:204
+msgid "Currently there are no open chats."
+msgstr ""
+
+#: admin/class-kong-helpdesk-livechat.php:211
+#, php-format
+msgid "There is currently %s open chat:"
+msgid_plural "There are currently %s open chats:"
+msgstr[0] ""
+msgstr[1] ""
+
+#: admin/class-kong-helpdesk-livechat.php:239
+#: admin/class-kong-helpdesk-livechat.php:243
+#: admin/class-kong-helpdesk-livechat.php:247
+msgid ""
+"<div class=\"alert alert-danger\" role=\"alert\">This Chat has been "
+"Closed</div>"
+msgstr ""
+
+#: admin/class-kong-helpdesk-livechat.php:267
+msgid ""
+"<div class=\"alert alert-danger\" role=\"alert\">Ticket could not be created."
+" Please contact support email directly.</div>"
+msgstr ""
+
+#: admin/class-kong-helpdesk-livechat.php:292
+msgid "</div>"
+msgstr ""
+
+#: admin/class-kong-helpdesk-livechat.php:438
+#: admin/class-kong-helpdesk-livechat.php:557
+msgid "Close this Chat"
+msgstr ""
+
+#: admin/class-kong-helpdesk-livechat.php:451
+msgid "<p>Please login first.</p>"
+msgstr ""
+
+#: admin/class-kong-helpdesk-livechat.php:452
+#, php-format
+msgid ""
+"<a href=\"%s\" class=\"button btn btn-primary theme-btn theme-button\">Login "
+"Now</a>"
+msgstr ""
+
+#: admin/class-kong-helpdesk-livechat.php:569
+#, php-format
+msgid "Hi Agent %s,"
+msgstr ""
+
+#: includes/class-kong-helpdesk-activator.php:193
+msgid "Agent"
+msgstr "Helpdesk-agentti"
+
+#: includes/class-kong-helpdesk-activator.php:215
+msgid "Subscriber"
+msgstr "Helpdesk-toimittaja"
+
+#: admin/widgets/faq-topics.php:6
+msgid "FAQ Topics"
+msgstr "FAQ Aiheet"
+
+#: admin/widgets/faq-topics.php:64
+msgid "Title:"
+msgstr "Otsikko:"
+
+#: admin/widgets/faq-topics.php:72
+msgid "Menu Order"
+msgstr "Valikkojärjestys"
+
+#: admin/widgets/faq-topics.php:74
+msgid "Slug"
+msgstr "Etana"
+
+#: admin/widgets/faq-topics.php:75
+msgid "Term_group"
+msgstr "Term_group"
+
+#: admin/widgets/faq-topics.php:76
+msgid "Term_id"
+msgstr "Term_id"
+
+#: admin/widgets/faq-topics.php:77
+msgid "Id"
+msgstr "Id"
+
+#: admin/widgets/faq-topics.php:78
+msgid "Description"
+msgstr "Kuvaus"
+
+#: admin/widgets/faq-topics.php:79
+msgid "Parent"
+msgstr "vanhempi"
+
+#: admin/widgets/faq-topics.php:80
+msgid "Count"
+msgstr "Kreivi"
+
+#: admin/widgets/faq-topics.php:83
+msgid "Order By:"
+msgstr "Järjestys:"
+
+#: admin/widgets/faq-topics.php:104
+msgid "Order:"
+msgstr "Tilata:"
+
+#: admin/widgets/faq-live-search.php:6
+msgid "Use this to show the live ajax search for FAQs"
+msgstr "Käytä tätä näyttämään Live ajax -haun usein kysytyistä kysymyksistä"
+
+#: admin/widgets/faq-posts.php:6
+msgid "Show some FAQs."
+msgstr "Näytä joitakin usein kysyttyjä kysymyksiä."
+
+#: admin/widgets/faq-dynamic-posts.php:6
+msgid ""
+"Use this if you want to show FAQs dynamically based on the current users FAQ "
+"page."
+msgstr ""
+"Käytä tätä, jos haluat näyttää usein kysytyt kysymykset nykyisten käyttäjien "
+"FAQ-sivun perusteella."
+
+#: admin/widgets/faq-dynamic-posts.php:71
+msgid "Popular FAQs"
+msgstr "Suosittuja usein kysyttyjä kysymyksiä"
+
+#: admin/views/single-faq.php:62
+#, php-format
+msgid "Viewed: %s"
+msgstr "Katsottu: %s"
+
+#: admin/views/single-ticket.php:57
+msgid "Close ticket"
+msgstr ""
+
+#: admin/views/single-ticket.php:116
+#, php-format
+msgid "Reporter: %s"
+msgstr "Reportteri: %s"
+
+#: admin/views/single-ticket.php:118 admin/views/single-ticket.php:151
+msgid "Created on:"
+msgstr "Luotu:"
+
+#: admin/views/single-ticket.php:119 admin/views/single-ticket.php:152
+msgid "Email:"
+msgstr "Sähköposti:"
+
+#: admin/views/single-ticket.php:136
+msgid "No Agent assigned yet."
+msgstr "Ei asiamiestä vielä ole annettu."
+
+#: admin/views/single-ticket.php:149
+#, php-format
+msgid "Agent: %s"
+msgstr "Agentti: %s"
+
+#. Name of the plugin
+msgid "Kong TotalDesk"
+msgstr "Kong TotalDesk"
+
+#. Description of the plugin
+msgid "The All in One Kong Helpdesk solution"
+msgstr "All in One Kong Helpdesk -ratkaisu"
+
+#. URI of the plugin
+msgid "http://capitalnumbers.com/"
+msgstr ""
+
+#. Author of the plugin
+msgid "weLaunch"
+msgstr ""
+
+#. Author URI of the plugin
+msgid "https://welaunch.io"
+msgstr ""

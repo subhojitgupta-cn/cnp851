@@ -1,0 +1,2611 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Kong TotalDesk\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-07 07:59+0000\n"
+"PO-Revision-Date: 2019-05-07 08:00+0000\n"
+"Last-Translator: WeLaunch <support@dev.welaunch.io>\n"
+"Language-Team: Portuguese (Portugal)\n"
+"Language: pt_PT\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.2.2; wp-5.1.1"
+
+#: kong-helpdesk.php:95
+msgid ""
+"Kong Helpdesk requires the Redux Framework Please install or activate "
+"it before!"
+msgstr ""
+"O Kong Helpdesk requer o Redux Framework Instale ou ative-o antes!"
+
+#: admin/class-kong-helpdesk-form.php:119 admin/views/single-ticket.php:47
+msgid "< Back to My Tickets"
+msgstr "<Voltar para Meus ingressos"
+
+#: admin/class-kong-helpdesk-form.php:133
+msgid "Recaptcha not passed!"
+msgstr "Recaptcha não passou!"
+
+#: admin/class-kong-helpdesk-form.php:140
+#, php-format
+msgid ""
+"Ticket successfully created! You can <a href=\"%s\">view it here</a>.<br/>"
+msgstr ""
+"Bilhete criado com sucesso! Você pode <a href=\" %s \"> vê-lo aqui </a>. "
+"<br/>"
+
+#: admin/class-kong-helpdesk-form.php:146
+msgid "Ticket could not be created!"
+msgstr "Bilhete não pôde ser criado!"
+
+#: admin/class-kong-helpdesk-form.php:170
+#: admin/class-kong-helpdesk-form.php:176
+#, php-format
+msgid "Please <a href=\"%s\" title=\"Login\">login to submit a ticket.</a>"
+msgstr ""
+"Por favor, <a href=\" %s \" title=\"Login\"> faça o login para enviar um "
+"ticket. </a>"
+
+#: admin/class-kong-helpdesk-form.php:218
+msgid "Create Ticket"
+msgstr "Criar ticket"
+
+#: admin/class-kong-helpdesk-form.php:256
+msgid "Order Support"
+msgstr "Suporte para pedidos"
+
+#: admin/class-kong-helpdesk-form.php:266
+msgid "Product Support"
+msgstr "Suporte ao Produto"
+
+#: admin/class-kong-helpdesk-form.php:275
+msgid "Other"
+msgstr "De outros"
+
+#: admin/class-kong-helpdesk-form.php:294
+msgid "Your Name (required)"
+msgstr "Seu nome (obrigatório)"
+
+#: admin/class-kong-helpdesk-form.php:310
+msgid "Your Email (required)"
+msgstr "Seu email (obrigatório)"
+
+#: admin/class-kong-helpdesk-form.php:326
+#: admin/class-kong-helpdesk-form.php:343
+msgid "Subject (required)"
+msgstr "Assunto (obrigatório)"
+
+#: admin/class-kong-helpdesk-form.php:368
+msgid "Message (required) "
+msgstr "Mensagem (obrigatória) "
+
+#: admin/class-kong-helpdesk-form.php:395
+msgid "Department (required)"
+msgstr "Departamento (obrigatório)"
+
+#: admin/class-kong-helpdesk-form.php:397
+msgid "Select a Department"
+msgstr "Selecione um departamento"
+
+#: admin/class-kong-helpdesk-form.php:430
+msgid "Priority (required)"
+msgstr "Prioridade (obrigatório)"
+
+#: admin/class-kong-helpdesk-form.php:432
+msgid "Select a priority"
+msgstr "Selecione uma prioridade"
+
+#: admin/class-kong-helpdesk-form.php:465
+msgid "Type (required)"
+msgstr "Digite (obrigatório)"
+
+#: admin/class-kong-helpdesk-form.php:467
+msgid "Select a type"
+msgstr "Selecione um tipo"
+
+#: admin/class-kong-helpdesk-form.php:503
+msgid "Your Order"
+msgstr "Seu pedido"
+
+#: admin/class-kong-helpdesk-form.php:505
+msgid "Select your Order"
+msgstr "Selecione seu pedido"
+
+#: admin/class-kong-helpdesk-form.php:525
+msgid "Where is my stuff?"
+msgstr "Onde estão minhas coisas?"
+
+#: admin/class-kong-helpdesk-form.php:526
+msgid "Problem with an order"
+msgstr "Problema com um pedido"
+
+#: admin/class-kong-helpdesk-form.php:527
+msgid "Returns and refunds"
+msgstr "Devoluções e reembolsos"
+
+#: admin/class-kong-helpdesk-form.php:528
+msgid "Gift Cards"
+msgstr "Cartões de presente"
+
+#: admin/class-kong-helpdesk-form.php:529
+msgid "Payment issues"
+msgstr "Problemas de pagamento"
+
+#: admin/class-kong-helpdesk-form.php:530
+msgid "Change an order"
+msgstr "Alterar um pedido"
+
+#: admin/class-kong-helpdesk-form.php:531
+msgid "Promotions and deals"
+msgstr "Promoções e promoções"
+
+#: admin/class-kong-helpdesk-form.php:532
+msgid "More order issues"
+msgstr "Mais problemas de encomenda"
+
+#: admin/class-kong-helpdesk-form.php:537
+msgid "Your Subject"
+msgstr "Seu assunto"
+
+#: admin/class-kong-helpdesk-form.php:539
+msgid "Select your Subject"
+msgstr "Selecione seu assunto"
+
+#: admin/class-kong-helpdesk-form.php:572
+msgid "Product"
+msgstr "produtos"
+
+#: admin/class-kong-helpdesk-form.php:574
+msgid "Select your product"
+msgstr "Selecione seu produto"
+
+#: admin/class-kong-helpdesk-form.php:603 admin/options-init.php:607
+msgid "Purchase Code"
+msgstr "Código de Compra"
+
+#: admin/class-kong-helpdesk-form.php:625
+msgid "Select Item"
+msgstr "Selecionar item"
+
+#: admin/class-kong-helpdesk-form.php:627
+msgid "Select an Item"
+msgstr "Selecione um item"
+
+#: admin/class-kong-helpdesk-form.php:679 admin/options-init.php:558
+#: admin/options-init.php:595 admin/options-init.php:645
+msgid "Website URL"
+msgstr "URL do site"
+
+#: admin/class-kong-helpdesk-form.php:699
+#: admin/class-kong-helpdesk-ticket-post-type.php:350
+#: admin/class-kong-helpdesk-attachments.php:62
+#: admin/views/single-ticket.php:182
+msgid "Attachments"
+msgstr "Anexos"
+
+#: admin/class-kong-helpdesk-notifications.php:46
+#: admin/class-kong-helpdesk-support-rating.php:72
+msgid "View Ticket"
+msgstr "Visualizar bilhete"
+
+#: admin/class-kong-helpdesk-notifications.php:90
+#: admin/class-kong-helpdesk-log.php:115
+msgid "New Ticket created"
+msgstr "Novo ticket criado"
+
+#: admin/class-kong-helpdesk-notifications.php:94
+#, php-format
+msgid "A Ticket with the ID %s has been created"
+msgstr "Um ticket com o ID %s foi criado"
+
+#: admin/class-kong-helpdesk-notifications.php:156
+#: admin/class-kong-helpdesk-log.php:151
+#, php-format
+msgid "%s changed from %s to %s"
+msgstr "%s alterado de %s para %s"
+
+#: admin/class-kong-helpdesk-notifications.php:160
+#, php-format
+msgid "The %s has changed from %s to %s"
+msgstr "O %s foi alterado de %s para %s"
+
+#: admin/class-kong-helpdesk-notifications.php:191
+#: admin/class-kong-helpdesk-slack.php:192
+#: admin/class-kong-helpdesk-log.php:160
+#, php-format
+msgid "%s changed to: %s"
+msgstr "%s alterado para: %s"
+
+#: admin/class-kong-helpdesk-notifications.php:195
+#, php-format
+msgid "The %s changed to: %s"
+msgstr "O %s alterado para: %s"
+
+#: admin/class-kong-helpdesk-notifications.php:255
+#: admin/class-kong-helpdesk-log.php:199
+msgid "Comment added"
+msgstr "Comentário adicionado"
+
+#: admin/class-kong-helpdesk-notifications.php:259
+#, php-format
+msgid "New comment added by %s"
+msgstr "Novo comentário adicionado por %s"
+
+#: admin/class-kong-helpdesk-notifications.php:325
+#: admin/class-kong-helpdesk-notifications.php:334
+#: admin/class-kong-helpdesk-ticket-post-type.php:604
+#: admin/class-kong-helpdesk-slack.php:231
+#: admin/class-kong-helpdesk-slack.php:240
+#: admin/class-kong-helpdesk-log.php:238
+#: admin/class-kong-helpdesk-log.php:247
+#: admin/class-kong-helpdesk-reports.php:168
+msgid "Unassigned"
+msgstr "Não atribuído"
+
+#: admin/class-kong-helpdesk-notifications.php:342
+#: admin/class-kong-helpdesk-notifications.php:399
+#: admin/class-kong-helpdesk-slack.php:291
+#: admin/class-kong-helpdesk-log.php:263
+#: admin/class-kong-helpdesk-log.php:298
+#, php-format
+msgid "Assigned to %s"
+msgstr "Atribuído a %s"
+
+#: admin/class-kong-helpdesk-notifications.php:347
+#, php-format
+msgid "This ticket has been assigned from %s to %s"
+msgstr "Este ticket foi atribuído de %s para %s"
+
+#: admin/class-kong-helpdesk-notifications.php:404
+#, php-format
+msgid "This ticket has been assigned to %s"
+msgstr "Este ticket foi atribuído a %s"
+
+#: admin/class-kong-helpdesk-sidebar-widgets.php:48
+msgid "Helpdesk Sidebar"
+msgstr "Barra lateral do suporte técnico"
+
+#: admin/class-kong-helpdesk-sidebar-widgets.php:50
+msgid "Widgets in this area will be shown on all posts and pages."
+msgstr "Widgets nessa área serão mostrados em todas as postagens e páginas."
+
+#: admin/class-kong-helpdesk-livechat-frontend.php:101
+#: admin/class-kong-helpdesk-livechat-backend.php:183
+msgid "Ticket could not be created. Please contact support email directly."
+msgstr ""
+"O ticket não pôde ser criado. Por favor, entre em contato diretamente com o "
+"suporte."
+
+#: admin/class-kong-helpdesk-livechat-frontend.php:112
+#: admin/class-kong-helpdesk-livechat-backend.php:195
+#: admin/class-kong-helpdesk-livechat.php:279
+#, php-format
+msgid "A seperate Chat-Ticket with the ID %s has been created."
+msgstr "Um Chat-Ticket separado com o ID %s foi criado."
+
+#: admin/class-kong-helpdesk-livechat-frontend.php:160
+#: admin/class-kong-helpdesk-livechat-frontend.php:216
+#: admin/class-kong-helpdesk-livechat-backend.php:320
+#: admin/class-kong-helpdesk-livechat-backend.php:439
+#: admin/class-kong-helpdesk-livechat.php:340
+msgid "Ticket not set."
+msgstr "Bilhete não definido."
+
+#: admin/class-kong-helpdesk-livechat-frontend.php:224
+#: admin/class-kong-helpdesk-livechat-backend.php:447
+#: admin/class-kong-helpdesk-livechat.php:348
+msgid "Ticket does not exists."
+msgstr "O ticket não existe."
+
+#: admin/class-kong-helpdesk-livechat-frontend.php:234
+#: admin/class-kong-helpdesk-livechat-backend.php:457
+#: admin/class-kong-helpdesk-livechat.php:357
+msgid "This is not your Ticket!"
+msgstr "Este não é o seu bilhete!"
+
+#: admin/class-kong-helpdesk-livechat-frontend.php:300
+#: admin/class-kong-helpdesk-ticket-post-type.php:118
+#: admin/class-kong-helpdesk-ticket-post-type.php:348
+#: admin/class-kong-helpdesk-ticket-post-type.php:1063
+#: admin/class-kong-helpdesk-livechat-backend.php:523
+msgid "Ticket"
+msgstr "Bilhete"
+
+#: admin/class-kong-helpdesk-livechat-frontend.php:403
+#: admin/class-kong-helpdesk-livechat-frontend.php:513
+#: admin/class-kong-helpdesk-livechat-backend.php:252
+#: admin/class-kong-helpdesk-livechat.php:486
+#: admin/class-kong-helpdesk-livechat.php:513
+msgid "Type your message…"
+msgstr "Digite sua mensagem…"
+
+#: admin/class-kong-helpdesk-livechat-frontend.php:469
+msgid "Visitor"
+msgstr "Visitante"
+
+#: admin/class-kong-helpdesk-livechat-frontend.php:501
+#: admin/class-kong-helpdesk-livechat.php:476
+msgid "Your Name"
+msgstr "Seu nome"
+
+#: admin/class-kong-helpdesk-livechat-frontend.php:504
+#: admin/class-kong-helpdesk-livechat.php:479
+msgid "Your Email"
+msgstr "Seu email"
+
+#: admin/class-kong-helpdesk-livechat-frontend.php:510
+#: admin/class-kong-helpdesk-livechat.php:483
+msgid "Subject"
+msgstr "Sujeito"
+
+#: admin/class-kong-helpdesk-livechat-frontend.php:517
+#: admin/class-kong-helpdesk-livechat.php:490
+msgid "Or enter your Ticket ID:"
+msgstr "Ou digite o seu ID de Ticket:"
+
+#: admin/class-kong-helpdesk-livechat-frontend.php:519
+msgid "Ticket ID"
+msgstr ""
+
+#: admin/class-kong-helpdesk-support-rating.php:88
+msgid "No Ticket ID set."
+msgstr "Nenhum ID de bilhete definido."
+
+#: admin/class-kong-helpdesk-support-rating.php:94
+msgid "Please set a feedback text."
+msgstr "Por favor, defina um texto de feedback."
+
+#: admin/class-kong-helpdesk-support-rating.php:108
+msgid "Feedback received. Thanks!"
+msgstr "Feedback recebido. Obrigado!"
+
+#: admin/class-kong-helpdesk-support-rating.php:112
+msgid "Wrong satisfied value."
+msgstr "Valor satisfeito errado."
+
+#: admin/class-kong-helpdesk-support-rating.php:130
+msgid "Thanks for your feedback!"
+msgstr "Obrigado pelo seu feedback!"
+
+#: admin/class-kong-helpdesk-support-rating.php:148
+msgid "We would be happy if you leave a feedback message:"
+msgstr "Ficaríamos felizes se você deixar uma mensagem de feedback:"
+
+#: admin/class-kong-helpdesk-support-rating.php:152
+msgid "Send Feedback"
+msgstr "Enviar comentários"
+
+#: admin/class-kong-helpdesk-ticket-post-type.php:119
+#: admin/class-kong-helpdesk-ticket-post-type.php:130
+#: admin/options-init.php:1408
+msgid "Tickets"
+msgstr "Bilhetes"
+
+#: admin/class-kong-helpdesk-ticket-post-type.php:122
+#: admin/class-kong-helpdesk-ticket-post-type.php:124
+#: admin/class-kong-helpdesk-ticket-post-type.php:195
+#: admin/class-kong-helpdesk-ticket-post-type.php:232
+#: admin/class-kong-helpdesk-ticket-post-type.php:269
+#: admin/class-kong-helpdesk-ticket-post-type.php:306
+#: admin/class-kong-helpdesk-saved-replies.php:149
+#: admin/class-kong-helpdesk-saved-replies.php:214
+#: admin/class-kong-helpdesk-saved-replies.php:250
+#: admin/class-kong-helpdesk-faq-post-type.php:547
+#: admin/class-kong-helpdesk-faq-post-type.php:617
+#, php-format
+msgid "All %s"
+msgstr "Todos %s"
+
+#: admin/class-kong-helpdesk-ticket-post-type.php:133
+#: admin/class-kong-helpdesk-ticket-post-type.php:136
+#: admin/class-kong-helpdesk-saved-replies.php:151
+#: admin/class-kong-helpdesk-saved-replies.php:154
+#: admin/class-kong-helpdesk-faq-post-type.php:549
+#: admin/class-kong-helpdesk-faq-post-type.php:552
+#, php-format
+msgid "New %s"
+msgstr "Novo %s"
+
+#: admin/class-kong-helpdesk-ticket-post-type.php:134
+#: admin/class-kong-helpdesk-ticket-post-type.php:200
+#: admin/class-kong-helpdesk-ticket-post-type.php:237
+#: admin/class-kong-helpdesk-ticket-post-type.php:274
+#: admin/class-kong-helpdesk-ticket-post-type.php:311
+#: admin/class-kong-helpdesk-saved-replies.php:152
+#: admin/class-kong-helpdesk-saved-replies.php:219
+#: admin/class-kong-helpdesk-saved-replies.php:255
+#: admin/class-kong-helpdesk-faq-post-type.php:550
+#: admin/class-kong-helpdesk-faq-post-type.php:622
+#, php-format
+msgid "Add New %s"
+msgstr "Adicionar novo %s"
+
+#: admin/class-kong-helpdesk-ticket-post-type.php:135
+#: admin/class-kong-helpdesk-ticket-post-type.php:198
+#: admin/class-kong-helpdesk-ticket-post-type.php:235
+#: admin/class-kong-helpdesk-ticket-post-type.php:272
+#: admin/class-kong-helpdesk-ticket-post-type.php:309
+#: admin/class-kong-helpdesk-saved-replies.php:153
+#: admin/class-kong-helpdesk-saved-replies.php:217
+#: admin/class-kong-helpdesk-saved-replies.php:253
+#: admin/class-kong-helpdesk-faq-post-type.php:551
+#: admin/class-kong-helpdesk-faq-post-type.php:620
+#, php-format
+msgid "Edit %s"
+msgstr "Editar %s"
+
+#: admin/class-kong-helpdesk-ticket-post-type.php:137
+#: admin/class-kong-helpdesk-saved-replies.php:155
+#: admin/class-kong-helpdesk-faq-post-type.php:553
+#, php-format
+msgid "View %s"
+msgstr "Ver %s"
+
+#: admin/class-kong-helpdesk-ticket-post-type.php:138
+#: admin/class-kong-helpdesk-ticket-post-type.php:194
+#: admin/class-kong-helpdesk-ticket-post-type.php:231
+#: admin/class-kong-helpdesk-ticket-post-type.php:268
+#: admin/class-kong-helpdesk-ticket-post-type.php:305
+#: admin/class-kong-helpdesk-saved-replies.php:156
+#: admin/class-kong-helpdesk-saved-replies.php:213
+#: admin/class-kong-helpdesk-saved-replies.php:249
+#: admin/class-kong-helpdesk-faq-post-type.php:554
+#: admin/class-kong-helpdesk-faq-post-type.php:616
+#, php-format
+msgid "Search %s"
+msgstr "Pesquisa %s"
+
+#: admin/class-kong-helpdesk-ticket-post-type.php:139
+#: admin/class-kong-helpdesk-saved-replies.php:157
+#: admin/class-kong-helpdesk-faq-post-type.php:555
+#, php-format
+msgid "No %s found"
+msgstr "Nenhum %s encontrado"
+
+#: admin/class-kong-helpdesk-ticket-post-type.php:140
+#: admin/class-kong-helpdesk-saved-replies.php:158
+#: admin/class-kong-helpdesk-faq-post-type.php:556
+#, php-format
+msgid "No %s found in trash"
+msgstr "Nenhum %s encontrado no lixo"
+
+#: admin/class-kong-helpdesk-ticket-post-type.php:188
+#: admin/class-kong-helpdesk-ticket-post-type.php:189
+#: admin/class-kong-helpdesk-ticket-post-type.php:1066
+#: admin/class-kong-helpdesk-exporter.php:185
+#: admin/class-kong-helpdesk-my-tickets.php:129
+msgid "Status"
+msgstr "Status"
+
+#: admin/class-kong-helpdesk-ticket-post-type.php:196
+#: admin/class-kong-helpdesk-ticket-post-type.php:233
+#: admin/class-kong-helpdesk-ticket-post-type.php:270
+#: admin/class-kong-helpdesk-ticket-post-type.php:307
+#: admin/class-kong-helpdesk-saved-replies.php:215
+#: admin/class-kong-helpdesk-saved-replies.php:251
+#: admin/class-kong-helpdesk-faq-post-type.php:618
+#, php-format
+msgid "Parent %s"
+msgstr "Pai %s"
+
+#: admin/class-kong-helpdesk-ticket-post-type.php:197
+#: admin/class-kong-helpdesk-ticket-post-type.php:234
+#: admin/class-kong-helpdesk-ticket-post-type.php:271
+#: admin/class-kong-helpdesk-ticket-post-type.php:308
+#: admin/class-kong-helpdesk-saved-replies.php:216
+#: admin/class-kong-helpdesk-saved-replies.php:252
+#: admin/class-kong-helpdesk-faq-post-type.php:619
+#, php-format
+msgid "Parent %s:"
+msgstr "Pais %s :"
+
+#: admin/class-kong-helpdesk-ticket-post-type.php:199
+#: admin/class-kong-helpdesk-ticket-post-type.php:236
+#: admin/class-kong-helpdesk-ticket-post-type.php:273
+#: admin/class-kong-helpdesk-ticket-post-type.php:310
+#: admin/class-kong-helpdesk-saved-replies.php:218
+#: admin/class-kong-helpdesk-saved-replies.php:254
+#: admin/class-kong-helpdesk-faq-post-type.php:621
+#, php-format
+msgid "Update %s"
+msgstr "Atualizar %s"
+
+#: admin/class-kong-helpdesk-ticket-post-type.php:201
+#: admin/class-kong-helpdesk-ticket-post-type.php:238
+#: admin/class-kong-helpdesk-ticket-post-type.php:275
+#: admin/class-kong-helpdesk-ticket-post-type.php:312
+#: admin/class-kong-helpdesk-saved-replies.php:220
+#: admin/class-kong-helpdesk-saved-replies.php:256
+#: admin/class-kong-helpdesk-faq-post-type.php:623
+#, php-format
+msgid "New %s Name"
+msgstr "Novo nome de %s"
+
+#: admin/class-kong-helpdesk-ticket-post-type.php:225
+#: admin/class-kong-helpdesk-ticket-post-type.php:1068
+#: admin/class-kong-helpdesk-exporter.php:191
+#: admin/class-kong-helpdesk-my-tickets.php:141
+msgid "Type"
+msgstr "Tipo"
+
+#: admin/class-kong-helpdesk-ticket-post-type.php:226
+msgid "Types"
+msgstr "Tipos"
+
+#: admin/class-kong-helpdesk-ticket-post-type.php:262
+#: admin/class-kong-helpdesk-ticket-post-type.php:1069
+#: admin/class-kong-helpdesk-my-tickets.php:135
+msgid "Department"
+msgstr "Departamento"
+
+#: admin/class-kong-helpdesk-ticket-post-type.php:263
+msgid "Departments"
+msgstr "Departamentos"
+
+#: admin/class-kong-helpdesk-ticket-post-type.php:299
+#: admin/class-kong-helpdesk-ticket-post-type.php:1070
+#: admin/class-kong-helpdesk-exporter.php:197
+#: admin/views/single-ticket.php:102
+msgid "Priority"
+msgstr "Prioridade"
+
+#: admin/class-kong-helpdesk-ticket-post-type.php:300
+msgid "Priorities"
+msgstr "Prioridades"
+
+#: admin/class-kong-helpdesk-ticket-post-type.php:349
+msgid "Merge Ticket"
+msgstr "Bilhete de mesclagem"
+
+#: admin/class-kong-helpdesk-ticket-post-type.php:353
+msgid "Feedback:"
+msgstr "Comentários:"
+
+#: admin/class-kong-helpdesk-ticket-post-type.php:376
+msgid "Website:"
+msgstr "Local na rede Internet:"
+
+#: admin/class-kong-helpdesk-ticket-post-type.php:415
+msgid "Select Ticket"
+msgstr "Selecione Ticket"
+
+#: admin/class-kong-helpdesk-ticket-post-type.php:422
+msgid "Merge Now"
+msgstr "Mesclar Agora"
+
+#: admin/class-kong-helpdesk-ticket-post-type.php:438
+#: admin/class-kong-helpdesk-faq-post-type.php:691
+msgid "No ticket to duplicate has been supplied!"
+msgstr "Nenhum bilhete para duplicar foi fornecido!"
+
+#: admin/class-kong-helpdesk-ticket-post-type.php:478
+msgid "Could not Merge Ticket."
+msgstr "Não foi possível mesclar o ticket."
+
+#: admin/class-kong-helpdesk-ticket-post-type.php:561
+msgid "Created on: "
+msgstr "Criado em: "
+
+#: admin/class-kong-helpdesk-ticket-post-type.php:562
+msgid "Created by: "
+msgstr "Criado por: "
+
+#: admin/class-kong-helpdesk-ticket-post-type.php:593
+msgid "Assigned to: "
+msgstr "Atribuído para: "
+
+#: admin/class-kong-helpdesk-ticket-post-type.php:639
+msgid "Purchase Code could not be verified!"
+msgstr "O código de compra não pôde ser verificado!"
+
+#: admin/class-kong-helpdesk-ticket-post-type.php:642
+msgid "Item: "
+msgstr "Item: "
+
+#: admin/class-kong-helpdesk-ticket-post-type.php:643
+msgid "License: "
+msgstr "Licença: "
+
+#: admin/class-kong-helpdesk-ticket-post-type.php:644
+msgid "Support Until:"
+msgstr "Suporte até:"
+
+#: admin/class-kong-helpdesk-ticket-post-type.php:757
+msgid "Select Product"
+msgstr "Selecione o produto"
+
+#: admin/class-kong-helpdesk-ticket-post-type.php:825
+msgid "No feedback available"
+msgstr "Nenhum feedback disponível"
+
+#: admin/class-kong-helpdesk-ticket-post-type.php:901
+msgid "Color"
+msgstr "Cor"
+
+#: admin/class-kong-helpdesk-ticket-post-type.php:930
+#: admin/class-kong-helpdesk-my-tickets.php:51
+#, php-format
+msgid "Please <a href=\"%s\" title=\"Login\">login to view your tickets</a>"
+msgstr ""
+"Por favor, <a href=\" %s \" title=\"Login\"> login para ver seus ingressos "
+"</a>"
+
+#: admin/class-kong-helpdesk-ticket-post-type.php:1009
+#, php-format
+msgid "[Ticket: %s] %s"
+msgstr "[Ticket: %s ] %s"
+
+#: admin/class-kong-helpdesk-ticket-post-type.php:1064
+msgid "From"
+msgstr "A partir de"
+
+#: admin/class-kong-helpdesk-ticket-post-type.php:1065
+msgid "Assigned To"
+msgstr "Atribuído a"
+
+#: admin/class-kong-helpdesk-ticket-post-type.php:1067
+msgid "Satisfied"
+msgstr "Satisfeito"
+
+#: admin/class-kong-helpdesk-ticket-post-type.php:1071
+msgid ""
+"<span class=\"vers comment-grey-bubble\" title=\"Comments\"><span "
+"class=\"screen-reader-text\">Comments</span></span>"
+msgstr ""
+"<span class =  \"vers comment-gray-bubble \" title =  \"Comentários \"> "
+"<span class =  \"screen-reader-text \"> Comentários </ span> </ span>"
+
+#: admin/class-kong-helpdesk-ticket-post-type.php:1072
+#: admin/class-kong-helpdesk-my-tickets.php:123
+msgid "Date"
+msgstr "Encontro"
+
+#: admin/class-kong-helpdesk-ticket-post-type.php:1104
+#: admin/class-kong-helpdesk-livechat-backend.php:403
+msgid "No Author"
+msgstr "Nenhum Autor"
+
+#: admin/class-kong-helpdesk-woocommerce.php:54
+msgid "My Tickets"
+msgstr "Meus ingressos"
+
+#: admin/class-kong-helpdesk-woocommerce.php:55
+msgid "Submit Ticket"
+msgstr "Enviar ticket"
+
+#: admin/class-kong-helpdesk-woocommerce.php:110
+msgid "Submit a new Ticket"
+msgstr "Envie um novo ticket"
+
+#: admin/class-kong-helpdesk-woocommerce.php:222
+#: admin/class-kong-helpdesk-faq-post-type.php:543
+#: admin/class-kong-helpdesk-faq-post-type.php:546
+msgid "FAQs"
+msgstr "FAQs"
+
+#: admin/class-kong-helpdesk-woocommerce.php:262
+msgid "Currently we do not have any frequently asked questions."
+msgstr "Atualmente, não temos perguntas frequentes."
+
+#: admin/class-kong-helpdesk-woocommerce.php:267
+msgid "Frequently Asked Questions"
+msgstr "perguntas frequentes"
+
+#: admin/class-kong-helpdesk-desktop-notifications.php:129
+#, php-format
+msgid "New comment on %s"
+msgstr "Novo comentário sobre %s"
+
+#: admin/options-init.php:28 admin/options-init.php:30
+msgid "Kong Helpdesk"
+msgstr "Kong Helpdesk"
+
+#: admin/options-init.php:36
+msgid "Settings"
+msgstr "Configurações"
+
+#: admin/options-init.php:90
+msgid "Information"
+msgstr "Em formação"
+
+#: admin/options-init.php:91
+msgid "<p>Need support? Please use the comment function on codecanyon.</p>"
+msgstr ""
+"<p> Precisa de suporte? Por favor, use a função de comentário no codecanyon. "
+"</ P>"
+
+#: admin/options-init.php:113 admin/options-init.php:1158
+msgid "Helpdesk"
+msgstr "Central de Ajuda"
+
+#: admin/options-init.php:115
+msgid "Need support? Please use the comment function on codecanyon."
+msgstr ""
+"Precisa de suporte? Por favor, use a função de comentário no codecanyon."
+
+#: admin/options-init.php:120
+msgid "General"
+msgstr "Geral"
+
+#: admin/options-init.php:127
+msgid "Enable"
+msgstr "Habilitar"
+
+#: admin/options-init.php:128
+msgid "Enable TotalDesk."
+msgstr "Ativar TotalDesk."
+
+#: admin/options-init.php:134
+msgid "Login Page"
+msgstr "Página de login"
+
+#: admin/options-init.php:135
+msgid "This will be the page, where the login button will link to."
+msgstr "Esta será a página onde o botão de login será vinculado."
+
+#: admin/options-init.php:141 admin/options-init.php:148
+msgid "My Tickets Page"
+msgstr "Minha página de ingressos"
+
+#: admin/options-init.php:142
+msgid ""
+"Make sure the [my_tickets] shortcode is placed there. After saving go to "
+"settings > permalinks and save."
+msgstr ""
+"Certifique-se de que o código de acesso [my_tickets] seja colocado lá. "
+"Depois de salvar, vá para configurações> permalinks e salve."
+
+#: admin/options-init.php:149
+msgid "Make sure the [new_ticket] shortcode is placed there."
+msgstr ""
+
+#: admin/options-init.php:155
+msgid "Redirect reporters to My Tickets page"
+msgstr "Redirecionar repórteres para a página Meus tickets"
+
+#: admin/options-init.php:156
+msgid "After login all reporters will be redirected to the my tickets page."
+msgstr ""
+"Após o login, todos os repórteres serão redirecionados para a página de meus "
+"tickets."
+
+#: admin/options-init.php:162
+msgid "Only Logged In"
+msgstr "Apenas logado"
+
+#: admin/options-init.php:163
+msgid "Allow Ticket creation via Forms only when User is logged in."
+msgstr ""
+"Permitir a criação de tickets via formulários somente quando o usuário "
+"estiver logado."
+
+#: admin/options-init.php:169
+msgid "Send Login credentials"
+msgstr "Enviar credenciais de login"
+
+#: admin/options-init.php:170
+msgid ""
+"Send out the login credentials when a new account has been created for a new "
+"user."
+msgstr ""
+"Envie as credenciais de login quando uma nova conta for criada para um novo "
+"usuário."
+
+#: admin/options-init.php:176
+msgid "Sidebar Display"
+msgstr "Display da barra lateral"
+
+#: admin/options-init.php:177
+msgid "Where you want to show the sidebar."
+msgstr "Onde você quer mostrar a barra lateral."
+
+#: admin/options-init.php:179
+msgid "None"
+msgstr "Nenhum"
+
+#: admin/options-init.php:180
+msgid "Only in Knowledge Base"
+msgstr "Apenas na Base de Conhecimento"
+
+#: admin/options-init.php:181
+msgid "Only for Ticket pages"
+msgstr "Apenas para páginas de tickets"
+
+#: admin/options-init.php:182
+msgid "Show in Ticket & FAQ pages"
+msgstr "Mostrar nas páginas de ticket e FAQ"
+
+#: admin/options-init.php:189
+msgid "Sidebar Position"
+msgstr "Posição da barra lateral"
+
+#: admin/options-init.php:190
+msgid "Left or Right sidebar."
+msgstr "Barra lateral esquerda ou direita."
+
+#: admin/options-init.php:192
+msgid "Left"
+msgstr "Esquerda"
+
+#: admin/options-init.php:193
+msgid "Right"
+msgstr "Certo"
+
+#: admin/options-init.php:200
+msgid "Use Excel 2007"
+msgstr "Use o Excel 2007"
+
+#: admin/options-init.php:201
+msgid ""
+"If you can not work with xlsx (Excel 2007 and higher) files, check this. You "
+"then can work with normal .xls files."
+msgstr ""
+"Se você não puder trabalhar com arquivos xlsx (Excel 2007 e superior), "
+"verifique isso. Você pode trabalhar com arquivos normais .xls."
+
+#: admin/options-init.php:208
+msgid "Export all Tickets"
+msgstr "Exportar todos os ingressos"
+
+#: admin/options-init.php:223
+msgid "Default New Ticket Status"
+msgstr ""
+
+#: admin/options-init.php:224
+msgid "The default status for new tickets."
+msgstr "O status padrão para novos tickets."
+
+#: admin/options-init.php:234
+msgid "Default Solved (closed) Status"
+msgstr ""
+
+#: admin/options-init.php:235
+msgid "Set the name of the Solved (closed) ticket status."
+msgstr ""
+
+#: admin/options-init.php:245
+msgid "Default Type"
+msgstr "Tipo Padrão"
+
+#: admin/options-init.php:246
+msgid "The default type for new tickets."
+msgstr "O tipo padrão para novos tickets."
+
+#: admin/options-init.php:256
+msgid "Default priority"
+msgstr "Prioridade padrão"
+
+#: admin/options-init.php:257
+msgid "The default priority for new tickets."
+msgstr "A prioridade padrão para novos tickets."
+
+#: admin/options-init.php:267
+msgid "Default Department"
+msgstr "Departamento padrão"
+
+#: admin/options-init.php:268
+msgid "The default Department for new tickets."
+msgstr "O departamento padrão para novos tickets."
+
+#: admin/options-init.php:273
+msgid "Default Agent"
+msgstr "Agente Padrão"
+
+#: admin/options-init.php:274
+msgid "The default user for new tickets."
+msgstr "O usuário padrão para novos tickets."
+
+#: admin/options-init.php:288
+#, php-format
+msgid "Default Agent for %s"
+msgstr "Agente padrão para %s"
+
+#: admin/options-init.php:289
+#, php-format
+msgid "The default user for %s."
+msgstr "O usuário padrão para %s ."
+
+#: admin/options-init.php:297
+msgid "Defaults"
+msgstr "Padrões"
+
+#: admin/options-init.php:305
+msgid "Desktop Notifications"
+msgstr "Notificações da área de trabalho"
+
+#: admin/options-init.php:312
+msgid "Enable Desktop Notifications"
+msgstr "Ativar notificações da área de trabalho"
+
+#: admin/options-init.php:318 admin/options-init.php:1282
+msgid "AJAX Interval"
+msgstr "Intervalo AJAX"
+
+#: admin/options-init.php:319 admin/options-init.php:1283
+msgid "Increase the interval (in miliseconds) to save server performance."
+msgstr ""
+"Aumente o intervalo (em milissegundos) para economizar o desempenho do "
+"servidor."
+
+#: admin/options-init.php:329
+msgid "Welcome Title"
+msgstr "Título de boas-vindas"
+
+#: admin/options-init.php:330
+msgid "Welcome to Helpdesk"
+msgstr "Bem vindo ao Helpdesk"
+
+#: admin/options-init.php:336
+msgid "Welcome Text"
+msgstr "Texto de boas-vindas"
+
+#: admin/options-init.php:337
+msgid "How can we help you today?"
+msgstr "Como podemos te ajudar hoje?"
+
+#: admin/options-init.php:343
+msgid "Welcome Timout"
+msgstr "Bem-vindo Timout"
+
+#: admin/options-init.php:344
+msgid "Time in minutes when the welcome message should pop up again."
+msgstr ""
+"Tempo em minutos quando a mensagem de boas vindas deve aparecer novamente."
+
+#: admin/options-init.php:355
+msgid "Set an icon"
+msgstr "Definir um ícone"
+
+#: admin/options-init.php:356 admin/options-init.php:1223
+msgid "The icon must be in square format."
+msgstr "O ícone deve estar no formato quadrado."
+
+#: admin/options-init.php:364
+msgid "Timeout"
+msgstr "Tempo esgotado"
+
+#: admin/options-init.php:365
+msgid "Set the time when the notification automatically hides."
+msgstr "Defina a hora em que a notificação é ocultada automaticamente."
+
+#: admin/options-init.php:378
+msgid "FAQ – Knowledge Base"
+msgstr "FAQ - Base de Conhecimento"
+
+#: admin/options-init.php:385
+msgid "Enable the FAQs Knowledge Base"
+msgstr "Ativar a Base de Conhecimento de FAQs"
+
+#: admin/options-init.php:386
+msgid ""
+"Custom Post Type FAQ will be created. Ticket can be copied into a new FAQ."
+msgstr ""
+"Perguntas frequentes sobre o tipo de postagem personalizada serão criadas. O "
+"ticket pode ser copiado em um novo FAQ."
+
+#: admin/options-init.php:392
+msgid "Knowledge Base Page"
+msgstr "Página da Base de Conhecimento"
+
+#: admin/options-init.php:393
+msgid ""
+"Make sure the [knowledge_base] shortcode is placed there. After saving go to "
+"settings > permalinks and save."
+msgstr ""
+"Verifique se o shortcode [knowledge_base] está localizado lá. Depois de "
+"salvar, vá para configurações> permalinks e salve."
+
+#: admin/options-init.php:400
+msgid "Show Search"
+msgstr "Mostrar pesquisa"
+
+#: admin/options-init.php:406
+msgid "Maximum Live Search Results"
+msgstr ""
+
+#: admin/options-init.php:407
+msgid "Set maximum results for FAQ live search."
+msgstr ""
+
+#: admin/options-init.php:418
+msgid "Show Views Count"
+msgstr "Mostrar contagem de exibições"
+
+#: admin/options-init.php:425
+msgid "Show Rating"
+msgstr "Mostrar classificação"
+
+#: admin/options-init.php:432
+msgid "Disable the Rating dislike button"
+msgstr "Desativar o botão Avaliação de não gostar"
+
+#: admin/options-init.php:439
+msgid "Masonry"
+msgstr "Alvenaria"
+
+#: admin/options-init.php:446
+msgid "Topics Layout"
+msgstr ""
+
+#: admin/options-init.php:448
+msgid "List Layout"
+msgstr "Layout de lista"
+
+#: admin/options-init.php:449
+msgid "Boxed Layout"
+msgstr "Layout em caixa"
+
+#: admin/options-init.php:456
+msgid "Topics Columns"
+msgstr ""
+
+#: admin/options-init.php:457 admin/options-init.php:475
+msgid "Default Topic columns. Needs to be deviable by 12."
+msgstr ""
+
+#: admin/options-init.php:468
+msgid "Item Masonry"
+msgstr ""
+
+#: admin/options-init.php:474
+msgid "Item Columns"
+msgstr ""
+
+#: admin/options-init.php:486
+msgid "Hide FAQ excerpts for not logged in"
+msgstr "Esconder trechos da FAQ por não estar logado"
+
+#: admin/options-init.php:487
+msgid "Hide all FAQ excerpts for not logged in users in the Knwoledge Base"
+msgstr ""
+"Ocultar todos os trechos de FAQ para usuários não logados na Base Knwoledge"
+
+#: admin/options-init.php:494
+msgid "Hide All Single FAQs pages"
+msgstr "Ocultar todas as páginas de perguntas frequentes"
+
+#: admin/options-init.php:495
+msgid "Hide all Single FAQ pages for not logged in users."
+msgstr ""
+"Ocultar todas as páginas de Perguntas frequentes únicas para usuários não "
+"conectados."
+
+#: admin/options-init.php:505
+msgid "Hide some FAQs"
+msgstr "Ocultar algumas perguntas frequentes"
+
+#: admin/options-init.php:506
+msgid "Show the following FAQs only to logged in Users:"
+msgstr ""
+"Mostrar as seguintes perguntas frequentes apenas para usuários conectados:"
+
+#: admin/options-init.php:518
+msgid "Hide some Topics"
+msgstr "Ocultar alguns tópicos"
+
+#: admin/options-init.php:519
+msgid "Hide complete Topics from not logged in users:"
+msgstr "Ocultar tópicos completos de usuários não conectados:"
+
+#: admin/options-init.php:526
+msgid "Form Fields"
+msgstr "Campos de formulário"
+
+#: admin/options-init.php:533
+msgid "Simple Form Fields"
+msgstr "Campos de formulário simples"
+
+#: admin/options-init.php:534
+msgid "Fields for the Simple [new_ticket] form. "
+msgstr "Campos para o formulário simples [new_ticket]. "
+
+#: admin/options-init.php:540 admin/options-init.php:577
+#: admin/options-init.php:627
+msgid "Systems / Project Select Field"
+msgstr "Campo de Seleção de Sistemas / Projetos"
+
+#: admin/options-init.php:546 admin/options-init.php:583
+#: admin/options-init.php:633
+msgid "Priority Select Field"
+msgstr "Priority Select Field"
+
+#: admin/options-init.php:552 admin/options-init.php:589
+#: admin/options-init.php:639
+msgid "Types Select Field"
+msgstr "Tipos Selecione o campo"
+
+#: admin/options-init.php:564 admin/options-init.php:601
+#: admin/options-init.php:651
+msgid "Attachments field"
+msgstr "Campo Anexos"
+
+#: admin/options-init.php:570
+msgid "Envato Form Fields"
+msgstr "Campos de Formulário Envato"
+
+#: admin/options-init.php:571
+msgid "Fields for the Simple [new_ticket type=\"Envato\"] form. "
+msgstr "Campos para o formulário simples [new_ticket type =  \"Envato \"]. "
+
+#: admin/options-init.php:613
+msgid "Envato Items"
+msgstr "Itens Envato"
+
+#: admin/options-init.php:614
+msgid ""
+"A selected Item will be overwritten when an item is found within the "
+"purchase code."
+msgstr ""
+"Um item selecionado será sobregravado quando um item for encontrado no "
+"código de compra."
+
+#: admin/options-init.php:620
+msgid "WooCommerce Form Fields"
+msgstr "Campos de Formulário WooCommerce"
+
+#: admin/options-init.php:621
+msgid "Fields for the Simple [new_ticket type=\"WooCommerce\"] form. "
+msgstr ""
+"Campos para o formulário simples [new_ticket type =  \"WooCommerce \"]. "
+
+#: admin/options-init.php:657
+msgid "Product Support (lists all Products)"
+msgstr "Suporte ao produto (lista todos os produtos)"
+
+#: admin/options-init.php:663
+msgid "Order Support (lists all Orders)"
+msgstr "Suporte ao pedido (lista todos os pedidos)"
+
+#: admin/options-init.php:670
+msgid "Inbox"
+msgstr "Caixa de entrada"
+
+#: admin/options-init.php:677
+msgid "Enable Inbox"
+msgstr "Ativar caixa de entrada"
+
+#: admin/options-init.php:678
+msgid "Enable this to allow ticket creation via Email."
+msgstr "Habilite isso para permitir a criação de tickets via e-mail."
+
+#: admin/options-init.php:684
+msgid "Recurrence"
+msgstr "Recorrência"
+
+#: admin/options-init.php:685
+msgid "How often should Emails be fetched."
+msgstr "Com que frequência os emails devem ser buscados."
+
+#: admin/options-init.php:687
+msgid "Hourly"
+msgstr "De hora em hora"
+
+#: admin/options-init.php:688
+msgid "Twice daily"
+msgstr "Duas vezes por dia"
+
+#: admin/options-init.php:689
+msgid "Daily"
+msgstr "Diariamente"
+
+#: admin/options-init.php:697
+msgid "Mail Account Settings"
+msgstr "Configurações da conta de email"
+
+#: admin/options-init.php:698
+msgid "Settings for your Mail Account."
+msgstr "Configurações para sua conta de email."
+
+#: admin/options-init.php:705
+msgid "Email"
+msgstr "O email"
+
+#: admin/options-init.php:712
+msgid "Username & Password"
+msgstr "Usuário senha"
+
+#: admin/options-init.php:714
+msgid "Enter your Username"
+msgstr "Entre com seu nome de usuário"
+
+#: admin/options-init.php:715
+msgid "Enter your Password"
+msgstr "Coloque sua senha"
+
+#: admin/options-init.php:722
+msgid "Host"
+msgstr "Hospedeiro"
+
+#: admin/options-init.php:728
+msgid "Inbox Folder"
+msgstr "Pasta da Caixa de Entrada"
+
+#: admin/options-init.php:729
+msgid ""
+"The folder where to scan for new mails. Most of the time it is the INBOX "
+"folder."
+msgstr ""
+"A pasta onde procurar novos e-mails. Na maioria das vezes é a pasta INBOX."
+
+#: admin/options-init.php:736
+msgid "Archive Folder"
+msgstr "Pasta de arquivo"
+
+#: admin/options-init.php:737
+msgid "The target folder, where processed mails should be moved (eg. Archiv)."
+msgstr ""
+"A pasta de destino, onde os emails processados ​​devem ser movidos (por "
+"exemplo, Archiv)."
+
+#: admin/options-init.php:744 admin/options-init.php:768
+msgid "Protocol"
+msgstr "Protocolo"
+
+#: admin/options-init.php:746
+msgid "TLS"
+msgstr "TLS"
+
+#: admin/options-init.php:747
+msgid "SSL"
+msgstr "SSL"
+
+#: admin/options-init.php:755
+msgid "Port"
+msgstr "Porta"
+
+#: admin/options-init.php:757
+msgid "143"
+msgstr "143"
+
+#: admin/options-init.php:758
+msgid "993"
+msgstr "993"
+
+#: admin/options-init.php:759
+msgid "110"
+msgstr "110"
+
+#: admin/options-init.php:760
+msgid "995"
+msgstr "995"
+
+#: admin/options-init.php:770
+msgid "IMAP"
+msgstr "IMAP"
+
+#: admin/options-init.php:771
+msgid "IMAPS"
+msgstr "IMAPS"
+
+#: admin/options-init.php:772
+msgid "POP3"
+msgstr "POP3"
+
+#: admin/options-init.php:773
+msgid "POP3S"
+msgstr "POP3S"
+
+#: admin/options-init.php:781
+msgid "No Validate Cert"
+msgstr "Nenhum certificado de validação"
+
+#: admin/options-init.php:782
+msgid "Do not validate Certificates."
+msgstr "Não valide certificados."
+
+#: admin/options-init.php:789
+msgid "Test Mail Account"
+msgstr "Conta de correio de teste"
+
+#: admin/options-init.php:789
+msgid "Check Folter"
+msgstr "Verificar Folter"
+
+#: admin/options-init.php:789
+msgid "Fetch Emails Now"
+msgstr "Buscar e-mails agora"
+
+#: admin/options-init.php:796
+msgid "Integrations"
+msgstr "Integrações"
+
+#: admin/options-init.php:804
+msgid "Invisible Recaptcha Integration"
+msgstr "Integração Invisible Recaptcha"
+
+#: admin/options-init.php:805
+msgid ""
+"Install & Setup the <a href=\"https://wordpress.org/plugins/invisible-"
+"recaptcha/\" target=\"_blank\">invisible recaptcha plugin from here</a>. "
+"Then check this option."
+msgstr ""
+"Instale e configure o <a href=\"https://wordpress.org/plugins/invisible-"
+"recaptcha/\" target=\"_blank\"> plug-in recaptcha invisível aqui </a>. Então "
+"marque esta opção."
+
+#: admin/options-init.php:812
+msgid "Envato Integration"
+msgstr "Integração Envato"
+
+#: admin/options-init.php:818
+msgid "Your Envato Username"
+msgstr "Seu nome de usuário do Envato"
+
+#: admin/options-init.php:824
+msgid "Envato API Key"
+msgstr "Chave da API do Envato"
+
+#: admin/options-init.php:825
+msgid ""
+"<a href=\"https://build.Envato.com/my-apps/\" target=\"_blank\">Click here "
+"to get your API key > Person Tokens</a>."
+msgstr ""
+"<a href=\"https://build.Envato.com/my-apps/\" target=\"_blank\"> Clique aqui "
+"para obter sua chave de API> Person Tokens </a>."
+
+#: admin/options-init.php:831
+msgid "Purchase Code required?"
+msgstr "Código de compra necessário?"
+
+#: admin/options-init.php:832
+msgid ""
+"If enabled manual ticket creations will require a purchase code. Requests "
+"without a purchase code will automatically be denied and a reply will be "
+"sent with the request for the code."
+msgstr ""
+"Se ativado, as criações manuais de tickets exigirão um código de compra. As "
+"solicitações sem um código de compra serão automaticamente negadas e uma "
+"resposta será enviada com a solicitação do código."
+
+#: admin/options-init.php:839
+msgid "Check Support until for Purchase?"
+msgstr "Verifique o suporte até a compra?"
+
+#: admin/options-init.php:840
+msgid ""
+"If enabled purchases, where the support is expired will not be created as a "
+"ticket."
+msgstr ""
+"Se as compras ativadas, onde o suporte expirou, não serão criadas como um "
+"ticket."
+
+#: admin/options-init.php:848
+msgid "WooCommerce Integration"
+msgstr "Integração WooCommerce"
+
+#: admin/options-init.php:854
+msgid "Show FAQs Tab on Product pages"
+msgstr "Mostrar a guia Perguntas frequentes nas páginas do produto"
+
+#: admin/options-init.php:861
+msgid "Hide Admin bar for Reporters"
+msgstr "Ocultar barra de administração para repórteres"
+
+#: admin/options-init.php:868
+msgid "Prevent Admin access for Reporters"
+msgstr "Impedir acesso de administrador para repórteres"
+
+#: admin/options-init.php:876
+msgid "Slack Integration"
+msgstr "Integração Slack"
+
+#: admin/options-init.php:882
+msgid "Webhook URL"
+msgstr "URL do Webhook"
+
+#: admin/options-init.php:883
+msgid ""
+"Then <a href=\"https://my.slack.com/services/new/incoming-webhook\" "
+"target=\"_blank\">create an incoming webhook</a> on your Slack account for "
+"the package to use. You'll need the webhook URL to instantiate the client."
+msgstr ""
+"Então <a href=\"https://my.slack.com/services/new/incoming-webhook\" "
+"target=\"_blank\"> crie um webhook de entrada </a> em sua conta do Slack "
+"para o pacote usar. Você precisará da URL do webhook para instanciar o "
+"cliente."
+
+#: admin/options-init.php:884
+msgid "https://hooks.slack.com/services/..."
+msgstr "https: //hooks.slack.com/services / ..."
+
+#: admin/options-init.php:890
+msgid "Channel"
+msgstr "Canal"
+
+#: admin/options-init.php:891
+msgid "Channel where to post to."
+msgstr "Canal para onde postar."
+
+#: admin/options-init.php:898
+msgid "Icon"
+msgstr "Ícone"
+
+#: admin/options-init.php:899
+msgid "Set your custom Slack Icon"
+msgstr "Defina seu ícone personalizado de folga"
+
+#: admin/options-init.php:910 admin/options-init.php:1007
+#: admin/options-init.php:1014
+msgid "New Ticket Notification"
+msgstr "Notificação de novo ticket"
+
+#: admin/options-init.php:917 admin/options-init.php:1042
+#: admin/options-init.php:1049
+msgid "Status Change Notification"
+msgstr "Notificação de mudança de status"
+
+#: admin/options-init.php:924 admin/options-init.php:931
+#: admin/options-init.php:1084
+msgid "Enable Comment added Notification"
+msgstr "Ativar comentário adicionado notificação"
+
+#: admin/options-init.php:938
+msgid "Enable FB Messenger Live Chat."
+msgstr ""
+
+#: admin/options-init.php:939
+msgid ""
+"Learn more here: <a href=\"https://developers.facebook.com/docs/messenger-"
+"platform/discovery/customer-chat-plugin\">Click</a>"
+msgstr ""
+
+#: admin/options-init.php:946
+msgid "FBMessenger Code"
+msgstr ""
+
+#: admin/options-init.php:947
+msgid ""
+"<a href=\"https://developers.facebook.com/docs/messenger-"
+"platform/discovery/customer-chat-plugin#steps\">Follow the steps here to get "
+"the Messenger code.</a>"
+msgstr ""
+
+#: admin/options-init.php:953
+msgid "Enable Crisp Live Chat."
+msgstr "Ativar o Crisp Live Chat."
+
+#: admin/options-init.php:954
+msgid "Learn more here: https://crisp.chat/en/"
+msgstr "Saiba mais aqui: https://crisp.chat/en/"
+
+#: admin/options-init.php:961
+msgid "Crisp Code"
+msgstr "Código Crisp"
+
+#: admin/options-init.php:962
+msgid ""
+"Copy & paste the HTML code here. https://app.crisp.chat/settings/websites/"
+msgstr ""
+"Copie e cole o código HTML aqui. https://app.crisp.chat/settings/websites/"
+
+#: admin/options-init.php:968
+msgid "Enable PureChat Live Chat."
+msgstr "Ativar o chat ao vivo do PureChat."
+
+#: admin/options-init.php:969
+msgid "Learn more here: https://www.purechat.com/"
+msgstr "Saiba mais aqui: https://www.purechat.com/"
+
+#: admin/options-init.php:976
+msgid "PureChat Code"
+msgstr "Código PureChat"
+
+#: admin/options-init.php:977
+msgid ""
+"Copy & paste the HTML code here. https://app.purechat.com/websites/install-"
+"first"
+msgstr ""
+"Copie e cole o código HTML aqui. https://app.purechat.com/websites/install-"
+"first"
+
+#: admin/options-init.php:983
+msgid "Enable Chatra Live Chat."
+msgstr "Ativar Chatra Live Chat."
+
+#: admin/options-init.php:984
+msgid "Learn more here: https://chatra.io"
+msgstr "Saiba mais aqui: https://chatra.io"
+
+#: admin/options-init.php:991
+msgid "Chatra Code"
+msgstr "Código Chatra"
+
+#: admin/options-init.php:992
+msgid "Copy & paste the HTML code here. https://app.chatra.io/settings/general"
+msgstr ""
+"Copie e cole o código HTML aqui. https://app.chatra.io/settings/general"
+
+#: admin/options-init.php:999
+msgid "Mail Notifications"
+msgstr "Notificações por email"
+
+#: admin/options-init.php:1008
+msgid "Notification when a new ticket has been created. "
+msgstr "Notificação quando um novo ticket foi criado. "
+
+#: admin/options-init.php:1020 admin/options-init.php:1055
+#: admin/options-init.php:1090 admin/options-init.php:1127
+msgid "Notify the reporter."
+msgstr "Notifique o repórter."
+
+#: admin/options-init.php:1027
+msgid "Notify the by default assigned agent."
+msgstr "Notifique o agente designado por padrão."
+
+#: admin/options-init.php:1034 admin/options-init.php:1069
+#: admin/options-init.php:1106 admin/options-init.php:1141
+msgid "Notify the the following users:"
+msgstr "Notifique os seguintes usuários:"
+
+#: admin/options-init.php:1043
+msgid "Notification when a ticket status has been changed. "
+msgstr "Notificação quando o status do ticket foi alterado. "
+
+#: admin/options-init.php:1062
+msgid "Notify the assigned agent."
+msgstr "Notifique o agente designado."
+
+#: admin/options-init.php:1077
+msgid "Comment Added Notification"
+msgstr "Comentário Adicionado Notificação"
+
+#: admin/options-init.php:1078
+msgid "Whenever a comment has been added. "
+msgstr "Sempre que um comentário foi adicionado. "
+
+#: admin/options-init.php:1098 admin/options-init.php:1134
+msgid "Notify the agent."
+msgstr "Notifique o agente."
+
+#: admin/options-init.php:1114
+msgid "Assigned Agent Changed Notification"
+msgstr "Notificação de Agente Atribuido Alterado"
+
+#: admin/options-init.php:1115
+msgid "Whenever the assigned agent changed. "
+msgstr "Sempre que o agente designado for alterado. "
+
+#: admin/options-init.php:1121
+msgid "Enable agent changed added Notification"
+msgstr "Ativar agente adicionado adicionado Notificação"
+
+#: admin/options-init.php:1149
+msgid "Notification settings"
+msgstr "Configurações de notificação"
+
+#: admin/options-init.php:1150
+msgid "The default notification settings for mails etc."
+msgstr "As configurações de notificação padrão para e-mails etc."
+
+#: admin/options-init.php:1156
+#: admin/class-kong-helpdesk-my-tickets.php:117
+#: admin/widgets/faq-topics.php:73
+msgid "Name"
+msgstr "Nome"
+
+#: admin/options-init.php:1157
+msgid "This is the default from name for your mail notifications."
+msgstr "Este é o padrão do nome para as notificações de email."
+
+#: admin/options-init.php:1164
+msgid "Set a Logo"
+msgstr "Definir um logotipo"
+
+#: admin/options-init.php:1165
+msgid "The logo will be used in all Mail notifications."
+msgstr "O logotipo será usado em todas as notificações por email."
+
+#: admin/options-init.php:1173
+msgid "Support Mail Address"
+msgstr "Endereço de correio de suporte"
+
+#: admin/options-init.php:1174
+msgid ""
+"This will be used in your mail notifications as the default reply to address."
+msgstr ""
+"Isso será usado em suas notificações de e-mail como a resposta padrão ao "
+"endereço."
+
+#: admin/options-init.php:1180
+msgid "Footer for Mails"
+msgstr "Rodapé para correios"
+
+#: admin/options-init.php:1187 admin/options-init.php:1241
+#: admin/class-kong-helpdesk-livechat-backend.php:222
+#: admin/class-kong-helpdesk-livechat-backend.php:223
+#: admin/class-kong-helpdesk-livechat-backend.php:235
+#: admin/class-kong-helpdesk-livechat.php:558
+#: admin/class-kong-helpdesk-livechat.php:604
+#: admin/class-kong-helpdesk-livechat.php:605
+#: admin/class-kong-helpdesk-livechat.php:614
+msgid "Live Chat"
+msgstr "Bate-papo ao vivo"
+
+#: admin/options-init.php:1194
+msgid "Enable Live Chat"
+msgstr "Ativar bate-papo ao vivo"
+
+#: admin/options-init.php:1200
+msgid "Allow Guest-Chat"
+msgstr "Permitir Convidado-Chat"
+
+#: admin/options-init.php:1207
+msgid "Allow Attachments"
+msgstr "Permitir anexos"
+
+#: admin/options-init.php:1214
+msgid "Hide Livechat when agents offline"
+msgstr "Ocultar o Livechat quando os agentes estiverem off-line"
+
+#: admin/options-init.php:1222
+msgid "Default Icon"
+msgstr "Ícone padrão"
+
+#: admin/options-init.php:1240
+msgid "Live Chat Title"
+msgstr "Título do bate-papo ao vivo"
+
+#: admin/options-init.php:1247
+msgid "Status Text (Online)"
+msgstr "Texto de status (online)"
+
+#: admin/options-init.php:1248
+msgid "Our customer service is available."
+msgstr "Nosso serviço ao cliente está disponível."
+
+#: admin/options-init.php:1254
+msgid "Status Text (Offline)"
+msgstr "Texto de status (off-line)"
+
+#: admin/options-init.php:1255
+msgid "No agents online."
+msgstr "Nenhum agente online."
+
+#: admin/options-init.php:1261
+msgid "Welcome Text (Online)"
+msgstr "Texto de Boas Vindas (Online)"
+
+#: admin/options-init.php:1262
+#, php-format
+msgid "Hi %s,<br><br>Please tell us your subject and your concerns."
+msgstr ""
+"Oi %s , <br> <br> Por favor, conte-nos seu assunto e suas preocupações."
+
+#: admin/options-init.php:1268
+msgid "Welcome Text (Offline)"
+msgstr "Texto de Boas Vindas (Offline)"
+
+#: admin/options-init.php:1269
+msgid ""
+"Sorry,<br><br>None of our agents is online right now. But you can leave a "
+"message."
+msgstr ""
+"Desculpe, <br> <br> Nenhum de nossos agentes está online agora. Mas você "
+"pode deixar uma mensagem."
+
+#: admin/options-init.php:1275
+msgid "Button Text"
+msgstr "Botão de texto"
+
+#: admin/options-init.php:1276
+msgid "Enter Chat"
+msgstr "Digite o bate-papo"
+
+#: admin/options-init.php:1294
+msgid "Saved Replies (BOT)"
+msgstr "Respostas salvas (BOT)"
+
+#: admin/options-init.php:1301
+msgid "Enable Saved Replies"
+msgstr "Ativar respostas salvas"
+
+#: admin/options-init.php:1302
+msgid ""
+"This allows you to save comments into a saved reply, that can be reused for "
+"later tickets."
+msgstr ""
+"Isso permite que você salve comentários em uma resposta salva, que pode ser "
+"reutilizada para ingressos posteriores."
+
+#: admin/options-init.php:1308
+msgid "Enable Automatic Replies"
+msgstr "Ativar respostas automáticas"
+
+#: admin/options-init.php:1309
+msgid ""
+"This will use your saved replies based on tags & word matches to "
+"automatically reply."
+msgstr ""
+"Isso usará suas respostas salvas com base em tags e correspondências de "
+"palavras para responder automaticamente."
+
+#: admin/options-init.php:1315
+msgid "Automatic Reply User"
+msgstr "Usuário de resposta automática"
+
+#: admin/options-init.php:1316
+msgid ""
+"This User will be used for automatic replies. You can create a user Bot for "
+"example and set it here."
+msgstr ""
+"Este usuário será usado para respostas automáticas. Você pode criar um "
+"usuário Bot por exemplo e configurá-lo aqui."
+
+#: admin/options-init.php:1323
+msgid "Enable Automatic Replies for new Tickets"
+msgstr "Ativar respostas automáticas para novos tickets"
+
+#: admin/options-init.php:1330
+msgid "Enable Automatic Reply for new Ticket Replies"
+msgstr "Ativar resposta automática para novas respostas de ticket"
+
+#: admin/options-init.php:1338
+msgid "Support Rating"
+msgstr "Classificação de suporte"
+
+#: admin/options-init.php:1339
+msgid ""
+"Send out Emails when tickets are completed and ask for a support rating."
+msgstr ""
+"Envie e-mails quando os tickets forem concluídos e solicite uma "
+"classificação de suporte."
+
+#: admin/options-init.php:1346
+msgid "Enable Support Rating"
+msgstr "Ativar classificação de suporte"
+
+#: admin/options-init.php:1357
+msgid "Rating Status"
+msgstr "Status de classificação"
+
+#: admin/options-init.php:1358
+msgid "The status when the rating support email should be sent out."
+msgstr "O status quando o email de suporte de classificação deve ser enviado."
+
+#: admin/options-init.php:1364
+msgid "Feedback Page"
+msgstr "Página de feedback"
+
+#: admin/options-init.php:1365
+msgid ""
+"Make sure the [helpdesk_feedback] shortcode is placed there. After saving "
+"here go to settings > permalinks and save."
+msgstr ""
+"Certifique-se de que o código de acesso [helpdesk_feedback] seja colocado lá."
+" Depois de salvar aqui, vá para configurações> permalinks e salve."
+
+#: admin/options-init.php:1372
+msgid "Email Subject"
+msgstr "Assunto do email"
+
+#: admin/options-init.php:1373
+msgid "How would you rate the support?"
+msgstr "Como você avaliaria o suporte?"
+
+#: admin/options-init.php:1379
+msgid "Email Intro"
+msgstr "Email Intro"
+
+#: admin/options-init.php:1380
+#, php-format
+msgid ""
+"Hello %s,<br/><br/>We'd love to hear about your support experience. Please "
+"take a moment to answer one simple question by clicking either link below:"
+"<br/><br/>How would you rate the support you received?<br/><br/>"
+msgstr ""
+"Olá %s , <br/> <br/> Gostaríamos muito de ouvir sobre sua experiência de "
+"suporte. Reserve um momento para responder a uma pergunta simples clicando "
+"no link abaixo: <br/> <br/> Como você avaliaria o suporte recebido? <br/> "
+"<br/>"
+
+#: admin/options-init.php:1386 admin/options-init.php:1393
+msgid "Email Satisfied Text"
+msgstr "Texto satisfeito por e-mail"
+
+#: admin/options-init.php:1387
+msgid "Good, I'm satisfied"
+msgstr "Bom, eu estou satisfeito"
+
+#: admin/options-init.php:1394
+msgid "Bad, I'm unsatisfied"
+msgstr "Mau, estou insatisfeito"
+
+#: admin/options-init.php:1400
+msgid "Email Outro"
+msgstr "Email Outro"
+
+#: admin/options-init.php:1401
+msgid ""
+"Not solved yet?<br><br>The message you add to your feedback will not be "
+"forwarded as a reply. If you have further questions you can reply to this "
+"email."
+msgstr ""
+"Ainda não está resolvido? <br> <br> A mensagem que você adicionar ao seu "
+"comentário não será encaminhada como resposta. Se você tiver mais dúvidas, "
+"responda a este e-mail."
+
+#: admin/options-init.php:1409
+msgid "My Tickets options."
+msgstr ""
+
+#: admin/options-init.php:1416
+msgid "Automatically Close Tickets"
+msgstr ""
+
+#: admin/options-init.php:1417
+msgid ""
+"Automatically set Tickets to close / solved after X Days no comment / update "
+"was made. You need to set a default solved status!"
+msgstr ""
+
+#: admin/options-init.php:1423
+msgid "Days after a Ticket gets closed"
+msgstr ""
+
+#: admin/options-init.php:1433
+msgid "My tickets"
+msgstr ""
+
+#: admin/options-init.php:1434
+msgid "Configure what you want to show in the My tickets table."
+msgstr ""
+
+#: admin/options-init.php:1526
+msgid "Show Name"
+msgstr ""
+
+#: admin/options-init.php:1532
+msgid "Show Date"
+msgstr ""
+
+#: admin/options-init.php:1538
+msgid "Show Status"
+msgstr ""
+
+#: admin/options-init.php:1544
+msgid "Show System"
+msgstr ""
+
+#: admin/options-init.php:1550
+msgid "Show Type"
+msgstr ""
+
+#: admin/options-init.php:1557
+msgid "Advanced settings"
+msgstr "Configurações avançadas"
+
+#: admin/options-init.php:1558
+msgid "Custom stylesheet / javascript."
+msgstr "Folha de estilo / javascript personalizada."
+
+#: admin/options-init.php:1565
+msgid "Use Theme Template"
+msgstr "Use o modelo de tema"
+
+#: admin/options-init.php:1566
+msgid "Enable this to override the custom templates."
+msgstr "Habilite isso para substituir os modelos personalizados."
+
+#: admin/options-init.php:1573
+msgid "Support Mail Template"
+msgstr "Modelo de correio de suporte"
+
+#: admin/options-init.php:1574
+msgid "This will be used for notifications."
+msgstr "Isso será usado para notificações."
+
+#: admin/options-init.php:1581
+msgid "Custom CSS"
+msgstr "CSS customizado"
+
+#: admin/options-init.php:1582 admin/options-init.php:1589
+msgid "Add some stylesheet if you want."
+msgstr "Adicione alguma folha de estilo, se quiser."
+
+#: admin/options-init.php:1588
+msgid "Custom JS"
+msgstr "JS personalizado"
+
+#: admin/class-kong-helpdesk-saved-replies.php:144
+msgid "Saved Reply"
+msgstr "Resposta guardada"
+
+#: admin/class-kong-helpdesk-saved-replies.php:145
+#: admin/class-kong-helpdesk-saved-replies.php:148
+msgid "Saved Replies"
+msgstr "Respostas salvas"
+
+#: admin/class-kong-helpdesk-saved-replies.php:207
+msgid "Category"
+msgstr "Categoria"
+
+#: admin/class-kong-helpdesk-saved-replies.php:208
+msgid "Categories"
+msgstr "Categorias"
+
+#: admin/class-kong-helpdesk-saved-replies.php:211
+#: admin/class-kong-helpdesk-saved-replies.php:212
+#: admin/class-kong-helpdesk-saved-replies.php:221
+#: admin/class-kong-helpdesk-saved-replies.php:247
+#: admin/class-kong-helpdesk-saved-replies.php:248
+#: admin/class-kong-helpdesk-saved-replies.php:257
+#, php-format
+msgid "%s"
+msgstr "% s"
+
+#: admin/class-kong-helpdesk-saved-replies.php:243
+msgid "Tag"
+msgstr "Tag"
+
+#: admin/class-kong-helpdesk-saved-replies.php:244
+msgid "Tags"
+msgstr "Tag"
+
+#: admin/class-kong-helpdesk-saved-replies.php:308
+msgid "Create Saved Reply"
+msgstr "Criar resposta salva"
+
+#: admin/class-kong-helpdesk-saved-replies.php:326
+msgid "No comment to duplicate has been supplied!"
+msgstr "Nenhum comentário para duplicar foi fornecido!"
+
+#: admin/class-kong-helpdesk-saved-replies.php:347
+msgid "Saved Reply creation failed, could not find original comment: "
+msgstr ""
+"Falha na criação da resposta salva, não foi possível encontrar o comentário "
+"original: "
+
+#: admin/class-kong-helpdesk-slack.php:90
+#: admin/class-kong-helpdesk-slack.php:95
+#, php-format
+msgid "New Ticket created: %s"
+msgstr "Novo ticket criado: %s"
+
+#: admin/class-kong-helpdesk-slack.php:93
+#: admin/class-kong-helpdesk-slack.php:132
+#: admin/class-kong-helpdesk-slack.php:178
+#: admin/class-kong-helpdesk-slack.php:190
+#: admin/class-kong-helpdesk-slack.php:253
+#: admin/class-kong-helpdesk-slack.php:289
+#, php-format
+msgid "[Ticket: %s] - %s"
+msgstr "[Ticket: %s ] - %s"
+
+#: admin/class-kong-helpdesk-slack.php:129
+#, php-format
+msgid "New Comment added on Ticket %s"
+msgstr "Novo comentário adicionado no ticket %s"
+
+#: admin/class-kong-helpdesk-slack.php:134
+#, php-format
+msgid "New Comment added by %s:"
+msgstr "Novo comentário adicionado por %s :"
+
+#: admin/class-kong-helpdesk-slack.php:176
+#: admin/class-kong-helpdesk-slack.php:188
+#, php-format
+msgid "[Ticket: %s] %s changed"
+msgstr "[Ticket: %s ] %s mudou"
+
+#: admin/class-kong-helpdesk-slack.php:180
+#, php-format
+msgid "%s changed from %s to: %s"
+msgstr "%s alterado de %s para: %s"
+
+#: admin/class-kong-helpdesk-slack.php:251
+#, php-format
+msgid "[Ticket: %s] Agent changed"
+msgstr "[Ticket: %s ] Agente alterado"
+
+#: admin/class-kong-helpdesk-slack.php:255
+#: admin/class-kong-helpdesk-log.php:265
+#, php-format
+msgid "Assigned from %s to %s"
+msgstr "Atribuído de %s a %s"
+
+#: admin/class-kong-helpdesk-slack.php:287
+#, php-format
+msgid "[Ticket: %s] Agent assigned"
+msgstr "[Ticket: %s ] Agente atribuído"
+
+#: admin/class-kong-helpdesk-log.php:46
+msgid "History"
+msgstr "História"
+
+#: admin/class-kong-helpdesk-log.php:74
+#: admin/class-kong-helpdesk-livechat-backend.php:160
+#: admin/class-kong-helpdesk-livechat.php:161
+msgid " by "
+msgstr " de "
+
+#: admin/class-kong-helpdesk-log.php:79
+msgid "Content: "
+msgstr "Conteúdo: "
+
+#: admin/class-kong-helpdesk-livechat-backend.php:201
+#: admin/class-kong-helpdesk-livechat.php:285
+#, php-format
+msgid "Message received and Chat-Ticket %s created. You should have an email."
+msgstr ""
+"Mensagem recebida e ticket de bate-papo %s criados. Você deveria ter um "
+"email."
+
+#: admin/class-kong-helpdesk-livechat-backend.php:355
+msgid "Error while uploading your attachment."
+msgstr "Erro ao carregar seu anexo."
+
+#: admin/class-kong-helpdesk-livechat-backend.php:391
+#: admin/class-kong-helpdesk-livechat.php:656
+msgid "No Chat Tickets created yet"
+msgstr "Nenhum bate-papo criado ainda"
+
+#: admin/class-kong-helpdesk-livechat-backend.php:395
+#, php-format
+msgid "%d Chat Tickets created yet"
+msgstr "%d Tickets de bate-papo criados ainda"
+
+#: admin/class-kong-helpdesk-faq-post-type.php:89
+msgid "<h2>No Topics created so far!</h2>"
+msgstr "<h2> Nenhum tópico criado até agora! </ h2>"
+
+#: admin/class-kong-helpdesk-faq-post-type.php:223
+#: admin/class-kong-helpdesk-faq-post-type.php:231
+#, php-format
+msgid "View %s article"
+msgid_plural "View %s articles"
+msgstr[0] "Ver %s artigo de %s"
+msgstr[1] "Ver %s artigo de %s"
+
+#: admin/class-kong-helpdesk-faq-post-type.php:257
+#: admin/class-kong-helpdesk-faq-post-type.php:260
+msgid "Search FAQs"
+msgstr "Pesquisar FAQs"
+
+#: admin/class-kong-helpdesk-faq-post-type.php:307
+msgid "No FAQ ID set."
+msgstr "Nenhum conjunto de IDs de FAQ."
+
+#: admin/class-kong-helpdesk-faq-post-type.php:313
+msgid "No FAQ found."
+msgstr "Nenhuma FAQ encontrada."
+
+#: admin/class-kong-helpdesk-faq-post-type.php:343
+#: admin/class-kong-helpdesk-faq-post-type.php:521
+msgid "View Article"
+msgstr "Ver Artigo"
+
+#: admin/class-kong-helpdesk-faq-post-type.php:404
+msgid "Topic ID not an ID"
+msgstr "ID do tópico não é um ID"
+
+#: admin/class-kong-helpdesk-faq-post-type.php:426
+#, php-format
+msgid "Please <a href=\"%s\" title=\"Login\">login to view this topic.</a>"
+msgstr ""
+"Por favor <a href=\" %s \" title=\"Login\"> faça o login para ver este "
+"tópico. </a>"
+
+#: admin/class-kong-helpdesk-faq-post-type.php:456
+msgid "No Articles found."
+msgstr "Nenhum artigo encontrado."
+
+#: admin/class-kong-helpdesk-faq-post-type.php:542
+msgid "FAQ"
+msgstr "Perguntas frequentes"
+
+#: admin/class-kong-helpdesk-faq-post-type.php:610
+msgid "Topic"
+msgstr "Tema"
+
+#: admin/class-kong-helpdesk-faq-post-type.php:611
+#: admin/widgets/faq-topics.php:63
+msgid "Topics"
+msgstr "Tópicos"
+
+#: admin/class-kong-helpdesk-faq-post-type.php:675
+msgid "Create FAQ from this Ticket"
+msgstr "Crie FAQ a partir deste ticket"
+
+#: admin/class-kong-helpdesk-faq-post-type.php:711
+msgid "FAQ creation failed, could not find original ticket: "
+msgstr ""
+"A criação de FAQs falhou, não foi possível encontrar o ticket original: "
+
+#: admin/class-kong-helpdesk-faq-post-type.php:783
+#, php-format
+msgid "Search Results for: %s"
+msgstr "Resultados da pesquisa para: %s"
+
+#: admin/class-kong-helpdesk-faq-post-type.php:797
+#, php-format
+msgid "We found more than %d results ..."
+msgstr ""
+
+#: admin/class-kong-helpdesk-faq-post-type.php:804
+#, php-format
+msgid "Could not find anything for: %s"
+msgstr "Não foi possível encontrar nada para: %s"
+
+#: admin/class-kong-helpdesk-faq-post-type.php:1068
+#: admin/class-kong-helpdesk-faq-post-type.php:1074
+#, php-format
+msgid "Please <a href=\"%s\" title=\"Login\">login to view this faq.</a>"
+msgstr ""
+"Por favor <a href=\" %s \" title=\"Login\"> faça o login para ver este FAQ "
+"</a>"
+
+#: admin/class-kong-helpdesk-faq-post-type.php:1085
+#: admin/class-kong-helpdesk-faq-post-type.php:1086
+#: admin/class-kong-helpdesk-faq-post-type.php:1105
+msgid "FAQ Terms"
+msgstr "FAQ Terms"
+
+#: admin/class-kong-helpdesk-faq-post-type.php:1098
+msgid "No Search Terms found yet"
+msgstr "Nenhum termo de pesquisa encontrado ainda"
+
+#: admin/class-kong-helpdesk-faq-post-type.php:1111
+msgid "Term"
+msgstr "Prazo"
+
+#: admin/class-kong-helpdesk-faq-post-type.php:1112
+msgid "Search Counts"
+msgstr "Contagens de pesquisa"
+
+#: admin/class-kong-helpdesk-faq-post-type.php:1113
+msgid "Articles Found"
+msgstr "Artigos encontrados"
+
+#: admin/class-kong-helpdesk-comments-processor.php:113
+#: admin/class-kong-helpdesk-ticket-processor.php:131
+msgid "Username not set!"
+msgstr "Nome de usuário não definido!"
+
+#: admin/class-kong-helpdesk-comments-processor.php:116
+#: admin/class-kong-helpdesk-ticket-processor.php:134
+msgid "Email not set!"
+msgstr "E-mail não definido!"
+
+#: admin/class-kong-helpdesk-comments-processor.php:121
+msgid "User Exists. The comment has been created by your account."
+msgstr "Usuário existe. O comentário foi criado pela sua conta."
+
+#: admin/class-kong-helpdesk-comments-processor.php:126
+#: admin/class-kong-helpdesk-ticket-processor.php:152
+msgid "We created an account for you – Check your inbox!"
+msgstr "Criamos uma conta para você - Verifique sua caixa de entrada!"
+
+#: admin/class-kong-helpdesk-comments-processor.php:129
+msgid "User not exists, but account could not be created."
+msgstr "O usuário não existe, mas a conta não pôde ser criada."
+
+#: admin/class-kong-helpdesk-comments-processor.php:140
+msgid "Post ID not set!"
+msgstr "ID do post não definido!"
+
+#: admin/class-kong-helpdesk-comments-processor.php:146
+msgid "Post ID not created!"
+msgstr "ID do post não criado!"
+
+#: admin/class-kong-helpdesk-comments-processor.php:151
+#: admin/class-kong-helpdesk-ticket-processor.php:178
+msgid "Message not set!"
+msgstr "Mensagem não definida!"
+
+#: admin/class-kong-helpdesk-exporter.php:40
+msgid "You are not an admin"
+msgstr "Você não é um administrador"
+
+#: admin/class-kong-helpdesk-exporter.php:47
+msgid "No Tickets to Export"
+msgstr "Nenhum bilhete para exportar"
+
+#: admin/class-kong-helpdesk-exporter.php:53
+msgid "Your Ticket Export is ready. The Download should start automatically."
+msgstr ""
+"Sua exportação de tickets está pronta. O download deve começar "
+"automaticamente."
+
+#: admin/class-kong-helpdesk-exporter.php:55
+msgid "Something was wrong with the export generation ..."
+msgstr "Algo estava errado com a geração de exportação ..."
+
+#: admin/class-kong-helpdesk-exporter.php:179
+msgid "Ticket Information"
+msgstr "Informação do Bilhete"
+
+#: admin/class-kong-helpdesk-exporter.php:203
+msgid "System"
+msgstr "Sistema"
+
+#: admin/class-kong-helpdesk-ticket-notes.php:49
+msgid "Private Notes"
+msgstr "Notas Particulares"
+
+#: admin/class-kong-helpdesk-ticket-notes.php:77
+#: admin/class-kong-helpdesk-ticket-notes.php:134
+#, php-format
+msgid "created on %s by %s"
+msgstr "criado em %s por %s"
+
+#: admin/class-kong-helpdesk-ticket-notes.php:78
+#: admin/class-kong-helpdesk-ticket-notes.php:135
+msgid "Delete Note"
+msgstr "Excluir nota"
+
+#: admin/class-kong-helpdesk-ticket-notes.php:86
+msgid "Add Note"
+msgstr "Adicionar nota"
+
+#: admin/class-kong-helpdesk-ticket-notes.php:92
+msgid "Add"
+msgstr "Adicionar"
+
+#: admin/class-kong-helpdesk-ticket-notes.php:107
+msgid "Ticket Sytem"
+msgstr "Ticket Sytem"
+
+#: admin/class-kong-helpdesk-ticket-processor.php:141
+#, php-format
+msgid ""
+"Username or Email exists.  <a href=\"%s\" title=\"Login\">Please login to "
+"create a ticket</a>."
+msgstr ""
+"Nome de usuário ou e-mail existe. <a href=\" %s \" title=\"Login\"> Por "
+"favor, faça o login para criar um ticket </a>."
+
+#: admin/class-kong-helpdesk-ticket-processor.php:155
+#, php-format
+msgid ""
+"User not exists, but account could not be created. <a href=\"%s\" "
+"title=\"Login\">Please login first</a>!"
+msgstr ""
+"O usuário não existe, mas a conta não pôde ser criada. <a href=\" %s \" "
+"title=\"Login\"> Por favor, faça o login primeiro </a>!"
+
+#: admin/class-kong-helpdesk-ticket-processor.php:174
+msgid "Subject not set!"
+msgstr "Assunto não definido!"
+
+#: admin/class-kong-helpdesk-ticket-processor.php:184
+msgid "Purchase Code not set!"
+msgstr "Código de compra não definido!"
+
+#: admin/class-kong-helpdesk-ticket-processor.php:193
+#, php-format
+msgid "Purchase Code %s could not be verified!"
+msgstr "O código de compra %s não pôde ser verificado!"
+
+#: admin/class-kong-helpdesk-ticket-processor.php:198
+#, php-format
+msgid "Support Expired on %s – please renew!"
+msgstr "Suporte Expirado em %s - por favor, renove!"
+
+#: admin/class-kong-helpdesk-ticket-processor.php:200
+#: admin/class-kong-helpdesk-ticket-processor.php:203
+msgid "Purchase Code verified for item: "
+msgstr "Código de compra verificado para o item: "
+
+#: admin/class-kong-helpdesk-reports.php:38
+#: admin/class-kong-helpdesk-reports.php:39
+#: admin/class-kong-helpdesk-reports.php:257
+msgid "Reports"
+msgstr "Relatórios"
+
+#: admin/class-kong-helpdesk-reports.php:84
+msgid "Date From is not valid!"
+msgstr "Data de não é válido!"
+
+#: admin/class-kong-helpdesk-reports.php:94
+msgid "Date Until is not valid!"
+msgstr "Data Até que não seja válido!"
+
+#: admin/class-kong-helpdesk-reports.php:202
+msgid "Waiting"
+msgstr "Esperando"
+
+#: admin/class-kong-helpdesk-reports.php:217
+msgid "No Source"
+msgstr "Nenhuma fonte"
+
+#: admin/class-kong-helpdesk-reports.php:259
+msgid "Date Filter"
+msgstr "Filtro de data"
+
+#: admin/class-kong-helpdesk-reports.php:263
+msgid "Date From (JJJJ-MM-DD)"
+msgstr "Data de (JJJJ-MM-DD)"
+
+#: admin/class-kong-helpdesk-reports.php:267
+msgid "Date Until (JJJJ-MM-DD)"
+msgstr "Data até (JJJJ-MM-DD)"
+
+#: admin/class-kong-helpdesk-reports.php:271
+msgid "Submit"
+msgstr "Enviar"
+
+#: admin/class-kong-helpdesk-reports.php:276
+msgid "Filtered"
+msgstr "Filtrado"
+
+#: admin/class-kong-helpdesk-reports.php:277
+msgid "Filtered Tickets:"
+msgstr "Bilhetes filtrados:"
+
+#: admin/class-kong-helpdesk-reports.php:281
+msgid "Tickets by Agent"
+msgstr "Bilhetes por agente"
+
+#: admin/class-kong-helpdesk-reports.php:290
+msgid "Tickets by Reporter"
+msgstr "Ingressos do Reporter"
+
+#: admin/class-kong-helpdesk-reports.php:299
+msgid "Tickets by Satisfaction"
+msgstr "Ingressos por Satisfação"
+
+#: admin/class-kong-helpdesk-reports.php:308
+msgid "Tickets by Source"
+msgstr "Bilhetes pela fonte"
+
+#: admin/class-kong-helpdesk-reports.php:317
+msgid "Tickets by Year"
+msgstr "Bilhetes por ano"
+
+#: admin/class-kong-helpdesk-reports.php:326
+msgid "Tickets by Month"
+msgstr "Bilhetes por mês"
+
+#: admin/class-kong-helpdesk-reports.php:335
+msgid "Tickets created by Year / Month"
+msgstr "Bilhetes criados por ano / mês"
+
+#: admin/class-kong-helpdesk-reports.php:352
+msgid "Total"
+msgstr "Total"
+
+#: admin/class-kong-helpdesk-reports.php:353
+msgid "No Date filter applied here:"
+msgstr "Nenhum filtro de data aplicado aqui:"
+
+#: admin/class-kong-helpdesk-reports.php:356
+msgid "Tickets by Status"
+msgstr "Tickets por status"
+
+#: admin/class-kong-helpdesk-reports.php:365
+msgid "Tickets by Type"
+msgstr "Bilhetes por tipo"
+
+#: admin/class-kong-helpdesk-reports.php:374
+msgid "Tickets by Department"
+msgstr "Bilhetes por departamento"
+
+#: admin/class-kong-helpdesk-reports.php:383
+msgid "Tickets by Priority"
+msgstr "Bilhetes por prioridade"
+
+#: admin/class-kong-helpdesk-my-tickets.php:146
+msgid "Actions"
+msgstr "Ações"
+
+#: admin/class-kong-helpdesk-my-tickets.php:153
+msgid "No tickets submitted yet."
+msgstr "Nenhum ticket enviado ainda."
+
+#: admin/class-kong-helpdesk-my-tickets.php:161
+#, php-format
+msgid "[Ticket: %s]"
+msgstr "[Ticket: %s ]"
+
+#: admin/class-kong-helpdesk-my-tickets.php:224
+msgid "View"
+msgstr ""
+
+#: admin/class-kong-helpdesk-inbox.php:312
+#: admin/class-kong-helpdesk-inbox.php:373
+msgid "No Message in your Email detected."
+msgstr "Nenhuma mensagem no seu e-mail foi detectada."
+
+#: admin/class-kong-helpdesk-inbox.php:329
+msgid ""
+"No purchase code detected. Please make sure the email contains the following "
+"pattern \"Purchase Code: XXX\"."
+msgstr ""
+"Nenhum código de compra detectado. Certifique-se de que o email contenha o "
+"seguinte padrão  \"Código de compra: XXX \"."
+
+#: admin/class-kong-helpdesk-inbox.php:379
+msgid "Ticket ID for your Reply could not be found."
+msgstr "O ID do ticket da sua resposta não pôde ser encontrado."
+
+#: admin/class-kong-helpdesk-inbox.php:460
+msgid "Sorry ..."
+msgstr "Desculpa ..."
+
+#: admin/class-kong-helpdesk-inbox.php:465
+msgid "Sorry we could not process your mail :("
+msgstr "Desculpe, não foi possível processar seu email :("
+
+#: admin/class-kong-helpdesk-inbox.php:466
+msgid "Visit our Website"
+msgstr "Visite o nosso site"
+
+#: admin/class-kong-helpdesk-livechat.php:204
+msgid "Currently there are no open chats."
+msgstr ""
+
+#: admin/class-kong-helpdesk-livechat.php:211
+#, php-format
+msgid "There is currently %s open chat:"
+msgid_plural "There are currently %s open chats:"
+msgstr[0] ""
+msgstr[1] ""
+
+#: admin/class-kong-helpdesk-livechat.php:239
+#: admin/class-kong-helpdesk-livechat.php:243
+#: admin/class-kong-helpdesk-livechat.php:247
+msgid ""
+"<div class=\"alert alert-danger\" role=\"alert\">This Chat has been "
+"Closed</div>"
+msgstr ""
+
+#: admin/class-kong-helpdesk-livechat.php:267
+msgid ""
+"<div class=\"alert alert-danger\" role=\"alert\">Ticket could not be created."
+" Please contact support email directly.</div>"
+msgstr ""
+
+#: admin/class-kong-helpdesk-livechat.php:292
+msgid "</div>"
+msgstr ""
+
+#: admin/class-kong-helpdesk-livechat.php:438
+#: admin/class-kong-helpdesk-livechat.php:557
+msgid "Close this Chat"
+msgstr ""
+
+#: admin/class-kong-helpdesk-livechat.php:451
+msgid "<p>Please login first.</p>"
+msgstr ""
+
+#: admin/class-kong-helpdesk-livechat.php:452
+#, php-format
+msgid ""
+"<a href=\"%s\" class=\"button btn btn-primary theme-btn theme-button\">Login "
+"Now</a>"
+msgstr ""
+
+#: admin/class-kong-helpdesk-livechat.php:569
+#, php-format
+msgid "Hi Agent %s,"
+msgstr ""
+
+#: includes/class-kong-helpdesk-activator.php:193
+msgid "Agent"
+msgstr "Agente de helpdesk"
+
+#: includes/class-kong-helpdesk-activator.php:215
+msgid "Subscriber"
+msgstr "Reporter de helpdesk"
+
+#: admin/widgets/faq-topics.php:6
+msgid "FAQ Topics"
+msgstr "Tópicos de FAQ"
+
+#: admin/widgets/faq-topics.php:64
+msgid "Title:"
+msgstr "Título:"
+
+#: admin/widgets/faq-topics.php:72
+msgid "Menu Order"
+msgstr "Ordem do menu"
+
+#: admin/widgets/faq-topics.php:74
+msgid "Slug"
+msgstr "Lesma"
+
+#: admin/widgets/faq-topics.php:75
+msgid "Term_group"
+msgstr "Term_group"
+
+#: admin/widgets/faq-topics.php:76
+msgid "Term_id"
+msgstr "Term_id"
+
+#: admin/widgets/faq-topics.php:77
+msgid "Id"
+msgstr "Identidade"
+
+#: admin/widgets/faq-topics.php:78
+msgid "Description"
+msgstr "Descrição"
+
+#: admin/widgets/faq-topics.php:79
+msgid "Parent"
+msgstr "Pai"
+
+#: admin/widgets/faq-topics.php:80
+msgid "Count"
+msgstr "Contagem"
+
+#: admin/widgets/faq-topics.php:83
+msgid "Order By:"
+msgstr "Ordenar por:"
+
+#: admin/widgets/faq-topics.php:104
+msgid "Order:"
+msgstr "Ordem:"
+
+#: admin/widgets/faq-live-search.php:6
+msgid "Use this to show the live ajax search for FAQs"
+msgstr "Use isto para mostrar a busca ao vivo do ajax para FAQs"
+
+#: admin/widgets/faq-posts.php:6
+msgid "Show some FAQs."
+msgstr "Mostrar algumas perguntas frequentes."
+
+#: admin/widgets/faq-dynamic-posts.php:6
+msgid ""
+"Use this if you want to show FAQs dynamically based on the current users FAQ "
+"page."
+msgstr ""
+"Use isso se quiser mostrar as perguntas frequentes dinamicamente com base na "
+"página de perguntas frequentes dos usuários atuais."
+
+#: admin/widgets/faq-dynamic-posts.php:71
+msgid "Popular FAQs"
+msgstr "FAQs populares"
+
+#: admin/views/single-faq.php:62
+#, php-format
+msgid "Viewed: %s"
+msgstr "Visualizado: %s"
+
+#: admin/views/single-ticket.php:57
+msgid "Close ticket"
+msgstr ""
+
+#: admin/views/single-ticket.php:116
+#, php-format
+msgid "Reporter: %s"
+msgstr "Repórter: %s"
+
+#: admin/views/single-ticket.php:118 admin/views/single-ticket.php:151
+msgid "Created on:"
+msgstr "Criado em:"
+
+#: admin/views/single-ticket.php:119 admin/views/single-ticket.php:152
+msgid "Email:"
+msgstr "O email:"
+
+#: admin/views/single-ticket.php:136
+msgid "No Agent assigned yet."
+msgstr "Nenhum agente atribuído ainda."
+
+#: admin/views/single-ticket.php:149
+#, php-format
+msgid "Agent: %s"
+msgstr "Agente: %s"
+
+#. Name of the plugin
+msgid "Kong TotalDesk"
+msgstr "Kong TotalDesk"
+
+#. Description of the plugin
+msgid "The All in One Kong Helpdesk solution"
+msgstr "A solução All in One do Kong Helpdesk"
+
+#. URI of the plugin
+msgid "http://capitalnumbers.com/"
+msgstr ""
+
+#. Author of the plugin
+msgid "weLaunch"
+msgstr ""
+
+#. Author URI of the plugin
+msgid "https://welaunch.io"
+msgstr ""
