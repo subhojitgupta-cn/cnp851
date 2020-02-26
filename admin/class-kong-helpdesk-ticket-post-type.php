@@ -10,7 +10,6 @@ class Kong_Helpdesk_Ticket_Post_Type extends Kong_Helpdesk
      * @author CN
      * @version 1.0.0
      * @since   1.0.0
-     * @link    https://plugins.db-dzine.com
      * @param   [type]                       $plugin_name [description]
      * @param   [type]                       $version     [description]
      */
@@ -25,8 +24,7 @@ class Kong_Helpdesk_Ticket_Post_Type extends Kong_Helpdesk
      * @author CN
      * @version 1.0.0
      * @since   1.0.0
-     * @link    https://plugins.db-dzine.com
-     * @return  [type]                       [description]
+     * @param   [type]                       [description]
      */
     public function init()
     {
@@ -48,8 +46,7 @@ class Kong_Helpdesk_Ticket_Post_Type extends Kong_Helpdesk
      * @author CN
      * @version 1.0.0
      * @since   1.0.0
-     * @link    https://plugins.db-dzine.com
-     * @return  [type]                       [description]
+     * @param   [type]                       [description]
      */
     public function filter_post_type_by_taxonomy()
     {
@@ -79,7 +76,6 @@ class Kong_Helpdesk_Ticket_Post_Type extends Kong_Helpdesk
      * @author CN
      * @version 1.0.0
      * @since   1.0.0
-     * @link    https://plugins.db-dzine.com
      * @param   [type]                       $query [description]
      * @return  [type]                              [description]
      */
@@ -103,8 +99,7 @@ class Kong_Helpdesk_Ticket_Post_Type extends Kong_Helpdesk
      * @author CN
      * @version 1.0.0
      * @since   1.0.0
-     * @link    https://plugins.db-dzine.com
-     * @return  [type]                       [description]
+     * @param   [type]                       [description]
      */
     public function register_ticket_post_type()
     {
@@ -180,8 +175,7 @@ class Kong_Helpdesk_Ticket_Post_Type extends Kong_Helpdesk
      * @author CN
      * @version 1.0.0
      * @since   1.0.0
-     * @link    https://plugins.db-dzine.com
-     * @return  [type]                       [description]
+     * @param   [type]                       [description]
      */
     
 
@@ -307,8 +301,8 @@ class Kong_Helpdesk_Ticket_Post_Type extends Kong_Helpdesk
 
         register_taxonomy('ticket_system', 'ticket', $args);
 
-        $default_status_array = array('customization','troubleshooting');
-        $this->add_ticket_default_terms($default_status_array,'ticket_system');
+        $default_system_array = array('customization','troubleshooting');
+        $this->add_ticket_default_terms($default_system_array,'ticket_system');
 
 
 
@@ -348,6 +342,8 @@ class Kong_Helpdesk_Ticket_Post_Type extends Kong_Helpdesk
         );
 
         register_taxonomy('ticket_priority', 'ticket', $args);
+        $default_priority_array = array('low','medium','high');
+        $this->add_ticket_default_terms($default_priority_array,'ticket_priority');
 
 
         
@@ -363,14 +359,38 @@ class Kong_Helpdesk_Ticket_Post_Type extends Kong_Helpdesk
                 foreach ($terms_array as $term_name) {
                     $term = term_exists( $term_name , $ticket_taxonomy);
                         if ( $term == 0 && $term == null ) {
-                            wp_insert_term(ucfirst($term_name), $ticket_taxonomy,    array('slug' => $term_name) );
+                            $insert_data = wp_insert_term(ucfirst($term_name), $ticket_taxonomy,    array('slug' => $term_name) );
+                            if( ! is_wp_error($insert_data) ){
+                                $term_id = $insert_data['term_id'];
+                            }
+                            if($term_name == 'open'){
+                                set_option_for_status('defaultStatus',$term_id);
+                            }else if($term_name == 'closed'){
+                                set_option_for_status('defaultSolvedStatus',$term_id);
+                            }else if($term_name == 'low') {
+                                set_option_for_status('defaultPriority',$term_id);
+                            } else{
+                                //do nothing
+                            }
+                            
                         }
+                    
                  }
             }
             update_option('default_terms_'.$ticket_taxonomy, 1);
+
        }
         
     }
+
+    //set default status as an option
+    public function set_option_for_status($option_name,$option_value) {
+        if($option_name){
+          Redux::setOption('kong_helpdesk_options',$option_name,$option_value);
+        }
+    }
+
+    // return termid 
 
 
 
@@ -418,7 +438,6 @@ class Kong_Helpdesk_Ticket_Post_Type extends Kong_Helpdesk
      * @author CN
      * @version 1.0.0
      * @since   1.0.0
-     * @link    https://plugins.db-dzine.com
      * @param   [type]                       $post_type [description]
      * @param   [type]                       $post      [description]
      */
@@ -438,8 +457,7 @@ class Kong_Helpdesk_Ticket_Post_Type extends Kong_Helpdesk
      * @author CN
      * @version 1.0.0
      * @since   1.0.0
-     * @link    https://plugins.db-dzine.com
-     * @return  [type]                       [description]
+     * @param   [type]                       [description]
      */
     public function short_information()
     {
@@ -470,7 +488,7 @@ class Kong_Helpdesk_Ticket_Post_Type extends Kong_Helpdesk
      * @author CN
      * @version 1.0.0
      * @since   1.4.3
-     * @link    https://plugins.db-dzine.com
+     * 
      * @return  [type]                       [description]
      */
     public function merge_ticket_metabox()
@@ -507,7 +525,7 @@ class Kong_Helpdesk_Ticket_Post_Type extends Kong_Helpdesk
      * @author CN
      * @version 1.0.0
      * @since   1.4.3
-     * @link    https://plugins.db-dzine.com
+     * 
      * @return  [type]                       [description]
      */
     public function merge_ticket($sourceID, $destinationID)
@@ -563,7 +581,6 @@ class Kong_Helpdesk_Ticket_Post_Type extends Kong_Helpdesk
      * @author CN
      * @version 1.0.0
      * @since   1.0.0
-     * @link    https://plugins.db-dzine.com
      * @param   [type]                       $post [description]
      * @return  [type]                             [description]
      */
@@ -627,7 +644,6 @@ class Kong_Helpdesk_Ticket_Post_Type extends Kong_Helpdesk
      * @author CN
      * @version 1.0.0
      * @since   1.0.0
-     * @link    https://plugins.db-dzine.com
      * @param   [type]                       $post [description]
      * @return  [type]                             [description]
      */
@@ -653,7 +669,6 @@ class Kong_Helpdesk_Ticket_Post_Type extends Kong_Helpdesk
      * @author CN
      * @version 1.0.0
      * @since   1.0.0
-     * @link    https://plugins.db-dzine.com
      * @param   [type]                       $post [description]
      * @return  [type]                             [description]
      */
@@ -703,7 +718,6 @@ class Kong_Helpdesk_Ticket_Post_Type extends Kong_Helpdesk
      * @author CN
      * @version 1.0.0
      * @since   1.0.0
-     * @link    https://plugins.db-dzine.com
      * @param   [type]                       $post [description]
      * @return  [type]                             [description]
      */
@@ -734,7 +748,6 @@ class Kong_Helpdesk_Ticket_Post_Type extends Kong_Helpdesk
      * @author CN
      * @version 1.0.0
      * @since   1.0.0
-     * @link    https://plugins.db-dzine.com
      * @param   [type]                       $code [description]
      * @return  [type]                             [description]
      */
@@ -763,7 +776,6 @@ class Kong_Helpdesk_Ticket_Post_Type extends Kong_Helpdesk
      * @author CN
      * @version 1.0.0
      * @since   1.0.0
-     * @link    https://plugins.db-dzine.com
      * @param   [type]                       $post [description]
      * @return  [type]                             [description]
      */
@@ -778,7 +790,6 @@ class Kong_Helpdesk_Ticket_Post_Type extends Kong_Helpdesk
      * @author CN
      * @version 1.0.0
      * @since   1.0.0
-     * @link    https://plugins.db-dzine.com
      * @param   [type]                       $post [description]
      * @return  [type]                             [description]
      */
@@ -816,7 +827,6 @@ class Kong_Helpdesk_Ticket_Post_Type extends Kong_Helpdesk
      * @author CN
      * @version 1.0.0
      * @since   1.0.0
-     * @link    https://plugins.db-dzine.com
      * @param   [type]                       $post [description]
      * @return  [type]                             [description]
      */
@@ -856,8 +866,7 @@ class Kong_Helpdesk_Ticket_Post_Type extends Kong_Helpdesk
      * @author CN
      * @version 1.0.0
      * @since   1.0.0
-     * @link    https://plugins.db-dzine.com
-     * @return  [type]                       [description]
+     * @param   [type]                       [description]
      */
     public function attachments()
     {
@@ -919,8 +928,7 @@ class Kong_Helpdesk_Ticket_Post_Type extends Kong_Helpdesk
      * @author CN
      * @version 1.0.0
      * @since   1.0.0
-     * @link    https://plugins.db-dzine.com
-     * @return  [type]                       [description]
+     * @param   [type]                       [description]
      */
     public function feedback_metabox()
     {
@@ -940,7 +948,6 @@ class Kong_Helpdesk_Ticket_Post_Type extends Kong_Helpdesk
      * @author CN
      * @version 1.0.0
      * @since   1.0.0
-     * @link    https://plugins.db-dzine.com
      * @param   [type]                       $post_id [description]
      * @param   [type]                       $post    [description]
      * @return  [type]                                [description]
@@ -989,7 +996,7 @@ class Kong_Helpdesk_Ticket_Post_Type extends Kong_Helpdesk
      * @author CN
      * @version 1.0.0
      * @since   1.0.0
-     * @link    https://plugins.db-dzine.com
+     * 
      */
     public function add_custom_meta_fields()
     {
@@ -1014,8 +1021,7 @@ class Kong_Helpdesk_Ticket_Post_Type extends Kong_Helpdesk
      * @author CN
      * @version 1.0.0
      * @since   1.0.0
-     * @link    https://plugins.db-dzine.com
-     * @return  [type]                       [description]
+     * @param   [type]                       [description]
      */
     public function access()
     {
@@ -1066,7 +1072,6 @@ class Kong_Helpdesk_Ticket_Post_Type extends Kong_Helpdesk
      * @author CN
      * @version 1.0.0
      * @since   1.0.0
-     * @link    https://plugins.db-dzine.com
      * @param   [type]                       $query [description]
      * @return  [type]                              [description]
      */
@@ -1098,7 +1103,6 @@ class Kong_Helpdesk_Ticket_Post_Type extends Kong_Helpdesk
      * @author CN
      * @version 1.0.0
      * @since   1.0.0
-     * @link    https://plugins.db-dzine.com
      * @param   [type]                       $title [description]
      * @param   [type]                       $id    [description]
      * @return  [type]                              [description]
@@ -1121,7 +1125,6 @@ class Kong_Helpdesk_Ticket_Post_Type extends Kong_Helpdesk
      * @author CN
      * @version 1.0.0
      * @since   1.0.0
-     * @link    https://plugins.db-dzine.com
      * @param   [type]                       $query_args [description]
      * @param   [type]                       $r          [description]
      */
@@ -1136,7 +1139,6 @@ class Kong_Helpdesk_Ticket_Post_Type extends Kong_Helpdesk
      * @author CN
      * @version 1.0.0
      * @since   1.0.0
-     * @link    https://plugins.db-dzine.com
      * @param   [type]                       $template [description]
      * @return  [type]                                 [description]
      */

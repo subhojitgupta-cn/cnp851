@@ -10,7 +10,6 @@ class Kong_Helpdesk_Crisp extends Kong_Helpdesk
      * @author CN
      * @version 1.0.0
      * @since   1.0.0
-     * @link    https://plugins.db-dzine.com
      * @param   [type]                       $plugin_name        [description]
      * @param   [type]                       $version            [description]
      * @param   [type]                       $ticket_processor   [description]
@@ -29,8 +28,7 @@ class Kong_Helpdesk_Crisp extends Kong_Helpdesk
      * @author CN
      * @version 1.0.0
      * @since   1.0.0
-     * @link    https://plugins.db-dzine.com
-     * @return  [type]                       [description]
+     * @param   [type]                       [description]
      */
     public function init()
     {
@@ -117,8 +115,7 @@ class Kong_Helpdesk_Crisp extends Kong_Helpdesk
      * @author CN
      * @version 1.0.0
      * @since   1.0.0
-     * @link    https://plugins.db-dzine.com
-     * @return  [type]                       [description]
+     * @param   [type]                       [description]
      */
     public function get_session($email, $password)
     {
@@ -149,8 +146,7 @@ class Kong_Helpdesk_Crisp extends Kong_Helpdesk
      * @author CN
      * @version 1.0.0
      * @since   1.0.0
-     * @link    https://plugins.db-dzine.com
-     * @return  [type]                       [description]
+     * @param   [type]                       [description]
      */
     public function authenticate()
     {

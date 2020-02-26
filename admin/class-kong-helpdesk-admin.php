@@ -192,7 +192,7 @@ class Kong_Helpdesk_Admin extends Kong_Helpdesk
      * @author CN
      * @version 1.0.0
      * @since   1.0.3
-     * @link    https://plugins.db-dzine.com
+     * 
      * @return  [type]                       [description]
      */
     public function remove_menus()
@@ -243,7 +243,7 @@ class Kong_Helpdesk_Admin extends Kong_Helpdesk
      * @author CN
      * @version 1.0.0
      * @since   1.0.3
-     * @link    https://plugins.db-dzine.com
+     * 
      * @param   [type]                       $wp_admin_bar [description]
      * @return  [type]                                     [description]
      */
@@ -267,7 +267,7 @@ class Kong_Helpdesk_Admin extends Kong_Helpdesk
      * @author CN
      * @version 1.0.0
      * @since   1.0.3
-     * @link    https://plugins.db-dzine.com
+     * 
      * @return  [type]                       [description]
      */
     public function redirect_dashboard()

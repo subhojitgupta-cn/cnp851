@@ -116,7 +116,7 @@
 - NEW:	Set FAQ Columns in a Topic Archive
 		e.g. show 2 faqs next to each other
 - INFO:	We will no longer develop the Desktop Notification feature (but it stays)
-		We developed a new plugin Fire Push: https://plugins.db-dzine.com/fire-push/
+		We developed a new plugin Fire Push: https://www.capitalnumbers.com/fire-push/
 		- Background Notfications (when browser is closed)
 		- send notification on new ticket replies
 		- notfiy on new tickets created
@@ -329,7 +329,7 @@
 ======
 - NEW:  Topic Widget for Sidebar
 - NEW:  FAQ for WPMl Translation: 
-		https://plugins.db-dzine.com/helpdesk/documentation/faq/can-translate-plugin-wpml/
+		https://www.capitalnumbers.com/helpdesk/documentation/faq/can-translate-plugin-wpml/
 - FIX:  Missing div in form shortcode
 - FIX:  My Tickets page on WooCommerce account page
 - FIX:  Product support in WPML environment showed all products
@@ -437,9 +437,9 @@ NEW: Chatra Live Chat Integration
 - NEW:  Support Rating Feedback
 		Ask reporters for Support feedback after a ticket has been solved
 		See settings > Support Rating
-		Rating Email: https://plugins.db-dzine.com/helpdesk/wp-content/uploads/sites/5/2017/10/support-rating-email.png
-		Support Feedback: https://plugins.db-dzine.com/helpdesk/wp-content/uploads/sites/5/2017/10/support-rating-feedback.png
-		Rating Overview: https://plugins.db-dzine.com/helpdesk/wp-content/uploads/sites/5/2017/10/support-rating-overview.png
+		Rating Email: https://www.capitalnumbers.com/helpdesk/wp-content/uploads/sites/5/2017/10/support-rating-email.png
+		Support Feedback: https://www.capitalnumbers.com/helpdesk/wp-content/uploads/sites/5/2017/10/support-rating-feedback.png
+		Rating Overview: https://www.capitalnumbers.com/helpdesk/wp-content/uploads/sites/5/2017/10/support-rating-overview.png
 - NEW:  2 x New Report charts: 
 		Tickets by Reporter
 		Tickets by Satisfaction
@@ -486,7 +486,7 @@ NEW: Chatra Live Chat Integration
 		Settings > Advanced Settings > Use Theme Template
 		Note: This will remove all custom templates!
 		It would be better to copy existing partials into your child theme
-		Tutorial: https://plugins.db-dzine.com/helpdesk/documentation/faq/override-templates-theme-support/
+		Tutorial: https://www.capitalnumbers.com/helpdesk/documentation/faq/override-templates-theme-support/
 - NEW:  Set a sidebar position (left or right) in General Settings
 - NEW:  Support for invisible Recaptcha (https://wordpress.org/plugins/invisible-recaptcha/)
 

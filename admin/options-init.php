@@ -125,7 +125,7 @@ if (! class_exists('Redux')) {
                 'id'       => 'enable',
                 'type'     => 'checkbox',
                 'title'    => __('Enable', 'kong-helpdesk'),
-                'subtitle' => __('Enable TotalDesk.', 'kong-helpdesk'),
+                'subtitle' => __('Enable Helpdesk.', 'kong-helpdesk'),
                 'default'  => '1',
             ),
             array(
@@ -1188,7 +1188,7 @@ if (! class_exists('Redux')) {
                 'id'       => 'supportFooter',
                 'type'     => 'editor',
                 'title'    => __('Footer for Mails', 'kong-helpdesk'),
-                'default'  => 'You can reply to this Email. Ticket created by WP TotalDesk Software.',
+                'default'  => 'You can reply to this Email. Ticket created by WP Helpdesk Software.',
             ),
         )
     ));
@@ -1444,7 +1444,7 @@ if (! class_exists('Redux')) {
                 'subtitle'    => __('Configure what you want to show in the My tickets table.', 'kong-helpdesk'),
                 'indent'   => false,
             ),
-            array(
+            /*array(
                 'id'       => 'myTicketsDatatablesEnable',
                 'type'     => 'checkbox',
                 'title'    => __( 'Enable Datatables', 'woocommerce-variations-table' ),
@@ -1529,7 +1529,7 @@ if (! class_exists('Redux')) {
                     'Welsh' => __('Welsh', 'woocommerce-variations-table'),
                 ),
                 'required' => array('myTicketsDatatablesEnable','equals','1'),
-            ),
+            ),*/
             array(
                 'id'       => 'myTicketsShowName',
                 'type'     => 'checkbox',

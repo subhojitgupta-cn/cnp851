@@ -40,7 +40,6 @@ class Kong_Helpdesk_Ticket_Processor extends Kong_Helpdesk
      * @author CN
      * @version 1.0.0
      * @since   1.0.0
-     * @link    https://plugins.db-dzine.com
      * @param   [type]                       $plugin_name [description]
      * @param   [type]                       $version     [description]
      */
@@ -56,8 +55,7 @@ class Kong_Helpdesk_Ticket_Processor extends Kong_Helpdesk
      * @author CN
      * @version 1.0.0
      * @since   1.0.0
-     * @link    https://plugins.db-dzine.com
-     * @return  [type]                       [description]
+     * @param   [type]                       [description]
      */
     public function init()
     {
@@ -70,7 +68,6 @@ class Kong_Helpdesk_Ticket_Processor extends Kong_Helpdesk
      * @author CN
      * @version 1.0.0
      * @since   1.0.0
-     * @link    https://plugins.db-dzine.com
      * @param   [type]                       $data [description]
      * @param   [type]                       $source [description]
      * @return  [type]                             [description]
@@ -116,7 +113,6 @@ class Kong_Helpdesk_Ticket_Processor extends Kong_Helpdesk
      * @author CN
      * @version 1.0.0
      * @since   1.0.0
-     * @link    https://plugins.db-dzine.com
      * @param   [type]                       $data [description]
      * @param   [type]                       $source [description]
      * @return  [type]                             [description]
@@ -227,7 +223,6 @@ class Kong_Helpdesk_Ticket_Processor extends Kong_Helpdesk
      * @author CN
      * @version 1.0.0
      * @since   1.0.0
-     * @link    https://plugins.db-dzine.com
      * @param   [type]                       $code [description]
      * @return  [type]                             [description]
      */
@@ -256,7 +251,6 @@ class Kong_Helpdesk_Ticket_Processor extends Kong_Helpdesk
      * @author CN
      * @version 1.0.0
      * @since   1.0.0
-     * @link    https://plugins.db-dzine.com
      * @param   [type]                       $data [description]
      * @param   [type]                       $source [description]
      * @return  [type]                             [description]
@@ -333,7 +327,6 @@ class Kong_Helpdesk_Ticket_Processor extends Kong_Helpdesk
      * @author CN
      * @version 1.0.0
      * @since   1.0.0
-     * @link    https://plugins.db-dzine.com
      * @param   [type]                       $user_name  [description]
      * @param   [type]                       $user_email [description]
      * @return  [type]                                   [description]
@@ -360,7 +353,6 @@ class Kong_Helpdesk_Ticket_Processor extends Kong_Helpdesk
      * @author CN
      * @version 1.0.0
      * @since   1.0.0
-     * @link    https://plugins.db-dzine.com
      * @param   [type]                       $user_name  [description]
      * @param   [type]                       $user_email [description]
      * @return  [type]                                   [description]
@@ -382,7 +374,6 @@ class Kong_Helpdesk_Ticket_Processor extends Kong_Helpdesk
      * @author CN
      * @version 1.0.0
      * @since   1.0.0
-     * @link    https://plugins.db-dzine.com
      * @param   [type]                       $user_name [description]
      * @param   [type]                       $user_email [description]
      * @return  [type]                                 [description]

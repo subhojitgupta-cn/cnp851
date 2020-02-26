@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: Kong TotalDesk\n"
+"Project-Id-Version: Kong Helpdesk\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-05-07 07:59+0000\n"
 "PO-Revision-Date: 2019-05-07 08:00+0000\n"
@@ -731,8 +731,8 @@ msgid "Enable"
 msgstr "Gör det möjligt"
 
 #: admin/options-init.php:128
-msgid "Enable TotalDesk."
-msgstr "Aktivera TotalDesk."
+msgid "Enable Helpdesk."
+msgstr "Aktivera Helpdesk."
 
 #: admin/options-init.php:134
 msgid "Login Page"
@@ -2560,8 +2560,8 @@ msgid "Agent: %s"
 msgstr "Agent: %s"
 
 #. Name of the plugin
-msgid "Kong TotalDesk"
-msgstr "Kong TotalDesk"
+msgid "Kong Helpdesk"
+msgstr "Kong Helpdesk"
 
 #. Description of the plugin
 msgid "The All in One Kong Helpdesk solution"

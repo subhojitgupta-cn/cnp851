@@ -25,8 +25,7 @@ class Kong_Helpdesk_WooCommerce extends Kong_Helpdesk
      * @author CN
      * @version 1.0.0
      * @since   1.0.0
-     * @link    https://plugins.db-dzine.com
-     * @return  [type]                       [description]
+     * @param   [type]                       [description]
      */
     public function init()
     {
@@ -39,7 +38,6 @@ class Kong_Helpdesk_WooCommerce extends Kong_Helpdesk
      * @author CN
      * @version 1.0.0
      * @since   1.0.0
-     * @link    https://plugins.db-dzine.com
      * @param   [type]                       $items [description]
      * @return  [type]                              [description]
      */
@@ -65,8 +63,7 @@ class Kong_Helpdesk_WooCommerce extends Kong_Helpdesk
      * @author CN
      * @version 1.0.0
      * @since   1.0.0
-     * @link    https://plugins.db-dzine.com
-     * @return  [type]                       [description]
+     * @param   [type]                       [description]
      */
     public function my_account_tickets_endpoint() 
     {
@@ -83,8 +80,7 @@ class Kong_Helpdesk_WooCommerce extends Kong_Helpdesk
      * @author CN
      * @version 1.0.0
      * @since   1.0.0
-     * @link    https://plugins.db-dzine.com
-     * @return  [type]                       [description]
+     * @param   [type]                       [description]
      */
     public function my_account_my_tickets_endpoint_content() 
     {
@@ -99,8 +95,7 @@ class Kong_Helpdesk_WooCommerce extends Kong_Helpdesk
      * @author CN
      * @version 1.0.0
      * @since   1.0.0
-     * @link    https://plugins.db-dzine.com
-     * @return  [type]                       [description]
+     * @param   [type]                       [description]
      */
     public function my_account_new_ticket_endpoint_content() 
     {
@@ -117,8 +112,7 @@ class Kong_Helpdesk_WooCommerce extends Kong_Helpdesk
      * @author CN
      * @version 1.0.0
      * @since   1.0.0
-     * @link    https://plugins.db-dzine.com
-     * @return  [type]                       [description]
+     * @param   [type]                       [description]
      */
     public function custom_user_redirect( $redirect, $user ) 
     {
@@ -157,8 +151,7 @@ class Kong_Helpdesk_WooCommerce extends Kong_Helpdesk
      * @author CN
      * @version 1.0.0
      * @since   1.0.0
-     * @link    https://plugins.db-dzine.com
-     * @return  [type]                       [description]
+     * @param   [type]                       [description]
      */
     public function show_admin_bar() 
     {
@@ -183,7 +176,6 @@ class Kong_Helpdesk_WooCommerce extends Kong_Helpdesk
      * @author CN
      * @version 1.0.0
      * @since   1.0.0
-     * @link    https://plugins.db-dzine.com
      * @param   [type]                       $array [description]
      * @return  [type]                              [description]
      */
@@ -209,7 +201,7 @@ class Kong_Helpdesk_WooCommerce extends Kong_Helpdesk
      * @author CN
      * @version 1.0.0
      * @since   1.1.3
-     * @link    https://plugins.db-dzine.com
+     * 
      * @return  [type]                       [description]
      */
     public function maybe_show_faqs($tabs) 

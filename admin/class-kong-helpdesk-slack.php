@@ -10,7 +10,6 @@ class Kong_Helpdesk_Slack extends Kong_Helpdesk
      * @author CN
      * @version 1.0.0
      * @since   1.0.0
-     * @link    https://plugins.db-dzine.com
      * @param   [type]                       $plugin_name [description]
      * @param   [type]                       $version     [description]
      */
@@ -25,8 +24,7 @@ class Kong_Helpdesk_Slack extends Kong_Helpdesk
      * @author CN
      * @version 1.0.0
      * @since   1.0.0
-     * @link    https://plugins.db-dzine.com
-     * @return  [type]                       [description]
+     * @param   [type]                       [description]
      */
     public function init()
     {
@@ -56,7 +54,6 @@ class Kong_Helpdesk_Slack extends Kong_Helpdesk
      * @author CN
      * @version 1.0.0
      * @since   1.0.0
-     * @link    https://plugins.db-dzine.com
      * @param   [type]                       $new_status [description]
      * @param   [type]                       $old_status [description]
      * @param   [type]                       $post       [description]
@@ -103,7 +100,6 @@ class Kong_Helpdesk_Slack extends Kong_Helpdesk
      * @author CN
      * @version 1.0.0
      * @since   1.0.0
-     * @link    https://plugins.db-dzine.com
      * @param   [type]                       $id      [description]
      * @param   [type]                       $comment [description]
      * @return  [type]                                [description]
@@ -144,7 +140,6 @@ class Kong_Helpdesk_Slack extends Kong_Helpdesk
      * @author CN
      * @version 1.0.0
      * @since   1.0.0
-     * @link    https://plugins.db-dzine.com
      * @param   [type]                       $object_id [description]
      * @param   [type]                       $tt_id     [description]
      * @param   [type]                       $taxonomy  [description]
@@ -203,7 +198,6 @@ class Kong_Helpdesk_Slack extends Kong_Helpdesk
      * @author CN
      * @version 1.0.0
      * @since   1.0.0
-     * @link    https://plugins.db-dzine.com
      * @param   [type]                       $meta_id     [description]
      * @param   [type]                       $object_id   [description]
      * @param   [type]                       $meta_key    [description]
@@ -262,7 +256,6 @@ class Kong_Helpdesk_Slack extends Kong_Helpdesk
      * @author CN
      * @version 1.0.0
      * @since   1.0.0
-     * @link    https://plugins.db-dzine.com
      * @param   [type]                       $meta_id    [description]
      * @param   [type]                       $object_id  [description]
      * @param   [type]                       $meta_key   [description]
@@ -298,8 +291,7 @@ class Kong_Helpdesk_Slack extends Kong_Helpdesk
      * @author CN
      * @version 1.0.0
      * @since   1.0.0
-     * @link    https://plugins.db-dzine.com
-     * @return  [type]                       [description]
+     * @param   [type]                       [description]
      */
     private function send()
     {

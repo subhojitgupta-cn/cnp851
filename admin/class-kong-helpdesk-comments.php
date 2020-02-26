@@ -29,7 +29,7 @@ class Kong_Helpdesk_Comments extends Kong_Helpdesk
      * @author CN
      * @version 1.0.0
      * @since   1.0.0
-     * @link    https://plugins.db-dzine.com
+     * 
      * @return [type] [description]
      */
     public function init()
@@ -43,7 +43,6 @@ class Kong_Helpdesk_Comments extends Kong_Helpdesk
      * @author CN
      * @version 1.0.0
      * @since   1.0.0
-     * @link    https://plugins.db-dzine.com
      * @param   [type]                       $settings  [description]
      * @param   [type]                       $editor_id [description]
      * @return  [type]                                  [description]
@@ -68,7 +67,7 @@ class Kong_Helpdesk_Comments extends Kong_Helpdesk
      * @author CN
      * @version 1.0.0
      * @since   1.0.0
-     * @link    https://plugins.db-dzine.com
+     * 
      * @param  [type] $field [description]
      * @return [type]        [description]
      */
@@ -100,7 +99,7 @@ class Kong_Helpdesk_Comments extends Kong_Helpdesk
      * @author CN
      * @version 1.0.0
      * @since   1.0.0
-     * @link    https://plugins.db-dzine.com
+     * 
      * @param  [type] $option [description]
      * @return [type]         [description]
      */

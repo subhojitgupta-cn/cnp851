@@ -10,7 +10,6 @@ class Kong_Helpdesk_Livechat_Backend extends Kong_Helpdesk
      * @author CN
      * @version 1.0.0
      * @since   1.0.0
-     * @link    https://plugins.db-dzine.com
      * @param   [type]                       $plugin_name        [description]
      * @param   [type]                       $version            [description]
      * @param   [type]                       $ticket_processor   [description]
@@ -30,8 +29,7 @@ class Kong_Helpdesk_Livechat_Backend extends Kong_Helpdesk
      * @author CN
      * @version 1.0.0
      * @since   1.0.0
-     * @link    https://plugins.db-dzine.com
-     * @return  [type]                       [description]
+     * @param   [type]                       [description]
      */
     public function init()
     {
@@ -44,8 +42,7 @@ class Kong_Helpdesk_Livechat_Backend extends Kong_Helpdesk
      * @author CN
      * @version 1.0.0
      * @since   1.0.0
-     * @link    https://plugins.db-dzine.com
-     * @return  [type]                       [description]
+     * @param   [type]                       [description]
      */
     public function set_agents_online()
     {
@@ -81,7 +78,6 @@ class Kong_Helpdesk_Livechat_Backend extends Kong_Helpdesk
      * @author CN
      * @version 1.0.0
      * @since   1.0.0
-     * @link    https://plugins.db-dzine.com
      * @param   [type]                       $id [description]
      * @return  boolean                          [description]
      */
@@ -96,8 +92,7 @@ class Kong_Helpdesk_Livechat_Backend extends Kong_Helpdesk
      * @author CN
      * @version 1.0.0
      * @since   1.0.0
-     * @link    https://plugins.db-dzine.com
-     * @return  [type]                       [description]
+     * @param   [type]                       [description]
      */
     public function get_users_online()
     {
@@ -121,7 +116,6 @@ class Kong_Helpdesk_Livechat_Backend extends Kong_Helpdesk
      * @author CN
      * @version 1.0.0
      * @since   1.0.0
-     * @link    https://plugins.db-dzine.com
      * @param   [type]                       $id [description]
      * @return  [type]                           [description]
      */
@@ -142,8 +136,7 @@ class Kong_Helpdesk_Livechat_Backend extends Kong_Helpdesk
      * @author CN
      * @version 1.0.0
      * @since   1.0.0
-     * @link    https://plugins.db-dzine.com
-     * @return  [type]                       [description]
+     * @param   [type]                       [description]
      */
     public function set_open_chat()
     {
@@ -171,8 +164,7 @@ class Kong_Helpdesk_Livechat_Backend extends Kong_Helpdesk
      * @author CN
      * @version 1.0.0
      * @since   1.0.0
-     * @link    https://plugins.db-dzine.com
-     * @return  [type]                       [description]
+     * @param   [type]                       [description]
      */
     public function create_ticket()
     {
@@ -273,8 +265,7 @@ class Kong_Helpdesk_Livechat_Backend extends Kong_Helpdesk
      * @author CN
      * @version 1.0.0
      * @since   1.0.0
-     * @link    https://plugins.db-dzine.com
-     * @return  [type]                       [description]
+     * @param   [type]                       [description]
      */
     public function get_comments()
     {
@@ -286,8 +277,7 @@ class Kong_Helpdesk_Livechat_Backend extends Kong_Helpdesk
      * @author CN
      * @version 1.0.0
      * @since   1.0.0
-     * @link    https://plugins.db-dzine.com
-     * @return  [type]                       [description]
+     * @param   [type]                       [description]
      */
     public function comment_ticket()
     {
@@ -310,8 +300,7 @@ class Kong_Helpdesk_Livechat_Backend extends Kong_Helpdesk
      * @author CN
      * @version 1.0.0
      * @since   1.0.0
-     * @link    https://plugins.db-dzine.com
-     * @return  [type]                       [description]
+     * @param   [type]                       [description]
      */
     public function upload_file()
     {
@@ -424,8 +413,7 @@ class Kong_Helpdesk_Livechat_Backend extends Kong_Helpdesk
      * @author CN
      * @version 1.0.0
      * @since   1.0.0
-     * @link    https://plugins.db-dzine.com
-     * @return  [type]                       [description]
+     * @param   [type]                       [description]
      */
     public function get_ticket()
     {

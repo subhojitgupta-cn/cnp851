@@ -10,7 +10,6 @@ class Kong_Helpdesk_My_Tickets extends Kong_Helpdesk
      * @author CN
      * @version 1.0.0
      * @since   1.0.0
-     * @link    https://plugins.db-dzine.com
      * @param   [type]                       $plugin_name      [description]
      * @param   [type]                       $version          [description]
      */
@@ -26,8 +25,7 @@ class Kong_Helpdesk_My_Tickets extends Kong_Helpdesk
      * @author CN
      * @version 1.0.0
      * @since   1.0.0
-     * @link    https://plugins.db-dzine.com
-     * @return  [type]                       [description]
+     * @param   [type]                       [description]
      */
     public function init()
     {
@@ -43,7 +41,6 @@ class Kong_Helpdesk_My_Tickets extends Kong_Helpdesk
      * @author CN
      * @version 1.0.0
      * @since   1.0.0
-     * @link    https://plugins.db-dzine.com
      * @param   [type]                       $atts [description]
      * @return  [type]                             [description]
      */

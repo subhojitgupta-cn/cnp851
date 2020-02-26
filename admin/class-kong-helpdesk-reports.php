@@ -10,7 +10,6 @@ class Kong_Helpdesk_Reports extends Kong_Helpdesk
      * @author CN
      * @version 1.0.0
      * @since   1.0.0
-     * @link    https://plugins.db-dzine.com
      * @param   [type]                       $plugin_name        [description]
      * @param   [type]                       $version            [description]
      */
@@ -25,7 +24,6 @@ class Kong_Helpdesk_Reports extends Kong_Helpdesk
      * @author CN
      * @version 1.0.0
      * @since   1.0.0
-     * @link    https://plugins.db-dzine.com
      * @return  [type]                       [description]
      */
     public function init()
@@ -42,14 +40,6 @@ class Kong_Helpdesk_Reports extends Kong_Helpdesk
             '',
             '3'
         );
-        /*add_menu_page(
-            'helpdesk-reports',
-            __('Reports', 'kong-helpdesk'),
-            __('Reports', 'kong-helpdesk'),
-            'manage_options',
-            'helpdesk-reports',
-            array($this, 'render_helpdesk_reports')
-        );*/
     }
 
     /**
@@ -57,18 +47,17 @@ class Kong_Helpdesk_Reports extends Kong_Helpdesk
      * @author CN
      * @version 1.0.0
      * @since   1.0.0
-     * @link    https://plugins.db-dzine.com
      * @return  [type]                       [description]
      */
     public function filter_report()
     {
         $query = array(
-            'post_type' => 'ticket',
+           // 'post_type' => 'ticket',
             'page' => 'helpdesk-reports',
             'date_from' => $_GET['date_from'],
             'date_until' => $_GET['date_until'],
         );
-        $url = admin_url('edit.php?' . http_build_query($query));
+        $url = admin_url('admin.php?' . http_build_query($query));
         wp_redirect($url);
         exit();
     }
@@ -78,7 +67,6 @@ class Kong_Helpdesk_Reports extends Kong_Helpdesk
      * @author CN
      * @version 1.0.0
      * @since   1.0.0
-     * @link    https://plugins.db-dzine.com
      * @return  [type]                       [description]
      */
     public function render_helpdesk_reports()
@@ -86,7 +74,7 @@ class Kong_Helpdesk_Reports extends Kong_Helpdesk
 
         $date_from = '';
         if (isset($_GET['date_from']) && !empty($_GET['date_from'])) {
-            $date_from = $this->validateDate($_GET['date_from']);
+           $date_from = $this->validateDate($_GET['date_from']);
             if ($date_from) {
                 $date_from = $_GET['date_from'];
             } else {
@@ -132,6 +120,9 @@ class Kong_Helpdesk_Reports extends Kong_Helpdesk
 
         $tickets = get_posts($args);
 
+
+
+
         $years = array();
         $months = array('01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12');
 
@@ -166,32 +157,55 @@ class Kong_Helpdesk_Reports extends Kong_Helpdesk
         }
 
         $ticketsAssignedToAgent = array();
+        $ticketsAssignedToAgents =array();
         $ticketsByReporter = array();
         $ticketsBySatisfaction = array();
         $ticketsBySource = array();
+        $ticketsByagents = array();
+        $ticketsByweekdays = array();
+
         foreach ($tickets as $ticket) {
             $d = new DateTime($ticket->post_date);
             $year_created = $d->format('Y');
             $month_created = $d->format('m');
+            $weekday_number_created = $d->format('N');
+            $weekday_name_created = $d->format('D');
+            $weekday_count = 1;
 
-            $ticketsCreatedByYearMonth[$month_created][$year_created]++;
+            // busiest day of week
             
-            // Tickets by Agent
+            $ticketsByweekdays[$weekday_name_created][] = array(
+                'day' => $weekday_number_created - 1,
+                'post_id' => $ticket->ID,
+                'time_created' => $this->get_busiest_time_interval_by_hours($d->format('H'))
+
+            );
+            
+            $ticketsCreatedByYearMonth[$month_created][$year_created]++;
+            //Tickets by agents
             $agent = get_post_meta($ticket->ID, 'agent', true);
+            $agent_email = $agent_display_name = '';
+            $agent_total_reply = 0;
+           
+        
             if (empty($agent)) {
-                $agent = __('Unassigned', 'kong-helpdesk');
-            } else {
-                $agent = get_userdata($agent)->data->display_name;
+                $agent = __('unassigned', 'kong-helpdesk');
+            } else {        
+                $agent_details = get_userdata($agent)->data;
+                $agent = $agent_details->user_email;
             }
 
             $count = 1;
             if (isset($ticketsAssignedToAgent[$agent])) {
                 $count = $ticketsAssignedToAgent[$agent]['value'] + 1;
+                
             }
+
             $ticketsAssignedToAgent[$agent] = array(
                 'label' => $agent,
                 'value' => $count,
             );
+
 
             // Tickets by Reporter
             $reporter = $ticket->post_author;
@@ -259,18 +273,31 @@ class Kong_Helpdesk_Reports extends Kong_Helpdesk
             );
         }
 
+        
+    
+
         $ticketsByStatus = $this->get_tickets_by_status();
         $ticketsByType = $this->get_tickets_by_type();
         $ticketsByPriority = $this->get_tickets_by_priority();
-        $ticketsBySystem = $this->get_tickets_by_system();
 
+        // tickets by department
+        $ticketsBySystem = $this->get_tickets_by_system();
+        // tickets by agents
+        $ticketsByagents = $this->get_tickets_by_agents($ticketsAssignedToAgent);
+
+        // Time to first reply graph
+        $timeto_first_reply_response = $this->first_response_time_selected_period($ticketsByagents);
+        
+        print_r($ticketsByweekdays);
+
+        
 
         ?>
        
         <div class="wrap">
             <div class="kong-helpdesk-container">
                 <h1><?php _e('Reports', 'kong-helpdesk'); ?></h1>
-                <form action="<?php echo admin_url('edit.php?post_type=ticket&page=helpdesk-reports') ?>" method="get" style="background-color: #FFF; padding: 5px 20px 20px;">
+                <form action="<?php echo admin_url('edit.php?page=helpdesk-reports') ?>" method="get" style="background-color: #FFF; padding: 5px 20px 20px;">
                     <h2><?php _e('Date Filter', 'kong-helpdesk') ?></h2>
                     <input type="hidden" name="action" value="kong_helpdesk_report_filter">
                      <div class="kong-helpdesk-row">
@@ -435,7 +462,7 @@ class Kong_Helpdesk_Reports extends Kong_Helpdesk
      * @author CN
      * @version 1.0.0
      * @since   1.0.0
-     * @link    https://plugins.db-dzine.com
+     * 
      * @return  [type]                       [description]
      */
     private function get_tickets_by_status()
@@ -457,7 +484,6 @@ class Kong_Helpdesk_Reports extends Kong_Helpdesk
      * @author CN
      * @version 1.0.0
      * @since   1.0.0
-     * @link    https://plugins.db-dzine.com
      * @return  [type]                       [description]
      */
     private function get_tickets_by_type()
@@ -479,7 +505,6 @@ class Kong_Helpdesk_Reports extends Kong_Helpdesk
      * @author CN
      * @version 1.0.0
      * @since   1.2.4
-     * @link    https://plugins.db-dzine.com
      * @return  [type]                       [description]
      */
     private function get_tickets_by_priority()
@@ -501,7 +526,6 @@ class Kong_Helpdesk_Reports extends Kong_Helpdesk
      * @author CN
      * @version 1.0.0
      * @since   1.0.0
-     * @link    https://plugins.db-dzine.com
      * @return  [type]                       [description]
      */
     private function get_tickets_by_system()
@@ -523,7 +547,6 @@ class Kong_Helpdesk_Reports extends Kong_Helpdesk
      * @author CN
      * @version 1.0.0
      * @since   1.0.0
-     * @link    https://plugins.db-dzine.com
      * @param   [type]                       $date   [description]
      * @param   string                       $format [description]
      * @return  [type]                               [description]
@@ -533,4 +556,182 @@ class Kong_Helpdesk_Reports extends Kong_Helpdesk
         $d = DateTime::createFromFormat($format, $date);
         return $d && $d->format($format) == $date;
     }
+
+    // return comments by userid 
+    private function get_comments_by_userid($userid) {
+        $args = array(
+            'comment_status' => 'approve',
+            'status'  => 'approve', 
+            'order'   => 'ASC', 
+            'orderby' => 'comment_date_gmt',
+            'user_id' =>$userid
+        );
+        $comments = get_comments( $args );
+        return $comments;
+    }
+
+    // return total number of solved tickets by user 
+    private function get_solved_tickets_by_userid($userid) {
+
+         $solved_array = get_posts(
+            array(
+                'showposts' => -1,
+                'post_type' => 'ticket',
+                'tax_query' => array(
+                    array(
+                        'taxonomy' => 'ticket_status',
+                        'field' => 'slug',
+                        'terms' => 'closed',
+                    )
+                ),
+                'meta_query' => array(
+                   array(
+                       'key' => 'agent',
+                       'value' => $userid,
+                       'compare' => '=',
+                   )
+               )
+            )
+            );
+            return count($solved_array); 
+
+    }
+
+    // return total number of reply/comment by user 
+    private function get_reply_count_by_userid($userid) {
+
+         $comments = $this->get_comments_by_userid($userid);
+         return count($comments);
+
+    }
+
+    // return Average first response time in selected period
+    private function first_response_time_selected_period($agents){
+        $data = $agent_detail = [];
+        $total_hours = $total_tickets = $avg_response_time = 0;
+        $period_value ='';
+
+        foreach ($agents as $agent) {
+            $agent_detail = $this->get_first_response_time_by_userid($agent['ID']);
+            $total_hours += $agent_detail['total_hours'];
+            $total_tickets += $agent_detail['total_ticket'];        
+
+        }
+        $avg_response_time = round($total_hours/$total_tickets,2);
+
+        if($avg_response_time < 2 ) {
+            $period_value = '0-1';
+        }else if($avg_response_time >=2 && $avg_response_time < 8 ){
+            $period_value = '1-8';
+        }else if($avg_response_time >=8 && $avg_response_time < 24 ){
+            $period_value = '8-24';
+        }else{
+            $period_value = '>24';
+        }
+
+
+
+        return (['total_hours'=>$total_hours,'period'=>$period_value,'total_tickets'=>$total_tickets, 'avg_response_time'=>$avg_response_time]);
+    }
+
+    // return avg, response time for user
+    private function get_first_response_time_by_userid($userid) {
+
+        $comments = $this->get_comments_by_userid($userid);
+        $comment = $first_comment = [];
+        $calculate_interval =0;
+        $total_tickets = 0;
+
+        
+        foreach ($comments as $key => $value) {
+            if (!in_array($value->comment_post_ID, $first_comment))
+            {
+                $first_comment[] = $value->comment_post_ID; 
+                $post_date = strtotime(get_the_time('Y-m-d H:i:s', $value->comment_post_ID));
+                $comment_date = strtotime($value->comment_date);
+                $interval = abs($comment_date - $post_date);
+                $days    = floor($interval / 86400);
+                $hours   = round($interval / ( 60 * 60 ),2);
+                $minutes = round($interval / ( 60 * 60 * 60));
+                $seconds = round($interval / ( 60 * 60 * 60 * 60 ));
+                $calculate_interval += $hours;
+
+
+                $comment[$value->comment_ID] = [
+                    'post_id' => $value->comment_post_ID,
+                    'posts_date' => get_the_time('Y-m-d H:i:s', $value->comment_post_ID),
+                    'comment_date' => date('Y-m-d H:i:s', strtotime($value->comment_date)),
+                    'interval'=> $hours
+                ];
+                $total_tickets ++;
+            }
+            
+        }
+
+
+        return ['data'=>$comment,'total_ticket'=>$total_tickets,'total_hours'=>$calculate_interval,'avg_response_time'=>round($calculate_interval / count($comment),1)];
+
+    
+    }
+
+    // return details of assigned agents
+    private function get_tickets_by_agents($agents = []) {
+        if(is_array($agents)) {
+
+            $ticket_by_agents =array();
+            foreach ($agents as $key => $agent) {
+               if($key == 'unassigned') {
+                  continue;
+               }
+               else{
+                 $user = get_user_by( 'email', $key );
+                 $ticket_by_agents[$key] = array(
+                    'ID'=>$user->ID,
+                    'email' => $agent['label'],
+                    'no_of_tickets_assigned' => $agent['value'],
+                    'displayname' => $user->display_name,
+                    'reply_count' => $this->get_reply_count_by_userid($user->ID),
+                    'solved'    => $this->get_solved_tickets_by_userid($user->ID),
+                    'avg_response_time' => $this->get_first_response_time_by_userid($user->ID)['avg_response_time']
+                 );
+                
+               }
+            }
+        }
+
+        return $ticket_by_agents;
+
+    }
+
+    // return busiest day time interval array
+    private function get_busiest_time_interval_array() {
+
+        $buseiest_day = [];
+        $count=0;
+        for($i=0;$i<24;$i+=2) {
+            
+            $buseiest_day[$count++] = $i.','.($i+2);
+            
+        }
+
+        return $buseiest_day;
+
+    }
+
+    // return busiest day time interval by hour
+    private function get_busiest_time_interval_by_hours($hours) {
+
+        $buseiest_day = $this->get_busiest_time_interval_array();
+        
+        foreach ($buseiest_day as $key => $value) {
+            $val = explode(",", $value);
+            if ( in_array($hours, range($val[0], $val[1])) ) {
+                return $val[0].'-'.$val[1];
+            }
+        }
+
+    
+                
+    }
+
 }

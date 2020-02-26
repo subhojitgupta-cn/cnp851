@@ -10,7 +10,7 @@ class Kong_Helpdesk_FAQ_Post_Type extends Kong_Helpdesk
      * @author CN
      * @version 1.0.0
      * @since   1.0.0
-     * @link    https://plugins.db-dzine.com
+     * 
      * @param [type] $plugin_name [description]
      * @param [type] $version     [description]
      */
@@ -26,7 +26,7 @@ class Kong_Helpdesk_FAQ_Post_Type extends Kong_Helpdesk
      * @author CN
      * @version 1.0.0
      * @since   1.0.0
-     * @link    https://plugins.db-dzine.com
+     * 
      * @return [type] [description]
      */
     public function init()
@@ -58,7 +58,7 @@ class Kong_Helpdesk_FAQ_Post_Type extends Kong_Helpdesk
      * @author CN
      * @version 1.0.0
      * @since   1.0.0
-     * @link    https://plugins.db-dzine.com
+     * 
      * @param  [type] $atts [description]
      * @return [type]       [description]
      */
@@ -166,7 +166,6 @@ class Kong_Helpdesk_FAQ_Post_Type extends Kong_Helpdesk
      * @author CN
      * @version 1.0.0
      * @since   1.0.0
-     * @link    https://plugins.db-dzine.com
      * @param   [type]                       $topic    [description]
      * @param   [type]                       $columns  [description]
      * @param   [type]                       $max_faqs [description]
@@ -245,8 +244,7 @@ class Kong_Helpdesk_FAQ_Post_Type extends Kong_Helpdesk
      * @author CN
      * @version 1.0.0
      * @since   1.0.0
-     * @link    https://plugins.db-dzine.com
-     * @return  [type]                       [description]
+     * @param   [type]                       [description]
      */
     private function get_search()
     {
@@ -287,7 +285,7 @@ class Kong_Helpdesk_FAQ_Post_Type extends Kong_Helpdesk
      * @author CN
      * @version 1.0.0
      * @since   1.0.0
-     * @link    https://plugins.db-dzine.com
+     * 
      * @param  [type] $atts [description]
      * @return [type]       [description]
      */
@@ -359,7 +357,7 @@ class Kong_Helpdesk_FAQ_Post_Type extends Kong_Helpdesk
      * @author CN
      * @version 1.0.0
      * @since   1.0.0
-     * @link    https://plugins.db-dzine.com
+     * 
      * @param  [type] $atts [description]
      * @return [type]       [description]
      */
@@ -530,8 +528,7 @@ class Kong_Helpdesk_FAQ_Post_Type extends Kong_Helpdesk
      * @author CN
      * @version 1.0.0
      * @since   1.0.0
-     * @link    https://plugins.db-dzine.com
-     * @return  [type]                       [description]
+     * @param   [type]                       [description]
      */
     public function register_faq_post_type()
     {
@@ -597,8 +594,7 @@ class Kong_Helpdesk_FAQ_Post_Type extends Kong_Helpdesk
      * @author CN
      * @version 1.0.0
      * @since   1.0.0
-     * @link    https://plugins.db-dzine.com
-     * @return  [type]                       [description]
+     * @param   [type]                       [description]
      */
     public function register_faq_taxonomy()
     {
@@ -652,8 +648,7 @@ class Kong_Helpdesk_FAQ_Post_Type extends Kong_Helpdesk
      * @author CN
      * @version 1.0.0
      * @since   1.0.0
-     * @link    https://plugins.db-dzine.com
-     * @return  [type]                       [description]
+     * @param   [type]                       [description]
      */
     public function show_copy_button()
     {
@@ -684,8 +679,7 @@ class Kong_Helpdesk_FAQ_Post_Type extends Kong_Helpdesk
      * @author CN
      * @version 1.0.0
      * @since   1.0.0
-     * @link    https://plugins.db-dzine.com
-     * @return  [type]                       [description]
+     * @param   [type]                       [description]
      */
     public function copy_ticket_to_faq()
     {
@@ -720,7 +714,7 @@ class Kong_Helpdesk_FAQ_Post_Type extends Kong_Helpdesk
      * @author CN
      * @version 1.0.0
      * @since   1.0.0
-     * @link    https://plugins.db-dzine.com
+     * 
      */
     public function add_custom_meta_fields()
     {
@@ -745,8 +739,7 @@ class Kong_Helpdesk_FAQ_Post_Type extends Kong_Helpdesk
      * @author CN
      * @version 1.0.0
      * @since   1.0.0
-     * @link    https://plugins.db-dzine.com
-     * @return  [type]                       [description]
+     * @param   [type]                       [description]
      */
     public function ajax_search_faqs()
     {
@@ -840,8 +833,7 @@ class Kong_Helpdesk_FAQ_Post_Type extends Kong_Helpdesk
      * @author CN
      * @version 1.0.0
      * @since   1.0.0
-     * @link    https://plugins.db-dzine.com
-     * @return  [type]                       [description]
+     * @param   [type]                       [description]
      */
     public function count_views()
     {
@@ -876,7 +868,6 @@ class Kong_Helpdesk_FAQ_Post_Type extends Kong_Helpdesk
      * @author CN
      * @version 1.0.0
      * @since   1.0.0
-     * @link    https://plugins.db-dzine.com
      * @param   [type]                       $template [description]
      * @return  [type]                                 [description]
      */
@@ -944,9 +935,8 @@ class Kong_Helpdesk_FAQ_Post_Type extends Kong_Helpdesk
      * Count FAQ likes and save likes into faq_likes meta key
      * @author CN
      * @version 1.1.0
-     * @since   1.0.0
-     * @link    https://plugins.db-dzine.com
-     * @return  [type]                       [description]
+* @since   1.0.0
+     * @param   [type]                       [description]
      */
     public function count_likes()
     {
@@ -1001,7 +991,7 @@ class Kong_Helpdesk_FAQ_Post_Type extends Kong_Helpdesk
      * @author CN
      * @version 1.0.0
      * @since   1.1.0
-     * @link    https://plugins.db-dzine.com
+     * 
      * @return  [type]                       [description]
      */
     public function count_dislikes()
@@ -1058,7 +1048,7 @@ class Kong_Helpdesk_FAQ_Post_Type extends Kong_Helpdesk
      * @author CN
      * @version 1.0.0
      * @since   1.1.0
-     * @link    https://plugins.db-dzine.com
+     * 
      * @return  [type]                       [description]
      */
     public function only_logged_in($content)

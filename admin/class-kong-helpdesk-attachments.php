@@ -28,7 +28,7 @@ class Kong_Helpdesk_Attachments extends Kong_Helpdesk
      * @author CN
      * @version 1.0.0
      * @since   1.0.0
-     * @link    https://plugins.db-dzine.com
+     * 
      * @return [type] [description]
      */
     public function init()

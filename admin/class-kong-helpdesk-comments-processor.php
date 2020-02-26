@@ -56,7 +56,7 @@ class Kong_Helpdesk_Comments_Processor extends Kong_Helpdesk
      * @author CN
      * @version 1.0.0
      * @since   1.0.0
-     * @link    https://plugins.db-dzine.com
+     * 
      * @return [type] [description]
      */
     public function init()
@@ -70,7 +70,7 @@ class Kong_Helpdesk_Comments_Processor extends Kong_Helpdesk
      * @author CN
      * @version 1.0.0
      * @since   1.0.0
-     * @link    https://plugins.db-dzine.com
+     * 
      * @param  [type] $data [description]
      * @param  [type] $type [description]
      * @return [type]       [description]
@@ -98,7 +98,7 @@ class Kong_Helpdesk_Comments_Processor extends Kong_Helpdesk
      * @author CN
      * @version 1.0.0
      * @since   1.0.0
-     * @link    https://plugins.db-dzine.com
+     * 
      * @param  [type] $data [description]
      * @param  [type] $type [description]
      * @return [type]       [description]
@@ -168,7 +168,7 @@ class Kong_Helpdesk_Comments_Processor extends Kong_Helpdesk
      * @author CN
      * @version 1.0.0
      * @since   1.0.0
-     * @link    https://plugins.db-dzine.com
+     * 
      * @param  [type] $data [description]
      * @return [type]       [description]
      */
@@ -204,7 +204,7 @@ class Kong_Helpdesk_Comments_Processor extends Kong_Helpdesk
      * @author CN
      * @version 1.0.0
      * @since   1.0.0
-     * @link    https://plugins.db-dzine.com
+     * 
      * @param  [type] $commentdata [description]
      * @return [type]              [description]
      */
@@ -237,7 +237,6 @@ class Kong_Helpdesk_Comments_Processor extends Kong_Helpdesk
      * @author CN
      * @version 1.0.0
      * @since   1.0.0
-     * @link    https://plugins.db-dzine.com
      * @param   [type]                       $comment_id      [description]
      * @param   [type]                       $comment [description]
      * @return  [type]                                [description]
@@ -269,7 +268,7 @@ class Kong_Helpdesk_Comments_Processor extends Kong_Helpdesk
      * @author CN
      * @version 1.0.0
      * @since   1.0.0
-     * @link    https://plugins.db-dzine.com
+     * 
      * @param  [type] $userName [description]
      * @param  [type] $userMail [description]
      * @return [type]           [description]
@@ -294,7 +293,7 @@ class Kong_Helpdesk_Comments_Processor extends Kong_Helpdesk
      * @author CN
      * @version 1.0.0
      * @since   1.0.0
-     * @link    https://plugins.db-dzine.com
+     * 
      * @param  [type] $userName [description]
      * @param  [type] $userMail [description]
      * @return [type]           [description]

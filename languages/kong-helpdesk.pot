@@ -721,7 +721,7 @@ msgid "Enable"
 msgstr ""
 
 #: admin/options-init.php:128
-msgid "Enable TotalDesk."
+msgid "Enable Helpdesk."
 msgstr ""
 
 #: admin/options-init.php:134
@@ -2491,7 +2491,7 @@ msgid "Agent: %s"
 msgstr ""
 
 #. Name of the plugin
-msgid "Kong TotalDesk"
+msgid "Kong Helpdesk"
 msgstr ""
 
 #. Description of the plugin

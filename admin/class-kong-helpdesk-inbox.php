@@ -16,7 +16,6 @@ class Kong_Helpdesk_Inbox extends Kong_Helpdesk
      * @author CN
      * @version 1.0.0
      * @since   1.0.0
-     * @link    https://plugins.db-dzine.com
      * @param   [type]                       $plugin_name       [description]
      * @param   [type]                       $version           [description]
      * @param   [type]                       $ticket_processor  [description]
@@ -35,8 +34,7 @@ class Kong_Helpdesk_Inbox extends Kong_Helpdesk
      * @author CN
      * @version 1.0.0
      * @since   1.0.0
-     * @link    https://plugins.db-dzine.com
-     * @return  [type]                       [description]
+     * @param   [type]                       [description]
      */
     public function init()
     {
@@ -108,8 +106,7 @@ class Kong_Helpdesk_Inbox extends Kong_Helpdesk
      * @author CN
      * @version 1.0.0
      * @since   1.0.0
-     * @link    https://plugins.db-dzine.com
-     * @return  [type]                       [description]
+     * @param   [type]                       [description]
      */
     public function setupMailbox()
     {
@@ -147,8 +144,7 @@ class Kong_Helpdesk_Inbox extends Kong_Helpdesk
      * @author CN
      * @version 1.0.0
      * @since   1.0.0
-     * @link    https://plugins.db-dzine.com
-     * @return  [type]                       [description]
+     * @param   [type]                       [description]
      */
     public function test_inbox()
     {
@@ -171,8 +167,7 @@ class Kong_Helpdesk_Inbox extends Kong_Helpdesk
      * @author CN
      * @version 1.0.0
      * @since   1.0.0
-     * @link    https://plugins.db-dzine.com
-     * @return  [type]                       [description]
+     * @param   [type]                       [description]
      */
     public function get_folders()
     {
@@ -205,8 +200,7 @@ class Kong_Helpdesk_Inbox extends Kong_Helpdesk
      * @author CN
      * @version 1.0.0
      * @since   1.0.0
-     * @link    https://plugins.db-dzine.com
-     * @return  [type]                       [description]
+     * @param   [type]                       [description]
      */
     protected function checkInbox()
     {
@@ -248,8 +242,7 @@ class Kong_Helpdesk_Inbox extends Kong_Helpdesk
      * @author CN
      * @version 1.0.0
      * @since   1.0.0
-     * @link    https://plugins.db-dzine.com
-     * @return  [type]                       [description]
+     * @param   [type]                       [description]
      */
     protected function getUnseenMails()
     {
@@ -261,7 +254,6 @@ class Kong_Helpdesk_Inbox extends Kong_Helpdesk
      * @author CN
      * @version 1.0.0
      * @since   1.0.0
-     * @link    https://plugins.db-dzine.com
      * @param   [type]                       $mail [description]
      * @return  boolean                            [description]
      */
@@ -288,7 +280,6 @@ class Kong_Helpdesk_Inbox extends Kong_Helpdesk
      * @author CN
      * @version 1.0.0
      * @since   1.0.0
-     * @link    https://plugins.db-dzine.com
      * @param   [type]                       $mail [description]
      * @return  [type]                             [description]
      */
@@ -353,7 +344,6 @@ class Kong_Helpdesk_Inbox extends Kong_Helpdesk
      * @author CN
      * @version 1.0.0
      * @since   1.0.0
-     * @link    https://plugins.db-dzine.com
      * @param   [type]                       $mail   [description]
      * @param   [type]                       $post_id [description]
      * @return  [type]                               [description]
@@ -406,7 +396,6 @@ class Kong_Helpdesk_Inbox extends Kong_Helpdesk
      * @author CN
      * @version 1.0.0
      * @since   1.0.0
-     * @link    https://plugins.db-dzine.com
      * @param   [type]                       $mail   [description]
      * @param   [type]                       $post_id [description]
      * @return  [type]                               [description]
@@ -448,7 +437,6 @@ class Kong_Helpdesk_Inbox extends Kong_Helpdesk
      * @author CN
      * @version 1.0.0
      * @since   1.0.0
-     * @link    https://plugins.db-dzine.com
      * @param   [type]                       $mail   [description]
      * @param   [type]                       $post_id [description]
      * @return  [type]                               [description]
@@ -481,7 +469,6 @@ class Kong_Helpdesk_Inbox extends Kong_Helpdesk
      * @author CN
      * @version 1.0.0
      * @since   1.0.0
-     * @link    https://plugins.db-dzine.com
      * @param   [type]                       $mail       [description]
      * @param   [type]                       $post_id     [description]
      * @param   boolean                      $comment_id [description]

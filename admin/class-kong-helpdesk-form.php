@@ -10,7 +10,6 @@ class Kong_Helpdesk_Form extends Kong_Helpdesk
      * @author CN
      * @version 1.0.0
      * @since   1.0.0
-     * @link    https://plugins.db-dzine.com
      * @param   [type]                       $plugin_name      [description]
      * @param   [type]                       $version          [description]
      * @param   [type]                       $ticket_processor [description]
@@ -27,8 +26,7 @@ class Kong_Helpdesk_Form extends Kong_Helpdesk
      * @author CN
      * @version 1.0.0
      * @since   1.0.0
-     * @link    https://plugins.db-dzine.com
-     * @return  [type]                       [description]
+     * @param   [type]                       [description]
      */
     public function init()
     {
@@ -44,7 +42,6 @@ class Kong_Helpdesk_Form extends Kong_Helpdesk
      * @author CN
      * @version 1.0.0
      * @since   1.0.0
-     * @link    https://plugins.db-dzine.com
      * @param   [type]                       $atts [description]
      * @return  [type]                             [description]
      */
@@ -213,8 +210,7 @@ class Kong_Helpdesk_Form extends Kong_Helpdesk
      * @author CN
      * @version 1.0.0
      * @since   1.0.0
-     * @link    https://plugins.db-dzine.com
-     * @return  [type]                       [description]
+     * @param   [type]                       [description]
      */
     public function get_woo_form_types()
     {
@@ -257,8 +253,7 @@ class Kong_Helpdesk_Form extends Kong_Helpdesk
      * @author CN
      * @version 1.0.0
      * @since   1.0.0
-     * @link    https://plugins.db-dzine.com
-     * @return  [type]                       [description]
+     * @param   [type]                       [description]
      */
     private function getUsernameField()
     {
@@ -273,8 +268,7 @@ class Kong_Helpdesk_Form extends Kong_Helpdesk
      * @author CN
      * @version 1.0.0
      * @since   1.0.0
-     * @link    https://plugins.db-dzine.com
-     * @return  [type]                       [description]
+     * @param   [type]                       [description]
      */
     private function getEmailField()
     {
@@ -289,8 +283,7 @@ class Kong_Helpdesk_Form extends Kong_Helpdesk
      * @author CN
      * @version 1.0.0
      * @since   1.0.0
-     * @link    https://plugins.db-dzine.com
-     * @return  [type]                       [description]
+     * @param   [type]                       [description]
      */
     private function getSubjectField()
     {
@@ -306,8 +299,7 @@ class Kong_Helpdesk_Form extends Kong_Helpdesk
      * @author CN
      * @version 1.0.0
      * @since   1.0.0
-     * @link    https://plugins.db-dzine.com
-     * @return  [type]                       [description]
+     * @param   [type]                       [description]
      */
     private function getProductsSubjectField()
     {
@@ -324,8 +316,7 @@ class Kong_Helpdesk_Form extends Kong_Helpdesk
      * @author CN
      * @version 1.0.0
      * @since   1.0.0
-     * @link    https://plugins.db-dzine.com
-     * @return  [type]                       [description]
+     * @param   [type]                       [description]
      */
     private function getMessageField()
     {
@@ -348,8 +339,7 @@ class Kong_Helpdesk_Form extends Kong_Helpdesk
      * @author CN
      * @version 1.0.0
      * @since   1.0.0
-     * @link    https://plugins.db-dzine.com
-     * @return  [type]                       [description]
+     * @param   [type]                       [description]
      */
     private function getDepartmentField($type, $defaultDepartments)
     {
@@ -383,8 +373,7 @@ class Kong_Helpdesk_Form extends Kong_Helpdesk
      * @author CN
      * @version 1.0.0
      * @since   1.0.0
-     * @link    https://plugins.db-dzine.com
-     * @return  [type]                       [description]
+     * @param   [type]                       [description]
      */
     private function getPriorityField($type, $defaultPriorities)
     {
@@ -418,8 +407,7 @@ class Kong_Helpdesk_Form extends Kong_Helpdesk
      * @author CN
      * @version 1.0.0
      * @since   1.0.0
-     * @link    https://plugins.db-dzine.com
-     * @return  [type]                       [description]
+     * @param   [type]                       [description]
      */
     private function getTypesField($type, $defaultTypes)
     {
@@ -453,8 +441,7 @@ class Kong_Helpdesk_Form extends Kong_Helpdesk
      * @author CN
      * @version 1.0.0
      * @since   1.0.0
-     * @link    https://plugins.db-dzine.com
-     * @return  [type]                       [description]
+     * @param   [type]                       [description]
      */
     private function getOrderField($type)
     {
@@ -488,8 +475,7 @@ class Kong_Helpdesk_Form extends Kong_Helpdesk
      * @author CN
      * @version 1.0.0
      * @since   1.0.0
-     * @link    https://plugins.db-dzine.com
-     * @return  [type]                       [description]
+     * @param   [type]                       [description]
      */
     private function getOrderSubjectField($type)
     {   
@@ -522,8 +508,7 @@ class Kong_Helpdesk_Form extends Kong_Helpdesk
      * @author CN
      * @version 1.0.0
      * @since   1.0.0
-     * @link    https://plugins.db-dzine.com
-     * @return  [type]                       [description]
+     * @param   [type]                       [description]
      */
     private function getProductsField($type)
     {
@@ -562,8 +547,7 @@ class Kong_Helpdesk_Form extends Kong_Helpdesk
      * @author CN
      * @version 1.0.0
      * @since   1.0.0
-     * @link    https://plugins.db-dzine.com
-     * @return  [type]                       [description]
+     * @param   [type]                       [description]
      */
     private function getPurchaseCodeField($type)
     {
@@ -582,8 +566,7 @@ class Kong_Helpdesk_Form extends Kong_Helpdesk
      * @author CN
      * @version 1.0.0
      * @since   1.0.0
-     * @link    https://plugins.db-dzine.com
-     * @return  [type]                       [description]
+     * @param   [type]                       [description]
      */
     private function getEnvatoItemsField($type)
     {
@@ -610,8 +593,7 @@ class Kong_Helpdesk_Form extends Kong_Helpdesk
      * @author CN
      * @version 1.0.0
      * @since   1.0.0
-     * @link    https://plugins.db-dzine.com
-     * @return  [type]                       [description]
+     * @param   [type]                       [description]
      */
     private function getEnvatoItems()
     {
@@ -638,8 +620,7 @@ class Kong_Helpdesk_Form extends Kong_Helpdesk
      * @author CN
      * @version 1.0.0
      * @since   1.0.0
-     * @link    https://plugins.db-dzine.com
-     * @return  [type]                       [description]
+     * @param   [type]                       [description]
      */
     private function getWebsiteURLField($type)
     {
@@ -658,8 +639,7 @@ class Kong_Helpdesk_Form extends Kong_Helpdesk
      * @author CN
      * @version 1.0.0
      * @since   1.0.0
-     * @link    https://plugins.db-dzine.com
-     * @return  [type]                       [description]
+     * @param   [type]                       [description]
      */
     private function getAttachmentsField($type)
     {

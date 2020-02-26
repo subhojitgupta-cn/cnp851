@@ -25,7 +25,7 @@ class Kong_Helpdesk_Defaults extends Kong_Helpdesk
      * @author CN
      * @version 1.0.0
      * @since   1.0.0
-     * @link    https://plugins.db-dzine.com
+     * 
      * @return [type] [description]
      */
     public function init()
@@ -39,7 +39,7 @@ class Kong_Helpdesk_Defaults extends Kong_Helpdesk
      * @author CN
      * @version 1.0.0
      * @since   1.0.0
-     * @link    https://plugins.db-dzine.com
+     * 
      * @param [type] $new_status [description]
      * @param [type] $old_status [description]
      * @param [type] $post       [description]

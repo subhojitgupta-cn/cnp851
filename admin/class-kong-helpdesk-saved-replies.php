@@ -10,7 +10,6 @@ class Kong_Helpdesk_Saved_Replies_Post_Type extends Kong_Helpdesk
      * @author CN
      * @version 1.0.0
      * @since   1.0.0
-     * @link    https://plugins.db-dzine.com
      * @param   [type]                       $plugin_name [description]
      * @param   [type]                       $version     [description]
      * @param   [type]                       $stop_words  [description]
@@ -30,8 +29,7 @@ class Kong_Helpdesk_Saved_Replies_Post_Type extends Kong_Helpdesk
      * @author CN
      * @version 1.0.0
      * @since   1.0.0
-     * @link    https://plugins.db-dzine.com
-     * @return  [type]                       [description]
+     * @param   [type]                       [description]
      */
     public function init()
     {
@@ -51,8 +49,7 @@ class Kong_Helpdesk_Saved_Replies_Post_Type extends Kong_Helpdesk
      * @author CN
      * @version 1.0.0
      * @since   1.0.0
-     * @link    https://plugins.db-dzine.com
-     * @return  [type]                       [description]
+     * @param   [type]                       [description]
      */
     public function get_saved_replies()
     {
@@ -107,8 +104,7 @@ class Kong_Helpdesk_Saved_Replies_Post_Type extends Kong_Helpdesk
      * @author CN
      * @version 1.0.0
      * @since   1.0.0
-     * @link    https://plugins.db-dzine.com
-     * @return  [type]                       [description]
+     * @param   [type]                       [description]
      */
     public function get_saved_reply()
     {
@@ -136,8 +132,7 @@ class Kong_Helpdesk_Saved_Replies_Post_Type extends Kong_Helpdesk
      * @author CN
      * @version 1.0.0
      * @since   1.0.0
-     * @link    https://plugins.db-dzine.com
-     * @return  [type]                       [description]
+     * @param   [type]                       [description]
      */
     public function register_saved_reply_post_type()
     {
@@ -198,8 +193,7 @@ class Kong_Helpdesk_Saved_Replies_Post_Type extends Kong_Helpdesk
      * @author CN
      * @version 1.0.0
      * @since   1.0.0
-     * @link    https://plugins.db-dzine.com
-     * @return  [type]                       [description]
+     * @param   [type]                       [description]
      */
     public function register_saved_reply_taxonomy()
     {
@@ -284,7 +278,6 @@ class Kong_Helpdesk_Saved_Replies_Post_Type extends Kong_Helpdesk
      * @author CN
      * @version 1.0.0
      * @since   1.0.0
-     * @link    https://plugins.db-dzine.com
      * @param   [type]                       $array   [description]
      * @param   [type]                       $comment [description]
      * @return  [type]                                [description]
@@ -317,8 +310,7 @@ class Kong_Helpdesk_Saved_Replies_Post_Type extends Kong_Helpdesk
      * @author CN
      * @version 1.0.0
      * @since   1.0.0
-     * @link    https://plugins.db-dzine.com
-     * @return  [type]                       [description]
+     * @param   [type]                       [description]
      */
     public function copy_comment_to_saved_reply()
     {

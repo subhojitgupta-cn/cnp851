@@ -26,7 +26,7 @@ class Kong_Helpdesk_Exporter extends Kong_Helpdesk
      * @author CN
      * @version 1.0.0
      * @since   1.0.0
-     * @link    https://plugins.db-dzine.com
+     * 
      * @return [type] [description]
      */
     public function init()
@@ -61,7 +61,7 @@ class Kong_Helpdesk_Exporter extends Kong_Helpdesk
      * @author CN
      * @version 1.0.0
      * @since   1.0.0
-     * @link    https://plugins.db-dzine.com
+     * 
      * @return [type] [description]
      */
     public function get_tickets()
@@ -140,7 +140,6 @@ class Kong_Helpdesk_Exporter extends Kong_Helpdesk
      * @author CN
      * @version 1.0.0
      * @since   1.0.0
-     * @link    https://plugins.db-dzine.com
      * @param   [type]                       $tickets [description]
      * @return  [type]                                [description]
      */
@@ -254,7 +253,7 @@ class Kong_Helpdesk_Exporter extends Kong_Helpdesk
      * @author CN
      * @version 1.0.0
      * @since   1.0.0
-     * @link    https://plugins.db-dzine.com
+     * 
      * @return [type] [description]
      */
     public function notice()
