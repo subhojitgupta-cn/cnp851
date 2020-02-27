@@ -118,10 +118,9 @@ class Kong_Helpdesk_Reports extends Kong_Helpdesk
             $args['date_query'] = $date_query;
         }
 
-        $tickets = get_posts($args);
-
-
-
+        $tickets = get_posts( $args);
+         
+       
 
         $years = array();
         $months = array('01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12');
@@ -163,7 +162,10 @@ class Kong_Helpdesk_Reports extends Kong_Helpdesk
         $ticketsBySource = array();
         $ticketsByagents = array();
         $ticketsByweekdays = array();
-
+        $ticket_ids = array();
+        $ticket_ids = wp_list_pluck( $tickets, 'ID' );
+        
+        
         foreach ($tickets as $ticket) {
             $d = new DateTime($ticket->post_date);
             $year_created = $d->format('Y');
@@ -281,17 +283,26 @@ class Kong_Helpdesk_Reports extends Kong_Helpdesk
         $ticketsByPriority = $this->get_tickets_by_priority();
 
         // tickets by department
-        $ticketsBySystem = $this->get_tickets_by_system();
+        $ticketsBySystem = $this->get_tickets_by_system($ticket_ids);
+        echo '#department';
+        //print_r($ticketsBySystem);
+        
         // tickets by agents
-        $ticketsByagents = $this->get_tickets_by_agents($ticketsAssignedToAgent);
+        $except= ''; // unassigned;
+        $ticketsByagents = $this->get_tickets_by_agents($ticketsAssignedToAgent , $ticket_ids,$except);
+        echo '#agents';
+        //print_r($ticketsByagents);
 
         // Time to first reply graph
-        $timeto_first_reply_response = $this->first_response_time_selected_period($ticketsByagents);
-        
-        print_r($ticketsByweekdays);
+        $timeto_first_reply_response = $this->first_response_time_selected_period($ticketsByagents,$ticket_ids);
+        echo '#firstreplygraph';
+        //print_r($timeto_first_reply_response);
 
+        //weekdayreport
+        echo '#weekdayreport';
+        $buseiest_day_response = $this->get_busiest_time_by_agents($ticketsByagents,$ticket_ids);
+        //print_r($buseiest_day_response);
         
-
         ?>
        
         <div class="wrap">
@@ -526,19 +537,22 @@ class Kong_Helpdesk_Reports extends Kong_Helpdesk
      * @author CN
      * @version 1.0.0
      * @since   1.0.0
-     * @return  [type]                       [description]
      */
-    private function get_tickets_by_system()
+    private function get_tickets_by_system($ticket_ids)
     {
+        
         $ticketsBySystems = array();
-        $systems = get_terms('ticket_system', array('hide_empty' => false));
-        foreach ($systems as $system) {
-            $ticketsBySystems[$system->term_id] = array(
-                'label' => $system->name,
-                'value' => $system->count,
-            );
+        foreach($ticket_ids as $ticketid) {
+            
+            $term_list = wp_get_post_terms( $ticketid, 'ticket_system', array( 'fields' => 'all' ) );
+            foreach ($term_list as $key=>$val) {
+                $count = 1;
+                if(isset($ticketsBySystems[$val->term_id])) {
+                    $count = $ticketsBySystems[$val->term_id]['count']+1;
+                }
+                  $ticketsBySystems[$val->term_id]= array('label'=>$val->name,'count'=>$count);
+              }
         }
-
         return $ticketsBySystems;
     }
 
@@ -558,24 +572,26 @@ class Kong_Helpdesk_Reports extends Kong_Helpdesk
     }
 
     // return comments by userid 
-    private function get_comments_by_userid($userid) {
+    private function get_comments_by_userid($userid ,$ticket_ids) {
         $args = array(
             'comment_status' => 'approve',
             'status'  => 'approve', 
             'order'   => 'ASC', 
             'orderby' => 'comment_date_gmt',
-            'user_id' =>$userid
+            'user_id' =>$userid,
+            'post__in' => $ticket_ids
         );
         $comments = get_comments( $args );
         return $comments;
     }
 
     // return total number of solved tickets by user 
-    private function get_solved_tickets_by_userid($userid) {
+    private function get_solved_tickets_by_userid($userid , $ticket_ids) {
 
          $solved_array = get_posts(
             array(
                 'showposts' => -1,
+                'post__in' => $ticket_ids,
                 'post_type' => 'ticket',
                 'tax_query' => array(
                     array(
@@ -598,55 +614,99 @@ class Kong_Helpdesk_Reports extends Kong_Helpdesk
     }
 
     // return total number of reply/comment by user 
-    private function get_reply_count_by_userid($userid) {
+    private function get_reply_count_by_userid($userid , $ticket_ids) {
 
-         $comments = $this->get_comments_by_userid($userid);
+         $comments = $this->get_comments_by_userid($userid , $ticket_ids);
          return count($comments);
 
     }
 
     // return Average first response time in selected period
-    private function first_response_time_selected_period($agents){
+    private function first_response_time_selected_period($agents , $ticket_ids){
         $data = $agent_detail = [];
-        $total_hours = $total_tickets = $avg_response_time = 0;
+        $total_hours = $total_comment = $avg_response_time = 0;
         $period_value ='';
 
-        foreach ($agents as $agent) {
-            $agent_detail = $this->get_first_response_time_by_userid($agent['ID']);
-            $total_hours += $agent_detail['total_hours'];
-            $total_tickets += $agent_detail['total_ticket'];        
+        if(!empty($agents)) {
+            foreach ($agents as $agent) {
+                $agent_detail = $this->get_first_response_time_by_userid($agent['ID'],$ticket_ids);
+                $total_hours += $agent_detail['total_hours'];
+                $total_comment += $agent_detail['total_comment'];        
 
+            }
+            $avg_response_time = round($total_hours/$total_comment,2);
+
+            if($avg_response_time < 2 ) {
+                $period_value = '0-1';
+            }else if($avg_response_time >=2 && $avg_response_time < 8 ){
+                $period_value = '1-8';
+            }else if($avg_response_time >=8 && $avg_response_time < 24 ){
+                $period_value = '8-24';
+            }else{
+                $period_value = '>24';
+            }
         }
-        $avg_response_time = round($total_hours/$total_tickets,2);
-
-        if($avg_response_time < 2 ) {
-            $period_value = '0-1';
-        }else if($avg_response_time >=2 && $avg_response_time < 8 ){
-            $period_value = '1-8';
-        }else if($avg_response_time >=8 && $avg_response_time < 24 ){
-            $period_value = '8-24';
-        }else{
-            $period_value = '>24';
-        }
 
 
 
-        return (['total_hours'=>$total_hours,'period'=>$period_value,'total_tickets'=>$total_tickets, 'avg_response_time'=>$avg_response_time]);
+        return (['total_hours'=>$total_hours,'period'=>$period_value,'total_comment'=>$total_comment, 'avg_response_time'=>$avg_response_time]);
     }
 
-    // return avg, response time for user
-    private function get_first_response_time_by_userid($userid) {
+    // return avg response time for first response of user
+    private function get_first_response_time_by_userid($userid ,$ticket_ids) {
 
-        $comments = $this->get_comments_by_userid($userid);
+        $comments = $this->get_comments_by_userid($userid , $ticket_ids);
         $comment = $first_comment = [];
-        $calculate_interval =0;
+        $calculate_interval = $avg_response_time = 0;
         $total_tickets = 0;
 
-        
-        foreach ($comments as $key => $value) {
-            if (!in_array($value->comment_post_ID, $first_comment))
-            {
-                $first_comment[] = $value->comment_post_ID; 
+        if(!empty($comments)) {
+            foreach ($comments as $key => $value) {
+                if (!in_array($value->comment_post_ID, $first_comment))
+                {
+                    $first_comment[] = $value->comment_post_ID; 
+                    $post_date = strtotime(get_the_time('Y-m-d H:i:s', $value->comment_post_ID));
+                    $comment_date = strtotime($value->comment_date);
+                    $interval = abs($comment_date - $post_date);
+                    $days    = floor($interval / 86400);
+                    $hours   = round($interval / ( 60 * 60 ),2);
+                    $minutes = round($interval / ( 60 * 60 * 60));
+                    $seconds = round($interval / ( 60 * 60 * 60 * 60 ));
+                    $calculate_interval += $hours;
+
+
+                    $comment[$value->comment_ID] = [
+                        'post_id' => $value->comment_post_ID,
+                        'posts_date' => get_the_time('Y-m-d H:i:s', $value->comment_post_ID),
+                        'comment_date' => date('Y-m-d H:i:s', strtotime($value->comment_date)),
+                        'comment_time_hours' => date('H', strtotime($value->comment_date)),
+                        'comment_weekday_hours' => date('D', strtotime($value->comment_date)),
+                        'interval'=> $hours
+                    ];
+                    $total_tickets ++;
+                }
+                
+            }
+            $avg_response_time = round($calculate_interval / count($comment),2);
+        }
+
+       
+
+        return ['data'=>$comment,'total_comment'=>$total_tickets,'total_hours'=>$calculate_interval,'avg_response_time'=>$avg_response_time];
+
+    
+    }
+
+    // return avg, response time for all response of user
+    private function get_response_time_by_userid($userid ,$ticket_ids) {
+
+        $comments = $this->get_comments_by_userid($userid , $ticket_ids);
+        $comment =  [];
+        $calculate_interval = $avg_response_time = 0;
+        $total_tickets = 0;
+
+        if(!empty($comments)) {
+            foreach ($comments as $key => $value) {
                 $post_date = strtotime(get_the_time('Y-m-d H:i:s', $value->comment_post_ID));
                 $comment_date = strtotime($value->comment_date);
                 $interval = abs($comment_date - $post_date);
@@ -655,47 +715,96 @@ class Kong_Helpdesk_Reports extends Kong_Helpdesk
                 $minutes = round($interval / ( 60 * 60 * 60));
                 $seconds = round($interval / ( 60 * 60 * 60 * 60 ));
                 $calculate_interval += $hours;
-
-
                 $comment[$value->comment_ID] = [
                     'post_id' => $value->comment_post_ID,
                     'posts_date' => get_the_time('Y-m-d H:i:s', $value->comment_post_ID),
                     'comment_date' => date('Y-m-d H:i:s', strtotime($value->comment_date)),
+                    'comment_time_hours' => date('H', strtotime($value->comment_date)),
+                    'comment_weekday_hours' => date('D', strtotime($value->comment_date)),
                     'interval'=> $hours
                 ];
                 $total_tickets ++;
             }
-            
+            $avg_response_time = round($calculate_interval / count($comment),2);
         }
 
+       
 
-        return ['data'=>$comment,'total_ticket'=>$total_tickets,'total_hours'=>$calculate_interval,'avg_response_time'=>round($calculate_interval / count($comment),1)];
+        return ['data'=>$comment,'total_comment'=>$total_tickets,'total_hours'=>$calculate_interval,'avg_response_time'=>$avg_response_time];
 
     
     }
 
-    // return details of assigned agents
-    private function get_tickets_by_agents($agents = []) {
-        if(is_array($agents)) {
+    // return avg, response time for user
+    private function get_busiest_time_by_agents($agents ,$ticket_ids) {
+        $weekdays = ['Mon','Tue','Wed','Thu','Fri','Sat','Sun'];
+        $times = $this->get_busiest_time_interval_array();
+        $busiest_days = [];
+        foreach($weekdays as $week) {
+            $busiest_days[$week] = $times;
+        }
+       
+        if(!empty($agents)) {
+            foreach ($agents as $agent) {
+                $count =1;
+                $agent_detail = $this->get_response_time_by_userid($agent['ID'],$ticket_ids);
+                foreach($agent_detail['data'] as $res){
+                    $time_interval = $this->get_busiest_time_interval_by_hours($res['comment_time_hours']);
+                    if(isset($busiest_days[$res['comment_weekday_hours']][$time_interval])) {
+                        $count = $busiest_days[$res['comment_weekday_hours']][$time_interval] + 1;
+                    }
+                    $busiest_days[$res['comment_weekday_hours']][$time_interval] = $count;
+                }
+                
 
+            }
+          
+        }
+      return ($busiest_days);
+    
+    }
+
+
+    // return details of assigned agents
+    private function get_tickets_by_agents($agents = [] , $ticket_ids=[] ) {
+        if(is_array($agents)) {
+            unset($agents["unassigned"]); 
             $ticket_by_agents =array();
             foreach ($agents as $key => $agent) {
-               if($key == 'unassigned') {
-                  continue;
-               }
-               else{
                  $user = get_user_by( 'email', $key );
                  $ticket_by_agents[$key] = array(
-                    'ID'=>$user->ID,
+                    'ID'=>($user->ID > 0 ?$user->ID :0),
                     'email' => $agent['label'],
                     'no_of_tickets_assigned' => $agent['value'],
                     'displayname' => $user->display_name,
-                    'reply_count' => $this->get_reply_count_by_userid($user->ID),
-                    'solved'    => $this->get_solved_tickets_by_userid($user->ID),
-                    'avg_response_time' => $this->get_first_response_time_by_userid($user->ID)['avg_response_time']
+                    'reply_count' => $this->get_reply_count_by_userid($user->ID,$ticket_ids),
+                    'solved'    => $this->get_solved_tickets_by_userid($user->ID, $ticket_ids),
+                    'avg_response_time' => $this->get_first_response_time_by_userid($user->ID , $ticket_ids)['avg_response_time']
                  );
                 
-               }
+            }
+        }
+
+        return $ticket_by_agents;
+
+    }
+
+    // return details of assigned agents with unassigned
+    private function get_tickets_by_agents_with_unassigned($agents = [] , $ticket_ids=[] ) {
+        if(is_array($agents)) {
+            $ticket_by_agents =array();
+            foreach ($agents as $key => $agent) {
+                 $user = get_user_by( 'email', $key );
+                 $ticket_by_agents[$key] = array(
+                    'ID'=>($user->ID > 0 ?$user->ID :0),
+                    'email' => $agent['label'],
+                    'no_of_tickets_assigned' => $agent['value'],
+                    'displayname' => $user->display_name,
+                    'reply_count' => $this->get_reply_count_by_userid($user->ID,$ticket_ids),
+                    'solved'    => $this->get_solved_tickets_by_userid($user->ID, $ticket_ids),
+                    'avg_response_time' => $this->get_first_response_time_by_userid($user->ID , $ticket_ids)['avg_response_time']
+                 );
+                
             }
         }
 
@@ -709,9 +818,7 @@ class Kong_Helpdesk_Reports extends Kong_Helpdesk
         $buseiest_day = [];
         $count=0;
         for($i=0;$i<24;$i+=2) {
-            
-            $buseiest_day[$count++] = $i.','.($i+2);
-            
+            $buseiest_day[$i.'-'.($i+2)] = 0;
         }
 
         return $buseiest_day;
@@ -724,7 +831,7 @@ class Kong_Helpdesk_Reports extends Kong_Helpdesk
         $buseiest_day = $this->get_busiest_time_interval_array();
         
         foreach ($buseiest_day as $key => $value) {
-            $val = explode(",", $value);
+            $val = explode("-", $key);
             if ( in_array($hours, range($val[0], $val[1])) ) {
                 return $val[0].'-'.$val[1];
             }

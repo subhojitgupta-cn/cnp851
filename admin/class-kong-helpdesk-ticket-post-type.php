@@ -364,11 +364,13 @@ class Kong_Helpdesk_Ticket_Post_Type extends Kong_Helpdesk
                                 $term_id = $insert_data['term_id'];
                             }
                             if($term_name == 'open'){
-                                set_option_for_status('defaultStatus',$term_id);
+                                $this->set_option_for_status('defaultStatus',$term_id);
                             }else if($term_name == 'closed'){
-                                set_option_for_status('defaultSolvedStatus',$term_id);
+                                $this->set_option_for_status('defaultSolvedStatus',$term_id);
                             }else if($term_name == 'low') {
-                                set_option_for_status('defaultPriority',$term_id);
+                                $this->set_option_for_status('defaultPriority',$term_id);
+                            }else if($term_name == 'troubleshooting') {
+                                $this->set_option_for_status('defaultSystem',$term_id);
                             } else{
                                 //do nothing
                             }
@@ -385,6 +387,7 @@ class Kong_Helpdesk_Ticket_Post_Type extends Kong_Helpdesk
 
     //set default status as an option
     public function set_option_for_status($option_name,$option_value) {
+        global $kong_helpdesk_options;
         if($option_name){
           Redux::setOption('kong_helpdesk_options',$option_name,$option_value);
         }
