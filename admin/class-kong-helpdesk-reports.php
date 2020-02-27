@@ -161,7 +161,6 @@ class Kong_Helpdesk_Reports extends Kong_Helpdesk
         $ticketsBySatisfaction = array();
         $ticketsBySource = array();
         $ticketsByagents = array();
-        $ticketsByweekdays = array();
         $ticket_ids = array();
         $ticket_ids = wp_list_pluck( $tickets, 'ID' );
         
@@ -173,15 +172,6 @@ class Kong_Helpdesk_Reports extends Kong_Helpdesk
             $weekday_number_created = $d->format('N');
             $weekday_name_created = $d->format('D');
             $weekday_count = 1;
-
-            // busiest day of week
-            
-            $ticketsByweekdays[$weekday_name_created][] = array(
-                'day' => $weekday_number_created - 1,
-                'post_id' => $ticket->ID,
-                'time_created' => $this->get_busiest_time_interval_by_hours($d->format('H'))
-
-            );
             
             $ticketsCreatedByYearMonth[$month_created][$year_created]++;
             //Tickets by agents
