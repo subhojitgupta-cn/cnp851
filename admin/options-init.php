@@ -215,7 +215,7 @@ if (! class_exists('Redux')) {
                 'id'   => 'export',
                 'type' => 'info',
                 'desc' => '<div style="text-align:center;">
-                    <a href="' . get_admin_url() . 'edit.php?post_type=stores&page=kong_helpdesk_options_options&export-tickets=all" class="button button-success">' . __('Export all Tickets', 'kong-helpdesk') . '</a>
+                    <a href="' . get_admin_url() . 'edit.php?post_type=stores&page=kong_helpdesk_options_options&export-tickets=all" class="btn btn-golden">' . __('Export all Tickets', 'kong-helpdesk') . '</a>
                     </div>'
             ),
         )

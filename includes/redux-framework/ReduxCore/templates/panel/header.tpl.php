@@ -37,7 +37,7 @@
     }
 
 ?>
-<div id="redux-header">
+<div id="redux-header" class="kg_ternary_bg">
     <?php if ( ! empty( $this->parent->args['display_name'] ) ) { ?>
         <div class="display_header">
 

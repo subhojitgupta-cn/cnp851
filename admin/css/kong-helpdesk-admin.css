@@ -907,4 +907,31 @@ tbody tr {
   line-height: 1 !important;
   margin-left: 10px !important; 
 }
+input.select-dropdown.dropdown-trigger {
+  border-color: #7c6123 !important;
+  outline: transparent solid 2px;
+   box-shadow: none !important;
+}
+.dropdown-content li>a, .dropdown-content li>span {
+  padding: 14px 24px;
+  color: #272727 !important;
+}
 
+
+
+@media (max-width: 767px) {
+  .redux-action_bar input{
+    width: auto !important;
+    font-size: 13px !important;
+    padding: 10px 10px !important
+  }
+  .redux-main h2 {
+    font-size: 30px;
+  }
+  .redux-main h3 {
+    font-size: 24px;
+  }
+  .display_header h2 {
+    font-size: 30px;
+  }
+}

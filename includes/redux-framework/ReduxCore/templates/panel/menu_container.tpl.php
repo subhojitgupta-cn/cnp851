@@ -10,7 +10,7 @@
  */
 
 ?>
-<div class="redux-sidebar">
+<div class="redux-sidebar kg_ternary_bg">
     <ul class="redux-group-menu">
 <?php
         foreach ( $this->parent->sections as $k => $section ) {
