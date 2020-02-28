@@ -54,6 +54,7 @@ class Kong_Helpdesk_Reports extends Kong_Helpdesk
         $query = array(
            // 'post_type' => 'ticket',
             'page' => 'helpdesk-reports',
+            'primary_range' => $_GET['primary_range'],
             'date_from' => $_GET['date_from'],
             'date_until' => $_GET['date_until'],
         );
@@ -92,7 +93,7 @@ class Kong_Helpdesk_Reports extends Kong_Helpdesk
             }
         }
 
-        $date_query = array();
+        $date_query = $alldates = array();
         if ($date_until && $date_from) {
             $date_query = array(
                 'after' => $date_from,
@@ -121,7 +122,10 @@ class Kong_Helpdesk_Reports extends Kong_Helpdesk
         $tickets = get_posts( $args);
          
        
-
+        // get all dates in between startdate and enddate
+        $primary_range = isset($_GET['primary_range'])? $_GET['primary_range'] : '';
+        $alldates = $this->getalldates($primary_range);
+        print_r($alldates);
         $years = array();
         $months = array('01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12');
 
@@ -162,7 +166,10 @@ class Kong_Helpdesk_Reports extends Kong_Helpdesk
         $ticketsBySource = array();
         $ticketsByagents = array();
         $ticket_ids = array();
+        $ticket_created = array();
         $ticket_ids = wp_list_pluck( $tickets, 'ID' );
+        
+
         
         
         foreach ($tickets as $ticket) {
@@ -171,9 +178,14 @@ class Kong_Helpdesk_Reports extends Kong_Helpdesk
             $month_created = $d->format('m');
             $weekday_number_created = $d->format('N');
             $weekday_name_created = $d->format('D');
-            $weekday_count = 1;
             
+            $ticket_created_count = 1;
             $ticketsCreatedByYearMonth[$month_created][$year_created]++;
+            if(isset($ticket_created[$d->format('d-m-Y')])) {
+                $ticket_created_count = $ticket_created[$d->format('d-m-Y')] + 1;
+            }
+            $ticket_created[$d->format('d-m-Y')] = $ticket_created_count;
+
             //Tickets by agents
             $agent = get_post_meta($ticket->ID, 'agent', true);
             $agent_email = $agent_display_name = '';
@@ -293,6 +305,9 @@ class Kong_Helpdesk_Reports extends Kong_Helpdesk
         $buseiest_day_response = $this->get_busiest_time_by_agents($ticketsByagents,$ticket_ids);
         //print_r($buseiest_day_response);
         
+        //maingraph
+
+        print_r($ticket_created);
         ?>
        
         <div class="wrap">
@@ -302,13 +317,23 @@ class Kong_Helpdesk_Reports extends Kong_Helpdesk
                     <h2><?php _e('Date Filter', 'kong-helpdesk') ?></h2>
                     <input type="hidden" name="action" value="kong_helpdesk_report_filter">
                      <div class="kong-helpdesk-row">
-                        <div class="kong-helpdesk-col-sm-2">
-                            <label for="date_from"><?php echo __('Date From (JJJJ-MM-DD)', 'kong-helpdesk') ?></label><br/>
-                            <input type="text" name="date_from" placeholder="JJJJ-MM-DD" value="<?php echo $date_from ?>">
-                        </div>
-                        <div class="kong-helpdesk-col-sm-2">
-                            <label for="date_until"><?php echo __('Date Until (JJJJ-MM-DD)', 'kong-helpdesk') ?></label><br/>
-                            <input type="text" name="date_until" placeholder="JJJJ-MM-DD" value="<?php echo $date_until ?>">
+                        <select id="primary_range" name="primary_range" class="ng-pristine ng-valid ng-touched">
+                            <option trans="" value="last_30_days">Last 30 days</option>
+                            <option trans="" value="last_month">Last Month</option>
+                            <option trans="" value="last_7_days">Last 7 days</option>
+                            <option trans="" value="last_week">Last Week</option>
+                            <option trans="" value="today">Today</option>
+                            <option trans="" value="custom">Custom Dates</option>
+                        </select>
+                        <div class="date_range_cls" style="display: none;">
+                            <div class="kong-helpdesk-col-sm-2">
+                                <label for="date_from"><?php echo __('Date From (JJJJ-MM-DD)', 'kong-helpdesk') ?></label><br/>
+                                <input type="text" name="date_from" placeholder="JJJJ-MM-DD" value="<?php echo $date_from ?>">
+                            </div>
+                            <div class="kong-helpdesk-col-sm-2">
+                                <label for="date_until"><?php echo __('Date Until (JJJJ-MM-DD)', 'kong-helpdesk') ?></label><br/>
+                                <input type="text" name="date_until" placeholder="JJJJ-MM-DD" value="<?php echo $date_until ?>">
+                            </div>
                         </div>
                         <div class="kong-helpdesk-col-sm-2">
                             <br/><input type="submit" class="button button-primary" value="<?php echo __('Submit', 'kong-helpdesk') ?>" >
@@ -416,11 +441,11 @@ class Kong_Helpdesk_Reports extends Kong_Helpdesk
                     <div class="kong-helpdesk-col-sm-3">
                         <h3 class="kong-helpdesk-center"><?php echo __('Tickets by Department', 'kong-helpdesk') ?></h3>
                         <div id="tickets-by-system"></div>
-                        <script>Morris.Donut({
+                       <!--  <script>Morris.Donut({
                           element: 'tickets-by-system',
                           colors: ['#F44336', '#2196F3', '#FFEB3B', '#4CAF50', '#FF9800', '#795548', '#673AB7'],
                           data: <?php echo json_encode(array_values($ticketsBySystem)) ?>
-                        });</script>
+                        });</script> -->
                     </div>
                     <div class="kong-helpdesk-col-sm-3">
                         <h3 class="kong-helpdesk-center"><?php echo __('Tickets by Priority', 'kong-helpdesk') ?></h3>
@@ -456,6 +481,51 @@ class Kong_Helpdesk_Reports extends Kong_Helpdesk
             </div>
         </div>
         <?php
+    }
+
+
+    //return all possible dates in between start and end dates
+    private function getalldates($primary_range) {
+        $startdate = $enddate ='';
+
+        if($primary_range == 'last_month'){
+            $startdate =  date('Y-m-d', strtotime('first day of previous month'));
+            $enddate =  date('Y-m-d', strtotime('last day of previous month'));
+
+        }else if($primary_range == 'last_7_days'){
+            $startdate = date('Y-m-d', strtotime('-7 days'));
+            $enddate = date('Y-m-d');
+
+        }else if($primary_range == 'last_week'){
+            $startdate = date('Y-m-d', strtotime('monday last week'));
+            $enddate = date('Y-m-d', strtotime('sunday last week'));
+            
+        }else if($primary_range == 'today'){
+            $startdate = $enddate = date('Y-m-d');
+        }else if($primary_range == 'custom'){
+
+            $startdate = $this->validateDate($_GET['date_from']);
+            $enddate = $this->validateDate($_GET['date_until']);
+            
+        }else{
+            $startdate = date('Y-m-d', strtotime('today - 30 days'));
+            $enddate = date('Y-m-d');
+
+        }
+        echo 'start'.$startdate;
+        echo 'end'.$enddate;
+       /* // Specify the start date. This date can be any English textual format  
+        $date_from = "2010-02-03";   
+        $date_from = strtotime($date_from); // Convert date to a UNIX timestamp  
+          
+        // Specify the end date. This date can be any English textual format  
+        $date_to = "2010-09-10";  
+        $date_to = strtotime($date_to); // Convert date to a UNIX timestamp  
+          
+        // Loop from the start date to end date and output all dates inbetween  
+        for ($i=$date_from; $i<=$date_to; $i+=86400) {  
+            echo date("Y-m-d", $i).'<br />';  
+        }  */
     }
 
     /**
@@ -614,32 +684,52 @@ class Kong_Helpdesk_Reports extends Kong_Helpdesk
     // return Average first response time in selected period
     private function first_response_time_selected_period($agents , $ticket_ids){
         $data = $agent_detail = [];
+        $period_array = [
+            '0-1'=>['count'=>0,'percentage'=>0],
+            '1-8'=>['count'=>0,'percentage'=>0],
+            '8-24'=>['count'=>0,'percentage'=>0],
+            '>24'=>['count'=>0,'percentage'=>0],
+        ];
+       
         $total_hours = $total_comment = $avg_response_time = 0;
-        $period_value ='';
+        $period_value = '';
+        $percentage =1;
+
 
         if(!empty($agents)) {
             foreach ($agents as $agent) {
                 $agent_detail = $this->get_first_response_time_by_userid($agent['ID'],$ticket_ids);
-                $total_hours += $agent_detail['total_hours'];
-                $total_comment += $agent_detail['total_comment'];        
+               // print_r($agent_detail);
+
+                foreach($agent_detail['data'] as $res){
+                    $count = 1;
+                    $avg_response_time = $res['comment_time_hours'];
+                    if($avg_response_time < 2 ) {
+                        $period_value = '0-1';
+                    }else if($avg_response_time >=2 && $avg_response_time < 8 ){
+                        $period_value = '1-8';
+                    }else if($avg_response_time >=8 && $avg_response_time < 24 ){
+                        $period_value = '8-24';
+                    }else{
+                        $period_value = '>24';
+                    }
+                    if(isset($period_array[$period_value]['count'])) {
+                        $count = $period_array[$period_value]['count'] + 1;
+                    }
+                    
+                    $percentage = ($count / count($ticket_ids)) * 100;
+
+                    $period_array[$period_value] = array(
+                        'count'=>$count,
+                        'percentage'=>round($percentage,2)
+                    );
+                }
 
             }
-            $avg_response_time = round($total_hours/$total_comment,2);
-
-            if($avg_response_time < 2 ) {
-                $period_value = '0-1';
-            }else if($avg_response_time >=2 && $avg_response_time < 8 ){
-                $period_value = '1-8';
-            }else if($avg_response_time >=8 && $avg_response_time < 24 ){
-                $period_value = '8-24';
-            }else{
-                $period_value = '>24';
-            }
+            
         }
 
-
-
-        return (['total_hours'=>$total_hours,'period'=>$period_value,'total_comment'=>$total_comment, 'avg_response_time'=>$avg_response_time]);
+        return $period_array;
     }
 
     // return avg response time for first response of user
@@ -683,8 +773,6 @@ class Kong_Helpdesk_Reports extends Kong_Helpdesk
        
 
         return ['data'=>$comment,'total_comment'=>$total_tickets,'total_hours'=>$calculate_interval,'avg_response_time'=>$avg_response_time];
-
-    
     }
 
     // return avg, response time for all response of user
@@ -693,7 +781,7 @@ class Kong_Helpdesk_Reports extends Kong_Helpdesk
         $comments = $this->get_comments_by_userid($userid , $ticket_ids);
         $comment =  [];
         $calculate_interval = $avg_response_time = 0;
-        $total_tickets = 0;
+       
 
         if(!empty($comments)) {
             foreach ($comments as $key => $value) {
@@ -705,6 +793,7 @@ class Kong_Helpdesk_Reports extends Kong_Helpdesk
                 $minutes = round($interval / ( 60 * 60 * 60));
                 $seconds = round($interval / ( 60 * 60 * 60 * 60 ));
                 $calculate_interval += $hours;
+                 $total_tickets = 0;
                 $comment[$value->comment_ID] = [
                     'post_id' => $value->comment_post_ID,
                     'posts_date' => get_the_time('Y-m-d H:i:s', $value->comment_post_ID),
@@ -721,8 +810,6 @@ class Kong_Helpdesk_Reports extends Kong_Helpdesk
        
 
         return ['data'=>$comment,'total_comment'=>$total_tickets,'total_hours'=>$calculate_interval,'avg_response_time'=>$avg_response_time];
-
-    
     }
 
     // return avg, response time for user
@@ -751,7 +838,6 @@ class Kong_Helpdesk_Reports extends Kong_Helpdesk
           
         }
       return ($busiest_days);
-    
     }
 
 
@@ -776,7 +862,6 @@ class Kong_Helpdesk_Reports extends Kong_Helpdesk
         }
 
         return $ticket_by_agents;
-
     }
 
     // return details of assigned agents with unassigned
@@ -799,7 +884,6 @@ class Kong_Helpdesk_Reports extends Kong_Helpdesk
         }
 
         return $ticket_by_agents;
-
     }
 
     // return busiest day time interval array
@@ -812,7 +896,6 @@ class Kong_Helpdesk_Reports extends Kong_Helpdesk
         }
 
         return $buseiest_day;
-
     }
 
     // return busiest day time interval by hour
@@ -825,10 +908,7 @@ class Kong_Helpdesk_Reports extends Kong_Helpdesk
             if ( in_array($hours, range($val[0], $val[1])) ) {
                 return $val[0].'-'.$val[1];
             }
-        }
-
-    
-                
+        }           
     }
 
 }

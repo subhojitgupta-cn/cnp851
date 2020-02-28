@@ -187,6 +187,13 @@
     	if( $('body.post-type-ticket').length > 0) {
     		ticket.init(kong_helpdesk_settings);
     	}
+        $("#primary_range").on("change",function(){
+            if($(this).val() == 'custom'){
+                $(".date_range_cls").show();
+            }else{
+                $(".date_range_cls").hide();
+            }
+        });
 	});
 
 })( jQuery );
