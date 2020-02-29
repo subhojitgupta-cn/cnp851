@@ -415,6 +415,8 @@ class Kong_Helpdesk
         $this->reports = new Kong_Helpdesk_Reports($this->get_plugin_name(), $this->get_version());
         $this->loader->add_action('admin_menu', $this->reports, 'init', 120);
         $this->loader->add_action('admin_action_kong_helpdesk_report_filter', $this->reports, 'filter_report');
+        $this->loader->add_action('admin_action_kong_helpdesk_report_compare', $this->reports, 'filter_report_compare');
+        
 
         // Logger
         $this->log = new Kong_Helpdesk_Log($this->get_plugin_name(), $this->get_version());

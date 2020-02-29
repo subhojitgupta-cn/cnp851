@@ -193,7 +193,7 @@ class Kong_Helpdesk_Admin extends Kong_Helpdesk
      * @version 1.0.0
      * @since   1.0.3
      * 
-     * @return  [type]                       [description]
+     * @return  [type]  
      */
     public function remove_menus()
     {
@@ -268,7 +268,7 @@ class Kong_Helpdesk_Admin extends Kong_Helpdesk
      * @version 1.0.0
      * @since   1.0.3
      * 
-     * @return  [type]                       [description]
+     * @return  [type]  
      */
     public function redirect_dashboard()
     {

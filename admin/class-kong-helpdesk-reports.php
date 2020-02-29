@@ -10,8 +10,7 @@ class Kong_Helpdesk_Reports extends Kong_Helpdesk
      * @author CN
      * @version 1.0.0
      * @since   1.0.0
-     * @param   [type]                       $plugin_name        [description]
-     * @param   [type]                       $version            [description]
+     * @param   [type]                                           
      */
     public function __construct($plugin_name, $version)
     {
@@ -24,7 +23,7 @@ class Kong_Helpdesk_Reports extends Kong_Helpdesk
      * @author CN
      * @version 1.0.0
      * @since   1.0.0
-     * @return  [type]                       [description]
+     * @return  [type]  
      */
     public function init()
     {
@@ -47,7 +46,7 @@ class Kong_Helpdesk_Reports extends Kong_Helpdesk
      * @author CN
      * @version 1.0.0
      * @since   1.0.0
-     * @return  [type]                       [description]
+     * @return  [type]  
      */
     public function filter_report()
     {
@@ -57,6 +56,10 @@ class Kong_Helpdesk_Reports extends Kong_Helpdesk
             'primary_range' => $_GET['primary_range'],
             'date_from' => $_GET['date_from'],
             'date_until' => $_GET['date_until'],
+            'compare_range' => $_GET['compare_range'],
+            'date_from_compare' => $_GET['date_from_compare'],
+            'date_until_compare' => $_GET['date_until_compare'],
+            
         );
         $url = admin_url('admin.php?' . http_build_query($query));
         wp_redirect($url);
@@ -68,32 +71,290 @@ class Kong_Helpdesk_Reports extends Kong_Helpdesk
      * @author CN
      * @version 1.0.0
      * @since   1.0.0
-     * @return  [type]                       [description]
+     * @return  [type]  
      */
     public function render_helpdesk_reports()
     {
+        $format ='Y-m-d';
+        $date_from = date($format, strtotime('today - 30 days'));
+        $date_until = date($format);
+        $date_from_compare = date($format, strtotime('today - 30 days'));
+        $date_until_compare = date($format);
+        $primary_range = isset($_GET['primary_range'])? $_GET['primary_range'] : 'last_30_days';
+        $compare_range = isset($_GET['compare_range'])? $_GET['compare_range'] : '';
+        $ticket_created = $ticket_created_compare = [];
+        $tickets = $compare_tickets = $primary_tickets_data = $compare_tickets_data = [];
+        $date_query = $date_query_compare = $alldates = [];
 
-        $date_from = '';
         if (isset($_GET['date_from']) && !empty($_GET['date_from'])) {
-           $date_from = $this->validateDate($_GET['date_from']);
-            if ($date_from) {
-                $date_from = $_GET['date_from'];
-            } else {
-                echo __('Date From is not valid!', 'kong-helpdesk');
-            }
+            $date_from = $this->validateDate($_GET['date_from']);
+             if ($date_from) {
+                 $date_from = $_GET['date_from'];
+ 
+             } else {
+                 echo __('Primary Date From is not valid!', 'kong-helpdesk');
+             }
+         }
+ 
+         
+         if (isset($_GET['date_until']) && !empty($_GET['date_until'])) {
+             $date_until = $this->validateDate($_GET['date_until']);
+             if ($date_until) {
+                 $date_until = $_GET['date_until'];
+             } else {
+                 echo __('Primary Date Until is not valid!', 'kong-helpdesk');
+             }
+         }
+         
+
+        $ticket_created = $this->getalldates($primary_range,$format);
+        
+        $tickets = $this->getTicketsReports($ticket_created['start_date'],$ticket_created['end_date']);
+        $primary_tickets_data = $this->ticketProcessing($tickets,$ticket_created);
+
+        echo "#primary";
+        echo count($tickets);
+        print_r($primary_tickets_data);
+
+        if(isset($_GET['compare_range']) && $_GET['compare_range']!='') {
+
+            if (isset($_GET['date_from_compare']) && !empty($_GET['date_from_compare'])) {
+                $date_from_compare = $this->validateDate($_GET['date_from_compare']);
+                 if ($date_from_compare) {
+                     $date_from_compare = $_GET['date_from_compare'];
+     
+                 } else {
+                     echo __('Compare Date From is not valid!', 'kong-helpdesk');
+                 }
+             }
+     
+             
+             if (isset($_GET['date_until_compare']) && !empty($_GET['date_until_compare'])) {
+                 $date_until_compare = $this->validateDate($_GET['date_until_compare']);
+                 if ($date_until_compare) {
+                     $date_until_compare = $_GET['date_until_compare'];
+                 } else {
+                     echo __('Compare Date Until is not valid!', 'kong-helpdesk');
+                 }
+             }
+             $ticket_created_compare = $this->getalldates($compare_range,$format);
+             $compare_tickets = $this->getTicketsReports($ticket_created_compare['start_date'],$ticket_created_compare['end_date']);
+             $compare_tickets_data = $this->ticketProcessing($compare_tickets,$ticket_created_compare);
         }
 
-        $date_until = '';
-        if (isset($_GET['date_until']) && !empty($_GET['date_until'])) {
-            $date_until = $this->validateDate($_GET['date_until']);
-            if ($date_until) {
-                $date_until = $_GET['date_until'];
-            } else {
-                echo __('Date Until is not valid!', 'kong-helpdesk');
-            }
-        }
 
-        $date_query = $alldates = array();
+        echo "#compare";
+        echo count($compare_tickets);
+        print_r($compare_tickets_data);
+        
+        // $ticketsByStatus = $this->get_tickets_by_status();
+        // $ticketsByType = $this->get_tickets_by_type();
+        // $ticketsByPriority = $this->get_tickets_by_priority();
+
+        
+        ?>
+       
+        <div class="wrap">
+            <div class="kong-helpdesk-container">
+                <h1><?php _e('Reports', 'kong-helpdesk'); ?></h1>
+                <form action="<?php echo admin_url('edit.php?page=helpdesk-reports') ?>" method="get" style="background-color: #FFF; padding: 5px 20px 20px;">
+                    <h2><?php _e('Date Filter', 'kong-helpdesk') ?></h2>
+                    <input type="hidden" name="action" value="kong_helpdesk_report_filter">
+                     <div class="kong-helpdesk-row">
+                        <select id="primary_range" name="primary_range" class="ng-pristine ng-valid ng-touched">
+                            <option trans="" <?php echo isset($_GET['primary_range']) && $_GET['primary_range']=='last_30_days' ? 'selected="true"' : '';?> value="last_30_days">Last 30 days</option>
+                            <option trans="" value="last_month" <?php echo $primary_range=='last_month' ? 'selected="true"' : '';?>>Last Month</option>
+                            <option trans="" value="last_7_days" <?php echo $primary_range =='last_7_days' ? 'selected="true"' : '';?>>Last 7 days</option>
+                            <option trans="" value="last_week" <?php echo $primary_range =='last_week' ? 'selected="true"' : '';?>>Last Week</option>
+                            <option trans="" value="today" <?php echo $primary_range =='today' ? 'selected="true"' : '';?>>Today</option>
+                            <option trans="" value="custom" <?php echo $primary_range =='custom' ? 'selected="true"' : '';?>>Custom Dates</option>
+                        </select>
+                        <div class="date_range_cls" style="display: none;">
+                            <div class="kong-helpdesk-col-sm-2">
+                                <label for="date_from"><?php echo __('Date From (JJJJ-MM-DD)', 'kong-helpdesk') ?></label><br/>
+                                <input type="text" name="date_from" placeholder="JJJJ-MM-DD" value="<?php echo $date_from ?>">
+                            </div>
+                            <div class="kong-helpdesk-col-sm-2">
+                                <label for="date_until"><?php echo __('Date Until (JJJJ-MM-DD)', 'kong-helpdesk') ?></label><br/>
+                                <input type="text" name="date_until" placeholder="JJJJ-MM-DD" value="<?php echo $date_until ?>">
+                            </div>
+                        </div>
+                        <div class="kong-helpdesk-col-sm-2">
+                            <br/><input type="submit" class="button button-primary" value="<?php echo __('Primary', 'kong-helpdesk') ?>" >
+                        </div>
+                    </div>
+                    <div class="kong-helpdesk-row">
+                        <select id="compare_range" name="compare_range" class="ng-pristine ng-valid ng-touched">
+                            <option value=''>Select Any</option>
+                            <option trans="" <?php echo isset($_GET['compare_range']) && $_GET['compare_range']=='last_30_days' ? 'selected="true"' : '';?> value="last_30_days">Last 30 days</option>
+                            <option trans="" value="last_month" <?php echo ($compare_range =='last_month') ? 'selected="true"' : '';?>>Last Month</option>
+                            <option trans="" value="last_7_days" <?php echo $compare_range =='last_7_days' ? 'selected="true"' : '';?>>Last 7 days</option>
+                            <option trans="" value="last_week" <?php echo $compare_range =='last_week' ? 'selected="true"' : '';?>>Last Week</option>
+                            <option trans="" value="today" <?php echo $compare_range =='today' ? 'selected="true"' : '';?>>Today</option>
+                            <option trans="" value="custom" <?php echo $compare_range =='custom' ? 'selected="true"' : '';?>>Custom Dates</option>
+                        </select>
+                        <div class="date_range_cls" style="display: none;">
+                            <div class="kong-helpdesk-col-sm-2">
+                                <label for="date_from"><?php echo __('Date From (JJJJ-MM-DD)', 'kong-helpdesk') ?></label><br/>
+                                <input type="text" name="date_from_compare" placeholder="JJJJ-MM-DD" value="<?php echo $date_from_compare; ?>">
+                            </div>
+                            <div class="kong-helpdesk-col-sm-2">
+                                <label for="date_until"><?php echo __('Date Until (JJJJ-MM-DD)', 'kong-helpdesk') ?></label><br/>
+                                <input type="text" name="date_until_compare" placeholder="JJJJ-MM-DD" value="<?php echo $date_until_compare; ?>">
+                            </div>
+                        </div>
+                        <div class="kong-helpdesk-col-sm-2">
+                            <br/><input type="submit" class="button button-primary" value="<?php echo __('Compare', 'kong-helpdesk') ?>" >
+                        </div>
+                    </div>
+                </form>
+                <div class="kong-helpdesk-col-sm-12">
+                    <h2><?php echo __('Filtered', 'kong-helpdesk') ?></h2>
+                    <p><?php echo __('Filtered Tickets:', 'kong-helpdesk') . ' ' . count($tickets) ?></p>
+                </div>
+                <div class="kong-helpdesk-row">
+                    <div class="kong-helpdesk-col-sm-3">
+                        <h3 class="kong-helpdesk-center"><?php echo __('Tickets by Agent', 'kong-helpdesk') ?></h3>
+                        <div id="tickets-by-agent"></div>
+                        <!-- <script>Morris.Donut({
+                          element: 'tickets-by-agent',
+                          colors: ['#F44336', '#2196F3', '#FFEB3B', '#4CAF50', '#FF9800', '#795548', '#673AB7'],
+                          data: <?php echo json_encode(array_values($ticketsAssignedToAgent)) ?>
+                        });</script> -->
+                    </div>
+                    <div class="kong-helpdesk-col-sm-3">
+                        <h3 class="kong-helpdesk-center"><?php echo __('Tickets by Reporter', 'kong-helpdesk') ?></h3>
+                        <div id="tickets-by-reporter"></div>
+                        <!-- <script>Morris.Donut({
+                          element: 'tickets-by-reporter',
+                          colors: ['#F44336', '#2196F3', '#FFEB3B', '#4CAF50', '#FF9800', '#795548', '#673AB7'],
+                          data: <?php echo json_encode(array_values($ticketsByReporter)) ?>
+                        });</script> -->
+                    </div>
+                    <div class="kong-helpdesk-col-sm-3">
+                        <h3 class="kong-helpdesk-center"><?php echo __('Tickets by Satisfaction', 'kong-helpdesk') ?></h3>
+                        <div id="tickets-by-satisfaction"></div>
+                        <!-- <script>Morris.Donut({
+                          element: 'tickets-by-satisfaction',
+                          colors: ['#F44336', '#2196F3', '#FFEB3B', '#4CAF50', '#FF9800', '#795548', '#673AB7'],
+                          data: <?php echo json_encode(array_values($ticketsBySatisfaction)) ?>
+                        });</script> -->
+                    </div>
+                    <div class="kong-helpdesk-col-sm-3">
+                        <h3 class="kong-helpdesk-center"><?php echo __('Tickets by Source', 'kong-helpdesk') ?></h3>
+                        <div id="tickets-by-source"></div>
+                        <!-- <script>Morris.Donut({
+                          element: 'tickets-by-source',
+                          colors: ['#F44336', '#2196F3', '#FFEB3B', '#4CAF50', '#FF9800', '#795548', '#673AB7'],
+                          data: <?php echo json_encode(array_values($ticketsBySource)) ?>
+                        });</script> -->
+                    </div>
+                    <div class="kong-helpdesk-col-sm-3">
+                        <h3 class="kong-helpdesk-center"><?php echo __('Tickets by Year', 'kong-helpdesk') ?></h3>
+                        <div id="tickets-by-year"></div>
+                        <!-- <script>Morris.Donut({
+                          element: 'tickets-by-year',
+                          colors: ['#F44336', '#2196F3', '#FFEB3B', '#4CAF50', '#FF9800', '#795548', '#673AB7'],
+                          data: <?php echo json_encode(array_values($ticketsCreatedByYear)) ?>
+                        });</script> -->
+                    </div>
+                    <div class="kong-helpdesk-col-sm-3">
+                        <h3 class="kong-helpdesk-center"><?php echo __('Tickets by Month', 'kong-helpdesk') ?></h3>
+                        <div id="tickets-by-month"></div>
+                        <!-- <script>Morris.Donut({
+                          element: 'tickets-by-month',
+                          colors: ['#F44336', '#2196F3', '#FFEB3B', '#4CAF50', '#FF9800', '#795548', '#673AB7'],
+                          data: <?php echo json_encode(array_values($ticketsCreatedByMonth)) ?>
+                        });</script> -->
+                    </div>
+                    <div class="kong-helpdesk-col-sm-6">
+                        <h3 class="kong-helpdesk-center"><?php echo __('Tickets created by Year / Month', 'kong-helpdesk') ?></h3>
+                        <div id="tickets-by-year-month"></div>
+                        <!-- <script>Morris.Line({
+                            element: 'tickets-by-year-month',
+                            colors: ['#F44336', '#2196F3', '#FFEB3B', '#4CAF50', '#FF9800', '#795548', '#673AB7'],
+                            data: <?php echo json_encode(array_values($ticketsCreatedByYearMonth)) ?>,
+                            xkey: 'y',
+                            ykeys: <?php echo json_encode(array_values($years)) ?>,
+                            labels: <?php echo json_encode(array_values($years)) ?>,
+                            xLabels: 'year-month',
+                            parseTime: false
+                        });
+                        </script> -->
+                    </div>
+                </div>
+                <div class="kong-helpdesk-row">
+                    <div class="kong-helpdesk-col-sm-12">
+                        <h2><?php echo __('Total', 'kong-helpdesk') ?></h2>
+                        <p><?php echo __('No Date filter applied here:', 'kong-helpdesk') ?></p>
+                    </div>
+                    <div class="kong-helpdesk-col-sm-3">
+                        <h3 class="kong-helpdesk-center"><?php echo __('Tickets by Status', 'kong-helpdesk') ?></h3>
+                        <div id="tickets-by-status"></div>
+                        <script>Morris.Donut({
+                          element: 'tickets-by-status',
+                          colors: ['#F44336', '#2196F3', '#FFEB3B', '#4CAF50', '#FF9800', '#795548', '#673AB7'],
+                          data: <?php echo json_encode(array_values($ticketsByStatus)) ?>
+                        });</script>
+                    </div>
+                    <div class="kong-helpdesk-col-sm-3">
+                        <h3 class="kong-helpdesk-center"><?php echo __('Tickets by Type', 'kong-helpdesk') ?></h3>
+                        <div id="tickets-by-type"></div>
+                        <script>Morris.Donut({
+                          element: 'tickets-by-type',
+                          colors: ['#F44336', '#2196F3', '#FFEB3B', '#4CAF50', '#FF9800', '#795548', '#673AB7'],
+                          data: <?php echo json_encode(array_values($ticketsByType)) ?>
+                        });</script>
+                    </div>
+                    <div class="kong-helpdesk-col-sm-3">
+                        <h3 class="kong-helpdesk-center"><?php echo __('Tickets by Department', 'kong-helpdesk') ?></h3>
+                        <div id="tickets-by-system"></div>
+                       <!--  <script>Morris.Donut({
+                          element: 'tickets-by-system',
+                          colors: ['#F44336', '#2196F3', '#FFEB3B', '#4CAF50', '#FF9800', '#795548', '#673AB7'],
+                          data: <?php echo json_encode(array_values($ticketsBySystem)) ?>
+                        });</script> -->
+                    </div>
+                    <div class="kong-helpdesk-col-sm-3">
+                        <h3 class="kong-helpdesk-center"><?php echo __('Tickets by Priority', 'kong-helpdesk') ?></h3>
+                        <div id="tickets-by-priority"></div>
+                        <script>Morris.Donut({
+                          element: 'tickets-by-priority',
+                          colors: ['#F44336', '#2196F3', '#FFEB3B', '#4CAF50', '#FF9800', '#795548', '#673AB7'],
+                          data: <?php echo json_encode(array_values($ticketsByPriority)) ?>
+                        });</script>
+                    </div>
+                    <div class="kong-helpdesk-col-sm-6">
+                        <h3 class="kong-helpdesk-center">Created / Completed Tickets by Month</h3>
+                        <div id="created-completed-tickets-by-month"></div>
+                        <script>Morris.Bar({
+                            element: 'created-completed-tickets-by-month',
+                            colors: ['#F44336', '#2196F3', '#FFEB3B', '#4CAF50', '#FF9800', '#795548', '#673AB7'],
+                            data: [
+                                { y: '2006', a: 100, b: 90 },
+                                { y: '2007', a: 75,  b: 65 },
+                                { y: '2008', a: 50,  b: 40 },
+                                { y: '2009', a: 75,  b: 65 },
+                                { y: '2010', a: 50,  b: 40 },
+                                { y: '2011', a: 75,  b: 65 },
+                                { y: '2012', a: 100, b: 90 }
+                              ],
+                              xkey: 'y',
+                              ykeys: ['a', 'b'],
+                              labels: ['Series A', 'Series B']
+                            });
+                        </script>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <?php
+    }
+
+    // list of primary tickets
+    private function getTicketsReports($date_from,$date_until){
+
+    
         if ($date_until && $date_from) {
             $date_query = array(
                 'after' => $date_from,
@@ -120,58 +381,27 @@ class Kong_Helpdesk_Reports extends Kong_Helpdesk
         }
 
         $tickets = get_posts( $args);
-         
-       
-        // get all dates in between startdate and enddate
-        $primary_range = isset($_GET['primary_range'])? $_GET['primary_range'] : '';
-        $alldates = $this->getalldates($primary_range);
-        print_r($alldates);
-        $years = array();
+
+        return $tickets;
+    }
+
+    // ticket proccessing 
+    private function ticketProcessing($tickets,$ticket_created){
+        $years = [];
         $months = array('01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12');
 
-        $firstTicket = end($tickets);
-        $firstTicket_post_date = '';
-        if(isset($firstTicket->post_date)){
-            $firstTicket_post_date = $firstTicket->post_date;
-           
-        }
-        $firstTicketDateTime = new DateTime($firstTicket_post_date);
-        $firstTicketYear = (int) $firstTicketDateTime->format('Y');
-
-        $ticketsCreatedByMonth = array();
-        $ticketsCreatedByYear = array();
-        $ticketsCreatedByYearMonth = array();
-        for ($i = $firstTicketYear; $i <= date('Y'); $i++) {
-            $years[] = $i;
-            $ticketsCreatedByYear[$i] = array(
-                'label' => $i,
-                'value' => 0,
-            );
-            foreach ($months as $month) {
-                $ticketsCreatedByYearMonth[$month] = array(
-                    'y' => $month,
-                    $i => 0,
-                );
-                $ticketsCreatedByMonth[$month] = array(
-                    'label' => $month,
-                    'value' => 0,
-                );
-            }
-        }
-
-        $ticketsAssignedToAgent = array();
-        $ticketsAssignedToAgents =array();
-        $ticketsByReporter = array();
-        $ticketsBySatisfaction = array();
-        $ticketsBySource = array();
-        $ticketsByagents = array();
-        $ticket_ids = array();
-        $ticket_created = array();
+        $ticketsCreatedByMonth = [];
+        $ticketsCreatedByYear = [];
+        $ticketsAssignedToAgent = [];
+        $ticketsAssignedToAgents = [];
+        $ticketsByReporter = [];
+        $ticketsBySatisfaction = [];
+        $ticketsBySource = [];
+        $ticketsByagents = [];
+        $ticket_ids = [];
+        $ticket_data = [];
+        
         $ticket_ids = wp_list_pluck( $tickets, 'ID' );
-        
-
-        
-        
         foreach ($tickets as $ticket) {
             $d = new DateTime($ticket->post_date);
             $year_created = $d->format('Y');
@@ -181,16 +411,20 @@ class Kong_Helpdesk_Reports extends Kong_Helpdesk
             
             $ticket_created_count = 1;
             $ticketsCreatedByYearMonth[$month_created][$year_created]++;
-            if(isset($ticket_created[$d->format('d-m-Y')])) {
-                $ticket_created_count = $ticket_created[$d->format('d-m-Y')] + 1;
+            if(isset($ticket_created[$d->format('Y-m-d')])) {
+                $ticket_created_count = $ticket_created[$d->format('Y-m-d')] + 1;
             }
-            $ticket_created[$d->format('d-m-Y')] = $ticket_created_count;
+            if (array_key_exists($d->format('Y-m-d'),$ticket_created))
+            {
+                $ticket_created[$d->format('Y-m-d')] = $ticket_created_count;
+            }
+            
 
             //Tickets by agents
             $agent = get_post_meta($ticket->ID, 'agent', true);
             $agent_email = $agent_display_name = '';
             $agent_total_reply = 0;
-           
+        
         
             if (empty($agent)) {
                 $agent = __('unassigned', 'kong-helpdesk');
@@ -276,256 +510,70 @@ class Kong_Helpdesk_Reports extends Kong_Helpdesk
                 'value' => $count,
             );
         }
-
-        
-    
-
-        $ticketsByStatus = $this->get_tickets_by_status();
-        $ticketsByType = $this->get_tickets_by_type();
-        $ticketsByPriority = $this->get_tickets_by_priority();
-
         // tickets by department
         $ticketsBySystem = $this->get_tickets_by_system($ticket_ids);
-        echo '#department';
-        //print_r($ticketsBySystem);
+        $ticket_data['ticket_by_category'] = $ticketsBySystem ;
         
         // tickets by agents
-        $except= ''; // unassigned;
-        $ticketsByagents = $this->get_tickets_by_agents($ticketsAssignedToAgent , $ticket_ids,$except);
-        echo '#agents';
-        //print_r($ticketsByagents);
+        $ticketsByagents = $this->get_tickets_by_agents($ticketsAssignedToAgent , $ticket_ids);
+        $ticket_data['ticket_by_agents'] = $ticketsByagents;
 
         // Time to first reply graph
         $timeto_first_reply_response = $this->first_response_time_selected_period($ticketsByagents,$ticket_ids);
-        echo '#firstreplygraph';
-        //print_r($timeto_first_reply_response);
+        $ticket_data['first_reply_response'] = $timeto_first_reply_response;
 
         //weekdayreport
-        echo '#weekdayreport';
         $buseiest_day_response = $this->get_busiest_time_by_agents($ticketsByagents,$ticket_ids);
-        //print_r($buseiest_day_response);
+        $ticket_data['buseiest_day_response'] = $buseiest_day_response;
         
-        //maingraph
-
-        print_r($ticket_created);
-        ?>
-       
-        <div class="wrap">
-            <div class="kong-helpdesk-container">
-                <h1><?php _e('Reports', 'kong-helpdesk'); ?></h1>
-                <form action="<?php echo admin_url('edit.php?page=helpdesk-reports') ?>" method="get" style="background-color: #FFF; padding: 5px 20px 20px;">
-                    <h2><?php _e('Date Filter', 'kong-helpdesk') ?></h2>
-                    <input type="hidden" name="action" value="kong_helpdesk_report_filter">
-                     <div class="kong-helpdesk-row">
-                        <select id="primary_range" name="primary_range" class="ng-pristine ng-valid ng-touched">
-                            <option trans="" value="last_30_days">Last 30 days</option>
-                            <option trans="" value="last_month">Last Month</option>
-                            <option trans="" value="last_7_days">Last 7 days</option>
-                            <option trans="" value="last_week">Last Week</option>
-                            <option trans="" value="today">Today</option>
-                            <option trans="" value="custom">Custom Dates</option>
-                        </select>
-                        <div class="date_range_cls" style="display: none;">
-                            <div class="kong-helpdesk-col-sm-2">
-                                <label for="date_from"><?php echo __('Date From (JJJJ-MM-DD)', 'kong-helpdesk') ?></label><br/>
-                                <input type="text" name="date_from" placeholder="JJJJ-MM-DD" value="<?php echo $date_from ?>">
-                            </div>
-                            <div class="kong-helpdesk-col-sm-2">
-                                <label for="date_until"><?php echo __('Date Until (JJJJ-MM-DD)', 'kong-helpdesk') ?></label><br/>
-                                <input type="text" name="date_until" placeholder="JJJJ-MM-DD" value="<?php echo $date_until ?>">
-                            </div>
-                        </div>
-                        <div class="kong-helpdesk-col-sm-2">
-                            <br/><input type="submit" class="button button-primary" value="<?php echo __('Submit', 'kong-helpdesk') ?>" >
-                        </div>
-                    </div>
-                </form>
-                <div class="kong-helpdesk-col-sm-12">
-                    <h2><?php echo __('Filtered', 'kong-helpdesk') ?></h2>
-                    <p><?php echo __('Filtered Tickets:', 'kong-helpdesk') . ' ' . count($tickets) ?></p>
-                </div>
-                <div class="kong-helpdesk-row">
-                    <div class="kong-helpdesk-col-sm-3">
-                        <h3 class="kong-helpdesk-center"><?php echo __('Tickets by Agent', 'kong-helpdesk') ?></h3>
-                        <div id="tickets-by-agent"></div>
-                        <script>Morris.Donut({
-                          element: 'tickets-by-agent',
-                          colors: ['#F44336', '#2196F3', '#FFEB3B', '#4CAF50', '#FF9800', '#795548', '#673AB7'],
-                          data: <?php echo json_encode(array_values($ticketsAssignedToAgent)) ?>
-                        });</script>
-                    </div>
-                    <div class="kong-helpdesk-col-sm-3">
-                        <h3 class="kong-helpdesk-center"><?php echo __('Tickets by Reporter', 'kong-helpdesk') ?></h3>
-                        <div id="tickets-by-reporter"></div>
-                        <script>Morris.Donut({
-                          element: 'tickets-by-reporter',
-                          colors: ['#F44336', '#2196F3', '#FFEB3B', '#4CAF50', '#FF9800', '#795548', '#673AB7'],
-                          data: <?php echo json_encode(array_values($ticketsByReporter)) ?>
-                        });</script>
-                    </div>
-                    <div class="kong-helpdesk-col-sm-3">
-                        <h3 class="kong-helpdesk-center"><?php echo __('Tickets by Satisfaction', 'kong-helpdesk') ?></h3>
-                        <div id="tickets-by-satisfaction"></div>
-                        <script>Morris.Donut({
-                          element: 'tickets-by-satisfaction',
-                          colors: ['#F44336', '#2196F3', '#FFEB3B', '#4CAF50', '#FF9800', '#795548', '#673AB7'],
-                          data: <?php echo json_encode(array_values($ticketsBySatisfaction)) ?>
-                        });</script>
-                    </div>
-                    <div class="kong-helpdesk-col-sm-3">
-                        <h3 class="kong-helpdesk-center"><?php echo __('Tickets by Source', 'kong-helpdesk') ?></h3>
-                        <div id="tickets-by-source"></div>
-                        <script>Morris.Donut({
-                          element: 'tickets-by-source',
-                          colors: ['#F44336', '#2196F3', '#FFEB3B', '#4CAF50', '#FF9800', '#795548', '#673AB7'],
-                          data: <?php echo json_encode(array_values($ticketsBySource)) ?>
-                        });</script>
-                    </div>
-                    <div class="kong-helpdesk-col-sm-3">
-                        <h3 class="kong-helpdesk-center"><?php echo __('Tickets by Year', 'kong-helpdesk') ?></h3>
-                        <div id="tickets-by-year"></div>
-                        <script>Morris.Donut({
-                          element: 'tickets-by-year',
-                          colors: ['#F44336', '#2196F3', '#FFEB3B', '#4CAF50', '#FF9800', '#795548', '#673AB7'],
-                          data: <?php echo json_encode(array_values($ticketsCreatedByYear)) ?>
-                        });</script>
-                    </div>
-                    <div class="kong-helpdesk-col-sm-3">
-                        <h3 class="kong-helpdesk-center"><?php echo __('Tickets by Month', 'kong-helpdesk') ?></h3>
-                        <div id="tickets-by-month"></div>
-                        <script>Morris.Donut({
-                          element: 'tickets-by-month',
-                          colors: ['#F44336', '#2196F3', '#FFEB3B', '#4CAF50', '#FF9800', '#795548', '#673AB7'],
-                          data: <?php echo json_encode(array_values($ticketsCreatedByMonth)) ?>
-                        });</script>
-                    </div>
-                    <div class="kong-helpdesk-col-sm-6">
-                        <h3 class="kong-helpdesk-center"><?php echo __('Tickets created by Year / Month', 'kong-helpdesk') ?></h3>
-                        <div id="tickets-by-year-month"></div>
-                        <script>Morris.Line({
-                            element: 'tickets-by-year-month',
-                            colors: ['#F44336', '#2196F3', '#FFEB3B', '#4CAF50', '#FF9800', '#795548', '#673AB7'],
-                            data: <?php echo json_encode(array_values($ticketsCreatedByYearMonth)) ?>,
-                            xkey: 'y',
-                            ykeys: <?php echo json_encode(array_values($years)) ?>,
-                            labels: <?php echo json_encode(array_values($years)) ?>,
-                            xLabels: 'year-month',
-                            parseTime: false
-                        });
-                        </script>
-                    </div>
-                </div>
-                <div class="kong-helpdesk-row">
-                    <div class="kong-helpdesk-col-sm-12">
-                        <h2><?php echo __('Total', 'kong-helpdesk') ?></h2>
-                        <p><?php echo __('No Date filter applied here:', 'kong-helpdesk') ?></p>
-                    </div>
-                    <div class="kong-helpdesk-col-sm-3">
-                        <h3 class="kong-helpdesk-center"><?php echo __('Tickets by Status', 'kong-helpdesk') ?></h3>
-                        <div id="tickets-by-status"></div>
-                        <script>Morris.Donut({
-                          element: 'tickets-by-status',
-                          colors: ['#F44336', '#2196F3', '#FFEB3B', '#4CAF50', '#FF9800', '#795548', '#673AB7'],
-                          data: <?php echo json_encode(array_values($ticketsByStatus)) ?>
-                        });</script>
-                    </div>
-                    <div class="kong-helpdesk-col-sm-3">
-                        <h3 class="kong-helpdesk-center"><?php echo __('Tickets by Type', 'kong-helpdesk') ?></h3>
-                        <div id="tickets-by-type"></div>
-                        <script>Morris.Donut({
-                          element: 'tickets-by-type',
-                          colors: ['#F44336', '#2196F3', '#FFEB3B', '#4CAF50', '#FF9800', '#795548', '#673AB7'],
-                          data: <?php echo json_encode(array_values($ticketsByType)) ?>
-                        });</script>
-                    </div>
-                    <div class="kong-helpdesk-col-sm-3">
-                        <h3 class="kong-helpdesk-center"><?php echo __('Tickets by Department', 'kong-helpdesk') ?></h3>
-                        <div id="tickets-by-system"></div>
-                       <!--  <script>Morris.Donut({
-                          element: 'tickets-by-system',
-                          colors: ['#F44336', '#2196F3', '#FFEB3B', '#4CAF50', '#FF9800', '#795548', '#673AB7'],
-                          data: <?php echo json_encode(array_values($ticketsBySystem)) ?>
-                        });</script> -->
-                    </div>
-                    <div class="kong-helpdesk-col-sm-3">
-                        <h3 class="kong-helpdesk-center"><?php echo __('Tickets by Priority', 'kong-helpdesk') ?></h3>
-                        <div id="tickets-by-priority"></div>
-                        <script>Morris.Donut({
-                          element: 'tickets-by-priority',
-                          colors: ['#F44336', '#2196F3', '#FFEB3B', '#4CAF50', '#FF9800', '#795548', '#673AB7'],
-                          data: <?php echo json_encode(array_values($ticketsByPriority)) ?>
-                        });</script>
-                    </div>
-                    <div class="kong-helpdesk-col-sm-6">
-                        <h3 class="kong-helpdesk-center">Created / Completed Tickets by Month</h3>
-                        <div id="created-completed-tickets-by-month"></div>
-                        <script>Morris.Bar({
-                            element: 'created-completed-tickets-by-month',
-                            colors: ['#F44336', '#2196F3', '#FFEB3B', '#4CAF50', '#FF9800', '#795548', '#673AB7'],
-                            data: [
-                                { y: '2006', a: 100, b: 90 },
-                                { y: '2007', a: 75,  b: 65 },
-                                { y: '2008', a: 50,  b: 40 },
-                                { y: '2009', a: 75,  b: 65 },
-                                { y: '2010', a: 50,  b: 40 },
-                                { y: '2011', a: 75,  b: 65 },
-                                { y: '2012', a: 100, b: 90 }
-                              ],
-                              xkey: 'y',
-                              ykeys: ['a', 'b'],
-                              labels: ['Series A', 'Series B']
-                            });
-                        </script>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <?php
+        return $ticket_data;
     }
 
 
     //return all possible dates in between start and end dates
-    private function getalldates($primary_range) {
+    private function getalldates($primary_range,$format) {
         $startdate = $enddate ='';
+        $getDatesFromRange =[];
 
         if($primary_range == 'last_month'){
-            $startdate =  date('Y-m-d', strtotime('first day of previous month'));
-            $enddate =  date('Y-m-d', strtotime('last day of previous month'));
+            $startdate =  date($format, strtotime('first day of previous month'));
+            $enddate =  date($format, strtotime('last day of previous month'));
 
         }else if($primary_range == 'last_7_days'){
-            $startdate = date('Y-m-d', strtotime('-7 days'));
-            $enddate = date('Y-m-d');
+            $startdate = date($format, strtotime('-7 days'));
+            $enddate = date($format);
 
         }else if($primary_range == 'last_week'){
-            $startdate = date('Y-m-d', strtotime('monday last week'));
-            $enddate = date('Y-m-d', strtotime('sunday last week'));
+            $startdate = date($format, strtotime('monday last week'));
+            $enddate = date($format, strtotime('sunday last week'));
             
         }else if($primary_range == 'today'){
-            $startdate = $enddate = date('Y-m-d');
+            $startdate = $enddate = date($format);
         }else if($primary_range == 'custom'){
 
             $startdate = $this->validateDate($_GET['date_from']);
+            if($startdate){
+                $startdate = $_GET['date_from'];
+            }else{
+                $startdate = date($format, strtotime('today - 30 days'));
+            }
             $enddate = $this->validateDate($_GET['date_until']);
+            if($enddate){
+                $enddate = $_GET['date_until'];
+            }else{
+                $enddate = date($format);
+            }
             
         }else{
-            $startdate = date('Y-m-d', strtotime('today - 30 days'));
-            $enddate = date('Y-m-d');
-
+            $startdate = date($format, strtotime('today - 30 days'));
+            $enddate = date($format);
         }
-        echo 'start'.$startdate;
-        echo 'end'.$enddate;
-       /* // Specify the start date. This date can be any English textual format  
-        $date_from = "2010-02-03";   
-        $date_from = strtotime($date_from); // Convert date to a UNIX timestamp  
-          
-        // Specify the end date. This date can be any English textual format  
-        $date_to = "2010-09-10";  
-        $date_to = strtotime($date_to); // Convert date to a UNIX timestamp  
+            
           
         // Loop from the start date to end date and output all dates inbetween  
-        for ($i=$date_from; $i<=$date_to; $i+=86400) {  
-            echo date("Y-m-d", $i).'<br />';  
-        }  */
+        $getDatesFromRange = $this->getDatesFromRange($startdate,$enddate,$format);  
+
+        return ['start_date'=>$startdate,'end_date'=>$enddate,'date_range'=>$getDatesFromRange];
     }
 
     /**
@@ -534,11 +582,11 @@ class Kong_Helpdesk_Reports extends Kong_Helpdesk
      * @version 1.0.0
      * @since   1.0.0
      * 
-     * @return  [type]                       [description]
+     * @return  [type]  
      */
     private function get_tickets_by_status()
     {
-        $ticketsByStatus = array();
+        $ticketsByStatus = [];
         $stati = get_terms('ticket_status', array('hide_empty' => false));
         foreach ($stati as $status) {
             $ticketsByStatus[$status->term_id] = array(
@@ -555,11 +603,11 @@ class Kong_Helpdesk_Reports extends Kong_Helpdesk
      * @author CN
      * @version 1.0.0
      * @since   1.0.0
-     * @return  [type]                       [description]
+     * @return  [type]  
      */
     private function get_tickets_by_type()
     {
-        $ticketsByTypes = array();
+        $ticketsByTypes = [];
         $types = get_terms('ticket_type', array('hide_empty' => false));
         foreach ($types as $type) {
             $ticketsByTypes[$type->term_id] = array(
@@ -576,11 +624,11 @@ class Kong_Helpdesk_Reports extends Kong_Helpdesk
      * @author CN
      * @version 1.0.0
      * @since   1.2.4
-     * @return  [type]                       [description]
+     * @return  [type]  
      */
     private function get_tickets_by_priority()
     {
-        $ticketsByPriority = array();
+        $ticketsByPriority = [];
         $priorities = get_terms('ticket_priority', array('hide_empty' => false));
         foreach ($priorities as $priority) {
             $ticketsByPriority[$priority->term_id] = array(
@@ -601,7 +649,7 @@ class Kong_Helpdesk_Reports extends Kong_Helpdesk
     private function get_tickets_by_system($ticket_ids)
     {
         
-        $ticketsBySystems = array();
+        $ticketsBySystems = [];
         foreach($ticket_ids as $ticketid) {
             
             $term_list = wp_get_post_terms( $ticketid, 'ticket_system', array( 'fields' => 'all' ) );
@@ -615,6 +663,31 @@ class Kong_Helpdesk_Reports extends Kong_Helpdesk
         }
         return $ticketsBySystems;
     }
+
+    // Function to get all the dates in given range 
+    private function getDatesFromRange($start, $end, $format) { 
+        
+        // Declare an empty array 
+        $array = []; 
+        
+        // Variable that store the date interval 
+        // of period 1 day 
+        $interval = new DateInterval('P1D'); 
+    
+        $realEnd = new DateTime($end); 
+        $realEnd->add($interval); 
+    
+        $period = new DatePeriod(new DateTime($start), $interval, $realEnd); 
+    
+        // Use loop to store date into array 
+        foreach($period as $date) {                  
+            $array[$date->format($format)] = 0;  
+        } 
+    
+        // Return the array elements 
+        return $array; 
+    } 
+
 
     /**
      * Validate Date

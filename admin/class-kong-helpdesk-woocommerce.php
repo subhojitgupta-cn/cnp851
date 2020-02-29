@@ -202,7 +202,7 @@ class Kong_Helpdesk_WooCommerce extends Kong_Helpdesk
      * @version 1.0.0
      * @since   1.1.3
      * 
-     * @return  [type]                       [description]
+     * @return  [type]  
      */
     public function maybe_show_faqs($tabs) 
     {

@@ -52,7 +52,7 @@ class Kong_Helpdesk_Ticket_Notes extends Kong_Helpdesk
      * @version 1.0.0
      * @since   1.4.4
      * 
-     * @return  [type]                       [description]
+     * @return  [type]  
      */
     public function notes_metabox()
     {

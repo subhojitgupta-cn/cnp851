@@ -28,7 +28,7 @@ class Kong_Helpdesk_Deactivator {
 	 * @version 1.0.0
 	 * @since   1.0.0
 	 * 
-	 * @return  [type]                       [description]
+	 * @return  [type]  
 	 */
 	public static function deactivate() {
         remove_role('agent');

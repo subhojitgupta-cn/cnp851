@@ -992,7 +992,7 @@ class Kong_Helpdesk_FAQ_Post_Type extends Kong_Helpdesk
      * @version 1.0.0
      * @since   1.1.0
      * 
-     * @return  [type]                       [description]
+     * @return  [type]  
      */
     public function count_dislikes()
     {
@@ -1049,7 +1049,7 @@ class Kong_Helpdesk_FAQ_Post_Type extends Kong_Helpdesk
      * @version 1.0.0
      * @since   1.1.0
      * 
-     * @return  [type]                       [description]
+     * @return  [type]  
      */
     public function only_logged_in($content)
     {

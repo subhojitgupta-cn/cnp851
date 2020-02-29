@@ -492,7 +492,7 @@ class Kong_Helpdesk_Ticket_Post_Type extends Kong_Helpdesk
      * @version 1.0.0
      * @since   1.4.3
      * 
-     * @return  [type]                       [description]
+     * @return  [type]  
      */
     public function merge_ticket_metabox()
     {
@@ -529,7 +529,7 @@ class Kong_Helpdesk_Ticket_Post_Type extends Kong_Helpdesk
      * @version 1.0.0
      * @since   1.4.3
      * 
-     * @return  [type]                       [description]
+     * @return  [type]  
      */
     public function merge_ticket($sourceID, $destinationID)
     {

@@ -186,12 +186,25 @@
     $(document).ready(function() {
     	if( $('body.post-type-ticket').length > 0) {
     		ticket.init(kong_helpdesk_settings);
-    	}
-        $("#primary_range").on("change",function(){
+        }
+        
+        if($("#primary_range").val()=='custom'){
+            $("#primary_range").next('.date_range_cls').show();
+        }else{
+            $("#compare_range").next(".date_range_cls").hide();
+        }
+        if($("#compare_range").val()=='custom'){
+            $("#compare_range").next('.date_range_cls').show();
+        }else{
+            $("#compare_range").next(".date_range_cls").hide();
+        }
+        
+        
+        $("#primary_range,#compare_range").on("change",function(){
             if($(this).val() == 'custom'){
-                $(".date_range_cls").show();
+                $(this).parent().find(".date_range_cls").show();
             }else{
-                $(".date_range_cls").hide();
+                $(this).parent().find(".date_range_cls").hide();
             }
         });
 	});

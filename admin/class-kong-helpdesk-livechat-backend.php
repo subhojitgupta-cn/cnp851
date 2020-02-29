@@ -10,8 +10,8 @@ class Kong_Helpdesk_Livechat_Backend extends Kong_Helpdesk
      * @author CN
      * @version 1.0.0
      * @since   1.0.0
-     * @param   [type]                       $plugin_name        [description]
-     * @param   [type]                       $version            [description]
+     * @param   [type]                       
+     * @param   [type]                       
      * @param   [type]                       $ticket_processor   [description]
      * @param   [type]                       $comments_processor [description]
      */
