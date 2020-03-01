@@ -1049,14 +1049,14 @@ if (! class_exists('Redux')) {
             array(
                 'id'       => 'statusChange',
                 'type'     => 'section',
-                'title'    => __('Status Change Notification', 'kong-helpdesk'),
+                'title'    => __('Tag Change Notification', 'kong-helpdesk'),
                 'subtitle' => __('Notification when a ticket status has been changed. ', 'kong-helpdesk'),
                 'indent'   => false,
             ),
             array(
                 'id'       => 'notificationsStatusChange',
                 'type'     => 'checkbox',
-                'title'    => __('Status Change Notification', 'kong-helpdesk'),
+                'title'    => __('Tag Change Notification', 'kong-helpdesk'),
                 'default'  => '1',
             ),
             array(

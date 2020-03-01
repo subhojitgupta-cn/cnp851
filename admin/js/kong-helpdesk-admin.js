@@ -207,6 +207,13 @@
                 $(this).parent().find(".date_range_cls").hide();
             }
         });
+
+        jQuery("#mail_template_select").on("change",function(){
+            jQuery("#mail_template_mode").val("display");
+            jQuery('#mail_template_frm').submit();
+        });
+
+        
 	});
 
 })( jQuery );

@@ -162,7 +162,7 @@ class Kong_Helpdesk_Reports extends Kong_Helpdesk
                     <input type="hidden" name="action" value="kong_helpdesk_report_filter">
                      <div class="kong-helpdesk-row">
                         <select id="primary_range" name="primary_range" class="ng-pristine ng-valid ng-touched">
-                            <option trans="" <?php echo isset($_GET['primary_range']) && $_GET['primary_range']=='last_30_days' ? 'selected="true"' : '';?> value="last_30_days">Last 30 days</option>
+                            <option trans="" <?php echo $primary_range =='last_30_days' ? 'selected="true"' : '';?> value="last_30_days">Last 30 days</option>
                             <option trans="" value="last_month" <?php echo $primary_range=='last_month' ? 'selected="true"' : '';?>>Last Month</option>
                             <option trans="" value="last_7_days" <?php echo $primary_range =='last_7_days' ? 'selected="true"' : '';?>>Last 7 days</option>
                             <option trans="" value="last_week" <?php echo $primary_range =='last_week' ? 'selected="true"' : '';?>>Last Week</option>

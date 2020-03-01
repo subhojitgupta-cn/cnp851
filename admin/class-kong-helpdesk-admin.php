@@ -18,7 +18,7 @@ class Kong_Helpdesk_Admin extends Kong_Helpdesk
     {
         $this->plugin_name = $plugin_name;
         $this->version = $version;
-        add_action('admin_menu', array($this,'custom_menu_links'));
+        
     }
 
     /**
@@ -222,21 +222,7 @@ class Kong_Helpdesk_Admin extends Kong_Helpdesk
         remove_menu_page( 'options-general.php' );        //Settings
     }
 
-    // created custom menu
-    public function custom_menu_links() {
-
-
-        /*add_menu_page(
-            'Tickets',
-            'Tickets',
-            'manage_options',
-            'edit.php?post_type=ticket',
-            '',
-            '',
-            81
-        );*/
-        
-    }
+   
 
     /**
      * Remove Admin bar nodes
