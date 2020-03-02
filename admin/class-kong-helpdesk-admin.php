@@ -35,6 +35,12 @@ class Kong_Helpdesk_Admin extends Kong_Helpdesk
         wp_enqueue_style('font-awesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css', array(), '4.7.0', 'all');
         wp_enqueue_style('morris', 'https://cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.css', array(), '0.5.1', 'all');
         wp_enqueue_style('Luminous', 'https://cdnjs.cloudflare.com/ajax/libs/luminous-lightbox/1.0.1/luminous-basic.min.css', array(), '1.0.1', 'all');
+
+        if($_REQUEST['page']== 'helpdesk-reports') {
+
+           wp_enqueue_style($this->plugin_name.'-chartist', plugin_dir_url(__FILE__).'css/chartist.css', array(), $this->version, 'all');
+
+        }
     }
     
     /**
@@ -47,11 +53,22 @@ class Kong_Helpdesk_Admin extends Kong_Helpdesk
      */
     public function enqueue_scripts()
     {
+        
+
         wp_enqueue_script('Luminous', 'https://cdnjs.cloudflare.com/ajax/libs/luminous-lightbox/1.0.1/Luminous.min.js', array('jquery'), '1.0.1', true);
         wp_enqueue_script($this->plugin_name.'-admin', plugin_dir_url(__FILE__).'js/kong-helpdesk-admin.js', array('jquery', 'Luminous'), $this->version, false);
         wp_enqueue_script($this->plugin_name.'-livechat', plugin_dir_url(__FILE__).'js/kong-helpdesk-livechat.js', array('jquery'), $this->version, false);
         wp_enqueue_script('raphael', 'https://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js', array('jquery'), '2.1.0', false);
         wp_enqueue_script('morris', 'https://cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.min.js', array('jquery', 'raphael'), '0.5.1', false);
+
+        if($_REQUEST['page']== 'helpdesk-reports') {
+            wp_enqueue_script($this->plugin_name.'-chartist', 'https://cdnjs.cloudflare.com/ajax/libs/chartist/0.11.4/chartist.js', array('jquery', 'raphael'), '0.5.1', false);
+            wp_enqueue_script($this->plugin_name.'-chartist-legend', plugin_dir_url(__FILE__).'js/chartist-plugin-legend.js', array('jquery', 'raphael'), '0.5.1', false);
+            
+
+        }
+        
+
         
     }
 

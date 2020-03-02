@@ -16,6 +16,7 @@ class Kong_Helpdesk_Reports extends Kong_Helpdesk
     {
         $this->plugin_name = $plugin_name;
         $this->version = $version;
+
     }
 
     /**
@@ -113,9 +114,9 @@ class Kong_Helpdesk_Reports extends Kong_Helpdesk
         $primary_tickets_data = $this->ticketProcessing($tickets,$ticket_created);
 
 
-        echo "#primary";
-        echo count($tickets);
-        print_r($primary_tickets_data);
+        //echo "#primary";
+        //echo count($tickets);
+        //print_r($primary_tickets_data);
 
         if(isset($_GET['compare_range']) && $_GET['compare_range']!='') {
 
@@ -144,9 +145,9 @@ class Kong_Helpdesk_Reports extends Kong_Helpdesk
         }
 
 
-        echo "#compare";
-        echo count($compare_tickets);
-        print_r($compare_tickets_data);
+        //echo "#compare";
+        //echo count($compare_tickets);
+        //print_r($compare_tickets_data);
         
         // $ticketsByStatus = $this->get_tickets_by_status();
         // $ticketsByType = $this->get_tickets_by_type();
@@ -213,122 +214,61 @@ class Kong_Helpdesk_Reports extends Kong_Helpdesk
                     <h2><?php echo __('Filtered', 'kong-helpdesk') ?></h2>
                     <p><?php echo __('Filtered Tickets:', 'kong-helpdesk') . ' ' . count($tickets) ?></p>
                 </div>
-                <div class="kong-helpdesk-row">
-                    <div class="kong-helpdesk-col-sm-3">
-                        <h3 class="kong-helpdesk-center"><?php echo __('Tickets by Agent', 'kong-helpdesk') ?></h3>
-                        <div id="tickets-by-agent"></div>
-                        <!-- <script>Morris.Donut({
-                          element: 'tickets-by-agent',
-                          colors: ['#F44336', '#2196F3', '#FFEB3B', '#4CAF50', '#FF9800', '#795548', '#673AB7'],
-                          data: <?php echo json_encode(array_values($ticketsAssignedToAgent)) ?>
-                        });</script> -->
-                    </div>
-                    <div class="kong-helpdesk-col-sm-3">
-                        <h3 class="kong-helpdesk-center"><?php echo __('Tickets by Reporter', 'kong-helpdesk') ?></h3>
-                        <div id="tickets-by-reporter"></div>
-                        <!-- <script>Morris.Donut({
-                          element: 'tickets-by-reporter',
-                          colors: ['#F44336', '#2196F3', '#FFEB3B', '#4CAF50', '#FF9800', '#795548', '#673AB7'],
-                          data: <?php echo json_encode(array_values($ticketsByReporter)) ?>
-                        });</script> -->
-                    </div>
-                    <div class="kong-helpdesk-col-sm-3">
-                        <h3 class="kong-helpdesk-center"><?php echo __('Tickets by Satisfaction', 'kong-helpdesk') ?></h3>
-                        <div id="tickets-by-satisfaction"></div>
-                        <!-- <script>Morris.Donut({
-                          element: 'tickets-by-satisfaction',
-                          colors: ['#F44336', '#2196F3', '#FFEB3B', '#4CAF50', '#FF9800', '#795548', '#673AB7'],
-                          data: <?php echo json_encode(array_values($ticketsBySatisfaction)) ?>
-                        });</script> -->
-                    </div>
-                    <div class="kong-helpdesk-col-sm-3">
-                        <h3 class="kong-helpdesk-center"><?php echo __('Tickets by Source', 'kong-helpdesk') ?></h3>
-                        <div id="tickets-by-source"></div>
-                        <!-- <script>Morris.Donut({
-                          element: 'tickets-by-source',
-                          colors: ['#F44336', '#2196F3', '#FFEB3B', '#4CAF50', '#FF9800', '#795548', '#673AB7'],
-                          data: <?php echo json_encode(array_values($ticketsBySource)) ?>
-                        });</script> -->
-                    </div>
-                    <div class="kong-helpdesk-col-sm-3">
-                        <h3 class="kong-helpdesk-center"><?php echo __('Tickets by Year', 'kong-helpdesk') ?></h3>
-                        <div id="tickets-by-year"></div>
-                        <!-- <script>Morris.Donut({
-                          element: 'tickets-by-year',
-                          colors: ['#F44336', '#2196F3', '#FFEB3B', '#4CAF50', '#FF9800', '#795548', '#673AB7'],
-                          data: <?php echo json_encode(array_values($ticketsCreatedByYear)) ?>
-                        });</script> -->
-                    </div>
-                    <div class="kong-helpdesk-col-sm-3">
-                        <h3 class="kong-helpdesk-center"><?php echo __('Tickets by Month', 'kong-helpdesk') ?></h3>
-                        <div id="tickets-by-month"></div>
-                        <!-- <script>Morris.Donut({
-                          element: 'tickets-by-month',
-                          colors: ['#F44336', '#2196F3', '#FFEB3B', '#4CAF50', '#FF9800', '#795548', '#673AB7'],
-                          data: <?php echo json_encode(array_values($ticketsCreatedByMonth)) ?>
-                        });</script> -->
-                    </div>
-                    <div class="kong-helpdesk-col-sm-6">
-                        <h3 class="kong-helpdesk-center"><?php echo __('Tickets created by Year / Month', 'kong-helpdesk') ?></h3>
-                        <div id="tickets-by-year-month"></div>
-                        <!-- <script>Morris.Line({
-                            element: 'tickets-by-year-month',
-                            colors: ['#F44336', '#2196F3', '#FFEB3B', '#4CAF50', '#FF9800', '#795548', '#673AB7'],
-                            data: <?php echo json_encode(array_values($ticketsCreatedByYearMonth)) ?>,
-                            xkey: 'y',
-                            ykeys: <?php echo json_encode(array_values($years)) ?>,
-                            labels: <?php echo json_encode(array_values($years)) ?>,
-                            xLabels: 'year-month',
-                            parseTime: false
-                        });
-                        </script> -->
-                    </div>
-                </div>
+               
                 <div class="kong-helpdesk-row">
                     <div class="kong-helpdesk-col-sm-12">
                         <h2><?php echo __('Total', 'kong-helpdesk') ?></h2>
                         <p><?php echo __('No Date filter applied here:', 'kong-helpdesk') ?></p>
                     </div>
-                    <div class="kong-helpdesk-col-sm-3">
+                    <!-- <div class="kong-helpdesk-col-sm-3">
                         <h3 class="kong-helpdesk-center"><?php echo __('Tickets by Status', 'kong-helpdesk') ?></h3>
-                        <div id="tickets-by-status"></div>
-                       <!--  <script>Morris.Donut({
-                          element: 'tickets-by-status',
-                          colors: ['#F44336', '#2196F3', '#FFEB3B', '#4CAF50', '#FF9800', '#795548', '#673AB7'],
-                          data: <?php echo json_encode(array_values($ticketsByStatus)) ?>
-                        });</script> -->
+                       
+                        <div id="tickets-by-tag" class="tickets-by-tag"></div>
+                        
                     </div>
                     <div class="kong-helpdesk-col-sm-3">
                         <h3 class="kong-helpdesk-center"><?php echo __('Tickets by Type', 'kong-helpdesk') ?></h3>
                         <div id="tickets-by-type"></div>
-                       <!--  <script>Morris.Donut({
+                         <script>Morris.Donut({
                           element: 'tickets-by-type',
                           colors: ['#F44336', '#2196F3', '#FFEB3B', '#4CAF50', '#FF9800', '#795548', '#673AB7'],
                           data: <?php echo json_encode(array_values($ticketsByType)) ?>
-                        });</script> -->
-                    </div>
-                    <div class="kong-helpdesk-col-sm-3">
+                        });</script> 
+                    </div>-->
+                    <div class="kong-helpdesk-col-sm-12">
                         <h3 class="kong-helpdesk-center"><?php echo __('Tickets by Department', 'kong-helpdesk') ?></h3>
-                        <div id="tickets-by-system"></div>
-                       <!--  <script>Morris.Donut({
-                          element: 'tickets-by-system',
-                          colors: ['#F44336', '#2196F3', '#FFEB3B', '#4CAF50', '#FF9800', '#795548', '#673AB7'],
-                          data: <?php echo json_encode(array_values($ticketsBySystem)) ?>
-                        });</script> -->
+                        <div id="tickets-by-system" class="ticketbycategory"></div>
+                       <?php $ticketbycategory_chart = $primary_tickets_data['ticket_by_category'];?>
+                        <script>
+
+                            new Chartist.Pie('.ticketbycategory', {
+                                  labels: <?php echo json_encode((array_column($ticketbycategory_chart, 'label')))?>,
+                                  series: <?php echo json_encode((array_column($ticketbycategory_chart, 'count')))?>,
+                                    }, {
+                                    donut: true,
+                                    donutWidth: 20,
+                                    donutSolid: true,
+                                    startAngle: 270,
+                                    showLabel: true,
+                                    // plugins: [
+                                    //     Chartist.plugins.legend()
+                                    // ]
+                                });
+                        </script>
                     </div>
-                    <div class="kong-helpdesk-col-sm-3">
+                    <!-- <div class="kong-helpdesk-col-sm-3">
                         <h3 class="kong-helpdesk-center"><?php echo __('Tickets by Priority', 'kong-helpdesk') ?></h3>
                         <div id="tickets-by-priority"></div>
-                       <!--  <script>Morris.Donut({
+                        <script>Morris.Donut({
                           element: 'tickets-by-priority',
                           colors: ['#F44336', '#2196F3', '#FFEB3B', '#4CAF50', '#FF9800', '#795548', '#673AB7'],
                           data: <?php echo json_encode(array_values($ticketsByPriority)) ?>
-                        });</script> -->
+                        });</script>
                     </div>
                     <div class="kong-helpdesk-col-sm-6">
                         <h3 class="kong-helpdesk-center">Created / Completed Tickets by Month</h3>
                         <div id="created-completed-tickets-by-month"></div>
-                       <!--  <script>Morris.Bar({
+                        <script>Morris.Bar({
                             element: 'created-completed-tickets-by-month',
                             colors: ['#F44336', '#2196F3', '#FFEB3B', '#4CAF50', '#FF9800', '#795548', '#673AB7'],
                             data: [
@@ -344,8 +284,8 @@ class Kong_Helpdesk_Reports extends Kong_Helpdesk
                               ykeys: ['a', 'b'],
                               labels: ['Series A', 'Series B']
                             });
-                        </script> -->
-                    </div>
+                        </script>
+                    </div> -->
                 </div>
             </div>
         </div>
