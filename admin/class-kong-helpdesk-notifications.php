@@ -37,9 +37,9 @@ class Kong_Helpdesk_Notifications extends Kong_Helpdesk
         $new_ticket_created = array('subject'=>'New Ticket created','content'=>'<p><b>A Ticket with the ID [ticket_id] has been created:</b></p>[ticket_content]');
         $tag_new = array('subject'=>'[tag_name] changed to: [new_tag]','content'=>'<p>The [tag_name] changed to: [new_tag]</p>');
         $tag_changed = array('subject'=>'[tag_name] changed from [old_tag] to [new_tag]','content'=>'<p>The [tag_name] has changed from [old_tag] to [new_tag]</p>');
-        $comment_added = array('subject'=>'','content'=>'<p><b>New comment added by [comment_author] :</b></p>[comment_content]');
-        $add_agent = array('subject'=>'','content'=>'<p>This ticket has been assigned to [agent]</p>');
-        $assigned_agent_changed = array('subject'=>'','content'=>'<p>This ticket has been assigned from [agent1] to [agent2]</p>');
+        $comment_added = array('subject'=>'Comment added','content'=>'<p><b>New comment added by [comment_author] :</b></p>[comment_content]');
+        $add_agent = array('subject'=>'Assigned to [agent]','content'=>'<p>This ticket has been assigned to [agent]</p>');
+        $assigned_agent_changed = array('subject'=>'Assigned to [agent]','content'=>'<p>This ticket has been assigned from [agent1] to [agent2]</p>');
 
 
 
@@ -88,19 +88,22 @@ class Kong_Helpdesk_Notifications extends Kong_Helpdesk
     }
 
     public function helpdesk_mail_templates() {
-        //echo "mail Templates";
-        $mail_template_content = '';
+
+        $mail_template_content = $mail_template_data = '';
         $mail_template_select = 'new_ticket_created';
+
         
         if ( isset( $_POST['mail_template_nonce'] )) {
             if(! wp_verify_nonce( $_POST['mail_template_nonce'], '_mail_template_nonce' ) ){
                 echo ( __( 'Security check', 'kong-helpdesk' ) ); 
             } else {
                 $mail_template_select = $_POST['mail_template_select'];
+                $mail_template_subject = $_POST['mail_template_subject'];
                 $mail_template_content = $_POST['mail_template_content'];
                 if( $_POST['mail_template_mode'] == 'modify') {
                     if(get_option($mail_template_select)!=''){
-                        update_option($mail_template_select, $mail_template_content);
+                        $mail_template_data = array('subject'=>$mail_template_subject,'content'=>$mail_template_content);
+                        update_option($mail_template_select, $mail_template_data);
                     }
                 }
                 
@@ -119,6 +122,8 @@ class Kong_Helpdesk_Notifications extends Kong_Helpdesk
                             <?php wp_nonce_field( '_mail_template_nonce', 'mail_template_nonce' ); ?>
                             <input type="hidden" name="mail_template_mode" id="mail_template_mode" value="modify" />
                             <div class="kong-helpdesk-row">
+                                 <div class="input-field">
+                                    <label for="mail_template_select" class="active">Selected Template:</label>
                             <select name="mail_template_select" id="mail_template_select">
                                 <option value="new_ticket_created" <?php echo $mail_template_select =='new_ticket_created' ? 'selected="true"' : '';?>>New Ticket Created Notification</option>
                                 <option value="tag_new" <?php echo $mail_template_select =='tag_new' ? 'selected="true"' : '';?>>New Tag Notification</option>
@@ -128,23 +133,34 @@ class Kong_Helpdesk_Notifications extends Kong_Helpdesk
                                 <option value="assigned_agent_changed" <?php echo $mail_template_select =='assigned_agent_changed' ? 'selected="true"' : '';?>>Assigned Agent Changed Notification</option>
                             </select>
                             </div>
+                            </div>
+                            <div class="kong-helpdesk-row">
+                              <div class="input-field">
+                            <?php $mailtemplate = get_option( $mail_template_select );
+                            $mail_subject = $mailtemplate['subject'];
+                            ?>
+                            <label for="mail_template_subject" class="active">Subject:</label>
+                            <input type="text" id="mail_template_subject" name="mail_template_subject" class="regular-text" value="<?php echo $mail_subject;?>" placeholder="">
+                                </div>
+                            </div>
                             <div class="kong-helpdesk-row">
                             <?php
-                            $meta_content = wpautop(stripslashes(get_option( $mail_template_select )));
+                            
+                            $meta_content = wpautop(stripslashes($mailtemplate['content']));
                             $editor_id = 'mail_template_content';
-                            $settings  = array (
-                                    'wpautop'          => true,   // Whether to use wpautop for adding in paragraphs. Note that the paragraphs are added automatically when wpautop is false.
-                                    'media_buttons'    => false,   // Whether to display media insert/upload buttons
-                                    'textarea_name'    => $editor_id,   // The name assigned to the generated textarea and passed parameter when the form is submitted.
-                                    'textarea_rows'    => get_option( 'default_post_edit_rows', 10 ),  // The number of rows to display for the textarea
-                                    'tabindex'         => '',     // The tabindex value used for the form field
-                                    'editor_css'       => '',     // Additional CSS styling applied for both visual and HTML editors buttons, needs to include <style> tags, can use "scoped"
-                                    'editor_class'     => '',     // Any extra CSS Classes to append to the Editor textarea
-                                    'teeny'            => true,  // Whether to output the minimal editor configuration used in PressThis
-                                    'dfw'              => false,  // Whether to replace the default fullscreen editor with DFW (needs specific DOM elements and CSS)
-                                    'tinymce'          => true,   // Load TinyMCE, can be used to pass settings directly to TinyMCE using an array
-                                    'quicktags'        => true,   // Load Quicktags, can be used to pass settings directly to Quicktags using an array. Set to false to remove your editor's Visual and Text tabs.
-                                    'drag_drop_upload' => true    // Enable Drag & Drop Upload Support (since WordPress 3.9)
+                            $settings =   array(
+                                'wpautop' => true,              // Whether to use wpautop for adding in paragraphs. Note that the paragraphs are added automatically when wpautop is false.
+                                'media_buttons' => false,        // Whether to display media insert/upload buttons
+                                'textarea_name' => $editor_id,       // The name assigned to the generated textarea and passed parameter when the form is submitted.
+                                'textarea_rows' => 20,          // The number of rows to display for the textarea
+                                'tabindex' => '',               // The tabindex value used for the form field
+                                'editor_css' => '',             // Additional CSS styling applied for both visual and HTML editors buttons, needs to include <style> tags, can use "scoped"
+                                'editor_class' => '',           // Any extra CSS Classes to append to the Editor textarea
+                                'teeny' => false,               // Whether to output the minimal editor configuration used in PressThis
+                                'dfw' => false,                 // Whether to replace the default fullscreen editor with DFW (needs specific DOM elements and CSS)
+                                'tinymce' => true,              // Load TinyMCE, can be used to pass settings directly to TinyMCE using an array
+                                'quicktags' => true,            // Load Quicktags, can be used to pass settings directly to Quicktags using an array. Set to false to remove your editor's Visual and Text tabs.
+                                'drag_drop_upload' => false     // Enable Drag & Drop Upload Support (since WordPress 3.9)
                             );
 
                             // display the editor
@@ -196,11 +212,13 @@ class Kong_Helpdesk_Notifications extends Kong_Helpdesk
             return false;
         }
 
-        $this->subject = __('New Ticket created', 'kong-helpdesk');
+        $maildata = get_option( 'new_ticket_created' );
+
+        $this->subject = $maildata['subject'];
 
         $this->id = $post->ID;
         $this->title = $post->post_title;
-        $content = stripslashes(get_option( 'new_ticket_created' ));
+        $content = stripslashes($maildata['content']);
         $content = str_replace(array('[ticket_id]','[ticket_content]'), array($post->ID, $post->post_content), $content);
        
         $this->content = $content;
@@ -263,12 +281,16 @@ class Kong_Helpdesk_Notifications extends Kong_Helpdesk
                         continue;
                     }
                     $post = get_post($object_id);
-                    
-                    $this->subject =  sprintf(__('%s changed from %s to %s', 'kong-helpdesk'), $taxonomy->label, $oldTerm->name, $newTerm->name);
+                    $maildata = get_option( 'tag_changed' );
+
+                    $subject = $maildata['subject'];
+                    $subject = str_replace(array('[tag_name]','[old_tag]','[new_tag]'), array($taxonomy->label,$oldTerm->name,$newTerm->name), $subject); 
+
+                    $this->subject =  $subject;
 
                     $this->id = $post->ID;
                     $this->title = $post->post_title;
-                    $content = stripslashes(get_option( 'tag_changed' ));
+                    $content = stripslashes($maildata['content']);
                     $content = str_replace(array('[tag_name]','[old_tag]','[new_tag]'), array($taxonomy->label,$oldTerm->name,$newTerm->name), $content);                
                     $this->content = $content;
                     $this->link = get_permalink($post->ID);
@@ -301,11 +323,16 @@ class Kong_Helpdesk_Notifications extends Kong_Helpdesk
             } else {
                 $post = get_post($object_id);
                 
-                $this->subject =  sprintf(__('%s changed to: %s', 'kong-helpdesk'), $taxonomy->label, $newTerm->name);
+                $maildata = get_option( 'tag_new' );
+
+                $subject = $maildata['subject'];
+                $subject = str_replace(array('[tag_name]','[new_tag]'), array($taxonomy->label,$newTerm->name), $subject); 
+
+                $this->subject =  $subject;
 
                 $this->id = $post->ID;
                 $this->title = $post->post_title;
-                $content = stripslashes(get_option( 'tag_new' ));
+                $content = stripslashes($maildata['content']);
                 $content = str_replace(array('[tag_name]','[new_tag]'), array($taxonomy->label,$newTerm->name), $content);                
                 $this->content = $content;
                 $this->link = get_permalink($post->ID);
@@ -366,11 +393,12 @@ class Kong_Helpdesk_Notifications extends Kong_Helpdesk
             return false;
         }
 
-        $this->subject = __('Comment added', 'kong-helpdesk');
+        $maildata = get_option( 'comment_added' );
+        $this->subject = $maildata['subject'];
 
         $this->id = $post->ID;
         $this->title = $post->post_title;
-        $content = stripslashes(get_option( 'comment_added' ));
+        $content = stripslashes($maildata['content']);
         $content = str_replace(array('[comment_author]','[comment_content]'), array($comment->comment_author,$comment->comment_content), $content);                
         $this->content = $content;
         $this->link = get_permalink($post->ID);
@@ -454,12 +482,14 @@ class Kong_Helpdesk_Notifications extends Kong_Helpdesk
             $agent_after_email = $agentAfter->user_email;
         }
 
-        $this->subject = sprintf(__('Assigned to %s', 'kong-helpdesk'), $agent_after_name);
+
+        $maildata = get_option( 'assigned_agent_changed' );
+        $this->subject = str_replace(array('[agent]'), array($agent_after_name), $maildata['subject']);
 
         $post = get_post($object_id);
         $this->id = $post->ID;
         $this->title = $post->post_title;
-        $content = stripslashes(get_option( 'assigned_agent_changed' ));
+        $content = stripslashes($maildata['content']);
         $content = str_replace(array('[agent1]','[agent2]'), array($agent_before_name,$agent_after_name), $content);                
         $this->content = $content;
         $this->link = get_permalink($post->ID);
@@ -512,12 +542,15 @@ class Kong_Helpdesk_Notifications extends Kong_Helpdesk
         $agentID = $meta_value;
         $agent = get_userdata($agentID)->data;
 
-        $this->subject = sprintf(__('Assigned to %s', 'kong-helpdesk'), $agent->display_name);
+        $maildata = get_option( 'add_agent' );
+
+
+        $this->subject = str_replace(array('[agent]'), array($agent->display_name), $maildata['subject']);
 
         $post = get_post($object_id);
         $this->id = $post->ID;
         $this->title = $post->post_title;
-        $content = stripslashes(get_option( 'add_agent' ));
+        $content = stripslashes($maildata['content']);
         $content = str_replace(array('[agent]'), array($agent->display_name), $content);                
         $this->content = $content;
         $this->link = get_permalink($post->ID);
