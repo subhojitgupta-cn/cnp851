@@ -198,8 +198,8 @@ class Kong_Helpdesk_Saved_Replies_Post_Type extends Kong_Helpdesk
     public function register_saved_reply_taxonomy()
     {
         // Saved Reply Category Taxonomy
-        $singular = __('Category', 'kong-helpdesk');
-        $plural = __('Categories', 'kong-helpdesk');
+        $singular = __('Canned Category', 'kong-helpdesk');
+        $plural = __('Canned Categories', 'kong-helpdesk');
 
         $labels = array(
             'name' => sprintf(__('%s', 'kong-helpdesk'), $plural),
@@ -234,8 +234,8 @@ class Kong_Helpdesk_Saved_Replies_Post_Type extends Kong_Helpdesk
         register_taxonomy('saved_reply_categories', 'saved_reply', $args);
 
         // Saved Reply Tag Taxonomy
-        $singular = __('Tag', 'kong-helpdesk');
-        $plural = __('Tags', 'kong-helpdesk');
+        $singular = __('Canned Tag', 'kong-helpdesk');
+        $plural = __('Canned Tags', 'kong-helpdesk');
 
         $labels = array(
             'name' => sprintf(__('%s', 'kong-helpdesk'), $plural),

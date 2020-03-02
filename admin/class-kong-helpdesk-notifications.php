@@ -34,12 +34,12 @@ class Kong_Helpdesk_Notifications extends Kong_Helpdesk
 
         // copnmtent of mail templates
         $template_array = ['new_ticket_created','tag_new','tag_changed','comment_added','add_agent','assigned_agent_changed'];
-        $new_ticket_created = '<p><b>A Ticket with the ID [ticket_id] has been created:</b></p>[ticket_content]';
-        $tag_new = '<p>The [tag_name] changed to: [new_tag]</p>';
-        $tag_changed = '<p>The [tag_name] has changed from [old_tag] to [new_tag]</p>';
-        $comment_added = '<p><b>New comment added by [comment_author] :</b></p>[comment_content]';
-        $add_agent = '<p>This ticket has been assigned to [agent]</p>';
-        $assigned_agent_changed = '<p>This ticket has been assigned from [agent1] to [agent2]</p>';
+        $new_ticket_created = array('subject'=>'New Ticket created','content'=>'<p><b>A Ticket with the ID [ticket_id] has been created:</b></p>[ticket_content]');
+        $tag_new = array('subject'=>'[tag_name] changed to: [new_tag]','content'=>'<p>The [tag_name] changed to: [new_tag]</p>');
+        $tag_changed = array('subject'=>'[tag_name] changed from [old_tag] to [new_tag]','content'=>'<p>The [tag_name] has changed from [old_tag] to [new_tag]</p>');
+        $comment_added = array('subject'=>'','content'=>'<p><b>New comment added by [comment_author] :</b></p>[comment_content]');
+        $add_agent = array('subject'=>'','content'=>'<p>This ticket has been assigned to [agent]</p>');
+        $assigned_agent_changed = array('subject'=>'','content'=>'<p>This ticket has been assigned from [agent1] to [agent2]</p>');
 
 
 
@@ -121,6 +121,7 @@ class Kong_Helpdesk_Notifications extends Kong_Helpdesk
                     <option value="add_agent" <?php echo $mail_template_select =='add_agent' ? 'selected="true"' : '';?>>Add Agent</option>
                     <option value="assigned_agent_changed" <?php echo $mail_template_select =='assigned_agent_changed' ? 'selected="true"' : '';?>>Assigned Agent Changed Notification</option>
                 </select>
+                <input type="text" name="mail_template_subject" value ="" />
                 </div>
                 <div class="kong-helpdesk-row">
 	            <?php
@@ -130,7 +131,6 @@ class Kong_Helpdesk_Notifications extends Kong_Helpdesk
                         'wpautop'          => true,   // Whether to use wpautop for adding in paragraphs. Note that the paragraphs are added automatically when wpautop is false.
                         'media_buttons'    => false,   // Whether to display media insert/upload buttons
                         'textarea_name'    => $editor_id,   // The name assigned to the generated textarea and passed parameter when the form is submitted.
-                        'textarea_rows'    => get_option( 'default_post_edit_rows', 10 ),  // The number of rows to display for the textarea
                         'tabindex'         => '',     // The tabindex value used for the form field
                         'editor_css'       => '',     // Additional CSS styling applied for both visual and HTML editors buttons, needs to include <style> tags, can use "scoped"
                         'editor_class'     => '',     // Any extra CSS Classes to append to the Editor textarea
@@ -449,7 +449,7 @@ class Kong_Helpdesk_Notifications extends Kong_Helpdesk
         $post = get_post($object_id);
         $this->id = $post->ID;
         $this->title = $post->post_title;
-        $content = stripslashes(get_option( 'comment_added' ));
+        $content = stripslashes(get_option( 'assigned_agent_changed' ));
         $content = str_replace(array('[agent1]','[agent2]'), array($agent_before_name,$agent_after_name), $content);                
         $this->content = $content;
         $this->link = get_permalink($post->ID);
@@ -507,7 +507,7 @@ class Kong_Helpdesk_Notifications extends Kong_Helpdesk
         $post = get_post($object_id);
         $this->id = $post->ID;
         $this->title = $post->post_title;
-        $content = stripslashes(get_option( 'comment_added' ));
+        $content = stripslashes(get_option( 'add_agent' ));
         $content = str_replace(array('[agent]'), array($agent->display_name), $content);                
         $this->content = $content;
         $this->link = get_permalink($post->ID);

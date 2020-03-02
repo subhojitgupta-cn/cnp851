@@ -37,7 +37,7 @@ class Kong_Helpdesk_Reports extends Kong_Helpdesk
             'helpdesk-reports',
             array($this, 'render_helpdesk_reports'),
             '',
-            '3'
+            '4'
         );
     }
 
@@ -111,6 +111,7 @@ class Kong_Helpdesk_Reports extends Kong_Helpdesk
         
         $tickets = $this->getTicketsReports($ticket_created['start_date'],$ticket_created['end_date']);
         $primary_tickets_data = $this->ticketProcessing($tickets,$ticket_created);
+
 
         echo "#primary";
         echo count($tickets);
@@ -291,20 +292,20 @@ class Kong_Helpdesk_Reports extends Kong_Helpdesk
                     <div class="kong-helpdesk-col-sm-3">
                         <h3 class="kong-helpdesk-center"><?php echo __('Tickets by Status', 'kong-helpdesk') ?></h3>
                         <div id="tickets-by-status"></div>
-                        <script>Morris.Donut({
+                       <!--  <script>Morris.Donut({
                           element: 'tickets-by-status',
                           colors: ['#F44336', '#2196F3', '#FFEB3B', '#4CAF50', '#FF9800', '#795548', '#673AB7'],
                           data: <?php echo json_encode(array_values($ticketsByStatus)) ?>
-                        });</script>
+                        });</script> -->
                     </div>
                     <div class="kong-helpdesk-col-sm-3">
                         <h3 class="kong-helpdesk-center"><?php echo __('Tickets by Type', 'kong-helpdesk') ?></h3>
                         <div id="tickets-by-type"></div>
-                        <script>Morris.Donut({
+                       <!--  <script>Morris.Donut({
                           element: 'tickets-by-type',
                           colors: ['#F44336', '#2196F3', '#FFEB3B', '#4CAF50', '#FF9800', '#795548', '#673AB7'],
                           data: <?php echo json_encode(array_values($ticketsByType)) ?>
-                        });</script>
+                        });</script> -->
                     </div>
                     <div class="kong-helpdesk-col-sm-3">
                         <h3 class="kong-helpdesk-center"><?php echo __('Tickets by Department', 'kong-helpdesk') ?></h3>
@@ -318,16 +319,16 @@ class Kong_Helpdesk_Reports extends Kong_Helpdesk
                     <div class="kong-helpdesk-col-sm-3">
                         <h3 class="kong-helpdesk-center"><?php echo __('Tickets by Priority', 'kong-helpdesk') ?></h3>
                         <div id="tickets-by-priority"></div>
-                        <script>Morris.Donut({
+                       <!--  <script>Morris.Donut({
                           element: 'tickets-by-priority',
                           colors: ['#F44336', '#2196F3', '#FFEB3B', '#4CAF50', '#FF9800', '#795548', '#673AB7'],
                           data: <?php echo json_encode(array_values($ticketsByPriority)) ?>
-                        });</script>
+                        });</script> -->
                     </div>
                     <div class="kong-helpdesk-col-sm-6">
                         <h3 class="kong-helpdesk-center">Created / Completed Tickets by Month</h3>
                         <div id="created-completed-tickets-by-month"></div>
-                        <script>Morris.Bar({
+                       <!--  <script>Morris.Bar({
                             element: 'created-completed-tickets-by-month',
                             colors: ['#F44336', '#2196F3', '#FFEB3B', '#4CAF50', '#FF9800', '#795548', '#673AB7'],
                             data: [
@@ -343,7 +344,7 @@ class Kong_Helpdesk_Reports extends Kong_Helpdesk
                               ykeys: ['a', 'b'],
                               labels: ['Series A', 'Series B']
                             });
-                        </script>
+                        </script> -->
                     </div>
                 </div>
             </div>
@@ -397,9 +398,11 @@ class Kong_Helpdesk_Reports extends Kong_Helpdesk
         $ticketsByReporter = [];
         $ticketsBySatisfaction = [];
         $ticketsBySource = [];
+        $ticketsByTags = [];
         $ticketsByagents = [];
         $ticket_ids = [];
         $ticket_data = [];
+
         
         $ticket_ids = wp_list_pluck( $tickets, 'ID' );
         foreach ($tickets as $ticket) {
@@ -410,7 +413,9 @@ class Kong_Helpdesk_Reports extends Kong_Helpdesk
             $weekday_name_created = $d->format('D');
             
             $ticket_created_count = 1;
-            $ticketsCreatedByYearMonth[$month_created][$year_created]++;
+            $count_ticket =1;
+
+            
             if(isset($ticket_created[$d->format('Y-m-d')])) {
                 $ticket_created_count = $ticket_created[$d->format('Y-m-d')] + 1;
             }
@@ -418,7 +423,8 @@ class Kong_Helpdesk_Reports extends Kong_Helpdesk
             {
                 $ticket_created[$d->format('Y-m-d')] = $ticket_created_count;
             }
-            
+
+         
 
             //Tickets by agents
             $agent = get_post_meta($ticket->ID, 'agent', true);
@@ -510,6 +516,12 @@ class Kong_Helpdesk_Reports extends Kong_Helpdesk
                 'value' => $count,
             );
         }
+
+        // tickets by tags
+        $ticketsByTags = $this->get_tickets_by_status($ticket_ids);
+        $ticket_data['ticket_by_tags'] = $ticketsByTags ;
+
+
         // tickets by department
         $ticketsBySystem = $this->get_tickets_by_system($ticket_ids);
         $ticket_data['ticket_by_category'] = $ticketsBySystem ;
@@ -584,18 +596,22 @@ class Kong_Helpdesk_Reports extends Kong_Helpdesk
      * 
      * @return  [type]  
      */
-    private function get_tickets_by_status()
+    private function get_tickets_by_status($ticket_ids)
     {
         $ticketsByStatus = [];
-        $stati = get_terms('ticket_status', array('hide_empty' => false));
-        foreach ($stati as $status) {
-            $ticketsByStatus[$status->term_id] = array(
-                'label' => $status->name,
-                'value' => $status->count,
-            );
+        foreach($ticket_ids as $ticketid) {
+            
+            $term_list = wp_get_post_terms( $ticketid, 'ticket_status', array( 'fields' => 'all' ) );
+            foreach ($term_list as $key=>$val) {
+                $count = 1;
+                if(isset($ticketsByStatus[$val->slug])) {
+                    $count = $ticketsByStatus[$val->slug]['count']+1;
+                }
+                  $ticketsByStatus[$val->slug]= array('term_id'=>$val->term_id,'count'=>$count);
+              }
         }
-
         return $ticketsByStatus;
+
     }
 
     /**
@@ -754,6 +770,11 @@ class Kong_Helpdesk_Reports extends Kong_Helpdesk
 
     }
 
+    // display number of total,open,close tickets
+    private function get_tickets_data($ticket_ids) {
+
+    }
+
     // return Average first response time in selected period
     private function first_response_time_selected_period($agents , $ticket_ids){
         $data = $agent_detail = [];
@@ -799,6 +820,8 @@ class Kong_Helpdesk_Reports extends Kong_Helpdesk
                 }
 
             }
+
+            $period_array['total'] = array_sum(array_column($period_array,'percentage'));
             
         }
 
@@ -853,7 +876,7 @@ class Kong_Helpdesk_Reports extends Kong_Helpdesk
 
         $comments = $this->get_comments_by_userid($userid , $ticket_ids);
         $comment =  [];
-        $calculate_interval = $avg_response_time = 0;
+        $calculate_interval = $avg_response_time = $total_tickets = 0;
        
 
         if(!empty($comments)) {
@@ -866,7 +889,7 @@ class Kong_Helpdesk_Reports extends Kong_Helpdesk
                 $minutes = round($interval / ( 60 * 60 * 60));
                 $seconds = round($interval / ( 60 * 60 * 60 * 60 ));
                 $calculate_interval += $hours;
-                 $total_tickets = 0;
+                $total_tickets = 0;
                 $comment[$value->comment_ID] = [
                     'post_id' => $value->comment_post_ID,
                     'posts_date' => get_the_time('Y-m-d H:i:s', $value->comment_post_ID),
@@ -932,6 +955,8 @@ class Kong_Helpdesk_Reports extends Kong_Helpdesk
                  );
                 
             }
+
+            $ticket_by_agents['total'] = array_sum(array_column($ticket_by_agents,'avg_response_time'));
         }
 
         return $ticket_by_agents;

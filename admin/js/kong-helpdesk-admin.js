@@ -200,11 +200,12 @@
         }
         
         
-        $("#primary_range,#compare_range").on("change",function(){
-            if($(this).val() == 'custom'){
-                $(this).parent().find(".date_range_cls").show();
+        jQuery("#primary_range,#compare_range").on("change",function(){
+            alert(jQuery(this).val());
+            if(jQuery(this).val() == 'custom'){
+                jQuery(this).parent().next(".date_range_cls").show();
             }else{
-                $(this).parent().find(".date_range_cls").hide();
+                jQuery(this).parent().next(".date_range_cls").hide();
             }
         });
 
