@@ -88,7 +88,7 @@ class Kong_Helpdesk_Notifications extends Kong_Helpdesk
     }
 
     public function helpdesk_mail_templates() {
-        echo "mail Templates";
+        //echo "mail Templates";
         $mail_template_content = '';
         $mail_template_select = 'new_ticket_created';
         
@@ -107,50 +107,59 @@ class Kong_Helpdesk_Notifications extends Kong_Helpdesk
             }
         }
         ?>
-
-        <div class="mail-_templates">
-            <form action="<?php echo admin_url('edit.php?page=mail-templates') ?>" name="mail_template_frm" id="mail_template_frm" method="POST">
-                <?php wp_nonce_field( '_mail_template_nonce', 'mail_template_nonce' ); ?>
-                <input type="hidden" name="mail_template_mode" id="mail_template_mode" value="modify" />
-                <div class="kong-helpdesk-row">
-                <select name="mail_template_select" id="mail_template_select">
-                    <option value="new_ticket_created" <?php echo $mail_template_select =='new_ticket_created' ? 'selected="true"' : '';?>>New Ticket Created Notification</option>
-                    <option value="tag_new" <?php echo $mail_template_select =='tag_new' ? 'selected="true"' : '';?>>New Tag Notification</option>
-                    <option value="tag_changed" <?php echo $mail_template_select =='tag_changed' ? 'selected="true"' : '';?>>Tag Change Notification</option>
-                    <option value="comment_added" <?php echo $mail_template_select =='comment_added' ? 'selected="true"' : '';?>>Comment Added Notification</option>
-                    <option value="add_agent" <?php echo $mail_template_select =='add_agent' ? 'selected="true"' : '';?>>Add Agent</option>
-                    <option value="assigned_agent_changed" <?php echo $mail_template_select =='assigned_agent_changed' ? 'selected="true"' : '';?>>Assigned Agent Changed Notification</option>
-                </select>
+        <div class="kg_container">
+            <div class="kg_block">
+                <div class="kg_top kg_primary_bg_color">
+                    <h2><i class="fa fa-cog"></i>Mail Templates</h2>
                 </div>
-                <div class="kong-helpdesk-row">
-	            <?php
-                $meta_content = wpautop(stripslashes(get_option( $mail_template_select )));
-                $editor_id = 'mail_template_content';
-                $settings  = array (
-                        'wpautop'          => true,   // Whether to use wpautop for adding in paragraphs. Note that the paragraphs are added automatically when wpautop is false.
-                        'media_buttons'    => false,   // Whether to display media insert/upload buttons
-                        'textarea_name'    => $editor_id,   // The name assigned to the generated textarea and passed parameter when the form is submitted.
-                        'textarea_rows'    => get_option( 'default_post_edit_rows', 10 ),  // The number of rows to display for the textarea
-                        'tabindex'         => '',     // The tabindex value used for the form field
-                        'editor_css'       => '',     // Additional CSS styling applied for both visual and HTML editors buttons, needs to include <style> tags, can use "scoped"
-                        'editor_class'     => '',     // Any extra CSS Classes to append to the Editor textarea
-                        'teeny'            => true,  // Whether to output the minimal editor configuration used in PressThis
-                        'dfw'              => false,  // Whether to replace the default fullscreen editor with DFW (needs specific DOM elements and CSS)
-                        'tinymce'          => true,   // Load TinyMCE, can be used to pass settings directly to TinyMCE using an array
-                        'quicktags'        => true,   // Load Quicktags, can be used to pass settings directly to Quicktags using an array. Set to false to remove your editor's Visual and Text tabs.
-                        'drag_drop_upload' => true    // Enable Drag & Drop Upload Support (since WordPress 3.9)
-                );
+                <div class="kg_form_block">
+                    <div class="mail-_templates">
+                        <form action="<?php echo admin_url('edit.php?page=mail-templates') ?>" name="mail_template_frm" id="mail_template_frm" method="POST">
+                            <?php wp_nonce_field( '_mail_template_nonce', 'mail_template_nonce' ); ?>
+                            <input type="hidden" name="mail_template_mode" id="mail_template_mode" value="modify" />
+                            <div class="kong-helpdesk-row">
+                            <select name="mail_template_select" id="mail_template_select">
+                                <option value="new_ticket_created" <?php echo $mail_template_select =='new_ticket_created' ? 'selected="true"' : '';?>>New Ticket Created Notification</option>
+                                <option value="tag_new" <?php echo $mail_template_select =='tag_new' ? 'selected="true"' : '';?>>New Tag Notification</option>
+                                <option value="tag_changed" <?php echo $mail_template_select =='tag_changed' ? 'selected="true"' : '';?>>Tag Change Notification</option>
+                                <option value="comment_added" <?php echo $mail_template_select =='comment_added' ? 'selected="true"' : '';?>>Comment Added Notification</option>
+                                <option value="add_agent" <?php echo $mail_template_select =='add_agent' ? 'selected="true"' : '';?>>Add Agent</option>
+                                <option value="assigned_agent_changed" <?php echo $mail_template_select =='assigned_agent_changed' ? 'selected="true"' : '';?>>Assigned Agent Changed Notification</option>
+                            </select>
+                            </div>
+                            <div class="kong-helpdesk-row">
+                            <?php
+                            $meta_content = wpautop(stripslashes(get_option( $mail_template_select )));
+                            $editor_id = 'mail_template_content';
+                            $settings  = array (
+                                    'wpautop'          => true,   // Whether to use wpautop for adding in paragraphs. Note that the paragraphs are added automatically when wpautop is false.
+                                    'media_buttons'    => false,   // Whether to display media insert/upload buttons
+                                    'textarea_name'    => $editor_id,   // The name assigned to the generated textarea and passed parameter when the form is submitted.
+                                    'textarea_rows'    => get_option( 'default_post_edit_rows', 10 ),  // The number of rows to display for the textarea
+                                    'tabindex'         => '',     // The tabindex value used for the form field
+                                    'editor_css'       => '',     // Additional CSS styling applied for both visual and HTML editors buttons, needs to include <style> tags, can use "scoped"
+                                    'editor_class'     => '',     // Any extra CSS Classes to append to the Editor textarea
+                                    'teeny'            => true,  // Whether to output the minimal editor configuration used in PressThis
+                                    'dfw'              => false,  // Whether to replace the default fullscreen editor with DFW (needs specific DOM elements and CSS)
+                                    'tinymce'          => true,   // Load TinyMCE, can be used to pass settings directly to TinyMCE using an array
+                                    'quicktags'        => true,   // Load Quicktags, can be used to pass settings directly to Quicktags using an array. Set to false to remove your editor's Visual and Text tabs.
+                                    'drag_drop_upload' => true    // Enable Drag & Drop Upload Support (since WordPress 3.9)
+                            );
 
-                // display the editor
-                wp_editor( $meta_content, $editor_id, $settings );
+                            // display the editor
+                            wp_editor( $meta_content, $editor_id, $settings );
 
-                ?>	
-                </div>
-                <div class="kong-helpdesk-row">
-                <input type="submit" value="update" />
-                </div>
-            </form>
+                            ?>	
+                            </div>
+                            <div class="kong-helpdesk-row" style="margin-top:15px">
+                                <input type="submit" value="update" />
+                            </div>
+                        </form>
+                    </div>
+                </div>                
+            </div>
         </div>
+        
 
     <?php }
     
