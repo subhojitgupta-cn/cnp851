@@ -155,6 +155,273 @@ class Kong_Helpdesk_Reports extends Kong_Helpdesk
 
         
         ?>
+
+
+        <!-- Custom html -->
+
+        <div class="warp">
+            <div class="kong-helpdesk-container">
+                <form action="<?php echo admin_url('edit.php?page=helpdesk-reports') ?>" method="get">
+                    <div class="row">
+                        <div class="col s12 m6 l6">
+                            <div class="helpdesk-input">
+                                <div class="input-field">
+                                    <label for="mail_template_select" class="active">Report Period:</label>
+                                    <div class="inputs-btn">
+                                        <select id="primary_range" name="primary_range" class="kong-helpdesk-col-sm-8 ng-pristine ng-valid ng-touched">
+                                            <option trans="" <?php echo $primary_range =='last_30_days' ? 'selected="true"' : '';?> value="last_30_days">Last 30 days</option>
+                                            <option trans="" value="last_month" <?php echo $primary_range=='last_month' ? 'selected="true"' : '';?>>Last Month</option>
+                                            <option trans="" value="last_7_days" <?php echo $primary_range =='last_7_days' ? 'selected="true"' : '';?>>Last 7 days</option>
+                                            <option trans="" value="last_week" <?php echo $primary_range =='last_week' ? 'selected="true"' : '';?>>Last Week</option>
+                                            <option trans="" value="today" <?php echo $primary_range =='today' ? 'selected="true"' : '';?>>Today</option>
+                                            <option trans="" value="custom" <?php echo $primary_range =='custom' ? 'selected="true"' : '';?>>Custom Dates</option>
+                                        </select>
+                                        <div class="kong-helpdesk-col-sm">
+                                            <input type="submit" class="button button-primary" value="<?php echo __('Primary', 'kong-helpdesk') ?>" >
+                                        </div>
+                                    </div>    
+                                </div>
+                                    <div class="date_range_cls kong-helpdesk-row" style="display: none;">
+                                        <div class="kong-helpdesk-col-sm-6">
+                                            <label for="date_from"><?php echo __('Date From (JJJJ-MM-DD)', 'kong-helpdesk') ?></label><br/>
+                                            <input type="text" name="date_from" placeholder="JJJJ-MM-DD" value="<?php echo $date_from ?>">
+                                        </div>
+                                        <div class="kong-helpdesk-col-sm-6">
+                                            <label for="date_until"><?php echo __('Date Until (JJJJ-MM-DD)', 'kong-helpdesk') ?></label><br/>
+                                            <input type="text" name="date_until" placeholder="JJJJ-MM-DD" value="<?php echo $date_until ?>">
+                                        </div>
+                                    </div>
+                                
+                            </div>
+                        </div>
+                        <div class="col s12 m6 l6">
+                            <div class="helpdesk-input">
+                                <div class="input-field">
+                                    <label for="mail_template_select" class="active">Compare Period:</label>
+                                    <div class="inputs-btn">
+                                        <select id="compare_range" name="compare_range" class="ng-pristine ng-valid ng-touched">
+                                            <option value=''>Select Any</option>
+                                            <option trans="" <?php echo isset($_GET['compare_range']) && $_GET['compare_range']=='last_30_days' ? 'selected="true"' : '';?> value="last_30_days">Last 30 days</option>
+                                            <option trans="" value="last_month" <?php echo ($compare_range =='last_month') ? 'selected="true"' : '';?>>Last Month</option>
+                                            <option trans="" value="last_7_days" <?php echo $compare_range =='last_7_days' ? 'selected="true"' : '';?>>Last 7 days</option>
+                                            <option trans="" value="last_week" <?php echo $compare_range =='last_week' ? 'selected="true"' : '';?>>Last Week</option>
+                                            <option trans="" value="today" <?php echo $compare_range =='today' ? 'selected="true"' : '';?>>Today</option>
+                                            <option trans="" value="custom" <?php echo $compare_range =='custom' ? 'selected="true"' : '';?>>Custom Dates</option>
+                                        </select>
+                                        <div class="kong-helpdesk-col-sm">
+                                            <input type="submit" class="button button-primary" value="<?php echo __('Compare', 'kong-helpdesk') ?>" >
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="date_range_cls kong-helpdesk-row" style="display: none;">
+                                    <div class="kong-helpdesk-col-sm-6">
+                                        <label for="date_from"><?php echo __('Date From (JJJJ-MM-DD)', 'kong-helpdesk') ?></label><br/>
+                                        <input type="text" name="date_from_compare" placeholder="JJJJ-MM-DD" value="<?php echo $date_from_compare; ?>">
+                                    </div>
+                                    <div class="kong-helpdesk-col-sm-6">
+                                        <label for="date_until"><?php echo __('Date Until (JJJJ-MM-DD)', 'kong-helpdesk') ?></label><br/>
+                                        <input type="text" name="date_until_compare" placeholder="JJJJ-MM-DD" value="<?php echo $date_until_compare; ?>">
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </form> 
+                <div>
+                    <div class="left-graph kong-helpdesk-col-sm-7">
+                        <!--- tickets graph ---->
+                        <div class="ticket-graph">
+                            <h4>Ticket Statistics</h4>
+                            <ul>
+                                <li>
+                                    <span>61</span>
+                                    <p>New Tickets</p>
+                                </li>
+                                <li>
+                                    <span>0</span>
+                                    <p>Solved Tickets</p>
+                                </li>
+                                <li>
+                                    <span>17</span>
+                                    <p>Open Tickets</p>
+                                </li>
+                                <li>
+                                    <span>377 hours</span>
+                                    <p>Time to first reply</p>
+                                </li>
+                                <li>
+                                    <span>2.7 hours</span>
+                                    <p>Average response time</p>
+                                </li>
+                            </ul>
+                            <div class="main-graph">
+                                Graph Goes Here
+                            </div>
+                        </div>
+
+                        <!-- Tags n Agents section -->
+                        <div class="tags_agent kong-helpdesk-row">
+                            <div class="kong-helpdesk-col-sm-6">
+                                <div class="ticket-graph">
+                                    <h4>Tickets by Tags</h4>
+                                    <div class="main-graph">
+                                        Graph Goes Here
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="kong-helpdesk-col-sm-6">
+                                <div class="ticket-graph">
+                                    <h4>Tickets by Agent</h4>
+                                </div>
+                                <div class="ticket-graph-table">
+                                    <div class="table_head">
+                                        <div>Agent</div>
+                                        <div>Replies</div>
+                                        <div>Solved</div>
+                                        <div>Avg Resp Time</div>
+                                    </div>
+                                    <div class="table_body">
+                                        <div>agent@demo.com</div>
+                                        <div>305</div>
+                                        <div>0</div>
+                                        <div>2.7h</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>   
+                    <div class="right-graph kong-helpdesk-col-sm-5"> 
+                        <div class="ticket-graph">
+                            <h4>Time to first reply</h4>
+                            <div class="time-reply">
+                                <h2>
+                                    377 Hours
+                                </h2>
+                                <p>Average first response time in selected period</p>
+                            </div>
+                            <div class="main-graph">
+                                Graph Goes Here
+                            </div>
+                        </div>
+                        <!-- Business Time graph -->
+                        <div class="ticket-graph">
+                            <h4>Busiest time of day</h4>
+                            <div class="business-graph">
+                                <div class="points-business">
+                                    <div class="boxes box-blank"></div>
+                                    <div class="boxes">0-2</div>
+                                    <div class="boxes">2-4</div>
+                                    <div class="boxes">4-6</div>
+                                    <div class="boxes">6-8</div>
+                                    <div class="boxes">10-12</div>
+                                    <div class="boxes">12-14</div>
+                                    <div class="boxes">14-16</div>
+                                    <div class="boxes">16-18</div>
+                                    <div class="boxes">18-20</div>
+                                    <div class="boxes">20-21</div>
+                                </div>
+                                <div class="points-business">
+                                    <div class="boxes">Mon</div>
+                                    <div class="boxes" style="background-color:rgba(152,117,45,1)"></div>
+                                    <div class="boxes" style="background-color:rgba(152,117,45,.2)"></div>
+                                    <div class="boxes" style="background-color:rgba(152,117,45,.5)"></div>
+                                    <div class="boxes" style="background-color:rgba(152,117,45,.9)"></div>
+                                    <div class="boxes" style="background-color:rgba(152,117,45,.3)"></div>
+                                    <div class="boxes" style="background-color:rgba(152,117,45,.2)"></div>
+                                    <div class="boxes" style="background-color:rgba(152,117,45,.2)"></div>
+                                    <div class="boxes" style="background-color:rgba(152,117,45,.8)"></div>
+                                    <div class="boxes" style="background-color:rgba(152,117,45,.7)"></div>
+                                    <div class="boxes" style="background-color:rgba(152,117,45,.7)"></div>
+                                </div>
+                                <div class="points-business">
+                                    <div class="boxes">Tue</div>
+                                    <div class="boxes" style="background-color:rgba(152,117,45,.2)"></div>
+                                    <div class="boxes" style="background-color:rgba(152,117,45,.2)"></div>
+                                    <div class="boxes" style="background-color:rgba(152,117,45,.2)"></div>
+                                    <div class="boxes" style="background-color:rgba(152,117,45,.2)"></div>
+                                    <div class="boxes" style="background-color:rgba(152,117,45,.2)"></div>
+                                    <div class="boxes" style="background-color:rgba(152,117,45,.5)"></div>
+                                    <div class="boxes" style="background-color:rgba(152,117,45,.2)"></div>
+                                    <div class="boxes" style="background-color:rgba(152,117,45,.2)"></div>
+                                    <div class="boxes" style="background-color:rgba(152,117,45,.2)"></div>
+                                    <div class="boxes" style="background-color:rgba(152,117,45,.2)"></div>
+                                </div>
+                                <div class="points-business">
+                                    <div class="boxes">Wed</div>
+                                    <div class="boxes" style="background-color:rgba(152,117,45,.2)"></div>
+                                    <div class="boxes" style="background-color:rgba(152,117,45,.2)"></div>
+                                    <div class="boxes" style="background-color:rgba(152,117,45,.2)"></div>
+                                    <div class="boxes" style="background-color:rgba(152,117,45,.2)"></div>
+                                    <div class="boxes" style="background-color:rgba(152,117,45,.9)"></div>
+                                    <div class="boxes" style="background-color:rgba(152,117,45,.2)"></div>
+                                    <div class="boxes" style="background-color:rgba(152,117,45,.2)"></div>
+                                    <div class="boxes" style="background-color:rgba(152,117,45,.2)"></div>
+                                    <div class="boxes" style="background-color:rgba(152,117,45,.3)"></div>
+                                    <div class="boxes" style="background-color:rgba(152,117,45,.3)"></div>
+                                </div>
+                                <div class="points-business">
+                                    <div class="boxes">Thu</div>
+                                    <div class="boxes" style="background-color:rgba(152,117,45,.9)"></div>
+                                    <div class="boxes" style="background-color:rgba(152,117,45,.2)"></div>
+                                    <div class="boxes" style="background-color:rgba(152,117,45,.2)"></div>
+                                    <div class="boxes" style="background-color:rgba(152,117,45,.2)"></div>
+                                    <div class="boxes" style="background-color:rgba(152,117,45,.2)"></div>
+                                    <div class="boxes" style="background-color:rgba(152,117,45,.7)"></div>
+                                    <div class="boxes" style="background-color:rgba(152,117,45,.2)"></div>
+                                    <div class="boxes" style="background-color:rgba(152,117,45,.2)"></div>
+                                    <div class="boxes" style="background-color:rgba(152,117,45,.2)"></div>
+                                    <div class="boxes" style="background-color:rgba(152,117,45,.2)"></div>
+                                </div>
+                                <div class="points-business">
+                                    <div class="boxes">Fri</div>
+                                    <div class="boxes" style="background-color:rgba(152,117,45,.6)"></div>
+                                    <div class="boxes" style="background-color:rgba(152,117,45,.2)"></div>
+                                    <div class="boxes" style="background-color:rgba(152,117,45,.2)"></div>
+                                    <div class="boxes" style="background-color:rgba(152,117,45,.2)"></div>
+                                    <div class="boxes" style="background-color:rgba(152,117,45,.6)"></div>
+                                    <div class="boxes" style="background-color:rgba(152,117,45,.2)"></div>
+                                    <div class="boxes" style="background-color:rgba(152,117,45,.2)"></div>
+                                    <div class="boxes" style="background-color:rgba(152,117,45,.2)"></div>
+                                    <div class="boxes" style="background-color:rgba(152,117,45,.4)"></div>
+                                    <div class="boxes" style="background-color:rgba(152,117,45,.2)"></div>
+                                </div>
+                                <div class="points-business">
+                                    <div class="boxes">Sat</div>
+                                    <div class="boxes" style="background-color:rgba(152,117,45,.2)"></div>
+                                    <div class="boxes" style="background-color:rgba(152,117,45,.2)"></div>
+                                    <div class="boxes" style="background-color:rgba(152,117,45,.2)"></div>
+                                    <div class="boxes" style="background-color:rgba(152,117,45,.2)"></div>
+                                    <div class="boxes" style="background-color:rgba(152,117,45,.9)"></div>
+                                    <div class="boxes" style="background-color:rgba(152,117,45,.2)"></div>
+                                    <div class="boxes" style="background-color:rgba(152,117,45,1)"></div>
+                                    <div class="boxes" style="background-color:rgba(152,117,45,.2)"></div>
+                                    <div class="boxes" style="background-color:rgba(152,117,45,.8)"></div>
+                                    <div class="boxes" style="background-color:rgba(152,117,45,.8)"></div>
+                                </div>
+                                <div class="points-business">
+                                    <div class="boxes">Sun</div>
+                                    <div class="boxes" style="background-color:rgba(152,117,45,.2)"></div>
+                                    <div class="boxes" style="background-color:rgba(152,117,45,.2)"></div>
+                                    <div class="boxes" style="background-color:rgba(152,117,45,.2)"></div>
+                                    <div class="boxes" style="background-color:rgba(152,117,45,.2)"></div>
+                                    <div class="boxes" style="background-color:rgba(152,117,45,1)"></div>
+                                    <div class="boxes" style="background-color:rgba(152,117,45,.2)"></div>
+                                    <div class="boxes" style="background-color:rgba(152,117,45,.2)"></div>
+                                    <div class="boxes" style="background-color:rgba(152,117,45,.2)"></div>
+                                    <div class="boxes" style="background-color:rgba(152,117,45,.2)"></div>
+                                    <div class="boxes" style="background-color:rgba(152,117,45,.2)"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div> 
+                </div> 
+            </div>
+        </div>
+
+
        
         <div class="wrap">
             <div class="kong-helpdesk-container">

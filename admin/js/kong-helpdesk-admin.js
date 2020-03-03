@@ -189,23 +189,23 @@
         }
         
         if($("#primary_range").val()=='custom'){
-            $("#primary_range").next('.date_range_cls').show();
+            $("#primary_range").parents('.helpdesk-input').find('.date_range_cls').show();
         }else{
-            $("#compare_range").next(".date_range_cls").hide();
+            $("#compare_range").parents('.helpdesk-input').find(".date_range_cls").hide();
         }
         if($("#compare_range").val()=='custom'){
-            $("#compare_range").next('.date_range_cls').show();
+            $("#compare_range").parents('.helpdesk-input').find('.date_range_cls').show();
         }else{
-            $("#compare_range").next(".date_range_cls").hide();
+            $("#compare_range").parents('.helpdesk-input').find(".date_range_cls").hide();
         }
         
         
         jQuery("#primary_range,#compare_range").on("change",function(){
             alert(jQuery(this).val());
             if(jQuery(this).val() == 'custom'){
-                jQuery(this).parent().next(".date_range_cls").show();
+                jQuery(this).parents('.helpdesk-input').find(".date_range_cls").show();
             }else{
-                jQuery(this).parent().next(".date_range_cls").hide();
+                jQuery(this).parents('.helpdesk-input').find(".date_range_cls").hide();
             }
         });
 
