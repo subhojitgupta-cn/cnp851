@@ -617,7 +617,7 @@ class Kong_Helpdesk_Reports extends Kong_Helpdesk
                        <?php $ticket_statictics_chart = $primary_tickets_data['ticket_statictics']['date_range'];
                        ?>
                        <script  type="text/javascript" charset="utf-8" async defer>
-                        console.log(new Date(143134652600));
+                        print_r($ticket_statictics_chart);
                          new Chartist.Line('#ticket-statictics', {
                             labels: <?php echo json_encode(array_keys($ticket_statictics_chart));?>,
                             series: [
@@ -654,7 +654,6 @@ class Kong_Helpdesk_Reports extends Kong_Helpdesk
                           }
                         );
                         var line_chart = new Chartist.Line('#ct-chart', {
-
   series: [
     {
       name: 'series-1',
@@ -666,7 +665,12 @@ class Kong_Helpdesk_Reports extends Kong_Helpdesk
         {x: new Date(143410652600), y: 20},
         {x: new Date(143508652600), y: 32},
         {x: new Date(143569652600), y: 18},
-        {x: new Date(143579652600), y: 11}
+        {x: new Date(143579652600), y: 11},
+        {x: new Date(143134652600), y: 2},
+        {x: new Date(143234652600), y: 4},
+        {x: new Date(143334652600), y: 30},
+        {x: new Date(143384652600), y: 30},
+        {x: new Date(143568652600), y: 10}
       ]
     },
     {

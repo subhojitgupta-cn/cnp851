@@ -201,7 +201,7 @@
         
         
         jQuery("#primary_range,#compare_range").on("change",function(){
-            alert(jQuery(this).val());
+            //alert(jQuery(this).val());
             if(jQuery(this).val() == 'custom'){
                 jQuery(this).parents('.helpdesk-input').find(".date_range_cls").show();
             }else{
