@@ -112,11 +112,11 @@ class Kong_Helpdesk_Reports extends Kong_Helpdesk
         
         $tickets = $this->getTicketsReports($ticket_created['start_date'],$ticket_created['end_date']);
         $primary_tickets_data = $this->ticketProcessing($tickets,$ticket_created);
-
+        $primary_tickets_data['ticket_statictics']['title'] = 'Primary';
 
         //echo "#primary";
         //echo count($tickets);
-        print_r($primary_tickets_data);
+        //print_r($primary_tickets_data);
 
         if(isset($_GET['compare_range']) && $_GET['compare_range']!='') {
 
@@ -142,6 +142,7 @@ class Kong_Helpdesk_Reports extends Kong_Helpdesk
              $ticket_created_compare = $this->getalldates($compare_range,$format);
              $compare_tickets = $this->getTicketsReports($ticket_created_compare['start_date'],$ticket_created_compare['end_date']);
              $compare_tickets_data = $this->ticketProcessing($compare_tickets,$ticket_created_compare);
+             $compare_tickets_data['ticket_statictics']['title'] = 'Compare';
         }
 
 
@@ -161,7 +162,8 @@ class Kong_Helpdesk_Reports extends Kong_Helpdesk
 
         <div class="warp">
             <div class="kong-helpdesk-container">
-                <form action="<?php echo admin_url('edit.php?page=helpdesk-reports') ?>" method="get">
+            <form action="<?php echo admin_url('edit.php?page=helpdesk-reports') ?>" method="get" style="background-color: #FFF; padding: 5px 20px 20px;">
+                <input type="hidden" name="action" value="kong_helpdesk_report_filter">
                     <div class="row">
                         <div class="col s12 m6 l6">
                             <div class="helpdesk-input">
@@ -614,99 +616,58 @@ class Kong_Helpdesk_Reports extends Kong_Helpdesk
                         <h3 class="kong-helpdesk-center"><?php echo __('Busiest time of day', 'kong-helpdesk') ?></h3>
                         <div id="ticket-statictics" class="ct-chart ct-major-tenth"></div>
                         <div id="ct-chart"></div>
-                       <?php $ticket_statictics_chart = $primary_tickets_data['ticket_statictics']['date_range'];
+                       <?php $ticket_statictics_chart = array($primary_tickets_data['ticket_statictics']);
+                       
+                       //print_r($ticket_statictics_chart);
+                      
                        ?>
                        <script  type="text/javascript" charset="utf-8" async defer>
-                        print_r($ticket_statictics_chart);
-                         new Chartist.Line('#ticket-statictics', {
-                            labels: <?php echo json_encode(array_keys($ticket_statictics_chart));?>,
-                            series: [
-                                <?php echo json_encode(array_values($ticket_statictics_chart));?>,
-                             ]
-                        }, {
-                             lineSmooth: Chartist.Interpolation.cardinal({
-                                tension: 0.2
-                              }),
-                            fullWidth: true,
-                            
-                            chartPadding: {
-                                right: 40
-                            },
-                            labelInterpolationFnc: function (value) {
-                                // do whatever math operation you want here
-                                return new Date(value).toISOString().slice(0,10);
-                            },
-                            seriesBarDistance: 12,
-                              axisX: {
-                                low: 1,
-                                offset: 80,
-                                scaleMinSpace: 45,
-                                onlyInteger: true
-                              },
-                              axisY: {
-                                low: 1,
-                                offset: 80,
-                                scaleMinSpace: 45,
-                                onlyInteger: true
-                              },
-                              showArea: true,
+                    
+        var line_chart = new Chartist.Line('#ct-chart', {
+                series: [
+                    <?php foreach($ticket_statictics_chart as $ticket_stat){
+                    ?>{
+                        name: '<?php echo $ticket_stat['title'];?>',
+                        data: [<?php foreach($ticket_stat['date_range'] as $key=>$value){?>
+                                {x: new Date(<?php echo strtotime($key); ?>), y: '<?php echo $value;?>'},
+                            <?php } ?>
+                        ]
+                     },
+                    <?php } ?>
+                ]
+                }, {
+                    axisX: {
+                        type: Chartist.FixedScaleAxis,
+                        divisor: 5,
+                        labelInterpolationFnc: function(value) {
+                            console.log(value);
+                        return moment.unix(value).format('MMM DD,YYYY');
+                        }
+                    },
+                    showArea: true,
+                });
 
-                          }
-                        );
-                        var line_chart = new Chartist.Line('#ct-chart', {
-  series: [
-    {
-      name: 'series-1',
-      data: [
-        {x: new Date(143134652600), y: 1},
-        {x: new Date(143234652600), y: 40},
-        {x: new Date(143340052600), y: 45},
-        {x: new Date(143366652600), y: 5},
-        {x: new Date(143410652600), y: 20},
-        {x: new Date(143508652600), y: 32},
-        {x: new Date(143569652600), y: 18},
-        {x: new Date(143579652600), y: 11},
-        {x: new Date(143134652600), y: 2},
-        {x: new Date(143234652600), y: 4},
-        {x: new Date(143334652600), y: 30},
-        {x: new Date(143384652600), y: 30},
-        {x: new Date(143568652600), y: 10}
-      ]
-    },
-    {
-      name: 'series-2',
-      data: [
-        {x: new Date(143134652600), y: 2},
-        {x: new Date(143234652600), y: 4},
-        {x: new Date(143334652600), y: 30},
-        {x: new Date(143384652600), y: 30},
-        {x: new Date(143568652600), y: 10}
-      ]
-    }
-  ]
-}, {
-  axisX: {
-    type: Chartist.FixedScaleAxis,
-    divisor: 5,
-    labelInterpolationFnc: function(value) {
-      return moment(value).format('MMM D');
-    }
-  },
-  showArea: true,
-});
-   line_chart.on('draw', function(data) {
-  if(data.type === 'line' || data.type === 'area') {
-    data.element.animate({
-      d: {
-        begin: 2000 * data.index,
-        dur: 2000,
-        from: data.path.clone().scale(1, 0).translate(0, data.chartRect.height()).stringify(),
-        to: data.path.clone().stringify(),
-        easing: Chartist.Svg.Easing.easeOutQuint
-      }
-    });
-  }
-});
+                line_chart.on('draw', function(data) {
+                    if(data.type === 'line' || data.type === 'area') {
+                        data.element.animate({
+                        d: {
+                            begin: 2000 * data.index,
+                            dur: 2000,
+                            from: data.path.clone().scale(1, 0).translate(0, data.chartRect.height()).stringify(),
+                            to: data.path.clone().stringify(),
+                            easing: Chartist.Svg.Easing.easeOutQuint
+                        }
+                        });
+                    }
+                 });
+                 line_chart.on('created', function() {
+                              if(window.__anim21278907127) {
+                                clearTimeout(window.__anim21278907127);
+                                window.__anim21278907127 = null;
+                              }
+                              window.__anim21278907127 = setTimeout(line_chart.update.bind(line_chart), 10000);
+                            });
+
 
                        </script>
                     </div>
