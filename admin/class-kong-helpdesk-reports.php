@@ -183,11 +183,11 @@ class Kong_Helpdesk_Reports extends Kong_Helpdesk
                                     <div class="date_range_cls kong-helpdesk-row" style="display: none;">
                                         <div class="kong-helpdesk-col-sm-6">
                                             <label for="date_from"><?php echo __('Date From (JJJJ-MM-DD)', 'kong-helpdesk') ?></label><br/>
-                                            <input type="text" name="date_from" placeholder="JJJJ-MM-DD" value="<?php echo $date_from ?>">
+                                            <input type="text" class="datepicker" name="date_from" placeholder="JJJJ-MM-DD" value="<?php echo $date_from ?>">
                                         </div>
                                         <div class="kong-helpdesk-col-sm-6">
                                             <label for="date_until"><?php echo __('Date Until (JJJJ-MM-DD)', 'kong-helpdesk') ?></label><br/>
-                                            <input type="text" name="date_until" placeholder="JJJJ-MM-DD" value="<?php echo $date_until ?>">
+                                            <input type="text" class="datepicker" name="date_until" placeholder="JJJJ-MM-DD" value="<?php echo $date_until ?>">
                                         </div>
                                     </div>
                                 
@@ -216,11 +216,11 @@ class Kong_Helpdesk_Reports extends Kong_Helpdesk
                                 <div class="date_range_cls kong-helpdesk-row" style="display: none;">
                                     <div class="kong-helpdesk-col-sm-6">
                                         <label for="date_from"><?php echo __('Date From (JJJJ-MM-DD)', 'kong-helpdesk') ?></label><br/>
-                                        <input type="text" name="date_from_compare" placeholder="JJJJ-MM-DD" value="<?php echo $date_from_compare; ?>">
+                                        <input type="text" class="datepicker" name="date_from_compare" placeholder="JJJJ-MM-DD" value="<?php echo $date_from_compare; ?>">
                                     </div>
                                     <div class="kong-helpdesk-col-sm-6">
                                         <label for="date_until"><?php echo __('Date Until (JJJJ-MM-DD)', 'kong-helpdesk') ?></label><br/>
-                                        <input type="text" name="date_until_compare" placeholder="JJJJ-MM-DD" value="<?php echo $date_until_compare; ?>">
+                                        <input type="text" class="datepicker" name="date_until_compare" placeholder="JJJJ-MM-DD" value="<?php echo $date_until_compare; ?>">
                                     </div>
                                 </div>
                                 

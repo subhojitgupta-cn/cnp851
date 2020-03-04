@@ -216,6 +216,16 @@
         });
 
         
-	});
+    });
 
 })( jQuery );
+
+
+// date picker
+jQuery(document).ready(function(){
+    jQuery('.datepicker').datepicker({
+        maxDate: new Date(),
+    });
+    jQuery('.datepicker-date-display').addClass('kg_primary_bg_color');
+    
+});
