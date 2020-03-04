@@ -970,9 +970,10 @@ input.select-dropdown.dropdown-trigger {
   color: #aaa;
 }
 .main-graph {
-  min-height: 300px;
-  background: #eee;
+  min-height: auto;
+  background: transparent;
   margin: 15px 0;
+  padding: 0;
 }
 .time-reply {
   margin-bottom: 30px;
@@ -1039,7 +1040,11 @@ input.select-dropdown.dropdown-trigger {
   font-size: 13px;
   flex: 0 0 45px;
 }
-
+.material-tooltip { 
+  font-size: 11px; 
+  min-height: 25px; 
+  background-color: rgba(0,0,0,.5); 
+}
 
 
 @media (max-width: 767px) {
