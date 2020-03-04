@@ -150,9 +150,6 @@ class Kong_Helpdesk_Reports extends Kong_Helpdesk
         //echo count($compare_tickets);
         //print_r($compare_tickets_data);
         
-        // $ticketsByStatus = $this->get_tickets_by_status();
-        // $ticketsByType = $this->get_tickets_by_type();
-        // $ticketsByPriority = $this->get_tickets_by_priority();
 
         
         ?>
@@ -179,7 +176,7 @@ class Kong_Helpdesk_Reports extends Kong_Helpdesk
                                             <option trans="" value="custom" <?php echo $primary_range =='custom' ? 'selected="true"' : '';?>>Custom Dates</option>
                                         </select>
                                         <div class="kong-helpdesk-col-sm">
-                                            <input type="submit" class="button button-primary" value="<?php echo __('Primary', 'kong-helpdesk') ?>" >
+                                            <input type="submit" class="button button-primary" value="<?php echo __('Update', 'kong-helpdesk') ?>" >
                                         </div>
                                     </div>    
                                 </div>
@@ -238,38 +235,160 @@ class Kong_Helpdesk_Reports extends Kong_Helpdesk
                             <h4>Ticket Statistics</h4>
                             <ul>
                                 <li>
-                                    <span>61</span>
+                                    <span><?php echo isset($primary_tickets_data['ticket_statictics']['count'])?$primary_tickets_data['ticket_statictics']['count']: 0; ?></span>
                                     <p>New Tickets</p>
                                 </li>
                                 <li>
-                                    <span>0</span>
+                                    <span><?php echo isset($primary_tickets_data['ticket_by_tags']['closed'])?$primary_tickets_data['ticket_by_tags']['closed']['count']: 0; ?></span>
                                     <p>Solved Tickets</p>
                                 </li>
                                 <li>
-                                    <span>17</span>
+                                    <span><?php echo isset($primary_tickets_data['ticket_by_tags']['open'])?$primary_tickets_data['ticket_by_tags']['open']['count']: 0; ?></span>
                                     <p>Open Tickets</p>
                                 </li>
                                 <li>
-                                    <span>377 hours</span>
+                                    <span><?php echo isset($primary_tickets_data['first_reply_response']['total'])?$primary_tickets_data['first_reply_response']['total']: 0; ?> hours</span>
                                     <p>Time to first reply</p>
                                 </li>
                                 <li>
-                                    <span>2.7 hours</span>
+                                    <span><?php echo isset($primary_tickets_data['ticket_by_agents']['total'])?$primary_tickets_data['ticket_by_agents']['total']: 0; ?> hours</span>
                                     <p>Average response time</p>
                                 </li>
                             </ul>
                             <div class="main-graph">
-                                Graph Goes Here
-                            </div>
+                                 <div id="ticket-statictics" class="ct-chart ct-major-tenth"></div>
+                       <?php $ticket_statictics_chart = array($primary_tickets_data['ticket_statictics']);
+                           if(isset($compare_tickets_data['ticket_statictics']))
+                            {
+                               array_push($ticket_statictics_chart,$compare_tickets_data['ticket_statictics']);
+                            }
+                            
+                       ?>
+                        <script  type="text/javascript" charset="utf-8" async defer>
+                                
+                                var line_chart = new Chartist.Line('#ticket-statictics', {
+                                        series: [
+                                            <?php foreach($ticket_statictics_chart as $ticket_stat){?>{
+                                                name: '<?php echo $ticket_stat['title'];?>',
+                                                data: [<?php foreach($ticket_stat['date_range'] as $key=>$value){?>
+                                                        {x: new Date(<?php echo strtotime($key); ?>), y: '<?php echo $value;?>'},
+                                                    <?php } ?>
+                                                ]
+                                             },
+                                            <?php } ?>
+                                        ]
+                                        }, {
+                                            axisX: {
+                                                type: Chartist.FixedScaleAxis,
+                                                divisor: 5,
+                                                labelInterpolationFnc: function(value) {
+                                                    console.log(value);
+                                                return moment.unix(value).format('MMM DD,YYYY');
+                                                }
+                                            },
+                                            showArea: true,
+                                        });
+
+                                        line_chart.on('draw', function(data) {
+                                            if(data.type === 'line' || data.type === 'area') {
+                                                data.element.animate({
+                                                d: {
+                                                    begin: 2000 * data.index,
+                                                    dur: 2000,
+                                                    from: data.path.clone().scale(1, 0).translate(0, data.chartRect.height()).stringify(),
+                                                    to: data.path.clone().stringify(),
+                                                    easing: Chartist.Svg.Easing.easeOutQuint
+                                                }
+                                                });
+                                            }
+                                         });
+                                         line_chart.on('created', function() {
+                                                      if(window.__anim21278907127) {
+                                                        clearTimeout(window.__anim21278907127);
+                                                        window.__anim21278907127 = null;
+                                                      }
+                                                      window.__anim21278907127 = setTimeout(line_chart.update.bind(line_chart), 10000);
+                                                    });
+                        </script>
+                   
+                        </div>
                         </div>
 
                         <!-- Tags n Agents section -->
                         <div class="tags_agent kong-helpdesk-row">
                             <div class="kong-helpdesk-col-sm-6">
                                 <div class="ticket-graph">
-                                    <h4>Tickets by Tags</h4>
+                                    <h4>Tickets by Categories</h4>
                                     <div class="main-graph">
-                                        Graph Goes Here
+                                         <div id="tickets-by-system" class="ct-chart ct-major-tenth"></div>
+                       <?php $ticketbycategory_chart = $primary_tickets_data['ticket_by_category'];
+                       if(isset($compare_tickets_data['ticket_by_category']))
+                            {
+                               $ticketbycategory_chart = $compare_tickets_data['ticket_by_category'];
+                            }
+                       ?>
+                       
+                        <script>
+                                var pie_chart = new Chartist.Pie('#tickets-by-system', {
+                                labels: <?php echo json_encode((array_column($ticketbycategory_chart, 'label')))?>,
+                                series: <?php echo json_encode((array_column($ticketbycategory_chart, 'count')))?>
+                                }, {
+                                 donut: true,
+                                donutWidth: 120,
+                                showLabel: true,
+                                });
+
+                                pie_chart.on('draw', function(data) {
+                                  if(data.type === 'slice') {
+                                    // Get the total path length in order to use for dash array animation
+                                    var pathLength = data.element._node.getTotalLength();
+
+                                    // Set a dasharray that matches the path length as prerequisite to animate dashoffset
+                                    data.element.attr({
+                                      'stroke-dasharray': pathLength + 'px ' + pathLength + 'px'
+                                    });
+
+                                    // Create animation definition while also assigning an ID to the animation for later sync usage
+                                    var animationDefinition = {
+                                      'stroke-dashoffset': {
+                                        id: 'anim' + data.index,
+                                        dur: 1000,
+                                        from: -pathLength + 'px',
+                                        to:  '0px',
+                                        easing: Chartist.Svg.Easing.easeOutQuint,
+                                        // We need to use `fill: 'freeze'` otherwise our animation will fall back to initial (not visible)
+                                        fill: 'freeze'
+                                      }
+                                    };
+
+                                    // If this was not the first slice, we need to time the animation so that it uses the end sync event of the previous animation
+                                    if(data.index !== 0) {
+                                      animationDefinition['stroke-dashoffset'].begin = 'anim' + (data.index - 1) + '.end';
+                                    }
+
+                                    // We need to set an initial value before the animation starts as we are not in guided mode which would do that for us
+                                    data.element.attr({
+                                      'stroke-dashoffset': -pathLength + 'px'
+                                    });
+
+                                    // We can't use guided mode as the animations need to rely on setting begin manually
+                                    // See http://gionkunz.github.io/chartist-js/api-documentation.html#chartistsvg-function-animate
+                                    data.element.animate(animationDefinition, false);
+                                  }
+                                });
+
+                                // For the sake of the example we update the chart every time it's created with a delay of 8 seconds
+                                pie_chart.on('created', function() {
+                                  if(window.__anim21278907124) {
+                                    clearTimeout(window.__anim21278907124);
+                                    window.__anim21278907124 = null;
+                                  }
+                                  window.__anim21278907124 = setTimeout(pie_chart.update.bind(pie_chart), 10000);
+                                });
+
+                                
+                        </script>
+                        
                                     </div>
                                 </div>
                             </div>
@@ -284,12 +403,21 @@ class Kong_Helpdesk_Reports extends Kong_Helpdesk
                                         <div>Solved</div>
                                         <div>Avg Resp Time</div>
                                     </div>
-                                    <div class="table_body">
-                                        <div>agent@demo.com</div>
-                                        <div>305</div>
-                                        <div>0</div>
-                                        <div>2.7h</div>
-                                    </div>
+                                     <?php $ticketbyagent = $primary_tickets_data['ticket_by_agents'];
+                                   if(isset($compare_tickets_data['ticket_by_agents']))
+                                        {
+                                           $ticketbyagent = $compare_tickets_data['ticket_by_agents'];
+                                        }
+                                    if(!empty($ticketbyagent)) {
+                                        foreach($ticketbyagent['data'] as $agent){?>
+                                            <div class="table_body">
+                                                <div><?php echo $agent['email']; ?></div>
+                                                <div><?php echo $agent['reply_count']; ?></div>
+                                                <div><?php echo $agent['solved']; ?></div>
+                                                <div><?php echo $agent['avg_response_time']; ?>h</div>
+                                            </div>
+                                    <?php } 
+                                    } ?>
                                 </div>
                             </div>
                         </div>
@@ -297,281 +425,35 @@ class Kong_Helpdesk_Reports extends Kong_Helpdesk
                     <div class="right-graph kong-helpdesk-col-sm-5"> 
                         <div class="ticket-graph">
                             <h4>Time to first reply</h4>
+                            <?php 
+                          
+                           
+                            $timetofirstreply_chart = $primary_tickets_data['first_reply_response'];
+                             if(isset($compare_tickets_data['first_reply_response']))
+                                {
+                                   $timetofirstreply_chart = $compare_tickets_data['first_reply_response'];
+                                }
+
+                       $timetofirstreply_chart_keys = array_keys($timetofirstreply_chart['data']);
+                       array_pop($timetofirstreply_chart_keys);
+
+                      ?>
+
+
                             <div class="time-reply">
                                 <h2>
-                                    377 Hours
+                                    <?php echo isset($timetofirstreply_chart['total'])?$timetofirstreply_chart['total']: 0; ?> Hours
                                 </h2>
                                 <p>Average first response time in selected period</p>
                             </div>
                             <div class="main-graph">
-                                Graph Goes Here
-                            </div>
-                        </div>
-                        <!-- Business Time graph -->
-                        <div class="ticket-graph">
-                            <h4>Busiest time of day</h4>
-                            <div class="business-graph">
-                                <div class="points-business">
-                                    <div class="boxes box-blank"></div>
-                                    <div class="boxes">0-2</div>
-                                    <div class="boxes">2-4</div>
-                                    <div class="boxes">4-6</div>
-                                    <div class="boxes">6-8</div>
-                                    <div class="boxes">10-12</div>
-                                    <div class="boxes">12-14</div>
-                                    <div class="boxes">14-16</div>
-                                    <div class="boxes">16-18</div>
-                                    <div class="boxes">18-20</div>
-                                    <div class="boxes">20-21</div>
-                                </div>
-                                <div class="points-business">
-                                    <div class="boxes">Mon</div>
-                                    <div class="boxes" style="background-color:rgba(152,117,45,1)"></div>
-                                    <div class="boxes" style="background-color:rgba(152,117,45,.2)"></div>
-                                    <div class="boxes" style="background-color:rgba(152,117,45,.5)"></div>
-                                    <div class="boxes" style="background-color:rgba(152,117,45,.9)"></div>
-                                    <div class="boxes" style="background-color:rgba(152,117,45,.3)"></div>
-                                    <div class="boxes" style="background-color:rgba(152,117,45,.2)"></div>
-                                    <div class="boxes" style="background-color:rgba(152,117,45,.2)"></div>
-                                    <div class="boxes" style="background-color:rgba(152,117,45,.8)"></div>
-                                    <div class="boxes" style="background-color:rgba(152,117,45,.7)"></div>
-                                    <div class="boxes" style="background-color:rgba(152,117,45,.7)"></div>
-                                </div>
-                                <div class="points-business">
-                                    <div class="boxes">Tue</div>
-                                    <div class="boxes" style="background-color:rgba(152,117,45,.2)"></div>
-                                    <div class="boxes" style="background-color:rgba(152,117,45,.2)"></div>
-                                    <div class="boxes" style="background-color:rgba(152,117,45,.2)"></div>
-                                    <div class="boxes" style="background-color:rgba(152,117,45,.2)"></div>
-                                    <div class="boxes" style="background-color:rgba(152,117,45,.2)"></div>
-                                    <div class="boxes" style="background-color:rgba(152,117,45,.5)"></div>
-                                    <div class="boxes" style="background-color:rgba(152,117,45,.2)"></div>
-                                    <div class="boxes" style="background-color:rgba(152,117,45,.2)"></div>
-                                    <div class="boxes" style="background-color:rgba(152,117,45,.2)"></div>
-                                    <div class="boxes" style="background-color:rgba(152,117,45,.2)"></div>
-                                </div>
-                                <div class="points-business">
-                                    <div class="boxes">Wed</div>
-                                    <div class="boxes" style="background-color:rgba(152,117,45,.2)"></div>
-                                    <div class="boxes" style="background-color:rgba(152,117,45,.2)"></div>
-                                    <div class="boxes" style="background-color:rgba(152,117,45,.2)"></div>
-                                    <div class="boxes" style="background-color:rgba(152,117,45,.2)"></div>
-                                    <div class="boxes" style="background-color:rgba(152,117,45,.9)"></div>
-                                    <div class="boxes" style="background-color:rgba(152,117,45,.2)"></div>
-                                    <div class="boxes" style="background-color:rgba(152,117,45,.2)"></div>
-                                    <div class="boxes" style="background-color:rgba(152,117,45,.2)"></div>
-                                    <div class="boxes" style="background-color:rgba(152,117,45,.3)"></div>
-                                    <div class="boxes" style="background-color:rgba(152,117,45,.3)"></div>
-                                </div>
-                                <div class="points-business">
-                                    <div class="boxes">Thu</div>
-                                    <div class="boxes" style="background-color:rgba(152,117,45,.9)"></div>
-                                    <div class="boxes" style="background-color:rgba(152,117,45,.2)"></div>
-                                    <div class="boxes" style="background-color:rgba(152,117,45,.2)"></div>
-                                    <div class="boxes" style="background-color:rgba(152,117,45,.2)"></div>
-                                    <div class="boxes" style="background-color:rgba(152,117,45,.2)"></div>
-                                    <div class="boxes" style="background-color:rgba(152,117,45,.7)"></div>
-                                    <div class="boxes" style="background-color:rgba(152,117,45,.2)"></div>
-                                    <div class="boxes" style="background-color:rgba(152,117,45,.2)"></div>
-                                    <div class="boxes" style="background-color:rgba(152,117,45,.2)"></div>
-                                    <div class="boxes" style="background-color:rgba(152,117,45,.2)"></div>
-                                </div>
-                                <div class="points-business">
-                                    <div class="boxes">Fri</div>
-                                    <div class="boxes" style="background-color:rgba(152,117,45,.6)"></div>
-                                    <div class="boxes" style="background-color:rgba(152,117,45,.2)"></div>
-                                    <div class="boxes" style="background-color:rgba(152,117,45,.2)"></div>
-                                    <div class="boxes" style="background-color:rgba(152,117,45,.2)"></div>
-                                    <div class="boxes" style="background-color:rgba(152,117,45,.6)"></div>
-                                    <div class="boxes" style="background-color:rgba(152,117,45,.2)"></div>
-                                    <div class="boxes" style="background-color:rgba(152,117,45,.2)"></div>
-                                    <div class="boxes" style="background-color:rgba(152,117,45,.2)"></div>
-                                    <div class="boxes" style="background-color:rgba(152,117,45,.4)"></div>
-                                    <div class="boxes" style="background-color:rgba(152,117,45,.2)"></div>
-                                </div>
-                                <div class="points-business">
-                                    <div class="boxes">Sat</div>
-                                    <div class="boxes" style="background-color:rgba(152,117,45,.2)"></div>
-                                    <div class="boxes" style="background-color:rgba(152,117,45,.2)"></div>
-                                    <div class="boxes" style="background-color:rgba(152,117,45,.2)"></div>
-                                    <div class="boxes" style="background-color:rgba(152,117,45,.2)"></div>
-                                    <div class="boxes" style="background-color:rgba(152,117,45,.9)"></div>
-                                    <div class="boxes" style="background-color:rgba(152,117,45,.2)"></div>
-                                    <div class="boxes" style="background-color:rgba(152,117,45,1)"></div>
-                                    <div class="boxes" style="background-color:rgba(152,117,45,.2)"></div>
-                                    <div class="boxes" style="background-color:rgba(152,117,45,.8)"></div>
-                                    <div class="boxes" style="background-color:rgba(152,117,45,.8)"></div>
-                                </div>
-                                <div class="points-business">
-                                    <div class="boxes">Sun</div>
-                                    <div class="boxes" style="background-color:rgba(152,117,45,.2)"></div>
-                                    <div class="boxes" style="background-color:rgba(152,117,45,.2)"></div>
-                                    <div class="boxes" style="background-color:rgba(152,117,45,.2)"></div>
-                                    <div class="boxes" style="background-color:rgba(152,117,45,.2)"></div>
-                                    <div class="boxes" style="background-color:rgba(152,117,45,1)"></div>
-                                    <div class="boxes" style="background-color:rgba(152,117,45,.2)"></div>
-                                    <div class="boxes" style="background-color:rgba(152,117,45,.2)"></div>
-                                    <div class="boxes" style="background-color:rgba(152,117,45,.2)"></div>
-                                    <div class="boxes" style="background-color:rgba(152,117,45,.2)"></div>
-                                    <div class="boxes" style="background-color:rgba(152,117,45,.2)"></div>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div> 
-                </div> 
-            </div>
-        </div>
-
-
-       
-        <div class="wrap">
-            <div class="kong-helpdesk-container">
-                <h1><?php _e('Reports', 'kong-helpdesk'); ?></h1>
-                <form action="<?php echo admin_url('edit.php?page=helpdesk-reports') ?>" method="get" style="background-color: #FFF; padding: 5px 20px 20px;">
-                    <h2><?php _e('Date Filter', 'kong-helpdesk') ?></h2>
-                    <input type="hidden" name="action" value="kong_helpdesk_report_filter">
-                     <div class="kong-helpdesk-row">
-                        <select id="primary_range" name="primary_range" class="ng-pristine ng-valid ng-touched">
-                            <option trans="" <?php echo $primary_range =='last_30_days' ? 'selected="true"' : '';?> value="last_30_days">Last 30 days</option>
-                            <option trans="" value="last_month" <?php echo $primary_range=='last_month' ? 'selected="true"' : '';?>>Last Month</option>
-                            <option trans="" value="last_7_days" <?php echo $primary_range =='last_7_days' ? 'selected="true"' : '';?>>Last 7 days</option>
-                            <option trans="" value="last_week" <?php echo $primary_range =='last_week' ? 'selected="true"' : '';?>>Last Week</option>
-                            <option trans="" value="today" <?php echo $primary_range =='today' ? 'selected="true"' : '';?>>Today</option>
-                            <option trans="" value="custom" <?php echo $primary_range =='custom' ? 'selected="true"' : '';?>>Custom Dates</option>
-                        </select>
-                        <div class="date_range_cls" style="display: none;">
-                            <div class="kong-helpdesk-col-sm-2">
-                                <label for="date_from"><?php echo __('Date From (JJJJ-MM-DD)', 'kong-helpdesk') ?></label><br/>
-                                <input type="text" name="date_from" placeholder="JJJJ-MM-DD" value="<?php echo $date_from ?>">
-                            </div>
-                            <div class="kong-helpdesk-col-sm-2">
-                                <label for="date_until"><?php echo __('Date Until (JJJJ-MM-DD)', 'kong-helpdesk') ?></label><br/>
-                                <input type="text" name="date_until" placeholder="JJJJ-MM-DD" value="<?php echo $date_until ?>">
-                            </div>
-                        </div>
-                        <div class="kong-helpdesk-col-sm-2">
-                            <br/><input type="submit" class="button button-primary" value="<?php echo __('Primary', 'kong-helpdesk') ?>" >
-                        </div>
-                    </div>
-                    <div class="kong-helpdesk-row">
-                        <select id="compare_range" name="compare_range" class="ng-pristine ng-valid ng-touched">
-                            <option value=''>Select Any</option>
-                            <option trans="" <?php echo isset($_GET['compare_range']) && $_GET['compare_range']=='last_30_days' ? 'selected="true"' : '';?> value="last_30_days">Last 30 days</option>
-                            <option trans="" value="last_month" <?php echo ($compare_range =='last_month') ? 'selected="true"' : '';?>>Last Month</option>
-                            <option trans="" value="last_7_days" <?php echo $compare_range =='last_7_days' ? 'selected="true"' : '';?>>Last 7 days</option>
-                            <option trans="" value="last_week" <?php echo $compare_range =='last_week' ? 'selected="true"' : '';?>>Last Week</option>
-                            <option trans="" value="today" <?php echo $compare_range =='today' ? 'selected="true"' : '';?>>Today</option>
-                            <option trans="" value="custom" <?php echo $compare_range =='custom' ? 'selected="true"' : '';?>>Custom Dates</option>
-                        </select>
-                        <div class="date_range_cls" style="display: none;">
-                            <div class="kong-helpdesk-col-sm-2">
-                                <label for="date_from"><?php echo __('Date From (JJJJ-MM-DD)', 'kong-helpdesk') ?></label><br/>
-                                <input type="text" name="date_from_compare" placeholder="JJJJ-MM-DD" value="<?php echo $date_from_compare; ?>">
-                            </div>
-                            <div class="kong-helpdesk-col-sm-2">
-                                <label for="date_until"><?php echo __('Date Until (JJJJ-MM-DD)', 'kong-helpdesk') ?></label><br/>
-                                <input type="text" name="date_until_compare" placeholder="JJJJ-MM-DD" value="<?php echo $date_until_compare; ?>">
-                            </div>
-                        </div>
-                        <div class="kong-helpdesk-col-sm-2">
-                            <br/><input type="submit" class="button button-primary" value="<?php echo __('Compare', 'kong-helpdesk') ?>" >
-                        </div>
-                    </div>
-                </form>
-                <div class="kong-helpdesk-col-sm-12">
-                    <h2><?php echo __('Filtered', 'kong-helpdesk') ?></h2>
-                    <p><?php echo __('Filtered Tickets:', 'kong-helpdesk') . ' ' . count($tickets) ?></p>
-                </div>
-               
-                <div class="kong-helpdesk-row">
-                    <!-- category -->
-                    <div class="kong-helpdesk-col-sm-12">
-                        <h3 class="kong-helpdesk-center"><?php echo __('Tickets by Department', 'kong-helpdesk') ?></h3>
-                        <div id="tickets-by-system" class="ct-chart ct-major-tenth"></div>
-                       <?php $ticketbycategory_chart = $primary_tickets_data['ticket_by_category'];?>
-                        <script>
-                            var pie_chart = new Chartist.Pie('#tickets-by-system', {
-                            labels: <?php echo json_encode((array_column($ticketbycategory_chart, 'label')))?>,
-                            series: <?php echo json_encode((array_column($ticketbycategory_chart, 'count')))?>
-                            }, {
-                             donut: true,
-                            donutWidth: 120,
-                            showLabel: true,
-                            });
-
-                            pie_chart.on('draw', function(data) {
-                              if(data.type === 'slice') {
-                                // Get the total path length in order to use for dash array animation
-                                var pathLength = data.element._node.getTotalLength();
-
-                                // Set a dasharray that matches the path length as prerequisite to animate dashoffset
-                                data.element.attr({
-                                  'stroke-dasharray': pathLength + 'px ' + pathLength + 'px'
-                                });
-
-                                // Create animation definition while also assigning an ID to the animation for later sync usage
-                                var animationDefinition = {
-                                  'stroke-dashoffset': {
-                                    id: 'anim' + data.index,
-                                    dur: 1000,
-                                    from: -pathLength + 'px',
-                                    to:  '0px',
-                                    easing: Chartist.Svg.Easing.easeOutQuint,
-                                    // We need to use `fill: 'freeze'` otherwise our animation will fall back to initial (not visible)
-                                    fill: 'freeze'
-                                  }
-                                };
-
-                                // If this was not the first slice, we need to time the animation so that it uses the end sync event of the previous animation
-                                if(data.index !== 0) {
-                                  animationDefinition['stroke-dashoffset'].begin = 'anim' + (data.index - 1) + '.end';
-                                }
-
-                                // We need to set an initial value before the animation starts as we are not in guided mode which would do that for us
-                                data.element.attr({
-                                  'stroke-dashoffset': -pathLength + 'px'
-                                });
-
-                                // We can't use guided mode as the animations need to rely on setting begin manually
-                                // See http://gionkunz.github.io/chartist-js/api-documentation.html#chartistsvg-function-animate
-                                data.element.animate(animationDefinition, false);
-                              }
-                            });
-
-                            // For the sake of the example we update the chart every time it's created with a delay of 8 seconds
-                            pie_chart.on('created', function() {
-                              if(window.__anim21278907124) {
-                                clearTimeout(window.__anim21278907124);
-                                window.__anim21278907124 = null;
-                              }
-                              window.__anim21278907124 = setTimeout(pie_chart.update.bind(pie_chart), 10000);
-                            });
-
-                            
-                        </script>
-                    </div>
-                    <!-- busiest time -->
-                    <div class="kong-helpdesk-col-sm-12">
-                        <h3 class="kong-helpdesk-center"><?php echo __('Busiest time of day', 'kong-helpdesk') ?></h3>
-                        <div id="busiest-time-of-day" class="ct-chart ct-major-tenth"></div>
-                       <?php $busiesttime_chart = $primary_tickets_data['buseiest_day_response'];
-                       ?>
-                       
-                    </div>
-                    <!-- avg response time -->
-                    <div class="kong-helpdesk-col-sm-12">
-                        <h3 class="kong-helpdesk-center"><?php echo __('Time to first reply', 'kong-helpdesk') ?></h3>
-                        <div id="time-to-first-reply" class="ct-chart ct-major-tenth"></div>
-                       <?php $timetofirstreply_chart = $primary_tickets_data['first_reply_response'];
-
-                       $timetofirstreply_chart_keys = array_keys($timetofirstreply_chart);
-                       array_pop($timetofirstreply_chart_keys);?>
+                                 <div id="time-to-first-reply" class="ct-chart ct-major-tenth"></div>
+                      
                        <script>
                            var bar_chart = new Chartist.Bar('#time-to-first-reply', {
                               labels: <?php echo json_encode($timetofirstreply_chart_keys);?>,
                               series: [
-                                <?php echo json_encode((array_column($timetofirstreply_chart, 'percentage')))?>
+                                <?php echo json_encode((array_column($timetofirstreply_chart['data'], 'percentage')))?>
                               ]
                             }, {
                               seriesBarDistance: 12,
@@ -590,7 +472,7 @@ class Kong_Helpdesk_Reports extends Kong_Helpdesk
                            bar_chart.on('draw', function(data) {
                                 if(data.type == 'bar') {
                                     data.element.attr({
-                                      style: `stroke-width: 100px;stroke-linecap: butt;stroke-dasharray: 0;`
+                                      style: `stroke-width: 50px;stroke-linecap: butt;stroke-dasharray: 0;stroke:rgb(148, 113, 41,0.7);`
                                     });
                                     data.element.animate({
                                         y2: {
@@ -609,72 +491,67 @@ class Kong_Helpdesk_Reports extends Kong_Helpdesk
                               window.__anim21278907125 = setTimeout(bar_chart.update.bind(bar_chart), 10000);
                             });
                        </script>
-                       
-                    </div>
-                    <!-- Ticket Statistics -->
-                    <div class="kong-helpdesk-col-sm-12">
-                        <h3 class="kong-helpdesk-center"><?php echo __('Busiest time of day', 'kong-helpdesk') ?></h3>
-                        <div id="ticket-statictics" class="ct-chart ct-major-tenth"></div>
-                        <div id="ct-chart"></div>
-                       <?php $ticket_statictics_chart = array($primary_tickets_data['ticket_statictics']);
-                       
-                       //print_r($ticket_statictics_chart);
-                      
-                       ?>
-                       <script  type="text/javascript" charset="utf-8" async defer>
-                    
-        var line_chart = new Chartist.Line('#ct-chart', {
-                series: [
-                    <?php foreach($ticket_statictics_chart as $ticket_stat){
-                    ?>{
-                        name: '<?php echo $ticket_stat['title'];?>',
-                        data: [<?php foreach($ticket_stat['date_range'] as $key=>$value){?>
-                                {x: new Date(<?php echo strtotime($key); ?>), y: '<?php echo $value;?>'},
-                            <?php } ?>
-                        ]
-                     },
-                    <?php } ?>
-                ]
-                }, {
-                    axisX: {
-                        type: Chartist.FixedScaleAxis,
-                        divisor: 5,
-                        labelInterpolationFnc: function(value) {
-                            console.log(value);
-                        return moment.unix(value).format('MMM DD,YYYY');
-                        }
-                    },
-                    showArea: true,
-                });
-
-                line_chart.on('draw', function(data) {
-                    if(data.type === 'line' || data.type === 'area') {
-                        data.element.animate({
-                        d: {
-                            begin: 2000 * data.index,
-                            dur: 2000,
-                            from: data.path.clone().scale(1, 0).translate(0, data.chartRect.height()).stringify(),
-                            to: data.path.clone().stringify(),
-                            easing: Chartist.Svg.Easing.easeOutQuint
-                        }
-                        });
-                    }
-                 });
-                 line_chart.on('created', function() {
-                              if(window.__anim21278907127) {
-                                clearTimeout(window.__anim21278907127);
-                                window.__anim21278907127 = null;
-                              }
-                              window.__anim21278907127 = setTimeout(line_chart.update.bind(line_chart), 10000);
-                            });
+                            </div>
+                        </div>
+                        <!-- Business Time graph -->
+                        <div class="ticket-graph">
+                            <h4>Busiest time of day</h4>
+                            <?php 
+                          
+                           
+                            $busiestday_chart = $primary_tickets_data['buseiest_day_response'];
+                             if(isset($compare_tickets_data['buseiest_day_response']))
+                            {
+                               $busiestday_chart = $compare_tickets_data['buseiest_day_response'];
+                            }
 
 
-                       </script>
-                    </div>
-                </div>
+
+                      ?>
+
+
+                            <div class="business-graph">
+                                <div class="points-business">
+                                    <div class="boxes box-blank"></div>
+                                <?php foreach ($busiestday_chart['Mon'] as $key => $value) {?>
+                                    <div class="boxes"><?php echo $key;?></div>
+                                <?php } ?>
+                                </div>
+
+                                <?php foreach ($busiestday_chart as $key => $result) {?>
+                                    <div class="points-business">
+                                    <div class="boxes"><?php echo $key;?></div>
+                                    <?php foreach ($result as $key => $value) { 
+                                        ?>
+                                        <div class="boxes tooltipped" style="background-color:<?php echo $this->getColorCode($value);?>" data-position="top" data-tooltip="<?php echo $value.' conversation';?>"></div>
+                                    <?php } ?>
+                                    </div>
+                                <?php } ?>
+                            </div>
+                        </div>
+
+                    </div> 
+                </div> 
             </div>
         </div>
+
         <?php
+    }
+
+    // return color code depending on conversation count
+    private function getColorCode($count = 0) {
+            $colorcode = '';
+            if ( $count == 0 ) {
+                $colorcode = 'rgba(152,117,45,.2)';
+            }else if ( in_array($count, range(1,7)) ) {
+                $colorcode = 'rgba(152,117,45,.5)';
+            }else if(in_array($count, range(8,10))) {
+                $colorcode = 'rgba(152,117,45,.7)';
+            }else {
+                $colorcode = 'rgba(152,117,45,1)';
+            }
+
+            return $colorcode;
     }
 
     // list of primary tickets
@@ -1108,7 +985,7 @@ class Kong_Helpdesk_Reports extends Kong_Helpdesk
 
     // return Average first response time in selected period
     private function first_response_time_selected_period($agents , $ticket_ids){
-        $data = $agent_detail = [];
+        $data = $agent_detail = $period_array_data = [];
         $period_array = [
             '0-1'=>['count'=>0,'percentage'=>0],
             '1-8'=>['count'=>0,'percentage'=>0],
@@ -1122,7 +999,7 @@ class Kong_Helpdesk_Reports extends Kong_Helpdesk
 
 
         if(!empty($agents)) {
-            foreach ($agents as $agent) {
+            foreach ($agents['data'] as $agent) {
                 $agent_detail = $this->get_first_response_time_by_userid($agent['ID'],$ticket_ids);
                // print_r($agent_detail);
 
@@ -1152,11 +1029,11 @@ class Kong_Helpdesk_Reports extends Kong_Helpdesk
 
             }
 
-            $period_array['total'] = array_sum(array_column($period_array,'percentage'));
+            $period_array_data = array ('data'=>$period_array,'total'=>array_sum(array_column($period_array,'percentage')));
             
         }
 
-        return $period_array;
+        return $period_array_data;
     }
 
     // return avg response time for first response of user
@@ -1249,7 +1126,7 @@ class Kong_Helpdesk_Reports extends Kong_Helpdesk
         }
        
         if(!empty($agents)) {
-            foreach ($agents as $agent) {
+            foreach ($agents['data'] as $agent) {
                 $count =1;
                 $agent_detail = $this->get_response_time_by_userid($agent['ID'],$ticket_ids);
                 foreach($agent_detail['data'] as $res){
@@ -1272,7 +1149,7 @@ class Kong_Helpdesk_Reports extends Kong_Helpdesk
     private function get_tickets_by_agents($agents = [] , $ticket_ids=[] ) {
         if(is_array($agents)) {
             unset($agents["unassigned"]); 
-            $ticket_by_agents =array();
+            $ticket_by_agents = $ticket_by_agents_data = [];
             foreach ($agents as $key => $agent) {
                  $user = get_user_by( 'email', $key );
                  $ticket_by_agents[$key] = array(
@@ -1287,10 +1164,10 @@ class Kong_Helpdesk_Reports extends Kong_Helpdesk
                 
             }
 
-            $ticket_by_agents['total'] = array_sum(array_column($ticket_by_agents,'avg_response_time'));
+            $ticket_by_agents_data = array('data'=>$ticket_by_agents,'total' => array_sum(array_column($ticket_by_agents,'avg_response_time')));
         }
 
-        return $ticket_by_agents;
+        return $ticket_by_agents_data;
     }
 
     // return details of assigned agents with unassigned

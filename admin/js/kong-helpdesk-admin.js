@@ -184,6 +184,7 @@
     };
 
     $(document).ready(function() {
+        $('.tooltipped').tooltip();
     	if( $('body.post-type-ticket').length > 0) {
     		ticket.init(kong_helpdesk_settings);
         }

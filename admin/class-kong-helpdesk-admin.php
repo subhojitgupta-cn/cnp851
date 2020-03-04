@@ -56,7 +56,7 @@ class Kong_Helpdesk_Admin extends Kong_Helpdesk
         
 
         wp_enqueue_script('Luminous', 'https://cdnjs.cloudflare.com/ajax/libs/luminous-lightbox/1.0.1/Luminous.min.js', array('jquery'), '1.0.1', true);
-        wp_enqueue_script($this->plugin_name.'-admin', plugin_dir_url(__FILE__).'js/kong-helpdesk-admin.js', array('jquery', 'Luminous'), $this->version, false);
+        wp_enqueue_script($this->plugin_name.'-admin', plugin_dir_url(__FILE__).'js/kong-helpdesk-admin.js', array('jquery', 'Luminous'), $this->version, true);
         wp_enqueue_script($this->plugin_name.'-livechat', plugin_dir_url(__FILE__).'js/kong-helpdesk-livechat.js', array('jquery'), $this->version, false);
         wp_enqueue_script('raphael', 'https://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js', array('jquery'), '2.1.0', false);
         wp_enqueue_script('morris', 'https://cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.min.js', array('jquery', 'raphael'), '0.5.1', false);
