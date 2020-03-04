@@ -229,3 +229,10 @@ jQuery(document).ready(function(){
     jQuery('.datepicker-date-display').addClass('kg_primary_bg_color');
     
 });
+
+// graph resize on mobile
+jQuery(window).on('resize', function() {
+  line_chart.update();
+  pie_chart.update();
+  bar_chart.update();
+});

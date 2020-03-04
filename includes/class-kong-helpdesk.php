@@ -195,7 +195,7 @@ class Kong_Helpdesk
         // Admin Interface
         $this->plugin_admin = new Kong_Helpdesk_Admin($this->get_plugin_name(), $this->get_version());
         $this->loader->add_action('init', $this->plugin_admin, 'init', 1);
-        $this->loader->add_action('admin_enqueue_scripts', $this->plugin_admin, 'enqueue_styles', 999);
+        $this->loader->add_action('admin_enqueue_scripts', $this->plugin_admin, 'enqueue_styles', 1);
         $this->loader->add_action('admin_enqueue_scripts', $this->plugin_admin, 'enqueue_scripts', 999);
         $this->loader->add_action('admin_head', $this->plugin_admin, 'add_admin_js_vars', 10);
         $this->loader->add_action('plugins_loaded', $this->plugin_admin, 'load_extensions');

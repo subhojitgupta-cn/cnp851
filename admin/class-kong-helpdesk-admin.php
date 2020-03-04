@@ -39,6 +39,8 @@ class Kong_Helpdesk_Admin extends Kong_Helpdesk
         if(isset($_REQUEST['page']) && $_REQUEST['page'] == 'helpdesk-reports') {
 
            wp_enqueue_style($this->plugin_name.'-chartist', plugin_dir_url(__FILE__).'css/chartist.css', array(), $this->version, 'all');
+           wp_enqueue_style($this->plugin_name.'-chartist-tooltip', plugin_dir_url(__FILE__).'css/chartist-plugin-tooltip.css', array(), $this->version, 'all');
+
 
         }
     }
@@ -65,6 +67,9 @@ class Kong_Helpdesk_Admin extends Kong_Helpdesk
             wp_enqueue_script($this->plugin_name.'-chartist', 'https://cdnjs.cloudflare.com/ajax/libs/chartist/0.11.4/chartist.js', array('jquery'), '0.5.1', false);
             wp_enqueue_script($this->plugin_name.'-chartist-legend', 'https://cdnjs.cloudflare.com/ajax/libs/chartist-plugin-legend/0.6.2/chartist-plugin-legend.js', array('jquery', 'raphael'), '0.5.1', false);
             wp_enqueue_script($this->plugin_name.'-chartist-moment','https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js', array('jquery'), '0.5.1', false);
+
+            wp_enqueue_script($this->plugin_name.'-chartist-tooltip',plugin_dir_url(__FILE__).'js/chartist-plugin-tooltip.js', array('jquery'), '0.5.1', false);
+
 
         }
         
