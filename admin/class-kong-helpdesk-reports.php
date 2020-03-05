@@ -113,6 +113,7 @@ class Kong_Helpdesk_Reports extends Kong_Helpdesk
         $tickets = $this->getTicketsReports($ticket_created['start_date'],$ticket_created['end_date']);
         $primary_tickets_data = $this->ticketProcessing($tickets,$ticket_created);
         $primary_tickets_data['ticket_statictics']['title'] = 'Primary';
+        $primary_tickets_data['first_reply_response']['title'] = 'Primary';
 
         //echo "#primary";
         //echo count($tickets);
@@ -143,6 +144,7 @@ class Kong_Helpdesk_Reports extends Kong_Helpdesk
              $compare_tickets = $this->getTicketsReports($ticket_created_compare['start_date'],$ticket_created_compare['end_date']);
              $compare_tickets_data = $this->ticketProcessing($compare_tickets,$ticket_created_compare);
              $compare_tickets_data['ticket_statictics']['title'] = 'Compare';
+             $compare_tickets_data['first_reply_response']['title'] = 'Compare';
         }
 
 
@@ -182,12 +184,12 @@ class Kong_Helpdesk_Reports extends Kong_Helpdesk
                                 </div>
                                     <div class="date_range_cls kong-helpdesk-row" style="display: none;">
                                         <div class="kong-helpdesk-col-sm-6">
-                                            <label for="date_from"><?php echo __('Date From (JJJJ-MM-DD)', 'kong-helpdesk') ?></label><br/>
-                                            <input type="text" class="datepicker" name="date_from" placeholder="JJJJ-MM-DD" value="<?php echo $date_from ?>">
+                                            <label for="date_from"><?php echo __('Date From', 'kong-helpdesk') ?></label><br/>
+                                            <input type="text" class="datepicker_chart" name="date_from" placeholder="YYYY-mm-dd" value="<?php echo $date_from ?>">
                                         </div>
                                         <div class="kong-helpdesk-col-sm-6">
-                                            <label for="date_until"><?php echo __('Date Until (JJJJ-MM-DD)', 'kong-helpdesk') ?></label><br/>
-                                            <input type="text" class="datepicker" name="date_until" placeholder="JJJJ-MM-DD" value="<?php echo $date_until ?>">
+                                            <label for="date_until"><?php echo __('Date Until', 'kong-helpdesk') ?></label><br/>
+                                            <input type="text" class="datepicker_chart" name="date_until" placeholder="YYYY-mm-dd" value="<?php echo $date_until ?>">
                                         </div>
                                     </div>
                                 
@@ -215,12 +217,12 @@ class Kong_Helpdesk_Reports extends Kong_Helpdesk
                                 
                                 <div class="date_range_cls kong-helpdesk-row" style="display: none;">
                                     <div class="kong-helpdesk-col-sm-6">
-                                        <label for="date_from"><?php echo __('Date From (JJJJ-MM-DD)', 'kong-helpdesk') ?></label><br/>
-                                        <input type="text" class="datepicker" name="date_from_compare" placeholder="JJJJ-MM-DD" value="<?php echo $date_from_compare; ?>">
+                                        <label for="date_from"><?php echo __('Date From', 'kong-helpdesk') ?></label><br/>
+                                        <input type="text" class="datepicker_chart" name="date_from_compare"  value="<?php echo $date_from_compare; ?>">
                                     </div>
                                     <div class="kong-helpdesk-col-sm-6">
-                                        <label for="date_until"><?php echo __('Date Until (JJJJ-MM-DD)', 'kong-helpdesk') ?></label><br/>
-                                        <input type="text" class="datepicker" name="date_until_compare" placeholder="JJJJ-MM-DD" value="<?php echo $date_until_compare; ?>">
+                                        <label for="date_until"><?php echo __('Date Until', 'kong-helpdesk') ?></label><br/>
+                                        <input type="text" class="datepicker_chart" name="date_until_compare"  value="<?php echo $date_until_compare; ?>">
                                     </div>
                                 </div>
                                 
@@ -288,6 +290,18 @@ class Kong_Helpdesk_Reports extends Kong_Helpdesk
                                                     },
                                                     showArea: true,
                                                 });
+<<<<<<< HEAD
+=======
+                                            }
+                                         });
+                                         line_chart.on('created', function() {
+                                                      if(window.__anim21278907127) {
+                                                        clearTimeout(window.__anim21278907127);
+                                                        window.__anim21278907127 = null;
+                                                      }
+                                                      window.__anim21278907127 = setTimeout(line_chart.update.bind(line_chart), 20000);
+                                                    });
+>>>>>>> 85691342124b706eecc608a306d879f952f5d469
 
                                                 line_chart.on('draw', function(data) {
                                                     if(data.type === 'line' || data.type === 'area') {
@@ -320,23 +334,31 @@ class Kong_Helpdesk_Reports extends Kong_Helpdesk
                         <div class="ticket-graph">
                             <h4>Time to first reply</h4>
                             <?php 
-                          
-                           
-                            $timetofirstreply_chart = $primary_tickets_data['first_reply_response'];
-                             if(isset($compare_tickets_data['first_reply_response']))
-                                {
-                                   $timetofirstreply_chart = $compare_tickets_data['first_reply_response'];
-                                }
+                          $timetofirstreply_chart = array($primary_tickets_data['first_reply_response']);
+                           if(isset($compare_tickets_data['first_reply_response']))
+                            {
+                               array_push($timetofirstreply_chart,$compare_tickets_data['first_reply_response']);
+                            }
+                        
+                        
+                        $timetofirstreply_chart_keys = array_keys($timetofirstreply_chart[0]['data']);
+                       // array_pop($timetofirstreply_chart_keys);
+                       $timetofirstreply_chart_data =[];
+                       foreach ($timetofirstreply_chart as $key => $value) {
+                        
+                                 $timetofirstreply_chart_data[] =array(
+                                    'meta'=>$value['title'],
+                                    'name'=>$value['title'],
+                                    'data'=>array_column($value['data'], 'percentage')
 
-                       $timetofirstreply_chart_keys = array_keys($timetofirstreply_chart['data']);
-                       array_pop($timetofirstreply_chart_keys);
-
+                             );               
+                       }
                       ?>
 
 
                             <div class="time-reply">
                                 <h2>
-                                    <?php echo isset($timetofirstreply_chart['total'])?$timetofirstreply_chart['total']: 0; ?> Hours
+                                    <?php echo isset($timetofirstreply_chart[0]['total'])?$timetofirstreply_chart[0]['total']: 0; ?> Hours
                                 </h2>
                                 <p>Average first response time in selected period</p>
                             </div>
@@ -346,9 +368,9 @@ class Kong_Helpdesk_Reports extends Kong_Helpdesk
                        <script>
                            var bar_chart = new Chartist.Bar('#time-to-first-reply', {
                               labels: <?php echo json_encode($timetofirstreply_chart_keys);?>,
-                              series: [
-                                <?php echo json_encode((array_column($timetofirstreply_chart['data'], 'percentage')))?>
-                              ]
+                              series: 
+                                <?php echo json_encode($timetofirstreply_chart_data);?>
+                              
                             }, {
                               seriesBarDistance: 12,
                               axisX: {
@@ -366,7 +388,7 @@ class Kong_Helpdesk_Reports extends Kong_Helpdesk
                            bar_chart.on('draw', function(data) {
                                 if(data.type == 'bar') {
                                     data.element.attr({
-                                      style: `stroke-width: 50px;stroke-linecap: butt;stroke-dasharray: 0;stroke:rgb(148, 113, 41,0.7);`
+                                      style: `stroke-width: 50px;stroke-linecap: butt;stroke-dasharray: 0;`
                                     });
                                     data.element.animate({
                                         y2: {
