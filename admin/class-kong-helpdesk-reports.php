@@ -266,67 +266,7 @@ class Kong_Helpdesk_Reports extends Kong_Helpdesk
                        ?>
                        <div id="ct-chart"></div>
                         <script  type="text/javascript" charset="utf-8" async defer>
-                            var chart = new Chartist.Line('#ct-chart', {
-  labels: [1, 2, 3],
-  series: [
-    [
-      {meta: 'description', value: 1},
-      {meta: 'description', value: 5},
-      {meta: 'description', value: 3}
-    ],
-    [
-      {meta: 'other description', value: 2},
-      {meta: 'other description', value: 4},
-      {meta: 'other description', value: 2}
-    ]
-  ]
-}, {
-  plugins: [
-    Chartist.plugins.tooltip()
-  ]
-});
-                            chart.on('draw', function(data) {
-                                            if(data.type === 'line' || data.type === 'area') {
-                                                data.element.animate({
-                                                d: {
-                                                    begin: 2000 * data.index,
-                                                    dur: 2000,
-                                                    from: data.path.clone().scale(1, 0).translate(0, data.chartRect.height()).stringify(),
-                                                    to: data.path.clone().stringify(),
-                                                    easing: Chartist.Svg.Easing.easeOutQuint
-                                                }
-                                                });
-                                            }
-                                            if(data.type === 'point') {
-                                                // We are creating a new path SVG element that draws a triangle around the point coordinates
-                                                console.log(data.value);
-                                                var circle = new Chartist.Svg('circle', {
-                                                    cx: [data.value.x],
-                                                  cy: [data.value.y],
-                                                  r: [5], 
-                                                  'ct:value': data.value.y,
-                                                  class: 'my-cool-point1',
-                                                }, 'ct-area');
-
-                                               
-                                                data.element.replace(circle);
-                                              }
-                                         });
-
-                                // var responsiveOptions = [
-                                //   ['screen and (min-width: 641px) and (max-width: 1024px)', {
-                                //     showPoint: true,
-                                //     lineSmooth: true
-                                //   }],
-                                //   ['screen and (max-width: 640px)', {
-                                //     showLine: true,
-                                //     axisX: {
-                                //       labelInterpolationFnc: function(value) {
-                                //         return value;
-                                //       }
-                                //     }
-                                //   }]
-                                // ];
+                          
                                 var line_chart = new Chartist.Line('#ticket-statictics', {
                                         series: [
                                             <?php foreach($ticket_statictics_chart as $ticket_stat){?>{
@@ -338,7 +278,6 @@ class Kong_Helpdesk_Reports extends Kong_Helpdesk
                                              },
                                             <?php } ?>
                                         ],
-                                        color: ['#000000','#ff0000'],
                                         }, {
                                             width: '100%',
                                             height: '100%',
@@ -348,7 +287,7 @@ class Kong_Helpdesk_Reports extends Kong_Helpdesk
                                                 divisor: 5,
                                                 labelInterpolationFnc: function(value) {
                                                     //console.log(value);
-                                                return moment.unix(value).format('MMM DD,YYYY');
+                                                return moment.unix(value).format('MMM DD,YY');
                                                 }
                                             },
                                             axisY: {
@@ -360,10 +299,15 @@ class Kong_Helpdesk_Reports extends Kong_Helpdesk
                                             showArea: true,
                                             lineSmooth: true,
                                             plugins: [
-                                                Chartist.plugins.legend(),
+                                                Chartist.plugins.legend({
+                                                  className: 'linechart_helpdesk'
+                                                }),
                                                 Chartist.plugins.tooltip({
-                                                    appendToBody: true,
-                                                  pointClass: 'my-cool-point'
+                                                    html : true,
+                                                    transformTooltipTextFnc: function(tooltip) {
+                                                        var xy = tooltip.split(",");
+                                                        return '<p>'+moment.unix(xy[0]).format('MMM DD,YY')+'<br/>New tickets : '+ xy[1]+ '</p>';
+                                                      }
                                                 })
                                             ]
                                         });
@@ -380,7 +324,7 @@ class Kong_Helpdesk_Reports extends Kong_Helpdesk
                                                 }
                                                 });
                                             }
-                                            if(data.type === 'point') {
+                                            /*if(data.type === 'point') {
                                                 // We are creating a new path SVG element that draws a triangle around the point coordinates
                                                 console.log(data.value);
                                                 var circle = new Chartist.Svg('circle', {
@@ -393,15 +337,16 @@ class Kong_Helpdesk_Reports extends Kong_Helpdesk
 
                                                
                                                 data.element.replace(circle);
-                                              }
+                                              }*/
                                          });
-                                         // line_chart.on('created', function() {
-                                         //              if(window.__anim21278907127) {
-                                         //                clearTimeout(window.__anim21278907127);
-                                         //                window.__anim21278907127 = null;
-                                         //              }
-                                         //              window.__anim21278907127 = setTimeout(line_chart.update.bind(line_chart), 10000);
-                                         //            });
+                                         line_chart.on('created', function() {
+                                                      if(window.__anim21278907127) {
+                                                        clearTimeout(window.__anim21278907127);
+                                                        window.__anim21278907127 = null;
+                                                      }
+                                                      window.__anim21278907127 = setTimeout(line_chart.update.bind(line_chart), 20000);
+                                                    });
+
                         </script>
                    
                         </div>
@@ -421,19 +366,38 @@ class Kong_Helpdesk_Reports extends Kong_Helpdesk
                             }
                        ?>
                        
-                        <script>
-                                var pie_chart = new Chartist.Pie('#tickets-by-system', {
+                        <script type="text/javascript" charset="utf-8" async defer>
+
+                            var data = {
                                 labels: <?php echo json_encode((array_column($ticketbycategory_chart, 'label')))?>,
                                 series: <?php echo json_encode((array_column($ticketbycategory_chart, 'count')))?>
-                                }, {
-                                    width: '100%',
-                                    height: '100%',
-                                    donut: true,
-                                    donutWidth: 120,
-                                    showLabel: true,
-                                });
+                                };
 
-                                pie_chart.on('draw', function(data) {
+                            var sum = function(a, b) { //console.log(a.value);
+                                return a.value + b.value };
+                              
+                            var pie_chart = new Chartist.Pie('#tickets-by-system', data, {
+                                    width: '100%',
+                                    height: '300px',
+                                    donut: true,
+                                    donutWidth: 30,
+                                    showLabel: true,
+                                    plugins: [
+                                        Chartist.plugins.legend({
+                                          className: 'pie_helpdesk',
+                                          position: 'top'
+                                        }),
+                                        Chartist.plugins.tooltip({
+                                            transformTooltipTextFnc: function(tooltip) {
+
+                                                return 'No of tickets : '+ tooltip;
+                                              }
+                                        })
+                                    ],
+                                    labelInterpolationFnc: function(label, index) {
+                                        return Math.round(data.series[index].value / data.series.reduce(sum) * 100) + '%';
+                                    }
+                                }).on('draw', function(data) {
                                   if(data.type === 'slice') {
                                     // Get the total path length in order to use for dash array animation
                                     var pathLength = data.element._node.getTotalLength();
@@ -470,15 +434,12 @@ class Kong_Helpdesk_Reports extends Kong_Helpdesk
                                     // See http://gionkunz.github.io/chartist-js/api-documentation.html#chartistsvg-function-animate
                                     data.element.animate(animationDefinition, false);
                                   }
-                                });
-
-                                // For the sake of the example we update the chart every time it's created with a delay of 8 seconds
-                                pie_chart.on('created', function() {
+                                }).on('created', function() {
                                   if(window.__anim21278907124) {
                                     clearTimeout(window.__anim21278907124);
                                     window.__anim21278907124 = null;
                                   }
-                                  window.__anim21278907124 = setTimeout(pie_chart.update.bind(pie_chart), 10000);
+                                  window.__anim21278907124 = setTimeout(pie_chart.update.bind(pie_chart), 20000);
                                 });
 
                                 
@@ -552,9 +513,8 @@ class Kong_Helpdesk_Reports extends Kong_Helpdesk
                               ]
                             }, {
                               width: '100%',
-                              height: '100%',
-                              seriesBarDistance: 12,
-                              responsive : true,
+                              height: '300px',
+                              seriesBarDistance: 10,
                               axisX: {
                                 offset: 60
                               },
@@ -564,12 +524,18 @@ class Kong_Helpdesk_Reports extends Kong_Helpdesk
                                 labelInterpolationFnc: function(value) {
                                   return value + ' %'
                                 },
-                                scaleMinSpace: 50
-                              }
-                            });
+                                scaleMinSpace: 10
+                              },
+                               plugins: [
+                                Chartist.plugins.tooltip({
+                                    transformTooltipTextFnc: function(tooltip) {
 
-                           bar_chart.on('draw', function(data) {
-                                if(data.type == 'bar') {
+                                        return 'Pertentage of all tickets : '+ tooltip + '%';
+                                      }
+                                })
+                                ],
+                            }).on('draw', function(data) {
+                                    if(data.type == 'bar') {
                                     data.element.attr({
                                       style: `stroke-width: 50px;stroke-linecap: butt;stroke-dasharray: 0;stroke:rgb(148, 113, 41,0.7);`
                                     });
@@ -581,14 +547,14 @@ class Kong_Helpdesk_Reports extends Kong_Helpdesk
                                         }
                                     });
                                 }
-                            });
-                           bar_chart.on('created', function() {
+                            }).on('created', function(bar) {
                               if(window.__anim21278907125) {
                                 clearTimeout(window.__anim21278907125);
                                 window.__anim21278907125 = null;
                               }
-                              window.__anim21278907125 = setTimeout(bar_chart.update.bind(bar_chart), 10000);
+                              window.__anim21278907125 = setTimeout(bar_chart.update.bind(bar_chart), 20000);
                             });
+
                        </script>
                             </div>
                         </div>
