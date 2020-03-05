@@ -223,8 +223,10 @@
 
 // date picker
 jQuery(document).ready(function(){
-    jQuery('.datepicker').datepicker({
+    jQuery('.datepicker_chart').datepicker({
         maxDate: new Date(),
+        outputFormat: 'YYYY/MM/DD',
+        sitePickerFormat: 'YYYY/MM/DD'
     });
     jQuery('.datepicker-date-display').addClass('kg_primary_bg_color');
     
