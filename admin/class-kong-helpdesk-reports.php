@@ -266,64 +266,72 @@ class Kong_Helpdesk_Reports extends Kong_Helpdesk
                                     }
                                     
                             ?>
-                                <script  type="text/javascript" charset="utf-8" async defer>
-                                        
-                                        var line_chart = new Chartist.Line('#ticket-statictics', {
-                                                series: [
-                                                    <?php foreach($ticket_statictics_chart as $ticket_stat){?>{
-                                                        name: '<?php echo $ticket_stat['title'];?>',
-                                                        data: [<?php foreach($ticket_stat['date_range'] as $key=>$value){?>
-                                                                {x: new Date(<?php echo strtotime($key); ?>), y: '<?php echo $value;?>'},
-                                                            <?php } ?>
-                                                        ]
-                                                    },
+                               <script  type="text/javascript" charset="utf-8" async defer>
+                          
+                                var line_chart = new Chartist.Line('#ticket-statictics', {
+                                        series: [
+                                            <?php foreach($ticket_statictics_chart as $ticket_stat){?>{
+                                                name: '<?php echo $ticket_stat['title'];?>',
+                                                data: [<?php foreach($ticket_stat['date_range'] as $key=>$value){?>
+                                                        {x: new Date(<?php echo strtotime($key); ?>), y: '<?php echo $value;?>'},
                                                     <?php } ?>
                                                 ]
-                                                }, {
-                                                    axisX: {
-                                                        type: Chartist.FixedScaleAxis,
-                                                        divisor: 5,
-                                                        labelInterpolationFnc: function(value) {
-                                                            console.log(value);
-                                                        return moment.unix(value).format('MMM DD,YYYY');
-                                                        }
-                                                    },
-                                                    showArea: true,
+                                             },
+                                            <?php } ?>
+                                        ],
+                                        }, {
+                                            width: '100%',
+                                            height: '100%',
+                                            axisX: {
+
+                                                type: Chartist.FixedScaleAxis,
+                                                divisor: 5,
+                                                labelInterpolationFnc: function(value) {
+                                                    //console.log(value);
+                                                return moment.unix(value).format('MMM DD,YY');
+                                                }
+                                            },
+                                            axisY: {
+                                                onlyInteger: true,
+                                                offset: 20,
+
+                                              },
+
+                                            showArea: true,
+                                            lineSmooth: true,
+                                            plugins: [
+                                                Chartist.plugins.legend({
+                                                  className: 'linechart_helpdesk'
+                                                }),
+                                                Chartist.plugins.tooltip({
+                                                    html : true,
+                                                    transformTooltipTextFnc: function(tooltip) {
+                                                        var xy = tooltip.split(",");
+                                                        return '<p>'+moment.unix(xy[0]).format('MMM DD,YY')+'<br/>New tickets : '+ xy[1]+ '</p>';
+                                                      }
+                                                })
+                                            ]
+                                        }).on('draw', function(data) {
+                                            if(data.type === 'line' || data.type === 'area') {
+                                                data.element.animate({
+                                                d: {
+                                                    begin: 2000 * data.index,
+                                                    dur: 2000,
+                                                    from: data.path.clone().scale(1, 0).translate(0, data.chartRect.height()).stringify(),
+                                                    to: data.path.clone().stringify(),
+                                                    easing: Chartist.Svg.Easing.easeOutQuint
+                                                }
                                                 });
-<<<<<<< HEAD
-=======
                                             }
-                                         });
-                                         line_chart.on('created', function() {
+                                         }).on('created', function() {
                                                       if(window.__anim21278907127) {
                                                         clearTimeout(window.__anim21278907127);
                                                         window.__anim21278907127 = null;
                                                       }
                                                       window.__anim21278907127 = setTimeout(line_chart.update.bind(line_chart), 20000);
                                                     });
->>>>>>> 85691342124b706eecc608a306d879f952f5d469
 
-                                                line_chart.on('draw', function(data) {
-                                                    if(data.type === 'line' || data.type === 'area') {
-                                                        data.element.animate({
-                                                        d: {
-                                                            begin: 2000 * data.index,
-                                                            dur: 2000,
-                                                            from: data.path.clone().scale(1, 0).translate(0, data.chartRect.height()).stringify(),
-                                                            to: data.path.clone().stringify(),
-                                                            easing: Chartist.Svg.Easing.easeOutQuint
-                                                        }
-                                                        });
-                                                    }
-                                                });
-                                                line_chart.on('created', function() {
-                                                            if(window.__anim21278907127) {
-                                                                clearTimeout(window.__anim21278907127);
-                                                                window.__anim21278907127 = null;
-                                                            }
-                                                            window.__anim21278907127 = setTimeout(line_chart.update.bind(line_chart), 10000);
-                                                            });
-                                </script>
+                        </script>
                    
                         </div>
                         </div>
@@ -354,8 +362,6 @@ class Kong_Helpdesk_Reports extends Kong_Helpdesk
                              );               
                        }
                       ?>
-
-
                             <div class="time-reply">
                                 <h2>
                                     <?php echo isset($timetofirstreply_chart[0]['total'])?$timetofirstreply_chart[0]['total']: 0; ?> Hours
@@ -372,21 +378,30 @@ class Kong_Helpdesk_Reports extends Kong_Helpdesk
                                 <?php echo json_encode($timetofirstreply_chart_data);?>
                               
                             }, {
-                              seriesBarDistance: 12,
+                              width: '100%',
+                              height: '300px',
+                              seriesBarDistance: 10,
                               axisX: {
                                 offset: 60
                               },
                               axisY: {
+                                 onlyInteger: true,
                                 offset: 80,
                                 labelInterpolationFnc: function(value) {
                                   return value + ' %'
                                 },
-                                scaleMinSpace: 50
-                              }
-                            });
+                                scaleMinSpace: 10
+                              },
+                               plugins: [
+                                Chartist.plugins.tooltip({
+                                    transformTooltipTextFnc: function(tooltip) {
 
-                           bar_chart.on('draw', function(data) {
-                                if(data.type == 'bar') {
+                                        return 'Pertentage of all tickets : '+ tooltip + '%';
+                                      }
+                                })
+                                ],
+                            }).on('draw', function(data) {
+                                    if(data.type == 'bar') {
                                     data.element.attr({
                                       style: `stroke-width: 50px;stroke-linecap: butt;stroke-dasharray: 0;`
                                     });
@@ -398,14 +413,14 @@ class Kong_Helpdesk_Reports extends Kong_Helpdesk
                                         }
                                     });
                                 }
-                            });
-                           bar_chart.on('created', function() {
+                            }).on('created', function(bar) {
                               if(window.__anim21278907125) {
                                 clearTimeout(window.__anim21278907125);
                                 window.__anim21278907125 = null;
                               }
-                              window.__anim21278907125 = setTimeout(bar_chart.update.bind(bar_chart), 10000);
+                              window.__anim21278907125 = setTimeout(bar_chart.update.bind(bar_chart), 20000);
                             });
+
                        </script>
                             </div>
                         </div>
@@ -416,15 +431,15 @@ class Kong_Helpdesk_Reports extends Kong_Helpdesk
                         <!-- Tags n Agents section -->
                         <div class="ticket-graph">
                                     <h4>Tickets by Categories</h4>
-                                    <div class="main-graph">
-                                         <div id="tickets-by-system" class="ct-chart ct-major-tenth"></div>
-                                            <?php $ticketbycategory_chart = $primary_tickets_data['ticket_by_category'];
+                                    <?php $ticketbycategory_chart = $primary_tickets_data['ticket_by_category'];
                                             if(isset($compare_tickets_data['ticket_by_category']))
                                                     {
                                                     $ticketbycategory_chart = $compare_tickets_data['ticket_by_category'];
                                                     }
-                                            ?>
-                       
+                                         if(!empty($ticketbycategory_chart)) { ?>
+                                    <div class="main-graph">
+                                        <div id="tickets-by-system" class="ct-chart ct-major-tenth"></div>
+                                       
                                             <script>
                                                     var pie_chart = new Chartist.Pie('#tickets-by-system', {
                                                     labels: <?php echo json_encode((array_column($ticketbycategory_chart, 'label')))?>,
@@ -433,9 +448,7 @@ class Kong_Helpdesk_Reports extends Kong_Helpdesk
                                                     donut: true,
                                                     donutWidth: 120,
                                                     showLabel: true,
-                                                    });
-
-                                                    pie_chart.on('draw', function(data) {
+                                                    }).on('draw', function(data) {
                                                     if(data.type === 'slice') {
                                                         // Get the total path length in order to use for dash array animation
                                                         var pathLength = data.element._node.getTotalLength();
@@ -472,10 +485,7 @@ class Kong_Helpdesk_Reports extends Kong_Helpdesk
                                                         // See http://gionkunz.github.io/chartist-js/api-documentation.html#chartistsvg-function-animate
                                                         data.element.animate(animationDefinition, false);
                                                     }
-                                                    });
-
-                                                    // For the sake of the example we update the chart every time it's created with a delay of 8 seconds
-                                                    pie_chart.on('created', function() {
+                                                    }).on('created', function() {
                                                     if(window.__anim21278907124) {
                                                         clearTimeout(window.__anim21278907124);
                                                         window.__anim21278907124 = null;
@@ -487,6 +497,9 @@ class Kong_Helpdesk_Reports extends Kong_Helpdesk
                                             </script>
                         
                                     </div>
+                                     <?php }else{
+                                            echo '<p style="text-align:center;">No ticket found.</p>';
+                                        } ?>
                                 </div>
                     
                     </div>
@@ -506,7 +519,7 @@ class Kong_Helpdesk_Reports extends Kong_Helpdesk
                                             {
                                             $ticketbyagent = $compare_tickets_data['ticket_by_agents'];
                                             }
-                                        if(!empty($ticketbyagent)) {
+                                        if(!empty($ticketbyagent['data'])) {
                                             foreach($ticketbyagent['data'] as $agent){?>
                                                 <div class="table_body">
                                                     <div><?php echo $agent['email']; ?></div>
@@ -515,6 +528,8 @@ class Kong_Helpdesk_Reports extends Kong_Helpdesk
                                                     <div><?php echo $agent['avg_response_time']; ?>h</div>
                                                 </div>
                                         <?php } 
+                                        }else{
+                                            echo '<p style="text-align:center;">No agent found.</p>';
                                         } ?>
                                     </div>
                         </div>
@@ -540,7 +555,8 @@ class Kong_Helpdesk_Reports extends Kong_Helpdesk
                                 <?php } ?>
                                 </div>
 
-                                <?php foreach ($busiestday_chart as $key => $result) {?>
+                                <?php 
+                                foreach ($busiestday_chart as $key => $result) {?>
                                     <div class="points-business">
                                     <div class="boxes"><?php echo $key;?></div>
                                     <?php foreach ($result as $key => $value) { 
