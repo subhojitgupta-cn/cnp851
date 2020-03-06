@@ -350,11 +350,11 @@ class Kong_Helpdesk_Reports extends Kong_Helpdesk
                                                 });
                                             }
                                          }).on('created', function() {
-                                                      if(window.__anim21278907127) {
-                                                        clearTimeout(window.__anim21278907127);
-                                                        window.__anim21278907127 = null;
-                                                      }
-                                                      window.__anim21278907127 = setTimeout(line_chart.update.bind(line_chart), 20000);
+                                                    //   if(window.__anim21278907127) {
+                                                    //     clearTimeout(window.__anim21278907127);
+                                                    //     window.__anim21278907127 = null;
+                                                    //   }
+                                                    //   window.__anim21278907127 = setTimeout(line_chart.update.bind(line_chart), 20000);
                                                     });
 
                         </script>
@@ -447,11 +447,11 @@ class Kong_Helpdesk_Reports extends Kong_Helpdesk
                                     });
                                 }
                             }).on('created', function(bar) {
-                              if(window.__anim21278907125) {
-                                clearTimeout(window.__anim21278907125);
-                                window.__anim21278907125 = null;
-                              }
-                              window.__anim21278907125 = setTimeout(bar_chart.update.bind(bar_chart), 20000);
+                            //   if(window.__anim21278907125) {
+                            //     clearTimeout(window.__anim21278907125);
+                            //     window.__anim21278907125 = null;
+                            //   }
+                            //   window.__anim21278907125 = setTimeout(bar_chart.update.bind(bar_chart), 20000);
                             });
 
                        </script>
@@ -541,11 +541,11 @@ class Kong_Helpdesk_Reports extends Kong_Helpdesk
                                     data.element.animate(animationDefinition, false);
                                   }
                                 }).on('created', function() {
-                                  if(window.__anim21278907124) {
-                                    clearTimeout(window.__anim21278907124);
-                                    window.__anim21278907124 = null;
-                                  }
-                                  window.__anim21278907124 = setTimeout(pie_chart.update.bind(pie_chart), 20000);
+                                //   if(window.__anim21278907124) {
+                                //     clearTimeout(window.__anim21278907124);
+                                //     window.__anim21278907124 = null;
+                                //   }
+                                //   window.__anim21278907124 = setTimeout(pie_chart.update.bind(pie_chart), 20000);
                                 });
 
                                                     

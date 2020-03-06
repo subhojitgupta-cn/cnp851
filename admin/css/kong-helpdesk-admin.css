@@ -1046,7 +1046,44 @@ input.select-dropdown.dropdown-trigger {
   min-height: 25px; 
   background-color: rgba(0,0,0,.5); 
 }
-
+.update-plugins {
+  display: none !important;
+}
+ul.ct-legend.linechart_helpdesk, ul.ct-legend.ct-legend-inside.pie_helpdesk {
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+}
+ul.ct-legend.ct-legend-inside.pie_helpdesk {
+  flex-flow: column;
+}
+ul.ct-legend.linechart_helpdesk li, ul.ct-legend.ct-legend-inside.pie_helpdesk li{
+  padding: 0 !important;
+  margin: 0;
+  display: flex !important;
+  text-align: left;
+  width: 100px !important;
+  justify-content: flex-start;
+  flex: 0 !important;
+  flex-flow: row;
+  border: none !important;
+  padding-left: 20px !important;
+  margin-right: 20px;
+}
+svg.ct-chart-line {
+  top: 40px !important;
+}
+.ct-legend .ct-series-0:before {
+  background-color: #2596F3 !important;
+  border-color: #2596F3 !important;
+}
+.ct-legend .ct-series-1:before {
+  background-color: #8BC349 !important;
+  border-color: #8BC349 !important;
+}
+svg.ct-chart-donut {
+  width: 80% !important;
+}
 
 @media (max-width: 767px) {
   .redux-action_bar input{
