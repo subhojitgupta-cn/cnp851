@@ -182,16 +182,16 @@ class Kong_Helpdesk_Reports extends Kong_Helpdesk
                                         </div>
                                     </div>    
                                 </div>
-                                    <div class="date_range_cls kong-helpdesk-row" style="display: none;">
-                                        <div class="kong-helpdesk-col-sm-6">
-                                            <label for="date_from"><?php echo __('Date From', 'kong-helpdesk') ?></label><br/>
-                                            <input type="text" class="datepicker_chart" name="date_from" placeholder="YYYY-mm-dd" value="<?php echo $date_from ?>">
-                                        </div>
-                                        <div class="kong-helpdesk-col-sm-6">
-                                            <label for="date_until"><?php echo __('Date Until', 'kong-helpdesk') ?></label><br/>
-                                            <input type="text" class="datepicker_chart" name="date_until" placeholder="YYYY-mm-dd" value="<?php echo $date_until ?>">
-                                        </div>
+                                <div class="date_range_cls kong-helpdesk-row" style="display: none;">
+                                    <div class="kong-helpdesk-col-sm-6">
+                                        <label for="date_from"><?php echo __('Date From', 'kong-helpdesk') ?></label><br/>
+                                        <input type="text" class="datepicker_chart" name="date_from" placeholder="YYYY-mm-dd" value="<?php echo $date_from ?>">
                                     </div>
+                                    <div class="kong-helpdesk-col-sm-6">
+                                        <label for="date_until"><?php echo __('Date Until', 'kong-helpdesk') ?></label><br/>
+                                        <input type="text" class="datepicker_chart" name="date_until" placeholder="YYYY-mm-dd" value="<?php echo $date_until ?>">
+                                    </div>
+                                </div>
                                 
                             </div>
                         </div>
@@ -257,6 +257,32 @@ class Kong_Helpdesk_Reports extends Kong_Helpdesk
                                     <p>Average response time</p>
                                 </li>
                             </ul>
+                            <?php if(isset($compare_tickets_data['ticket_statictics']))
+                                    {?>
+                            <h4>Ticket Statistics(Compare)</h4>
+                            <ul>
+                                <li>
+                                    <span><?php echo isset($compare_tickets_data['ticket_statictics']['count'])?$compare_tickets_data['ticket_statictics']['count']: 0; ?></span>
+                                    <p>New Tickets</p>
+                                </li>
+                                <li>
+                                    <span><?php echo isset($compare_tickets_data['ticket_by_tags']['closed'])?$compare_tickets_data['ticket_by_tags']['closed']['count']: 0; ?></span>
+                                    <p>Solved Tickets</p>
+                                </li>
+                                <li>
+                                    <span><?php echo isset($compare_tickets_data['ticket_by_tags']['open'])?$compare_tickets_data['ticket_by_tags']['open']['count']: 0; ?></span>
+                                    <p>Open Tickets</p>
+                                </li>
+                                <li>
+                                    <span><?php echo isset($compare_tickets_data['first_reply_response']['total'])?$compare_tickets_data['first_reply_response']['total']: 0; ?> hours</span>
+                                    <p>Time to first reply</p>
+                                </li>
+                                <li>
+                                    <span><?php echo isset($compare_tickets_data['ticket_by_agents']['total'])?$compare_tickets_data['ticket_by_agents']['total']: 0; ?> hours</span>
+                                    <p>Average response time</p>
+                                </li>
+                            </ul>
+                            <?php } ?>
                             <div class="main-graph">
                                  <div id="ticket-statictics" class="ct-chart ct-major-tenth"></div>
                             <?php $ticket_statictics_chart = array($primary_tickets_data['ticket_statictics']);
@@ -366,6 +392,13 @@ class Kong_Helpdesk_Reports extends Kong_Helpdesk
                                 <h2>
                                     <?php echo isset($timetofirstreply_chart[0]['total'])?$timetofirstreply_chart[0]['total']: 0; ?> Hours
                                 </h2>
+                                <?php if(isset($compare_tickets_data['first_reply_response']))
+                                {?>
+                                   <h2>
+                                    (Compare): <?php echo isset($timetofirstreply_chart[1]['total'])?$timetofirstreply_chart[1]['total']: 0; ?> Hours
+                                </h2>
+                                <?php }?>
+                                 
                                 <p>Average first response time in selected period</p>
                             </div>
                             <div class="main-graph">
@@ -441,57 +474,79 @@ class Kong_Helpdesk_Reports extends Kong_Helpdesk
                                         <div id="tickets-by-system" class="ct-chart ct-major-tenth"></div>
                                        
                                             <script>
-                                                    var pie_chart = new Chartist.Pie('#tickets-by-system', {
-                                                    labels: <?php echo json_encode((array_column($ticketbycategory_chart, 'label')))?>,
-                                                    series: <?php echo json_encode((array_column($ticketbycategory_chart, 'count')))?>
-                                                    }, {
-                                                    donut: true,
-                                                    donutWidth: 120,
-                                                    showLabel: true,
-                                                    }).on('draw', function(data) {
-                                                    if(data.type === 'slice') {
-                                                        // Get the total path length in order to use for dash array animation
-                                                        var pathLength = data.element._node.getTotalLength();
+                                                   var data = {
+                                labels: <?php echo json_encode((array_column($ticketbycategory_chart, 'label')))?>,
+                                series: <?php echo json_encode((array_column($ticketbycategory_chart, 'count')))?>
+                                };
 
-                                                        // Set a dasharray that matches the path length as prerequisite to animate dashoffset
-                                                        data.element.attr({
-                                                        'stroke-dasharray': pathLength + 'px ' + pathLength + 'px'
-                                                        });
+                            var sum = function(a, b) { //console.log(a.value);
+                                return a.value + b.value };
+                              
+                            var pie_chart = new Chartist.Pie('#tickets-by-system', data, {
+                                    width: '100%',
+                                    height: '300px',
+                                    donut: true,
+                                    donutWidth: 40,
+                                    showLabel: true,
+                                    plugins: [
+                                        Chartist.plugins.legend({
+                                          className: 'pie_helpdesk',
+                                          position: 'top'
+                                        }),
+                                        Chartist.plugins.tooltip({
+                                            transformTooltipTextFnc: function(tooltip) {
 
-                                                        // Create animation definition while also assigning an ID to the animation for later sync usage
-                                                        var animationDefinition = {
-                                                        'stroke-dashoffset': {
-                                                            id: 'anim' + data.index,
-                                                            dur: 1000,
-                                                            from: -pathLength + 'px',
-                                                            to:  '0px',
-                                                            easing: Chartist.Svg.Easing.easeOutQuint,
-                                                            // We need to use `fill: 'freeze'` otherwise our animation will fall back to initial (not visible)
-                                                            fill: 'freeze'
-                                                        }
-                                                        };
+                                                return 'No of tickets : '+ tooltip;
+                                              }
+                                        })
+                                    ],
+                                    labelInterpolationFnc: function(label, index) {
+                                        return Math.round(data.series[index].value / data.series.reduce(sum) * 100) + '%';
+                                    }
+                                }).on('draw', function(data) {
+                                  if(data.type === 'slice') {
+                                    // Get the total path length in order to use for dash array animation
+                                    var pathLength = data.element._node.getTotalLength();
 
-                                                        // If this was not the first slice, we need to time the animation so that it uses the end sync event of the previous animation
-                                                        if(data.index !== 0) {
-                                                        animationDefinition['stroke-dashoffset'].begin = 'anim' + (data.index - 1) + '.end';
-                                                        }
+                                    // Set a dasharray that matches the path length as prerequisite to animate dashoffset
+                                    data.element.attr({
+                                      'stroke-dasharray': pathLength + 'px ' + pathLength + 'px'
+                                    });
 
-                                                        // We need to set an initial value before the animation starts as we are not in guided mode which would do that for us
-                                                        data.element.attr({
-                                                        'stroke-dashoffset': -pathLength + 'px'
-                                                        });
+                                    // Create animation definition while also assigning an ID to the animation for later sync usage
+                                    var animationDefinition = {
+                                      'stroke-dashoffset': {
+                                        id: 'anim' + data.index,
+                                        dur: 1000,
+                                        from: -pathLength + 'px',
+                                        to:  '0px',
+                                        easing: Chartist.Svg.Easing.easeOutQuint,
+                                        // We need to use `fill: 'freeze'` otherwise our animation will fall back to initial (not visible)
+                                        fill: 'freeze'
+                                      }
+                                    };
 
-                                                        // We can't use guided mode as the animations need to rely on setting begin manually
-                                                        // See http://gionkunz.github.io/chartist-js/api-documentation.html#chartistsvg-function-animate
-                                                        data.element.animate(animationDefinition, false);
-                                                    }
-                                                    }).on('created', function() {
-                                                    if(window.__anim21278907124) {
-                                                        clearTimeout(window.__anim21278907124);
-                                                        window.__anim21278907124 = null;
-                                                    }
-                                                    window.__anim21278907124 = setTimeout(pie_chart.update.bind(pie_chart), 10000);
-                                                    });
+                                    // If this was not the first slice, we need to time the animation so that it uses the end sync event of the previous animation
+                                    if(data.index !== 0) {
+                                      animationDefinition['stroke-dashoffset'].begin = 'anim' + (data.index - 1) + '.end';
+                                    }
+
+                                    // We need to set an initial value before the animation starts as we are not in guided mode which would do that for us
+                                    data.element.attr({
+                                      'stroke-dashoffset': -pathLength + 'px'
+                                    });
+
+                                    // We can't use guided mode as the animations need to rely on setting begin manually
+                                    // See http://gionkunz.github.io/chartist-js/api-documentation.html#chartistsvg-function-animate
+                                    data.element.animate(animationDefinition, false);
+                                  }
+                                }).on('created', function() {
+                                  if(window.__anim21278907124) {
+                                    clearTimeout(window.__anim21278907124);
+                                    window.__anim21278907124 = null;
+                                  }
+                                  window.__anim21278907124 = setTimeout(pie_chart.update.bind(pie_chart), 20000);
+                                });
 
                                                     
                                             </script>

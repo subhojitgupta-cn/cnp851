@@ -225,8 +225,9 @@
 jQuery(document).ready(function(){
     jQuery('.datepicker_chart').datepicker({
         maxDate: new Date(),
-        outputFormat: 'YYYY/MM/DD',
-        sitePickerFormat: 'YYYY/MM/DD'
+        format:'yyyy-mm-dd',
+        // outputFormat: 'YYYY/MM/DD',
+        // sitePickerFormat: 'YYYY/MM/DD'
     });
     jQuery('.datepicker-date-display').addClass('kg_primary_bg_color');
     
@@ -235,6 +236,9 @@ jQuery(document).ready(function(){
 // graph resize on mobile
 jQuery(window).on('resize', function() {
   line_chart.update();
-  pie_chart.update();
+  if(pie_chart) {
+    pie_chart.update();
+  }
+  
   bar_chart.update();
 });
