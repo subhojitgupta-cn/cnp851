@@ -220,6 +220,7 @@ class Kong_Helpdesk_Admin extends Kong_Helpdesk
     public function remove_menus()
     {
         $user = wp_get_current_user();
+        //$selected_menu = array('')
 
         if (isset($user->roles) && is_array($user->roles)) {
             if (in_array('subscriber', $user->roles) || in_array('agent', $user->roles)) {

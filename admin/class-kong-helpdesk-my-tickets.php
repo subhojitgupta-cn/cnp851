@@ -247,6 +247,8 @@ class Kong_Helpdesk_My_Tickets extends Kong_Helpdesk
 
     public function inbox_category_menu() {
 
+
+
         $parent_menu_slug ='';
         // add inbox menuitems 
 
@@ -256,20 +258,22 @@ class Kong_Helpdesk_My_Tickets extends Kong_Helpdesk
                 'menu_name'  => 'INBOX',
                 'slug'       =>'konginbox',
                 'icon'       =>'dashicons-email',
-                'position'   => 2,
+                'position'   => 20,
             ),
             array(
                 'id'       => 'ticket_system',
                 'menu_name'  => 'FOLDERS',
                 'slug'       =>'kongfolder',
                 'icon'       =>'dashicons-portfolio',
-                'position'   => 3,
+                'position'   => 21,
             )
             
         );
 
 
         foreach ($_taxonomy_array as $taxonomy) {
+
+
             $menu_taxonomy_terms = get_terms( array(
                 'taxonomy' => $taxonomy['id'],
                 'orderby' => 'term_order',

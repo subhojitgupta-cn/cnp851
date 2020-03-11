@@ -200,7 +200,7 @@ class Kong_Helpdesk
         $this->loader->add_action('admin_head', $this->plugin_admin, 'add_admin_js_vars', 10);
         $this->loader->add_action('plugins_loaded', $this->plugin_admin, 'load_extensions');
         $this->loader->add_filter('login_redirect', $this->plugin_admin, 'maybe_login_redirect', 10, 3);
-        $this->loader->add_action('admin_menu', $this->plugin_admin, 'remove_menus');
+        $this->loader->add_action('admin_menu', $this->plugin_admin, 'remove_menus', 99);
         $this->loader->add_action('admin_bar_menu', $this->plugin_admin, 'remove_admin_bar_nodes', 1, 99999999 );
         $this->loader->add_action('current_screen', $this->plugin_admin, 'redirect_dashboard');
         $this->loader->add_filter('login_url', $this->plugin_admin, 'maybe_modify_login_url', 10, 3 );
