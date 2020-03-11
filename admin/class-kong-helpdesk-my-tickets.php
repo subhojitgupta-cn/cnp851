@@ -304,11 +304,45 @@ class Kong_Helpdesk_My_Tickets extends Kong_Helpdesk
     // get all terms based on taxonomy name
     public function kong_get_menu_items_terms($menu_taxonomy_terms ,$taxonomy ,$parent_menu_slug, $callbackname) {
         foreach ($menu_taxonomy_terms as $terms) {
+            //print_r($terms);
             //$term_slug = $terms->slug;
-             add_submenu_page( $taxonomy['slug'].'-'.$parent_menu_slug, $terms->name, $terms->name.' <span>'.$terms->count.'</span>',
+             add_submenu_page( $taxonomy['slug'].'-'.$parent_menu_slug, $terms->name, $terms->name.' <span>'.$this->kong_terms_count_by_loggedid($terms->taxonomy,$terms->slug).'</span>',
                 'edit_tickets', $taxonomy['slug'].'-'.$terms->slug,array($this,$callbackname));
         }
 
+    }
+
+    // terms count by logged in id 
+    public function kong_terms_count_by_loggedid($taxonomy,$terms_slug) {
+
+        $curentuserid = get_current_user_id();
+            $args =array(
+                'showposts' => -1,
+                'post_type' => 'ticket',
+                'order' => 'DESC',
+                'orderby' => 'post_date',
+                'post_status' => 'publish',
+                'tax_query' => array(
+                    array(
+                        'taxonomy' => $taxonomy,
+                        'field' => 'slug',
+                        'terms' => $terms_slug
+                    )
+                )
+            );
+        
+            if ( !current_user_can( 'manage_options' ) ) {
+                $args['meta_query'] = array(
+                    array(
+                        'key' => 'agent',
+                        'value' => get_current_user_id(),
+                        'compare' => '=',
+                    )
+                );
+                //$args['author'] = get_current_user_id();
+            } 
+            $solved_array = get_posts($args);
+            return count($solved_array);
     }
 
     // kong inbox callback function for wp-list-table

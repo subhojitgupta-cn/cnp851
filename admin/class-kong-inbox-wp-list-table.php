@@ -468,7 +468,14 @@ class Kong_Inbox_List_Table extends WP_List_Table {
           );
 
 		if ( !current_user_can( 'manage_options' ) ) {
-		    $args['author'] = get_current_user_id();
+			$args['meta_query'] = array(
+				array(
+					'key' => 'agent',
+					'value' => get_current_user_id(),
+					'compare' => '=',
+				)
+			);
+		    //$args['author'] = get_current_user_id();
 		} 
 
 		$wp_query = new wp_query($args);
