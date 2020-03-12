@@ -48,6 +48,7 @@ a.copy-to-faq {
   padding-left: 0px;
   padding-right: 0px;
   width: 100%;
+  background-color: #fff;
 }
 .kong-helpdesk-row {
   margin-left: -15px;
@@ -791,25 +792,29 @@ li.wp-first-item a{
   display: none !important; 
 }
 
-.inboxes.widefat th.sortable a, .inboxes.widefat th.sorted a, .inboxes.widefat th {
+.inboxes.widefat th.sortable a, .inboxes.widefat th.sorted a, .inboxes.widefat th, .posts th.sortable a, .posts.widefat th.sorted a, .posts.widefat th {
   font-size: 12px !important;
   color: #a2a2a2 !important;
 }
-.inboxes.widefat th:first-of-type {
+.inboxes.widefat th:first-of-type{
   width: 80px;
 }
-.inboxes #the-list tr:last-child td, .inboxes #the-list tr:last-child th {
+.inboxes #the-list tr:last-child td, .inboxes #the-list tr:last-child th, .posts #the-list tr:last-child td, .posts #the-list tr:last-child th {
   vertical-align: middle !important;
 }
-.inboxes .customer.column-customer a{
+.wp-list-table a {
+  transition: none;
+  color: #555;
+}
+.inboxes .customer.column-customer a, .posts .customer.column-customer a{
   display: flex;
   align-items: center;
 }
-.inboxes td.customer.column-customer a span{
+.inboxes td.customer.column-customer a span, .posts td.customer.column-customer a span{
    margin-right: 5px;
    color: #6f6f6f;
 }
-.inboxes th#ticket_summary {
+.inboxes th#ticket_summary, .posts th#ticket_summary {
   width: 40%;
 }
 .inboxes .helpdesk-avatar {
@@ -1084,6 +1089,63 @@ svg.ct-chart-line {
 svg.ct-chart-donut {
   width: 80% !important;
 }
+.wp-submenu li.wp-first-item {
+  padding: 0 !important;
+}
+a.desktop_default_logo {
+  display: flex;
+}
+.side-menu__closed a.mobile_default_logo {
+  display: flex !important;
+}
+.wrap {
+  margin: 10px 20px 2px 20px;
+}
+h4 {
+  font-size: 18px !important;
+  margin: 1.14rem 0 .912rem;
+}
+.login form {
+  position: relative !important;
+}
+input#current-page-selector {
+  position: relative;
+  border: none;
+  width: auto;
+}
+form p.search-box {
+  display: flex;
+}
+form p.search-box input#search-submit,form input#post-query-submit {
+  height: 45px;
+  padding: 0 15px;
+  font-size: 13px;
+  line-height: 1;
+  margin-left: 10px;
+  border-radius: 5px;
+}
+.alignleft.actions {
+  display: flex;
+  flex-flow: row wrap;
+}
+.alignleft.actions .select-wrapper {
+  position: static !important;
+  margin-right: 10px;
+}
+.alignleft.actions .select-wrapper input.select-dropdown {
+  font-size: 13px !important;
+}
+.select-wrapper .dropdown-content li>a, .dropdown-content li>span {
+  font-size: 13px !important;
+  padding: 10px 14px !important;
+}
+.helpdesk-avatar {
+  width: 30px !important;
+  height: auto;
+}
+
+
+
 
 @media (max-width: 767px) {
   .redux-action_bar input{
@@ -1100,4 +1162,5 @@ svg.ct-chart-donut {
   .display_header h2 {
     font-size: 30px;
   }
+  
 }
