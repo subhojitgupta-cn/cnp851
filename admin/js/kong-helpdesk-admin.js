@@ -184,6 +184,12 @@
     };
 
     $(document).ready(function() {
+
+        jQuery("input[type=submit]").removeClass("button");
+        jQuery("input[type=submit]").removeClass("button-primary");
+        jQuery("input[type=submit]").addClass("btn btn-golden");
+    
+
         $('.tooltipped').tooltip();
     	if( $('body.post-type-ticket').length > 0) {
     		ticket.init(kong_helpdesk_settings);
