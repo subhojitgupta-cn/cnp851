@@ -291,6 +291,8 @@ class Kong_Helpdesk_Ticket_Processor extends Kong_Helpdesk
 
             if(isset($data['helpdesk_status']) && !empty($data['helpdesk_status'])) {
                 wp_set_object_terms($post_id, $data['helpdesk_status'], 'ticket_status');
+            }else {
+                wp_set_object_terms($post_id, 'open', 'ticket_status');
             }
 
             if(isset($data['helpdesk_system']) && !empty($data['helpdesk_system'])) {

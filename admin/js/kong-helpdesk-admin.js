@@ -241,10 +241,13 @@ jQuery(document).ready(function(){
 
 // graph resize on mobile
 jQuery(window).on('resize', function() {
-  line_chart.update();
-  if(pie_chart) {
-    pie_chart.update();
-  }
-  
-  bar_chart.update();
+    if(line_chart) {
+        line_chart.update();
+    }
+    if(pie_chart) {
+        pie_chart.update();
+    }
+    if(bar_chart) {
+        bar_chart.update();
+    }
 });

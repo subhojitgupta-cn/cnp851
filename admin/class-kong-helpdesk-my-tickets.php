@@ -34,6 +34,8 @@ class Kong_Helpdesk_My_Tickets extends Kong_Helpdesk
 
         add_shortcode('my_tickets', array( $this, 'my_tickets' ));
         add_action('admin_menu', array( $this, 'inbox_category_menu' ));
+        add_action( 'restrict_manage_posts',  array( $this, 'kong_filter_sites' ) , 10, 2);
+        add_filter( 'parse_query', array( $this, 'kong_filter_sites_search' ) );
     }
 
     /**
@@ -363,9 +365,55 @@ class Kong_Helpdesk_My_Tickets extends Kong_Helpdesk
             <?php $kong_inbox_list_table->display() ?>
         </form>
 
-</div>
-    <?php 
+        </div>
+        <?php 
         
      }
+
+    // all sites dropdown filter
+    public function kong_filter_sites( $post_type, $which ) {
+
+        // Apply this only on a specific post type
+        if ( 'ticket' !== $post_type )
+            return;
+
+        // A list of taxonomy slugs to filter by
+        $sites = wp_get_sites();
+        echo '<select name="kong_ticket_sites" id="kong_ticket_sites" class="postform">';
+        foreach ( $sites as $i => $site ) {        
+            switch_to_blog( $site[ 'blog_id' ] );
+
+            $current_blog_details = get_blog_details( array( 'blog_id' => $site[ 'blog_id' ] ) );?>
+            <option value="<?php echo $site['blog_id'];?>" <?php echo ($_GET['kong_ticket_sites'] == $site['blog_id']) ? 'selected="true"': ''?>><?php  echo $current_blog_details->siteurl;?></option>
+            <?php restore_current_blog();
+        }
+        echo '</select>';
+
+    }
+
+
+    /**
+     * Filter by author
+     * @param  (wp_query object) $query
+     *
+     * @return Void
+     */
+    public function kong_filter_sites_search( $query ){
+
+        global $pagenow;
+        if ( isset($_GET['post_type']) 
+             && 'ticket' == $_GET['post_type'] 
+             && is_admin() && 
+             $pagenow == 'edit.php' 
+             && isset($_GET['kong_ticket_sites']) 
+             && $_GET['kong_ticket_sites'] != '') {
+                switch_to_blog($_GET['kong_ticket_sites'] );
+                return $query;
+                restore_current_blog();
+        }
+    }
+
+   
+
 }
 

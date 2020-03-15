@@ -47,6 +47,7 @@ class Kong_Helpdesk_Form extends Kong_Helpdesk
      */
     public function new_ticket_form($atts)
     {
+        
         $args = shortcode_atts(array(
             'type' => 'Simple',
             'types' => '',

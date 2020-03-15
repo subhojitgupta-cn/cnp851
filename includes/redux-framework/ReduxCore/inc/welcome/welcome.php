@@ -88,15 +88,7 @@
                 //    $redirect = true; // Previous version
                 //}
                 if ( $redirect && ! defined( 'WP_TESTS_DOMAIN' ) && ReduxFramework::$_as_plugin ) {
-                    add_action( 'init', array( $this, 'do_redirect' ) );
                 }
-            }
-        }
-
-        public function do_redirect() {
-            if ( ! defined( 'WP_CLI' ) ) {
-                wp_redirect( admin_url( 'tools.php?page=redux-about' ) );
-                exit();
             }
         }
 
@@ -199,12 +191,12 @@
             $page = 'add_management_page';
 
             // About Page
-            $page(
-                esc_html__( 'Welcome to Redux Framework', 'redux-framework' ), esc_html__( 'Redux Framework', 'redux-framework' ), $this->minimum_capability, 'redux-about', array(
-                    $this,
-                    'about_screen'
-                )
-            );
+            // $page(
+            //     esc_html__( 'Welcome to Redux Framework', 'redux-framework' ), esc_html__( 'Redux Framework', 'redux-framework' ), $this->minimum_capability, 'redux-about', array(
+            //         $this,
+            //         'about_screen'
+            //     )
+            // );
 
             // Changelog Page
             $page(
@@ -247,7 +239,7 @@
                 )
             );
 
-            //remove_submenu_page( 'tools.php', 'redux-about' );
+            remove_submenu_page( 'tools.php', 'redux-about' );
             remove_submenu_page( 'tools.php', 'redux-status' );
             remove_submenu_page( 'tools.php', 'redux-changelog' );
             remove_submenu_page( 'tools.php', 'redux-getting-started' );

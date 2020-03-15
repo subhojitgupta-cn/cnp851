@@ -560,7 +560,7 @@ if (! class_exists('Redux')) {
                 'id'       => 'fieldsSimpleTypes',
                 'type'     => 'checkbox',
                 'title'    => __('Types Select Field', 'kong-helpdesk'),
-                'default'  => '0',
+                'default'  => '1',
             ),
             array(
                 'id'       => 'fieldsSimpleWebsiteURL',

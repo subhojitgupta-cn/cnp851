@@ -18,6 +18,7 @@ class Kong_Helpdesk_Admin extends Kong_Helpdesk
     {
         $this->plugin_name = $plugin_name;
         $this->version = $version;
+        $this->blog_id = get_current_blog_id();
         
     }
 
@@ -56,7 +57,6 @@ class Kong_Helpdesk_Admin extends Kong_Helpdesk
     public function enqueue_scripts()
     {
         
-
         wp_enqueue_script('Luminous', 'https://cdnjs.cloudflare.com/ajax/libs/luminous-lightbox/1.0.1/Luminous.min.js', array('jquery'), '1.0.1', true);
         wp_enqueue_script($this->plugin_name.'-admin', plugin_dir_url(__FILE__).'js/kong-helpdesk-admin.js', array('jquery', 'Luminous'), $this->version, true);
         wp_enqueue_script($this->plugin_name.'-livechat', plugin_dir_url(__FILE__).'js/kong-helpdesk-livechat.js', array('jquery'), $this->version, false);
@@ -72,8 +72,6 @@ class Kong_Helpdesk_Admin extends Kong_Helpdesk
 
 
         }
-        
-
         
     }
 
@@ -220,7 +218,15 @@ class Kong_Helpdesk_Admin extends Kong_Helpdesk
     public function remove_menus()
     {
         $user = wp_get_current_user();
-        //$selected_menu = array('')
+        $selected_page_menu = array(
+            'helpdesk-reports',
+            'mail-templates',
+        );
+        $selected_posttype_menu = array(
+            'faq',
+            'ticket',
+            'saved_reply'
+        );
 
         if (isset($user->roles) && is_array($user->roles)) {
             if (in_array('subscriber', $user->roles) || in_array('agent', $user->roles)) {
@@ -231,18 +237,21 @@ class Kong_Helpdesk_Admin extends Kong_Helpdesk
             }
         }
 
-        // remove menu item for all users
-        remove_menu_page( 'index.php' );                   // dashboard
-        remove_menu_page( 'jetpack' );                    //Jetpack* 
-        remove_menu_page( 'edit.php' );                   //Posts
-        //remove_menu_page( 'upload.php' );                 //Media
-        //remove_menu_page( 'edit.php?post_type=page' );    //Pages
-        remove_menu_page( 'edit-comments.php' );          //Comments
-        remove_menu_page( 'themes.php' );                 //Appearance
-        remove_menu_page( 'plugins.php' );                //Plugins
-        //remove_menu_page( 'users.php' );                  //Users
-        remove_menu_page( 'tools.php' );                  //Tools
-        remove_menu_page( 'options-general.php' );        //Settings
+        if(in_array($_REQUEST['page'],$selected_page_menu) || in_array($_REQUEST['post_type'],$selected_posttype_menu) || strpos($_REQUEST['page'], 'kong') !== false ) {
+             // remove menu item for all users
+            remove_menu_page( 'index.php' );                   // dashboard
+            remove_menu_page( 'jetpack' );                    //Jetpack* 
+            remove_menu_page( 'edit.php' );                   //Posts
+            //remove_menu_page( 'upload.php' );                 //Media
+            //remove_menu_page( 'edit.php?post_type=page' );    //Pages
+            remove_menu_page( 'edit-comments.php' );          //Comments
+            remove_menu_page( 'themes.php' );                 //Appearance
+            remove_menu_page( 'plugins.php' );                //Plugins
+            //remove_menu_page( 'users.php' );                  //Users
+            //remove_menu_page( 'tools.php' );                  //Tools
+            //remove_menu_page( 'options-general.php' );        //Settings
+        }
+       
     }
 
    
@@ -324,4 +333,7 @@ class Kong_Helpdesk_Admin extends Kong_Helpdesk
         $login_url = add_query_arg( 'redirect_to', $redirect, $login_page );
         return $login_url;
     }
+
+
+
 }

@@ -260,6 +260,8 @@ class Kong_Helpdesk_Ticket_Post_Type extends Kong_Helpdesk
         );
 
         register_taxonomy('ticket_type', 'ticket', $args);
+        $default_type_array = array('bug','feature','question');
+        $this->add_ticket_default_terms($default_type_array,'ticket_type');
 
         
         
@@ -399,7 +401,8 @@ class Kong_Helpdesk_Ticket_Post_Type extends Kong_Helpdesk
 
     // dropdown html for ticket status taxonomy in  admin area
     public function ticket_status_meta_box_callback( $post, $box ){
-       
+
+  
         $defaults = array( 'taxonomy' => 'category' );
         
         if ( ! isset( $box['args'] ) || ! is_array( $box['args'] ) ) {
@@ -410,16 +413,16 @@ class Kong_Helpdesk_Ticket_Post_Type extends Kong_Helpdesk
         }
 
         extract( wp_parse_args($args, $defaults), EXTR_SKIP );
-        $tax = get_taxonomy( $taxonomy );?>
+        $tax = get_taxonomy( $taxonomy );
+        ?>
         
-        
+       
         <div id="taxonomy-<?php echo $taxonomy; ?>" class="categorydiv">
             <?php 
               $name = ($taxonomy == 'category' ) ? 'post_category' : 'tax_input[' . $taxonomy . ']';
                 echo "<input type='hidden' name='{$name}[]' value='0' />"; // Allows for an empty term set to be sent. 0 is an invalid Term ID and will be ignored by empty() checks.
                 
                 $term_obj = wp_get_object_terms( $post->ID, $taxonomy ); //_log($term_obj[0]->term_id)
-        
                 if ( ! empty( $term_obj ) ) {
                     wp_dropdown_categories( array(
                         'taxonomy'      => $taxonomy,

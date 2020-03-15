@@ -501,7 +501,7 @@ class Kong_Helpdesk_Reports extends Kong_Helpdesk
                                         })
                                     ],
                                     labelInterpolationFnc: function(label, index) {
-                                        return Math.round(data.series[index].value / data.series.reduce(sum) * 100) + '%';
+                                       // return Math.round(data.series[index].value / data.series.reduce(sum) * 100) + '%';
                                     }
                                 }).on('draw', function(data) {
                                   if(data.type === 'slice') {

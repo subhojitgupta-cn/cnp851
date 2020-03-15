@@ -436,6 +436,9 @@ a.copy-to-faq {
   width: 8%;
 }
 
+#taxonomy-ticket_status select{
+  display: block!important;
+}
 .wp-list-table #assigned, 
 .wp-list-table #from {
   width: auto;
