@@ -33,7 +33,7 @@ if (! class_exists('Redux')) {
         'footer_text' => '&copy; ' . date('Y') . ' weLaunch',
         'admin_bar' => true,
         'menu_type' => 'menu',
-        'menu_title' => __('Settings', 'kong-helpdesk'),
+        'menu_title' => __('HELPDESK OPTION', 'kong-helpdesk'),
         'allow_sub_menu' => false,
        /* 'page_parent' => 'edit.php?post_type=ticket',
         'page_parent_post_type' => 'ticket',*/
@@ -171,7 +171,7 @@ if (! class_exists('Redux')) {
                 'type'     => 'checkbox',
                 'title'    => __('Only Logged In', 'kong-helpdesk'),
                 'subtitle' => __('Allow Ticket creation via Forms only when User is logged in.', 'kong-helpdesk'),
-                'default'  => '0',
+                'default'  => '1',
             ),
             array(
                 'id'       => 'supportSendLoginCredentials',

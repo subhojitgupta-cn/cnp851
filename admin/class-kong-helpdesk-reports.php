@@ -33,7 +33,7 @@ class Kong_Helpdesk_Reports extends Kong_Helpdesk
         
        add_menu_page(
             'Reports',
-            'Reports',
+            'REPORTS',
             'manage_options',
             'helpdesk-reports',
             array($this, 'render_helpdesk_reports'),

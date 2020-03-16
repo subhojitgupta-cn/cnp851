@@ -53,7 +53,7 @@ class Kong_Helpdesk_Ticket_Post_Type extends Kong_Helpdesk
         global $typenow;
         $post_type = 'ticket'; // change to your post type
         
-        $taxonomies = array('ticket_status', 'ticket_type', 'ticket_system', 'ticket_priority'); // change to your taxonomy
+        $taxonomies = array('ticket_status', 'ticket_type', 'ticket_system'); // change to your taxonomy
         foreach ($taxonomies as $taxonomy) {
             if ($typenow == $post_type) {
                 $selected      = isset($_GET[$taxonomy]) ? $_GET[$taxonomy] : '';
@@ -123,7 +123,7 @@ class Kong_Helpdesk_Ticket_Post_Type extends Kong_Helpdesk
         }
 
         $labels = array(
-            'name' => __('Tickets', 'kong-helpdesk'),
+            'name' => __('TICKETS', 'kong-helpdesk'),
             'all_items' => $all_tickets,
             'singular_name' => $singular,
             'add_new' => sprintf(__('New %s', 'kong-helpdesk'), $singular),
@@ -151,6 +151,7 @@ class Kong_Helpdesk_Ticket_Post_Type extends Kong_Helpdesk
             'menu_icon' => 'dashicons-sos',
             'capability_type'     => array('ticket','tickets'),
             'capabilities' => array(
+                  'create_posts' => 'do_not_allow',
                 'publish_posts' => 'publish_tickets',
                 'edit_posts' => 'edit_tickets',
                 'edit_others_posts' => 'edit_others_tickets',
@@ -1179,11 +1180,11 @@ class Kong_Helpdesk_Ticket_Post_Type extends Kong_Helpdesk
         $columns["from"] = __('From', 'kong-helpdesk');
         $columns["assigned"] = __('Assigned To', 'kong-helpdesk');
         $columns["taxonomy-ticket_status"] = __('Status', 'kong-helpdesk');
-        $columns["satisfied"] = __('Satisfied', 'kong-helpdesk');
-        $columns["taxonomy-ticket_type"] = __('Type', 'kong-helpdesk');
+        //$columns["satisfied"] = __('Satisfied', 'kong-helpdesk');
+        //$columns["taxonomy-ticket_type"] = __('Type', 'kong-helpdesk');
         $columns["taxonomy-ticket_system"] = __('Department', 'kong-helpdesk');
-        $columns["taxonomy-ticket_priority"] = __('Priority', 'kong-helpdesk');
-        $columns["comments"] = __('<span class="vers comment-grey-bubble" title="Comments"><span class="screen-reader-text">Comments</span></span>', 'kong-helpdesk');
+        //$columns["taxonomy-ticket_priority"] = __('Priority', 'kong-helpdesk');
+        //$columns["comments"] = __('<span class="vers comment-grey-bubble" title="Comments"><span class="screen-reader-text">Comments</span></span>', 'kong-helpdesk');
         $columns["date"] = __('Date', 'kong-helpdesk');
 
         return $columns;
@@ -1356,4 +1357,6 @@ class Kong_Helpdesk_Ticket_Post_Type extends Kong_Helpdesk
 
         wp_set_object_terms($ticket->ID, intval($defaultSolvedStatus), 'ticket_status');
     }
+
+
 }

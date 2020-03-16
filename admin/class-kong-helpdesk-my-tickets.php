@@ -382,9 +382,9 @@ class Kong_Helpdesk_My_Tickets extends Kong_Helpdesk
         echo '<select name="kong_ticket_sites" id="kong_ticket_sites" class="postform">';
         foreach ( $sites as $i => $site ) {        
             switch_to_blog( $site[ 'blog_id' ] );
-
-            $current_blog_details = get_blog_details( array( 'blog_id' => $site[ 'blog_id' ] ) );?>
-            <option value="<?php echo $site['blog_id'];?>" <?php echo ($_GET['kong_ticket_sites'] == $site['blog_id']) ? 'selected="true"': ''?>><?php  echo $current_blog_details->siteurl;?></option>
+            $current_blog_details = get_blog_details( array( 'blog_id' => $site[ 'blog_id' ] ) );
+                        print_r($current_blog_details);?>
+            <option value="<?php echo $site['blog_id'];?>" <?php echo ($_GET['kong_ticket_sites'] == $site['blog_id']) ? 'selected="true"': ''?>><?php  echo $current_blog_details->blogname;?></option>
             <?php restore_current_blog();
         }
         echo '</select>';

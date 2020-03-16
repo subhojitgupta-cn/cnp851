@@ -140,7 +140,7 @@ class Kong_Helpdesk_Saved_Replies_Post_Type extends Kong_Helpdesk
         $plural = __('Canned Replies', 'kong-helpdesk');
 
         $labels = array(
-            'name' => __('Canned Replies', 'kong-helpdesk'),
+            'name' => __('CANNED REPLIES', 'kong-helpdesk'),
             'all_items' => sprintf(__('All %s', 'kong-helpdesk'), $plural),
             'singular_name' => $singular,
             'add_new' => sprintf(__('New %s', 'kong-helpdesk'), $singular),

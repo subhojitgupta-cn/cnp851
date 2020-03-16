@@ -77,8 +77,8 @@ class Kong_Helpdesk_Notifications extends Kong_Helpdesk
      public function mail_templates_menu() {
 
         add_menu_page( 
-            __( 'Mail Templates', 'kong-helpdesk' ),
-            'Mail Templates',
+            __( 'MAIL TEMPLATES', 'kong-helpdesk' ),
+            'MAIL TEMPLATES',
             'manage_options',
             'mail-templates',
             array($this,'helpdesk_mail_templates'),
