@@ -241,13 +241,13 @@ jQuery(document).ready(function(){
 
 // graph resize on mobile
 jQuery(window).on('resize', function() {
-    if(line_chart) {
+    if(jQuery('#ticket-statictics').length) {
         line_chart.update();
     }
-    if(pie_chart) {
+    if(jQuery('#tickets-by-system').length) {
         pie_chart.update();
     }
-    if(bar_chart) {
+    if(jQuery('#time-to-first-reply').length) {
         bar_chart.update();
     }
 });

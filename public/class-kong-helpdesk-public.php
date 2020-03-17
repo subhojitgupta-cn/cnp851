@@ -40,9 +40,9 @@ class Kong_Helpdesk_Public
         wp_enqueue_style('Luminous', plugin_dir_url(__FILE__).'vendor/luminous-2.2.1/dist/luminous-basic.min.css', array(), '2.2.1', 'all');
         wp_enqueue_style('datatables', plugin_dir_url(__FILE__).'vendor/DataTables/DataTables-1.10.18/css/jquery.dataTables.min.css', array(), '1.10.18', 'all');
         wp_enqueue_style('datatables', 'https://cdn.datatables.net/responsive/2.2.3/css/responsive.dataTables.min.css', array('datatables'), '2.3.3', 'all');
-        $customCSS = $this->get_option('customCSS');
+        /*$customCSS = $this->get_option('customCSS');
 
-        file_put_contents(dirname(__FILE__)  . '/css/kong-helpdesk-custom.css', $customCSS);
+        file_put_contents(dirname(__FILE__)  . '/css/kong-helpdesk-custom.css', $customCSS);*/
 
         wp_enqueue_style($this->plugin_name.'-custom', plugin_dir_url(__FILE__) . 'css/kong-helpdesk-custom.css', array(), $this->version, 'all');
 

@@ -236,20 +236,31 @@ class Kong_Helpdesk_Admin extends Kong_Helpdesk
                 
             }
         }
+        $flag = 0;
+        if(isset($_REQUEST['page']) && in_array($_REQUEST['page'],$selected_page_menu)) {
+            $flag = 1;
+        }
+        if(isset($_REQUEST['post_type']) && in_array($_REQUEST['post_type'],$selected_page_menu)) {
+            $flag = 1;
+        }
+        if(isset($_REQUEST['page']) && strpos($_REQUEST['page'], 'kong') !== false ) {
+            $flag = 1;
+        }
 
-        if(in_array($_REQUEST['page'],$selected_page_menu) || in_array($_REQUEST['post_type'],$selected_posttype_menu) || strpos($_REQUEST['page'], 'kong') !== false ) {
+
+        if($flag == 1) {
              // remove menu item for all users
-            remove_menu_page( 'index.php' );                   // dashboard
+            //remove_menu_page( 'index.php' );                   // dashboard
             remove_menu_page( 'jetpack' );                    //Jetpack* 
             remove_menu_page( 'edit.php' );                   //Posts
-            //remove_menu_page( 'upload.php' );                 //Media
+            remove_menu_page( 'upload.php' );                 //Media
             //remove_menu_page( 'edit.php?post_type=page' );    //Pages
             remove_menu_page( 'edit-comments.php' );          //Comments
             remove_menu_page( 'themes.php' );                 //Appearance
             remove_menu_page( 'plugins.php' );                //Plugins
             //remove_menu_page( 'users.php' );                  //Users
-            //remove_menu_page( 'tools.php' );                  //Tools
-            //remove_menu_page( 'options-general.php' );        //Settings
+            remove_menu_page( 'tools.php' );                  //Tools
+            remove_menu_page( 'options-general.php' );        //Settings
         }
        
     }

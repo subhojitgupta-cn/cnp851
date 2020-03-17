@@ -185,10 +185,11 @@ class Kong_Helpdesk_Activator {
         $editor = get_role('editor');
         $administrator = get_role('administrator');
         $subscriber = get_role('subscriber');
+        //print_r($subscriber);
 
         // Agent
 
-        remove_role('agent');               
+        //remove_role('agent');               
         $agent = add_role('agent', __('Agent', 'kong-helpdesk'), 
             $subscriber->capabilities);
         $agent_caps = apply_filters('kong_agent_caps', $this->agent_caps);
@@ -211,8 +212,8 @@ class Kong_Helpdesk_Activator {
         }
         
         // Reporter
-        remove_role('subscriber');
-        $reporter = add_role('subscriber', __('Subscriber', 'kong-helpdesk'), $subscriber->capabilities);
+        //remove_role('subscriber');
+        /*$reporter = add_role('subscriber', __('Subscriber', 'kong-helpdesk'), $subscriber->capabilities);
         $repoter_caps = apply_filters('kong_helpdesk_repoter_caps', $this->repoter_caps);
         foreach ($repoter_caps as $cap) {
             if(!empty($reporter)) {
@@ -227,7 +228,7 @@ class Kong_Helpdesk_Activator {
             if(!empty($subscriber)) {
                 $subscriber->add_cap($cap);
             }
-        }
+        }*/
 
         // Admin
         $all_caps = apply_filters('kong_helpdesk_all_caps', $this->all_caps);

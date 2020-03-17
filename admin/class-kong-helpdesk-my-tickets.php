@@ -272,6 +272,7 @@ class Kong_Helpdesk_My_Tickets extends Kong_Helpdesk
             
         );
 
+        
 
         foreach ($_taxonomy_array as $taxonomy) {
 
@@ -300,7 +301,7 @@ class Kong_Helpdesk_My_Tickets extends Kong_Helpdesk
             
         }
 
-             
+        
     }
 
     // get all terms based on taxonomy name
@@ -349,20 +350,34 @@ class Kong_Helpdesk_My_Tickets extends Kong_Helpdesk
 
     // kong inbox callback function for wp-list-table
     public function kong_inbox_callback() { 
+
+
  
        $kong_inbox_list_table = new Kong_Inbox_List_Table();
 
         // Fetch, prepare, sort, and filter our data.
         $kong_inbox_list_table->prepare_items();
 
+        if(strpos($_REQUEST['page'],'konginbox' ) !== false){
+            $taxonomy = 'ticket_status';
+            $terms_slug = substr(strstr($_REQUEST['page'], '-'),1); 
+            
+        }
+        if(strpos($_REQUEST['page'],'kongfolder') !== false){
+            $taxonomy = 'ticket_system';
+            $terms_slug = substr(strstr($_REQUEST['page'], '-'),1);
+        }
+
+
         ?>
         <div class="wrap">
+        <h2><?php echo ucwords($terms_slug);?></h2>
         <!-- Forms are NOT created automatically, so you need to wrap the table in one to use features like bulk actions -->
         <form id="inbox-filter" method="get" class="inbox-filter">
             <!-- For plugins, we also need to ensure that the form posts back to our current page -->
             <input type="hidden" name="page" value="<?php echo $_REQUEST['page'] ?>" />
             <!-- Now we can render the completed list table -->
-            <?php $kong_inbox_list_table->display() ?>
+            <?php $kong_inbox_list_table->display(); ?>
         </form>
 
         </div>
@@ -378,13 +393,19 @@ class Kong_Helpdesk_My_Tickets extends Kong_Helpdesk
             return;
 
         // A list of taxonomy slugs to filter by
-        $sites = wp_get_sites();
+        $sites = get_sites();
+        $currentblog = get_current_blog_id();
+
         echo '<select name="kong_ticket_sites" id="kong_ticket_sites" class="postform">';
         foreach ( $sites as $i => $site ) {        
-            switch_to_blog( $site[ 'blog_id' ] );
-            $current_blog_details = get_blog_details( array( 'blog_id' => $site[ 'blog_id' ] ) );
-                        print_r($current_blog_details);?>
-            <option value="<?php echo $site['blog_id'];?>" <?php echo ($_GET['kong_ticket_sites'] == $site['blog_id']) ? 'selected="true"': ''?>><?php  echo $current_blog_details->blogname;?></option>
+            switch_to_blog( $site->blog_id );
+            $current_blog_details = get_blog_details( array( 'blog_id' => $site->blog_id ) );
+
+             if(isset($_GET['kong_ticket_sites'])){
+                $currentblog = $_GET['kong_ticket_sites'];
+             }?>
+
+            <option value="<?php echo $site->blog_id;?>" <?php echo (isset($_GET['kong_ticket_sites']) && $_GET['kong_ticket_sites'] == $site->blog_id) ? 'selected="true"': ''?>><?php  echo $current_blog_details->blogname;?></option>
             <?php restore_current_blog();
         }
         echo '</select>';
@@ -408,8 +429,10 @@ class Kong_Helpdesk_My_Tickets extends Kong_Helpdesk
              && isset($_GET['kong_ticket_sites']) 
              && $_GET['kong_ticket_sites'] != '') {
                 switch_to_blog($_GET['kong_ticket_sites'] );
-                return $query;
+                   return $query;
                 restore_current_blog();
+                
+                
         }
     }
 

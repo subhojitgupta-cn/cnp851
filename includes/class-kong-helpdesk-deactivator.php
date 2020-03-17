@@ -31,8 +31,8 @@ class Kong_Helpdesk_Deactivator {
 	 * @return  [type]  
 	 */
 	public static function deactivate() {
-        remove_role('agent');
-        remove_role('subscriber');
+        /*remove_role('agent');
+        remove_role('subscriber');*/
 
 		wp_clear_scheduled_hook('run_kong_helpdesk_inbox_fetching');
 	}

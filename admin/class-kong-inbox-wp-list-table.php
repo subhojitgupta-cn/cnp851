@@ -253,6 +253,7 @@ class Kong_Inbox_List_Table extends WP_List_Table {
                 'order' => 'ASC',
                 'hide_empty' => false,
             ) );
+
 		$actions =[];
         foreach ($menu_taxonomy_terms as $term) {
         	$actions[$term->term_id] = $term->name;
@@ -270,6 +271,8 @@ class Kong_Inbox_List_Table extends WP_List_Table {
 	 * @see $this->prepare_items()
 	 */
 	protected function process_bulk_action() {
+
+		
 		// Detect when a bulk action is being triggered.
 	
 		// security check!
@@ -435,6 +438,13 @@ class Kong_Inbox_List_Table extends WP_List_Table {
 	protected function get_tickets($per_page) {
 		global $wp_query;
 		$taxonomy = $terms_slug ='';
+		if(isset($_REQUEST['site-filter']) && $_REQUEST['site-filter']!='') {
+			 switch_to_blog( $_REQUEST['site-filter'] );
+		}
+
+
+
+
 
 		if(strpos($_REQUEST['page'],'konginbox' ) !== false){
 			$taxonomy = 'ticket_status';
@@ -517,8 +527,8 @@ class Kong_Inbox_List_Table extends WP_List_Table {
 
 			    $comment = get_comments( $args );
 			    $comment_count = count($comment);
-   				$comment_latest = isset($comment[0]->comment_content)? $comment[0]->comment_content : 0;
-   				$last_updated = human_time_diff(get_the_time ( 'U' ), current_time( 'timestamp' )). ' ago';
+   				$comment_latest = isset($comment[0]->comment_content)? $comment[0]->comment_content : '';
+   				$last_updated = human_time_diff(get_the_modified_time ( 'U' ), current_time( 'timestamp' )). ' ago';
    			
    				$ticket_summary = '<div class="info-warp"><div class="cat-name"><span>'.$term_list_string.'</span><p>'.$title.'</p></div><p>'.$comment_latest.'</p><span class="cat-count">'.$comment_count.'</span></div>';
 
@@ -533,15 +543,78 @@ class Kong_Inbox_List_Table extends WP_List_Table {
            	}
        	}
 
-          
+        if(isset($_REQUEST['site-filter']) && $_REQUEST['site-filter']!='') {
+			 restore_current_blog();
+		}
             // update_post_meta(get_the_ID(),'wpb_post_views_count','0');
 
 		return $tickets_data;
+
+
+	}
+
+	function extra_tablenav( $which ) {
+ 
+		    if ( 'top' !== $which ) {
+		        return;
+		    }
+		    ?>
+		    <div class="alignleft actions">
+			    <?php
+			       echo '<label class="screen-reader-text" for="site_id">' . __( 'Filter by category' ) . '</label>';
+			       $sites = get_sites();
+			       $currentblog = get_current_blog_id();
+
+			        if($sites) {
+			        	echo '<select name="site-filter" id="kong_ticket_sites" class="postform">';
+				        foreach ( $sites as $i => $site ) {        
+				            switch_to_blog( $site->blog_id );
+				            $current_blog_details = get_blog_details( array( 'blog_id' => $site->blog_id ) );
+				             if(isset($_GET['site-filter'])){
+				                $currentblog = $_GET['site-filter'];
+				             }
+				                       ?>
+				            <option value="<?php echo $site->blog_id;?>" <?php echo ($currentblog == $site->blog_id) ? 'selected="true"': ''?>><?php  echo $current_blog_details->blogname;?></option>
+				            <?php restore_current_blog();
+				        }
+				         echo '</select>';
+			        }
+			        submit_button( __( 'Filter' ), '', 'filter_action', false, array( 'id' => 'post-query-submit' ) );
+			    ?>
+		    </div>
+		    <?php
+
+	   /* $move_on_url = '&site-filter=';
+	    if ( $which == "top" ){
+	        ?>
+	        <div class="alignleft actions bulkactions">
+	        <?php
+	        $sites = get_sites();
+	        if($sites) {
+	        	echo '<select name="site-filter" id="kong_ticket_sites" class="postform">';
+		        foreach ( $sites as $i => $site ) {        
+		            switch_to_blog( $site->blog_id );
+		            $current_blog_details = get_blog_details( array( 'blog_id' => $site->blog_id ) );
+		                       ?>
+		            <option value="<?php echo $site->blog_id;?>" <?php echo (isset($_GET['kong_ticket_sites']) && $_GET['kong_ticket_sites'] == $site->blog_id) ? 'selected="true"': ''?>><?php  echo $current_blog_details->blogname;?></option>
+		            <?php restore_current_blog();
+		        }
+		         echo '</select>';
+	        }
+        
+	        ?>  
+	        </div>
+	        <?php */
+	    
 	}
 
 	function column_ticket_id($item) {
+		$blog_id = 1;
+		if(isset($_REQUEST['site-filter'])) {
+			$blog_id = $_REQUEST['site-filter'];
+		}
 	  $actions = array(
-	            'edit'      => sprintf('<a href="post.php?post=%s&action=%s">Edit</a>',$item['ticket_id'],'edit'),
+	            'edit'      => sprintf('<a target="_blank" href="'.get_blog_option( $blog_id, 'siteurl' ).'/wp-admin/post.php?post=%s&action=%s">Edit</a>',$item['ticket_id'],'edit'),
 
 	           
 	        );

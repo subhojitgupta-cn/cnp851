@@ -239,7 +239,7 @@
                 )
             );
 
-            remove_submenu_page( 'tools.php', 'redux-about' );
+
             remove_submenu_page( 'tools.php', 'redux-status' );
             remove_submenu_page( 'tools.php', 'redux-changelog' );
             remove_submenu_page( 'tools.php', 'redux-getting-started' );
@@ -326,32 +326,7 @@
          * @return void
          */
         public function tabs() {
-            $selected = isset ( $_GET['page'] ) ? esc_attr( $_GET['page'] ) : 'redux-about';
-            $nonce    = wp_create_nonce( 'redux-support-hash' );
-            ?>
-            <input type="hidden" id="redux_support_nonce" value="<?php echo esc_attr( $nonce ); ?>"/>
-            <h2 class="nav-tab-wrapper">
-                <a class="nav-tab <?php echo $selected == 'redux-about' ? 'nav-tab-active' : ''; ?>"
-                    href="<?php echo esc_url( admin_url( add_query_arg( array( 'page' => 'redux-about' ), 'tools.php' ) ) ); ?>">
-                    <?php esc_attr_e( "What's New", 'redux-framework' ); ?>
-                </a> <a class="nav-tab <?php echo $selected == 'redux-extensions' ? 'nav-tab-active' : ''; ?>"
-                    href="<?php echo esc_url( admin_url( add_query_arg( array( 'page' => 'redux-extensions' ), 'tools.php' ) ) ); ?>">
-                    <?php esc_attr_e( 'Extensions', 'redux-framework' ); ?>
-                </a> <a class="nav-tab <?php echo $selected == 'redux-changelog' ? 'nav-tab-active' : ''; ?>"
-                    href="<?php echo esc_url( admin_url( add_query_arg( array( 'page' => 'redux-changelog' ), 'tools.php' ) ) ); ?>">
-                    <?php esc_attr_e( 'Changelog', 'redux-framework' ); ?>
-                </a> <a class="nav-tab <?php echo $selected == 'redux-credits' ? 'nav-tab-active' : ''; ?>"
-                    href="<?php echo esc_url( admin_url( add_query_arg( array( 'page' => 'redux-credits' ), 'tools.php' ) ) ); ?>">
-                    <?php _e( 'Credits', 'redux-framework' ); ?>
-                </a> <a class="nav-tab <?php echo $selected == 'redux-support' ? 'nav-tab-active' : ''; ?>"
-                    href="<?php echo esc_url( admin_url( add_query_arg( array( 'page' => 'redux-support' ), 'tools.php' ) ) ); ?>">
-                    <?php esc_attr_e( 'Support', 'redux-framework' ); ?>
-                </a> <a class="nav-tab <?php echo $selected == 'redux-status' ? 'nav-tab-active' : ''; ?>"
-                    href="<?php echo esc_url( admin_url( add_query_arg( array( 'page' => 'redux-status' ), 'tools.php' ) ) ); ?>">
-                    <?php esc_attr_e( 'Status', 'redux-framework' ); ?>
-                </a>
-            </h2>
-            <?php
+           
         }
 
         /**

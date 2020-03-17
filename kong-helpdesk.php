@@ -100,3 +100,4 @@ function run_Kong_Helpdesk_Not_Installed()
     <?php
 }
 
+define('temp_file', ABSPATH.'/_temp_out.txt' );
