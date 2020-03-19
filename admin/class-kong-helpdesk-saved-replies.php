@@ -298,7 +298,7 @@ class Kong_Helpdesk_Saved_Replies_Post_Type extends Kong_Helpdesk
 
         $notifyUrl = wp_nonce_url(admin_url("edit.php?action=copy_comment_to_saved_reply&comment=" . absint($comment->comment_ID)), 'kong_helpdesk_copy_' . $comment->comment_ID);
 
-        $array['copy-comment-to-saved-reply'] = '<a class="button button-primary button-small" href="' . esc_url($notifyUrl) . '">' . __('Create Saved Reply', 'kong-helpdesk') .'</a>';
+        $array['copy-comment-to-saved-reply'] = '<a class="button-link" style="text-decoration: none;" href="' . esc_url($notifyUrl) . '">' . __('Create Saved Reply', 'kong-helpdesk') .'</a>';
 
         $array = array_merge($array, $temp);
 

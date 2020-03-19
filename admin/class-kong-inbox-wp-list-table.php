@@ -500,7 +500,7 @@ class Kong_Inbox_List_Table extends WP_List_Table {
            		if ( !empty( $post->post_author ) ) {
                    $author = get_userdata($post->post_author)->data;
                    $url = admin_url('edit.php?post_type=ticket&author=' . $author->ID);
-                   $customer = '<a href="'.$url.'" target="_blank"><span>'.$author->display_name.' </span>'.get_avatar($post->post_author, 50, '', '', array('class' => 'helpdesk-avatar')).'</a>';
+                   $customer = '<a href="'.$url.'" target="_blank" class="customerHolder"><span>'.$author->display_name.' </span>'.get_avatar($post->post_author, 30, '', '', array('class' => 'helpdesk-avatar')).'</a>';
                 }
 
                 $agentID = get_post_meta( $post->ID, 'agent', true );
@@ -530,7 +530,7 @@ class Kong_Inbox_List_Table extends WP_List_Table {
    				$comment_latest = isset($comment[0]->comment_content)? $comment[0]->comment_content : '';
    				$last_updated = human_time_diff(get_the_modified_time ( 'U' ), current_time( 'timestamp' )). ' ago';
    			
-   				$ticket_summary = '<div class="info-warp"><div class="cat-name"><span>'.$term_list_string.'</span><p>'.$title.'</p></div><p>'.$comment_latest.'</p><span class="cat-count">'.$comment_count.'</span></div>';
+   				$ticket_summary = '<div class="info-warp"><div class="cat-name"><div class="txtBd"><span>'.$term_list_string.'</span><p>'.wp_trim_words( $title,10, '...' ).'</p></div><p class="optTxt">'.wp_trim_words( $comment_latest,10, '...' ).'</p></div><span class="cat-count">'.$comment_count.'</span></div>';
 
 
            		$tickets_data[] = array(
@@ -583,28 +583,6 @@ class Kong_Inbox_List_Table extends WP_List_Table {
 			    ?>
 		    </div>
 		    <?php
-
-	   /* $move_on_url = '&site-filter=';
-	    if ( $which == "top" ){
-	        ?>
-	        <div class="alignleft actions bulkactions">
-	        <?php
-	        $sites = get_sites();
-	        if($sites) {
-	        	echo '<select name="site-filter" id="kong_ticket_sites" class="postform">';
-		        foreach ( $sites as $i => $site ) {        
-		            switch_to_blog( $site->blog_id );
-		            $current_blog_details = get_blog_details( array( 'blog_id' => $site->blog_id ) );
-		                       ?>
-		            <option value="<?php echo $site->blog_id;?>" <?php echo (isset($_GET['kong_ticket_sites']) && $_GET['kong_ticket_sites'] == $site->blog_id) ? 'selected="true"': ''?>><?php  echo $current_blog_details->blogname;?></option>
-		            <?php restore_current_blog();
-		        }
-		         echo '</select>';
-	        }
-        
-	        ?>  
-	        </div>
-	        <?php */
 	    
 	}
 

@@ -217,6 +217,11 @@ class Kong_Helpdesk_Admin extends Kong_Helpdesk
      */
     public function remove_menus()
     {
+
+        global $menu, $submenu;
+         unset($menu[100]); ////broadcast
+
+
         $user = wp_get_current_user();
         $selected_page_menu = array(
             'helpdesk-reports',
@@ -248,12 +253,12 @@ class Kong_Helpdesk_Admin extends Kong_Helpdesk
         }
 
 
-        if($flag == 1) {
+        //if($flag == 1) {
              // remove menu item for all users
             //remove_menu_page( 'index.php' );                   // dashboard
             remove_menu_page( 'jetpack' );                    //Jetpack* 
             remove_menu_page( 'edit.php' );                   //Posts
-            remove_menu_page( 'upload.php' );                 //Media
+            //remove_menu_page( 'upload.php' );                 //Media
             //remove_menu_page( 'edit.php?post_type=page' );    //Pages
             remove_menu_page( 'edit-comments.php' );          //Comments
             remove_menu_page( 'themes.php' );                 //Appearance
@@ -261,7 +266,7 @@ class Kong_Helpdesk_Admin extends Kong_Helpdesk
             //remove_menu_page( 'users.php' );                  //Users
             remove_menu_page( 'tools.php' );                  //Tools
             remove_menu_page( 'options-general.php' );        //Settings
-        }
+        //}
        
     }
 

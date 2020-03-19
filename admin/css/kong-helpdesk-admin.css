@@ -23,7 +23,7 @@ a.copy-to-faq {
 }
 
 .kong-helpdesk-label {
-  display: inline;
+  display: inline-block;
   padding: .2em .6em .3em;
   color: #FFFFFF;
   line-height: 1;
@@ -31,6 +31,7 @@ a.copy-to-faq {
   white-space: nowrap;
   vertical-align: baseline;
   border-radius: .25em;
+  margin:2px;
 }
 .helpdesk-avatar {
   border-radius: 50%;
@@ -822,33 +823,30 @@ li.wp-first-item a{
 }
 .inboxes .helpdesk-avatar {
   border-radius: 50%;
-  width: 35px;
-  height: 35px;
+  width: 30px;
+  height: 30px;
 }
 .info-warp {
   display: flex;
   align-items: flex-start;
-  flex-flow: column;
+  flex-flow: row wrap;
   position: relative;
 }
-.info-warp p {
+/*.info-warp p {
   margin: 0 !important;
 }
 .info-warp > p {
   color: #272727;
-}
+}*/
 .widefat tbody td, .widefat tbody th {
   padding: 12px 10px !important;
 }
 .info-warp .cat-count {
+  align-self: center;
   background: #f1f1f1;
   padding: 2px 5px;
   box-shadow: 0 0 5px 0 rgba(0,0,0,.1);
   color: #9c9c9c;
-  position: absolute;
-  right: 0;
-  top: 50%;
-  transform: translate(0%, -50%);
   border-radius: 3px;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
@@ -859,10 +857,13 @@ li.wp-first-item a{
   position: static !important;
 }
 .info-warp .cat-name {
+  flex:1;
+  padding-right: 10px;
+}
+.txtBd{
   display: flex;
   flex-flow: row;
-  align-items: center;
-  margin-bottom: 5px;
+  justify-content: flex-start;
 }
 .info-warp .cat-name span {
   background: #AAAEB7;
@@ -871,9 +872,11 @@ li.wp-first-item a{
   border-radius: 3px;
   font-size: 11px !important;
   margin-right: 5px;
+  max-height: 20px;
 }
-.info-warp .cat-name p {
-  font-weight: 600;
+.optTxt {
+  font-weight: 100;
+  color: #757575!important;
 }
 td.assigned_to.column-assigned_to, td.last_updated.column-last_updated {
   color: #272727;
@@ -1142,12 +1145,30 @@ form p.search-box input#search-submit,form input#post-query-submit {
   font-size: 13px !important;
   padding: 10px 14px !important;
 }
-.helpdesk-avatar {
-  width: 30px !important;
+
+
+.btn-kong, .btn.btn-kong{
+  padding: 0 9px;
   height: auto;
+  border-radius: 5px;
+  font-size: 14px;
+/*  line-height: 1 !important;*/
+  margin-left: 10px !important;
+  border-radius: 6px!important;
+  background: #98752d!important;
+  color:#fff!important;
 }
+.bdTxt{
 
-
+}
+.customerHolder{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+.app-kong-general #wpbody-content h2{
+  font-size: 1.82rem!important;
+}
 
 
 @media (max-width: 767px) {

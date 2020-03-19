@@ -86,7 +86,7 @@ class Kong_Helpdesk_Ticket_Notes extends Kong_Helpdesk
                         <textarea type="text" name="ticket_note" id="ticket_note" class="input-text" cols="20" rows="5"></textarea>
                     </p>
                     <p>
-                    <a href="#" id="add_ticket_note_button" class="button"><?php echo __('Add', 'kong-helpdesk') ?></a>
+                    <a href="#" id="add_ticket_note_button" class="btn btn-golden btn-kong"><?php echo __('Add', 'kong-helpdesk') ?></a>
                 </p>
             </div>
         <?php

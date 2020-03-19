@@ -53,7 +53,7 @@ class Kong_Helpdesk_Ticket_Post_Type extends Kong_Helpdesk
         global $typenow;
         $post_type = 'ticket'; // change to your post type
         
-        $taxonomies = array('ticket_status', 'ticket_type', 'ticket_system'); // change to your taxonomy
+        $taxonomies = array('ticket_status',  'ticket_system'); // change to your taxonomy
         foreach ($taxonomies as $taxonomy) {
             if ($typenow == $post_type) {
                 $selected      = isset($_GET[$taxonomy]) ? $_GET[$taxonomy] : '';

@@ -185,9 +185,13 @@
 
     $(document).ready(function() {
 
-        jQuery("input[type=submit]").removeClass("button");
-        jQuery("input[type=submit]").removeClass("button-primary");
-        jQuery("input[type=submit]").addClass("btn btn-golden");
+        var selector = "input[type=submit], input[type=button],input[type=reset],.copy-to-faq,#kong-helpdesk-merge button:not(.handlediv),#add-new-comment button";
+        jQuery(selector).removeClass("button");
+        jQuery(selector).removeClass("button-primary");
+        jQuery(selector).addClass("btn btn-golden");
+        jQuery(selector).addClass("btn-kong");
+
+
     
 
         $('.tooltipped').tooltip();
