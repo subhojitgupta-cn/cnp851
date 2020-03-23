@@ -7,7 +7,7 @@
     if (!class_exists('reduxDashboardWidget')) {
         class reduxDashboardWidget {
             
-            public function __construct ($parent) {
+            /*public function __construct ($parent) {
                 $fname = Redux_Functions::dat( 'add_redux_dashboard', $parent->args['opt_name'] );
 
                 add_action('wp_dashboard_setup', array($this, $fname));
@@ -32,6 +32,6 @@
                      'show_date'    => 1
                 ));
                 echo '</div>';
-            }
+            }*/
         }
     }

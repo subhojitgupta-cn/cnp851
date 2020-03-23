@@ -175,9 +175,10 @@ class Kong_Helpdesk_Notifications extends Kong_Helpdesk
 
                             ?>	
                             </div>
-                            <div class="kong-helpdesk-row" style="margin-top:15px">
-                                <input type="submit" value="update" />
-                            </div>
+                            <div class="input-field justify-center align-center">
+                        <span class="btn-wrap"><p class="submit"><input type="submit" name="submit" id="submit" class="kg_secondary_bg btn btn-golden" value="Save"></p><span class="kg_secondary_bg btn-bot"></span></span>    
+                        <div style="color:red;" id="insert_dep_error"></div>
+                    </div>
                         </form>
                     </div>
                 </div>                
