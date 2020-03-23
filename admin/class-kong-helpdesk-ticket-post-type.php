@@ -38,8 +38,17 @@ class Kong_Helpdesk_Ticket_Post_Type extends Kong_Helpdesk
 
         add_action('restrict_manage_posts', array($this, 'filter_post_type_by_taxonomy' ));
         add_filter('parse_query', array($this, 'convert_id_to_term_in_query' ));
+        add_filter( 'get_user_option_screen_layout_ticket',array($this,'make_ticket_one_column'),10, 3 );
 
     }
+
+    public function make_ticket_one_column( $result, $option, $user ){
+        if( !empty($user) ):
+           $result = '1';
+        endif;
+        return $result;
+    }
+
 
     /**
      * Make filtering for custom Taxonomies possible

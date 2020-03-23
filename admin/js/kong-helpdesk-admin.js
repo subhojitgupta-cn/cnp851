@@ -198,6 +198,8 @@
         jQuery(block_style_h2).addClass('kg_primary_bg_color');
 
 
+        //jQuery(selector).addClass("btn btn-golden kg_primary_bg_color btn-kong");
+        jQuery(selector).addClass("btn kg_primary_bg_color btn-kong");
 
         $('.tooltipped').tooltip();
     	if( $('body.post-type-ticket').length > 0) {
