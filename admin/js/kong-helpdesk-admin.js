@@ -185,16 +185,19 @@
 
     $(document).ready(function() {
 
-        var selector = "input[type=submit], input[type=button],input[type=reset],.copy-to-faq,#kong-helpdesk-merge button:not(.handlediv),#add-new-comment button";
+        var selector = ".wrap input[type=submit],.wrap input[type=button],.copy-to-faq,#kong-helpdesk-merge button:not(.handlediv),#add-new-comment button";
 
         jQuery(selector).removeClass("button");
         jQuery(selector).removeClass("button-primary");
-        jQuery(selector).addClass("btn btn-golden");
-        jQuery(selector).addClass("btn-kong");
+        jQuery(selector).addClass("btn kg_secondary_bg btn-kong");
+
+        var block_style = ".postbox";
+        var block_style_h2 = ".postbox h2";
+
+        jQuery(block_style).addClass('kg-block-style');
+        jQuery(block_style_h2).addClass('kg_primary_bg_color');
 
 
-
-    
 
         $('.tooltipped').tooltip();
     	if( $('body.post-type-ticket').length > 0) {

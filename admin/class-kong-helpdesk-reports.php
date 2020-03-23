@@ -159,7 +159,7 @@ class Kong_Helpdesk_Reports extends Kong_Helpdesk
 
         <!-- Custom html -->
 
-        <div class="warp">
+        <div class="wrap">
             <div class="kong-helpdesk-container">
             <form action="<?php echo admin_url('edit.php?page=helpdesk-reports') ?>" method="get" style="background-color: #FFF; padding: 5px 20px 20px;">
                 <input type="hidden" name="action" value="kong_helpdesk_report_filter">

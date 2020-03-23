@@ -733,52 +733,6 @@ input[type="text"].kong-helpdesk-livechat-comment-form-message,
 
 /* custom css */
 
-.app__navigation  {
-  overflow-y: scroll !important;
-}
-body::-webkit-scrollbar,
-.app__navigation::-webkit-scrollbar,
-.kong-container::-webkit-scrollbar,
-.form-landing::-webkit-scrollbar {
- width: 5px;
-}
-
-body::-webkit-scrollbar-track,
-.app__navigation::-webkit-scrollbar-track,
-.kong-container::-webkit-scrollbar-track,
-.form-landing::-webkit-scrollbar-track {
- box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-}
-
-body::-webkit-scrollbar-thumb,
-.app__navigation::-webkit-scrollbar-thumb,
-.kong-container::-webkit-scrollbar-thumb,
-.form-landing::-webkit-scrollbar-thumb {
- background-color:#3a3a3a;
- outline: 1px solid #000;
- border-radius: 5px;
-}
-.kong-container::-webkit-scrollbar-thumb {
-background-color: #000
-}
-.wp-submenu .wp-submenu-head {
-  display: none !important;
-}
-.side-navigation__menu-item > i {
-  display: none !important;
-}
-li.wp-first-item {
-  padding: 0 !important;
-}
-li.wp-first-item a{
-  padding: 15px !important;
-}
-.wp-submenu li a i {
-  display: none !important;
-}
-.wp-submenu li a {
-  text-transform: capitalize;
-}
 
 .wp-submenu li a span {
   float: right !important;
@@ -906,9 +860,10 @@ tbody tr {
 }
 .alignleft.actions.bulkactions {
   display: flex;
+  align-items: center;
 }
 .alignleft.actions.bulkactions .select-wrapper {
-  position: static !important;
+  /* position: static !important; */
 }
 .btn.action {
   padding: 0 25px;
@@ -1121,21 +1076,14 @@ input#current-page-selector {
 }
 form p.search-box {
   display: flex;
-}
-form p.search-box input#search-submit,form input#post-query-submit {
-  height: 45px;
-  padding: 0 15px;
-  font-size: 13px;
-  line-height: 1;
-  margin-left: 10px;
-  border-radius: 5px;
+  align-items: center;
 }
 .alignleft.actions {
   display: flex;
   flex-flow: row wrap;
+  align-items: center;
 }
 .alignleft.actions .select-wrapper {
-  position: static !important;
   margin-right: 10px;
 }
 .alignleft.actions .select-wrapper input.select-dropdown {
@@ -1152,17 +1100,7 @@ form p.search-box input#search-submit,form input#post-query-submit {
 .multiple-select-dropdown li:first-child{
   display: none;
 }
-.btn-kong, .btn.btn-kong{
-  padding: 0 9px;
-  height: 45px;
-  border-radius: 5px;
-  font-size: 14px;
-/*  line-height: 1 !important;*/
-  margin-left: 10px !important;
-  border-radius: 6px!important;
-  background: #98752d!important;
-  color:#fff!important;
-}
+
 .bdTxt{
 
 }
