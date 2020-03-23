@@ -189,12 +189,8 @@
 
         jQuery(selector).removeClass("button");
         jQuery(selector).removeClass("button-primary");
-        jQuery(selector).addClass("btn btn-golden");
-        jQuery(selector).addClass("btn-kong");
-
-
-
-    
+        //jQuery(selector).addClass("btn btn-golden kg_primary_bg_color btn-kong");
+        jQuery(selector).addClass("btn kg_primary_bg_color");
 
         $('.tooltipped').tooltip();
     	if( $('body.post-type-ticket').length > 0) {
