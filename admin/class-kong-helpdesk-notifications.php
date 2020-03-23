@@ -49,8 +49,15 @@ class Kong_Helpdesk_Notifications extends Kong_Helpdesk
         $supportLogo = $this->get_option('supportLogo');
         $supportFooter = $this->get_option('supportFooter');
 
+        if($supportLogo['url'] !=''){
+            $url = $supportLogo['url'];  
+        }else {
+            $url = site_url().'/wp-content/plugins/kong-general/public/img/kong-logo.png';
+        }
+
+        //die;
         $tpl = str_replace('{{support_name}}', $supportName, $tpl);
-        $tpl = str_replace('{{support_logo}}', $supportLogo['url'], $tpl);
+        $tpl = str_replace('{{support_logo}}', $url, $tpl);
         $tpl = str_replace('{{footer}}', $supportFooter, $tpl);
         $tpl = str_replace('{{ticket_link_text}}', __('View Ticket', 'kong-helpdesk'), $tpl);
 

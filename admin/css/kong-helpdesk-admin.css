@@ -868,7 +868,7 @@ li.wp-first-item a{
 .info-warp .cat-name span {
   background: #AAAEB7;
   color: #fff;
-  padding: 0px 7px;
+  padding: 2px 7px;
   border-radius: 3px;
   font-size: 11px !important;
   margin-right: 5px;
@@ -1146,10 +1146,15 @@ form p.search-box input#search-submit,form input#post-query-submit {
   padding: 10px 14px !important;
 }
 
-
+.multiple-select-dropdown input[type=checkbox] {
+  opacity: 0;
+}
+.multiple-select-dropdown li:first-child{
+  display: none;
+}
 .btn-kong, .btn.btn-kong{
   padding: 0 9px;
-  height: auto;
+  height: 45px;
   border-radius: 5px;
   font-size: 14px;
 /*  line-height: 1 !important;*/
@@ -1169,6 +1174,7 @@ form p.search-box input#search-submit,form input#post-query-submit {
 .app-kong-general #wpbody-content h2{
   font-size: 1.82rem!important;
 }
+
 
 
 @media (max-width: 767px) {

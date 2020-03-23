@@ -9,7 +9,7 @@
      */
 ?>
 <!-- Header Block -->
-<?php $this->get_template( 'header.tpl.php' ); ?>
+<?php //$this->get_template( 'header.tpl.php' ); ?>
 
 <!-- Intro Text -->
 <?php if ( isset( $this->parent->args['intro_text'] ) ) { ?>

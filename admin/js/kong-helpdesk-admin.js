@@ -186,10 +186,12 @@
     $(document).ready(function() {
 
         var selector = "input[type=submit], input[type=button],input[type=reset],.copy-to-faq,#kong-helpdesk-merge button:not(.handlediv),#add-new-comment button";
+
         jQuery(selector).removeClass("button");
         jQuery(selector).removeClass("button-primary");
         jQuery(selector).addClass("btn btn-golden");
         jQuery(selector).addClass("btn-kong");
+
 
 
     

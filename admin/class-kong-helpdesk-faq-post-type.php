@@ -49,8 +49,18 @@ class Kong_Helpdesk_FAQ_Post_Type extends Kong_Helpdesk
         add_shortcode('faq', array( $this, 'get_faq' ));
         add_shortcode('faqs', array( $this, 'get_faqs' ));
         add_shortcode('faq_search', array( $this, 'get_shortcode_search' ));
+        add_filter( 'get_user_option_screen_layout_faq',array($this,'make_faq_one_column'),10, 3 );
         
     }
+
+
+    public function make_faq_one_column( $result, $option, $user ){
+        if( !empty($user) ):
+           $result = '1';
+        endif;
+        return $result;
+    }
+
 
     /**
      * Get Knowledge Base Shortcode Output 

@@ -1188,7 +1188,7 @@ if (! class_exists('Redux')) {
                 'id'       => 'supportFooter',
                 'type'     => 'editor',
                 'title'    => __('Footer for Mails', 'kong-helpdesk'),
-                'default'  => 'You can reply to this Email. Ticket created by WP Helpdesk Software.',
+                'default'  => 'You can reply to this Email. Ticket created by Kong Helpdesk Software.',
             ),
         )
     ));

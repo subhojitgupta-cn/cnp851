@@ -36,8 +36,12 @@ class Kong_Helpdesk_My_Tickets extends Kong_Helpdesk
         add_action('admin_menu', array( $this, 'inbox_category_menu' ));
         add_action( 'restrict_manage_posts',  array( $this, 'kong_filter_sites' ) , 10, 2);
         add_filter( 'parse_query', array( $this, 'kong_filter_sites_search' ) );
+        
     }
 
+
+
+    
     /**
      * Render my tickets shortcode [my_tickets orderby="date" order="DESC"]
      * @author CN
@@ -309,7 +313,10 @@ class Kong_Helpdesk_My_Tickets extends Kong_Helpdesk
         foreach ($menu_taxonomy_terms as $terms) {
             //print_r($terms);
             //$term_slug = $terms->slug;
-             add_submenu_page( $taxonomy['slug'].'-'.$parent_menu_slug, $terms->name, $terms->name.' <span>'.$this->kong_terms_count_by_loggedid($terms->taxonomy,$terms->slug).'</span>',
+             /*add_submenu_page( $taxonomy['slug'].'-'.$parent_menu_slug, $terms->name, $terms->name.' <span>'.$this->kong_terms_count_by_loggedid($terms->taxonomy,$terms->slug).'</span>',
+                'edit_tickets', $taxonomy['slug'].'-'.$terms->slug,array($this,$callbackname));*/
+
+              add_submenu_page( $taxonomy['slug'].'-'.$parent_menu_slug, $terms->name, $terms->name,
                 'edit_tickets', $taxonomy['slug'].'-'.$terms->slug,array($this,$callbackname));
         }
 
