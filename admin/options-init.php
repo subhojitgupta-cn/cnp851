@@ -84,14 +84,14 @@ if (! class_exists('Redux')) {
      * ---> START HELP TABS
      */
 
-    $tabs = array(
+   /* $tabs = array(
         array(
             'id'      => 'help-tab',
             'title'   => __('Information', 'kong-helpdesk'),
             'content' => __('<p>Need support? Please use the comment function on codecanyon.</p>', 'kong-helpdesk')
         ),
     );
-    Redux::setHelpTab($opt_name, $tabs);
+    Redux::setHelpTab($opt_name, $tabs);*/
 
     // Set the help sidebar
     // $content = __( '<p>This is the sidebar content, HTML is allowed.</p>', 'kong-helpdesk' );
@@ -215,7 +215,7 @@ if (! class_exists('Redux')) {
                 'id'   => 'export',
                 'type' => 'info',
                 'desc' => '<div style="text-align:center;">
-                    <a href="' . get_admin_url() . 'edit.php?post_type=stores&page=kong_helpdesk_options_options&export-tickets=all" class="btn btn-golden btn-kong">' . __('Export all Tickets', 'kong-helpdesk') . '</a>
+                    <a href="' . get_admin_url() . 'edit.php?post_type=stores&page=kong_helpdesk_options_options&export-tickets=all" class="btn kg_secondary_bg btn-kong kg_primary_bg_color">' . __('Export all Tickets', 'kong-helpdesk') . '</a>
                     </div>'
             ),
         )

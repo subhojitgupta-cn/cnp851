@@ -12,9 +12,9 @@
 <?php //$this->get_template( 'header.tpl.php' ); ?>
 
 <!-- Intro Text -->
-<?php if ( isset( $this->parent->args['intro_text'] ) ) { ?>
+<!-- <?php if ( isset( $this->parent->args['intro_text'] ) ) { ?>
     <div id="redux-intro-text"><?php echo wp_kses_post( $this->parent->args['intro_text'] ); ?></div>
-<?php } ?>
+<?php } ?> -->
 
 <?php $this->get_template( 'menu_container.tpl.php' ); ?>
 
