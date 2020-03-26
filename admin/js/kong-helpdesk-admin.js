@@ -183,6 +183,8 @@
         }
     };
 
+    
+
     $(document).ready(function() {
 
         var selector = ".wrap input[type=submit],.wrap input[type=button],.copy-to-faq,#kong-helpdesk-merge button:not(.handlediv),#add-new-comment button";
