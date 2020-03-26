@@ -19,7 +19,17 @@ class Kong_Helpdesk_Admin extends Kong_Helpdesk
         $this->plugin_name = $plugin_name;
         $this->version = $version;
         $this->blog_id = get_current_blog_id();
-        
+        $this->selected_page_menu = array(
+            'helpdesk-reports',
+            'mail-templates',
+        );
+        $this->selected_posttype_menu = array(
+            'faq',
+            'ticket',
+            'saved_reply'
+        );        
+
+
     }
 
     /**
@@ -32,7 +42,37 @@ class Kong_Helpdesk_Admin extends Kong_Helpdesk
      */
     public function enqueue_styles()
     {
-        wp_enqueue_style($this->plugin_name.'-admin', plugin_dir_url(__FILE__).'css/kong-helpdesk-admin.css', array(), $this->version, 'all');
+        
+        $flag = 0;
+
+        if(isset($_REQUEST['page']) && in_array($_REQUEST['page'],$this->selected_page_menu)) {
+            $flag = 1;
+        }
+
+        if(isset($_REQUEST['post_type']) && in_array($_REQUEST['post_type'],$this->selected_posttype_menu)) {
+            $flag = 1;
+        }
+        if(isset($_REQUEST['page']) && strpos($_REQUEST['page'], 'kong') !== false ) {
+            $flag = 1;
+        }
+
+     
+        if($flag == 1) {
+
+              /*=============Kong General CSS=============*/
+                // Vendors css
+                wp_enqueue_style( 'kong-general-vendor-min', plugins_url() . '/kong-general/admin/app-assets/vendors/vendors.min.css', array(), '1.0.0', 'all' );
+                // Materialize theme specific css
+                wp_enqueue_style( 'kong-general-materialize-min', plugins_url() . '/kong-general/admin/app-assets/css/themes/vertical-dark-menu-template/materialize.min.css', array(), '1.0.0', 'all' );
+                wp_enqueue_style( 'kong-general-style-min', plugins_url() . '/kong-general/admin/app-assets/css/themes/vertical-dark-menu-template/style.min.css', array(), '1.0.0', 'all' );
+                // Custom css
+                wp_enqueue_style( 'kong-general-custom', plugins_url() . '/kong-general/admin/app-assets/css/custom/kong-custom.css', array(), '1.0.0', 'all' );
+                // Kong General Plugin css
+                wp_enqueue_style( 'kong-general', plugins_url() . '/kong-general/admin/css/kong-general-admin.css', array(), '1.0.0', 'all' );
+            /*=============Kong General CSS=============*/
+
+
+           wp_enqueue_style($this->plugin_name.'-admin', plugin_dir_url(__FILE__).'css/kong-helpdesk-admin.css', array(), $this->version, 'all');
         wp_enqueue_style('font-awesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css', array(), '4.7.0', 'all');
         wp_enqueue_style('morris', 'https://cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.css', array(), '0.5.1', 'all');
         wp_enqueue_style('Luminous', 'https://cdnjs.cloudflare.com/ajax/libs/luminous-lightbox/1.0.1/luminous-basic.min.css', array(), '1.0.1', 'all');
@@ -41,7 +81,7 @@ class Kong_Helpdesk_Admin extends Kong_Helpdesk
 
            wp_enqueue_style($this->plugin_name.'-chartist', plugin_dir_url(__FILE__).'css/chartist.css', array(), $this->version, 'all');
            wp_enqueue_style($this->plugin_name.'-chartist-tooltip', plugin_dir_url(__FILE__).'css/chartist-plugin-tooltip.css', array(), $this->version, 'all');
-
+        }
 
         }
     }
@@ -57,20 +97,57 @@ class Kong_Helpdesk_Admin extends Kong_Helpdesk
     public function enqueue_scripts()
     {
         
-        wp_enqueue_script('Luminous', 'https://cdnjs.cloudflare.com/ajax/libs/luminous-lightbox/1.0.1/Luminous.min.js', array('jquery'), '1.0.1', true);
-        wp_enqueue_script($this->plugin_name.'-admin', plugin_dir_url(__FILE__).'js/kong-helpdesk-admin.js', array('jquery', 'Luminous'), $this->version, true);
-        wp_enqueue_script($this->plugin_name.'-livechat', plugin_dir_url(__FILE__).'js/kong-helpdesk-livechat.js', array('jquery'), $this->version, false);
-        wp_enqueue_script('raphael', 'https://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js', array('jquery'), '2.1.0', false);
-        wp_enqueue_script('morris', 'https://cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.min.js', array('jquery', 'raphael'), '0.5.1', false);
+       
+        $flag = 0;
 
-       if(isset($_REQUEST['page']) && $_REQUEST['page'] == 'helpdesk-reports') {
-            wp_enqueue_script($this->plugin_name.'-chartist', 'https://cdnjs.cloudflare.com/ajax/libs/chartist/0.11.4/chartist.js', array('jquery'), '0.5.1', false);
-            wp_enqueue_script($this->plugin_name.'-chartist-legend', 'https://cdnjs.cloudflare.com/ajax/libs/chartist-plugin-legend/0.6.2/chartist-plugin-legend.js', array('jquery', 'raphael'), '0.5.1', false);
-            wp_enqueue_script($this->plugin_name.'-chartist-moment','https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js', array('jquery'), '0.5.1', false);
+        if(isset($_REQUEST['page']) && in_array($_REQUEST['page'],$this->selected_page_menu)) {
+            $flag = 1;
+        }
+        if(isset($_REQUEST['post_type']) && in_array($_REQUEST['post_type'],$this->selected_posttype_menu)) {
+            $flag = 1;
+        }
+        if(isset($_REQUEST['page']) && strpos($_REQUEST['page'], 'kong') !== false ) {
+            $flag = 1;
+        }
 
-            wp_enqueue_script($this->plugin_name.'-chartist-tooltip',plugin_dir_url(__FILE__).'js/chartist-plugin-tooltip.js', array('jquery'), '0.5.1', false);
 
+        if($flag == 1) {
 
+         /*=============Kong General JS=============*/
+            wp_enqueue_script( 'kong-common', plugins_url() . '/kong-general/admin/js/kong-common.js', array( 'jquery' ), '1.0.0', true );
+            // Theme specific JS
+            wp_enqueue_script( 'kong-general-materialize-min', plugins_url() . '/kong-general/admin/app-assets/js/materialize.min.js', array( 'jquery' ), '1.0.0', true );
+            // Theme Custom JS
+            wp_enqueue_script( 'kong-general-custom-min', plugins_url() . '/kong-general/admin/app-assets/js/custom/custom-script.min.js', array( 'jquery' ), '1.0.0', true );
+        /*=============Kong General JS=============*/
+
+             wp_enqueue_script('Luminous', 'https://cdnjs.cloudflare.com/ajax/libs/luminous-lightbox/1.0.1/Luminous.min.js', array('jquery'), '1.0.1', true);
+            wp_enqueue_script($this->plugin_name.'-admin', plugin_dir_url(__FILE__).'js/kong-helpdesk-admin.js', array('jquery', 'Luminous'), $this->version, true);
+            wp_enqueue_script($this->plugin_name.'-livechat', plugin_dir_url(__FILE__).'js/kong-helpdesk-livechat.js', array('jquery'), $this->version, false);
+            wp_enqueue_script('raphael', 'https://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js', array('jquery'), '2.1.0', false);
+            wp_enqueue_script('morris', 'https://cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.min.js', array('jquery', 'raphael'), '0.5.1', false);
+
+           if(isset($_REQUEST['page']) && $_REQUEST['page'] == 'helpdesk-reports') {
+                wp_enqueue_script($this->plugin_name.'-chartist', 'https://cdnjs.cloudflare.com/ajax/libs/chartist/0.11.4/chartist.js', array('jquery'), '0.5.1', false);
+                wp_enqueue_script($this->plugin_name.'-chartist-legend', 'https://cdnjs.cloudflare.com/ajax/libs/chartist-plugin-legend/0.6.2/chartist-plugin-legend.js', array('jquery', 'raphael'), '0.5.1', false);
+                wp_enqueue_script($this->plugin_name.'-chartist-moment','https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js', array('jquery'), '0.5.1', false);
+
+                wp_enqueue_script($this->plugin_name.'-chartist-tooltip',plugin_dir_url(__FILE__).'js/chartist-plugin-tooltip.js', array('jquery'), '0.5.1', false);
+
+            }
+        
+           /*wp_enqueue_script( 'vendors-min', plugins_url() . '/kong-general/admin/app-assets/js/vendors.min.js', array( 'jquery' ), $this->version, true );
+            
+            //wp_enqueue_script( 'chart-min', plugins_url() . '/kong-general/admin/app-assets/vendors/chartjs/chart.min.js', array( 'jquery' ), $this->version, true );
+
+            // Plugin JS
+            wp_enqueue_script( 'plugins-min', plugins_url() . '/kong-general/admin/app-assets/js/plugins.min.js', array( 'jquery' ), $this->version, true );
+
+            // Theme specific JS
+            wp_enqueue_script( 'materialize-min', plugins_url() . '/kong-general/admin/app-assets/js/materialize.min.js', array( 'jquery' ), $this->version, true );
+
+            // Custom JS
+            wp_enqueue_script( 'custom-min', plugins_url() . '/kong-general/admin/app-assets/js/custom/custom-script.min.js', array( 'jquery' ), $this->version, true );*/
         }
         
     }
@@ -223,15 +300,6 @@ class Kong_Helpdesk_Admin extends Kong_Helpdesk
 
 
         $user = wp_get_current_user();
-        $selected_page_menu = array(
-            'helpdesk-reports',
-            'mail-templates',
-        );
-        $selected_posttype_menu = array(
-            'faq',
-            'ticket',
-            'saved_reply'
-        );
 
         if (isset($user->roles) && is_array($user->roles)) {
             if (in_array('subscriber', $user->roles) || in_array('agent', $user->roles)) {
@@ -242,10 +310,10 @@ class Kong_Helpdesk_Admin extends Kong_Helpdesk
             }
         }
         $flag = 0;
-        if(isset($_REQUEST['page']) && in_array($_REQUEST['page'],$selected_page_menu)) {
+        if(isset($_REQUEST['page']) && in_array($_REQUEST['page'],$this->selected_page_menu)) {
             $flag = 1;
         }
-        if(isset($_REQUEST['post_type']) && in_array($_REQUEST['post_type'],$selected_page_menu)) {
+        if(isset($_REQUEST['post_type']) && in_array($_REQUEST['post_type'],$this->selected_page_menu)) {
             $flag = 1;
         }
         if(isset($_REQUEST['page']) && strpos($_REQUEST['page'], 'kong') !== false ) {
@@ -253,7 +321,7 @@ class Kong_Helpdesk_Admin extends Kong_Helpdesk
         }
 
 
-        //if($flag == 1) {
+        if($flag == 1) {
              // remove menu item for all users
             //remove_menu_page( 'index.php' );                   // dashboard
             remove_menu_page( 'jetpack' );                    //Jetpack* 
@@ -266,7 +334,7 @@ class Kong_Helpdesk_Admin extends Kong_Helpdesk
             //remove_menu_page( 'users.php' );                  //Users
             remove_menu_page( 'tools.php' );                  //Tools
             remove_menu_page( 'options-general.php' );        //Settings
-        //}
+        }
        
     }
 
